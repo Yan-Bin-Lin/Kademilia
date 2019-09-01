@@ -10,7 +10,7 @@ serveport = 6699  #這裡亂改
 node1 = Connect(serveport)
 
 
-IP = '192.168.0.7'  #i need ip...
+IP = '192.168.0.6'  #i need ip...
 port = 6687
 
 while True:

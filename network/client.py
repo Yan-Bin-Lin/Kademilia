@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 '''
-Created on 2019年9月1日
+Created on 2019/9/1
 
 @author: danny
 '''

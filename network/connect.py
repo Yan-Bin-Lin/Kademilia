@@ -24,7 +24,7 @@ class Connect():
     def _request(self, ConnectIP, msg):        
         result = self.clients[ConnectIP].request(msg)    
         if result == 'ERROR':
-            del self.client[ConnectIP]
+            del self.clients[ConnectIP]
             #do something...
         
         
