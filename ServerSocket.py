@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 '''
 Created on 2019年9月1日
 
@@ -10,4 +11,4 @@ node1 = Connect(6688)
 node1.run()
 
 while(1):
-    pass
+    passf
