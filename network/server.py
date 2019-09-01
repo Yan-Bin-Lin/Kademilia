@@ -9,15 +9,16 @@ import threading
 
 # a server socket class
 class Server():
-    def __init__(self, port):
+    def __init__(self, ServePort):
         #server local IP
         self.LocalIP = self._get_host_ip()
         # 创建一个socket套接字，该套接字还没有建立连接
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # 绑定监听端口，这里必须填本机的IP192.168.27.238，localhost和127.0.0.1是本机之间的进程通信使用的
-        self.server.bind((self.LocalIP, port)) 
+        self.server.bind((self.LocalIP, ServePort)) 
         # 开始监听，并设置最大连接数
         self.server.listen(5)        
+        print(self.LocalIP)
     
     
     def start(self):

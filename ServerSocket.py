@@ -7,8 +7,10 @@ Created on 2019年9月1日
 
 from network.connect import Connect
 
-node1 = Connect(6688)
+serveport = 6687
+
+node1 = Connect(serveport)
 node1.run()
 
 while(1):
-    passf
+    pass

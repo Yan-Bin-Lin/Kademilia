@@ -12,8 +12,8 @@ from .server import Server
 
 # handle server and client connect
 class Connect():
-    def __init__(self, port):
-        self.server = Server(port)
+    def __init__(self, ServePort):
+        self.server = Server(ServePort)
         self.clients = {}
     
     
@@ -21,22 +21,22 @@ class Connect():
         self.server.start()
       
         
-    def _request(self, IP, msg):        
-        result = self.clients[IP].request(msg)    
+    def _request(self, ConnectIP, msg):        
+        result = self.clients[ConnectIP].request(msg)    
         if result == 'ERROR':
-            del self.client[IP]
+            del self.client[ConnectIP]
             #do something...
         
         
-    def _CheckClient(self, IP):
-        if IP not in self.clients:
-            self.clients[IP] = Client(IP)
+    def _CheckClient(self, ConnectIP, port):
+        if ConnectIP not in self.clients:
+            self.clients[ConnectIP] = Client(ConnectIP, port)
       
       
     # send message to other IP    
-    def send(self, IP, msg):
-        self._CheckClient(IP)
-        threading._start_new_thread(self._request, (IP, msg))                 
+    def send(self, ConnectIP, port, msg):
+        self._CheckClient(ConnectIP, port)
+        threading._start_new_thread(self._request, (ConnectIP, msg))                 
 
             
 

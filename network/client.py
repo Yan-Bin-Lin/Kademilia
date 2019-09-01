@@ -8,14 +8,14 @@ import socket
 import time
 
 class Client():
-    def __init__(self, IP):
-        IP = '192.168.0.7'
+    def __init__(self, ConnectIP, ConnectPort):
+        #IP = '192.168.0.7'
         #server local IP
-        self.ConnectIP = IP
+        self.ConnectIP = ConnectIP
         # 创建一个socket
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # 主动去连接局域网内IP为192.168.27.238，端口为6688的进程
-        self.client.connect((self.ConnectIP, 6688))
+        self.client.connect((self.ConnectIP, ConnectPort))
         # no blocking socket
         self.client.setblocking(0)
 
