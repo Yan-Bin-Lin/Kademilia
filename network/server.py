@@ -6,6 +6,7 @@ Created on 2019年9月1日
 '''
 import socket
 import threading
+from handler.communicate import writefile
 
 # a server socket class
 class Server():
@@ -19,6 +20,8 @@ class Server():
         # 开始监听，并设置最大连接数
         self.server.listen(5)        
         print(self.LocalIP)
+        self.receive_data = False
+        self.receiver = ''
     
     
     def start(self):
@@ -38,8 +41,19 @@ class Server():
                 # 发送数据给客户端
                 connect.sendall(b'your words has received.')
                 print(b'the client say:' + data)
+                connect.sendall(b'what do you want to do? read or write?')
+                if self.receive_data == False:
+                    self.receive_data = True
+                    self.receiver = str(data, encoding = "utf-8")
+                    self.receive_data = writefile(connect,str(data, encoding = "utf-8"),self.receiver)
+                    if self.receive_data == False: #代表不再需要存入
+                        self.receiver = ''
+                else:
+                    print(self.receiver)
+                    self.receive_data = writefile(connect,str(data, encoding = "utf-8"),self.receiver)
+                    if self.receive_data == False: #代表不再需要存入
+                        self.receiver = ''
                 #do something here......
-            
             
     def _WaitConnect(self):
         while True:
