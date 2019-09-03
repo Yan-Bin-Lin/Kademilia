@@ -7,16 +7,16 @@ Created on 2019年9月1日
 import socket
 import threading
 
-from handler.communicate import writefile
-from handler.communicate import testwrite
-from util.web import GetLocalIP
+from ..handler.communicate import writefile
+from ..handler.communicate import testwrite
+from ..util.web import GetLocalIP
 
 
 # a server socket class
 class Server():
     def __init__(self, ServePort=0):
         #server local IP
-        self.LocalIP = self._get_host_ip()
+        self.LocalIP = GetLocalIP()#self._get_host_ip()
         # 创建一个socket套接字，该套接字还没有建立连接
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # 绑定监听端口，这里必须填本机的IP192.168.27.238，localhost和127.0.0.1是本机之间的进程通信使用的
@@ -65,22 +65,6 @@ class Server():
             connect, (host, port) = self.server.accept()
             print(u'the client %s:%s has connected.' % (host, port))
             threading._start_new_thread(self._communicate, (connect, host, port))        
-            
-            
-    #get local IP
-    def _get_host_ip(self):
-        try:
-            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            s.connect(('8.8.8.8', 80))
-            ip = s.getsockname()[0]
-        finally:
-            s.close()
-        return ip
 
-        
-        
- 
-
-        
         
     

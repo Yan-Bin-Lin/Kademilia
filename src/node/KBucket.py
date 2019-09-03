@@ -31,17 +31,37 @@ class KBucket():
         self.bucket.pop(ID, None)
         
     
-    # return a NodeData if it is in the bucket, else return None 
-    def GetNode(self, ID):
-        return self.bucket.get(ID, None)
+    # check if a node is in bucket and alive
+    def CheckNode(self, ID):
+        if ID in self.bucket:
+            return self.IsExist(ID)
+        return False
+    
+
+    def GetNode(self, *args):
+        '''
+        return a NodeData 
+        if there is a parmeter "ID", return the node if it is in the bucket, else return none 
+        if you don't give any parmeter, return a alive node, or return false if there is no alive node       
+        '''
+        # if receive parmeter "ID"
+        if len(args) == 1:
+            return self.bucket[args[0]] if self.CheckNode(args[0]) else None
+        # if no parmeter
+        else:
+            for ID, node in self.bucket.items():
+                if self.IsExist(ID):
+                    return self.bucket[ID]
+        return  None
         
     
-    # check if the node is exist
+    # check if the node in bucket is exist
     def IsExist(self, ID):
-        pass
         # call handler function here...
-    
-    
+        
+        return True# return true or false
+        
+            
     # return number of node in the Kbucket
     def length(self):
         return len(self.bucket)
