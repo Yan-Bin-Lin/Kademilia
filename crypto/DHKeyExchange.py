@@ -21,7 +21,7 @@ class DH(asycalgori):
         # Generate a private key for use in the exchange.
         self.PrivateKey = parameters.generate_private_key()
         # create public key
-        self.CreatePublicKey()
+        self._CreatePublicKey()
         
         if PublicKey != None:
             self.CreateShareKey(PublicKey)

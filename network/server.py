@@ -6,13 +6,15 @@ Created on 2019年9月1日
 '''
 import socket
 import threading
+
 from handler.communicate import writefile
 from handler.communicate import testwrite
+from util.web import GetLocalIP
 
 
 # a server socket class
 class Server():
-    def __init__(self, ServePort):
+    def __init__(self, ServePort=0):
         #server local IP
         self.LocalIP = self._get_host_ip()
         # 创建一个socket套接字，该套接字还没有建立连接
@@ -30,6 +32,11 @@ class Server():
         #start serving
         threading._start_new_thread(self._WaitConnect, ())                     
         
+        
+    # get the sever socket bindind address    
+    def GetAddress(self):
+        return self.server.getsockname()
+
         
     def _communicate(self, connect, host, port):
         while True:

@@ -16,20 +16,20 @@ class RSA(asycalgori):
     def __init__(self, SaveKeyPath = None):
         super()
         if SaveKeyPath == None:
-            self._NewKey()
+            self.NewKey()
         else:
             self.LoadKey(SaveKeyPath)
-        self.CreatePublicKey()
+        
         
         
     # create new RSA KEY
-    def _NewKey(self):
+    def NewKey(self):
         self.PrivateKey = rsa.generate_private_key(
             public_exponent=65537,
             key_size=2048,
             backend=default_backend()
         )
-
+        self._CreatePublicKey()
 
 
     # use private to sign data
@@ -56,14 +56,16 @@ class RSA(asycalgori):
                 ),
                 hashes.SHA256()
             )
+        # verify error
         except InvalidSignature:
             return False
+        # something error
         except:
             return False
+        # verify complete
         else: 
             return True
     
-        
         
     
     # use "others" public key to encrypt data      

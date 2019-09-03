@@ -15,7 +15,7 @@ class asycalgori():
         self.PublicKey
         
     # generate public key from private key    
-    def CreatePublicKey(self):
+    def _CreatePublicKey(self):
         self.PublicKey = self.PrivateKey.public_key()
         
         

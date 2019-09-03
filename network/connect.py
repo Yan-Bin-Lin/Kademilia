@@ -12,7 +12,7 @@ from .server import Server
 
 # handle server and client connect
 class Connect():
-    def __init__(self, ServePort):
+    def __init__(self, ServePort=0):
         self.server = Server(ServePort)
         self.clients = {}
     
@@ -20,6 +20,11 @@ class Connect():
     def run(self):
         self.server.start()
       
+        
+    # return server binding address
+    def GetServeAddress(self):
+        return self.server.GetAddress() 
+    
         
     def _request(self, ConnectIP, msg):        
         result = self.clients[ConnectIP].request(msg)    
