@@ -49,6 +49,7 @@ class Server():
                     self.receive_data = False
                 else:
                     self.receive_data = True
+
             
     def _WaitConnect(self):
         while True:
