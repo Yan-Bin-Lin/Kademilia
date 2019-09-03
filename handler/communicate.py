@@ -4,7 +4,7 @@ Created on 2019年9月2日
 
 @author: danny
 '''
-def writefile(connect,data,receive): #receive代表要開啟的檔案 data是要存入的內容 
+def writefile(connect,data,receive): #receive代表要開啟的檔案 data是要存入的內容 功能是寫入內容
     if data != 'end' and receive != '':
         filename = '/Users/jerrylin/Desktop/105703044/專題/Kademilia-master-3/Kademilia/' + receive +'.txt'
         f = open(filename,'a',encoding = 'UTF-8')
@@ -15,7 +15,7 @@ def writefile(connect,data,receive): #receive代表要開啟的檔案 data是要
     else:
         return False
 
-def testwrite(receive,connect,data,receiver):
+def testwrite(receive,connect,data,receiver): #receive代表要開啟的檔案 data是要存入的內容 功能是判段是否寫入 還有寫入的位置
     if receive == False:
         receive = True
         receiver = str(data, encoding = "utf-8")
