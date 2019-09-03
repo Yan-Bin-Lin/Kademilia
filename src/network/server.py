@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+#-*- coding: UTF-8 -*-
 '''
 Created on 2019年9月1日
 
@@ -47,13 +47,20 @@ class Server():
                 print(b'the client has quit.')
                 break
             else:
-                # 发送数据给客户端
+                # 发送数据给客户端 
                 connect.sendall(b'your words has received.')
                 print(b'the client say:' + data)
-                self.receiver = testwrite(self.receive_data ,connect, data,self.receiver)
-                print(self.receiver)
-                if self.receiver == '':
+                data = str(data, encoding = "utf-8")
+                if data == 'trans':
+                    self.transaction = 0
+                self.receiver = testwrite(self.receive_data, data,self.receiver,self.transaction)
+                if self.receiver == '' and self.transaction >= 0: #改檔名
+                    self.transaction = -1
                     self.receive_data = False
+                elif self.receiver == '':
+                    self.receive_data = False
+                elif self.transaction >= 0:
+                    self.transaction = self.transaction + 1
                 else:
                     self.receive_data = True
 
