@@ -7,6 +7,8 @@ Created on 2019年9月1日
 import socket
 import threading
 from handler.communicate import writefile
+from handler.communicate import testwrite
+
 
 # a server socket class
 class Server():
@@ -41,19 +43,12 @@ class Server():
                 # 发送数据给客户端
                 connect.sendall(b'your words has received.')
                 print(b'the client say:' + data)
-                connect.sendall(b'what do you want to do? read or write?')
-                if self.receive_data == False:
-                    self.receive_data = True
-                    self.receiver = str(data, encoding = "utf-8")
-                    self.receive_data = writefile(connect,str(data, encoding = "utf-8"),self.receiver)
-                    if self.receive_data == False: #代表不再需要存入
-                        self.receiver = ''
+                self.receiver = testwrite(self.receive_data ,connect, data,self.receiver)
+                print(self.receiver)
+                if self.receiver == '':
+                    self.receive_data = False
                 else:
-                    print(self.receiver)
-                    self.receive_data = writefile(connect,str(data, encoding = "utf-8"),self.receiver)
-                    if self.receive_data == False: #代表不再需要存入
-                        self.receiver = ''
-                #do something here......
+                    self.receive_data = True
             
     def _WaitConnect(self):
         while True:
