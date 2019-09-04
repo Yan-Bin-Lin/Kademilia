@@ -10,6 +10,7 @@ import threading
 from ..handler.communicate import writefile
 from ..handler.communicate import testwrite
 from ..util.web import GetLocalIP
+from ..handler.handler import MainHandle
 
 
 # a server socket class
@@ -42,6 +43,9 @@ class Server():
         while True:
             # 接受客户端的数据
             data = connect.recv(1024)
+            MainHandle(data)
+            # 下面這一坨讓main handle決定要用哪些function
+            '''
             # 如果接受到客户端要quit就结束循环
             if data == b'quit' or data == b'':
                 print(b'the client has quit.')
@@ -63,7 +67,8 @@ class Server():
                     self.transaction = self.transaction + 1
                 else:
                     self.receive_data = True
-
+            '''
+            # 上面這一坨讓main handle決定要用哪些function
             
     def _WaitConnect(self):
         while True:
@@ -72,6 +77,5 @@ class Server():
             connect, (host, port) = self.server.accept()
             print(u'the client %s:%s has connected.' % (host, port))
             threading._start_new_thread(self._communicate, (connect, host, port))        
-
         
     
