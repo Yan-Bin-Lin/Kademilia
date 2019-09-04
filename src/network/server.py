@@ -13,6 +13,7 @@ from ..handler.communicate import cut_ID
 from ..handler.communicate import cut_data
 from ..handler.communicate import cut_mode
 from ..util.web import GetLocalIP
+from ..handler.handler import MainHandle
 
 
 # a server socket class
@@ -42,7 +43,14 @@ class Server():
     def _communicate(self, connect, host, port):
         while True:
             # 接受客户端的数据
+<<<<<<< HEAD
             msg = connect.recv(1024)
+=======
+            data = connect.recv(1024)
+            MainHandle(data)
+            # 下面這一坨讓main handle決定要用哪些function
+            '''
+>>>>>>> 75698f102553a32e18b1516d384474d11e4394f3
             # 如果接受到客户端要quit就结束循环
             if msg == b'quit' or msg == b'':
                 print(b'the client has quit.')
@@ -55,9 +63,15 @@ class Server():
                 if cut_mode(msg) == 0 : 
                     content = read(cut_ID(msg))
                 else:
+<<<<<<< HEAD
                     select_mode(cut_mode(msg),cut_ID(msg),cut_ID(msg),cut_data(msg))
 
 
+=======
+                    self.receive_data = True
+            '''
+            # 上面這一坨讓main handle決定要用哪些function
+>>>>>>> 75698f102553a32e18b1516d384474d11e4394f3
             
     def _WaitConnect(self):
         while True:
@@ -66,6 +80,5 @@ class Server():
             connect, (host, port) = self.server.accept()
             print(u'the client %s:%s has connected.' % (host, port))
             threading._start_new_thread(self._communicate, (connect, host, port))        
-
         
     
