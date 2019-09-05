@@ -26,7 +26,6 @@ def MainHandle(connect, data):
     #if instruction.find('ping'):
     if data.find(b'ping'):
         pass
-
         '''
         # set to no block
         connect.setblocking(0) 

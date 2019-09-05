@@ -15,3 +15,4 @@ def GetHash(data, OutSize=8):
 if __name__ == '__main__':
     data = ('122331', 'pooe')
     print(GetHash(data))
+

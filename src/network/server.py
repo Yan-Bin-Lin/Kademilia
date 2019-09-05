@@ -7,8 +7,11 @@ Created on 2019年9月1日
 import socket
 import threading
 
-#from kademilia.src.handler.file import writefile
-#from kademilia.src.handler.file import testwrite
+from ..handler.file import read
+from ..handler.file import select_mode
+from ..handler.file import cut_ID
+from ..handler.file import cut_data
+from ..handler.file import cut_mode
 from ..util.web import GetLocalIP
 from ..handler.handler import MainHandle
 
@@ -25,9 +28,10 @@ class Server():
         # 开始监听，并设置最大连接数
         self.server.listen(5)        
         print(self.GetAddress())
+        
         self.receive_data = False
         self.receiver = ''
-    
+
     
     def start(self):
         #start serving
@@ -40,38 +44,33 @@ class Server():
 
         
     def _communicate(self, connect, host, port):
-        i = 0
         while True:
             # block to wait for receive
             connect.setblocking(1)
             # 接受客户端的数据
             data = connect.recv(1024)
             # 由main handle決定處理方法
-            print(f'i am in communicate, loop time = {i}')
-            i += 1
             MainHandle(connect, data)
             # 下面這一坨讓main handle決定要用哪些function
             '''
+>>>>>>> 75698f102553a32e18b1516d384474d11e4394f3
             # 如果接受到客户端要quit就结束循环
-            if data == b'quit' or data == b'':
+            if msg == b'quit' or msg == b'':
                 print(b'the client has quit.')
                 break
             else:
                 # 发送数据给客户端 
                 connect.sendall(b'your words has received.')
-                print(b'the client say:' + data)
-                data = str(data, encoding = "utf-8")
-                if data == 'trans':
-                    self.transaction = 0
-                self.receiver = testwrite(self.receive_data, data,self.receiver,self.transaction)
-                if self.receiver == '' and self.transaction >= 0: #改檔名
-                    self.transaction = -1
-                    self.receive_data = False
-                elif self.receiver == '':
-                    self.receive_data = False
-                elif self.transaction >= 0:
-                    self.transaction = self.transaction + 1
+                print(b'the client say:' + msg)
+                msg = str(msg, encoding = "utf-8")
+                if cut_mode(msg) == 0 : 
+                    content = read(cut_ID(msg))
                 else:
+<<<<<<< HEAD
+                    select_mode(cut_mode(msg),cut_ID(msg),cut_ID(msg),cut_data(msg))
+
+
+=======
                     self.receive_data = True
             '''
             # 上面這一坨讓main handle決定要用哪些function

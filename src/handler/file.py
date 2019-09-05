@@ -1,52 +1,47 @@
 # -*- coding: UTF-8 -*-
-'''
-Created on 2019年9月2日
+import os
 
-@author: danny
-'''
-def writefile(data,receive,transaction): #receive代表要開啟的檔案 data是要存入的內容 功能是寫入內容
-    if data != 'end' and receive != '':
-        if transaction >= 0:
-            filename = '/Users/jerrylin/Desktop/105703044/專題/Kademilia-master-3/Kademilia/' + 'temp' +'.txt'
-        else:
-            filename = '/Users/jerrylin/Desktop/105703044/專題/Kademilia-master-3/Kademilia/' + receive +'.txt'
-        f = open(filename,'a',encoding = 'UTF-8')
-        if transaction >= 0:
-            transaction_template = copy(transaction)
-            f.write(transaction_template)
-        f.write(data) #finish write
-        f.close()
-        return True
-    elif transaction >= 0:
-        return False
-    else:
-        return False
+def writefile(filename,data): #receive代表要開啟的檔案 data是要存入的內容 功能是寫入內容       
+    path1=os.path.abspath('..') 
+    filesite = path1 + filename +'.txt'
+    f = open(filesite,'a',encoding = 'UTF-8')
+    f.write(data) #finish write
+    f.close()
 
-def testwrite(receive,data,receiver,transaction): #receive 代表是否正在寫入某個檔案 receiver代表要開啟的檔案 data是要存入的內容 功能是判段是否正在寫入 
-    if receive == False:
-        receive = True
-        receiver = data
-        receive = writefile(data,receiver,transaction)
-        if receive == False: #代表不再需要存入
-            receiver = ''
-        return receiver
-    else:
-        receive = writefile(data,receiver,transaction)
-        if receive == False: #代表不再需要存入
-            receiver = ''
-        return receiver
-
-def modify(receive,line,data):
-    filename = '/Users/jerrylin/Desktop/105703044/專題/Kademilia-master-3/Kademilia/' + receive +'.txt'
-    f = open(filename,'r')
+def modify(filename,data):
+    path1=os.path.abspath('..') 
+    filesite = path1 + filename +'.txt'
+    f = open(filesite,'r')
     filelist = f.readlines()
-    filelist[line] = data
+    filelist[1] = data #決定改第幾行的部分還沒寫
     f = open(filename,'w')
     f.writelines(filelist)
     f.close()
 
-def copy(transaction):
-    filename = '/Users/jerrylin/Desktop/105703044/專題/Kademilia-master-3/Kademilia/transaction.txt'
-    f = open(filename,'r')
+def read(filename):
+    path1=os.path.abspath('..') 
+    filesite = path1 + filename +'.txt'
+    f = open(filesite,'r')
     filelist = f.readlines()
-    return filelist[transaction]
+    return filelist
+
+
+
+    
+def cut_mode(msg):
+    return msg[0]
+
+def cut_ID(msg):
+    return msg[1:161]
+
+def cut_data(msg):
+    return msg[161:]        
+
+def select_mode(mode,ID,filename,data):
+    if mode == 1 : #append
+        writefile(filename,data)
+    if mode == 2 : 
+        modify(filename,data)
+    
+        
+    

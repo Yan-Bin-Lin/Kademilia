@@ -1,0 +1,13 @@
+Lender:
+private_key: 
+sign_date:
+signature:
+Borrower:
+private_key: 
+sign_date:
+signature:
+Transaction:
+start_date:
+end_date:
+amount:
+interest:

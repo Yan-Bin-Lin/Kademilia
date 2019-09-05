@@ -1,0 +1,9 @@
+clientID = Node ID => 160 bits
+filename = Hash(clientID + serverID => 320 bits) 
+clientdata = 
+lender => 160 bits
+sign_date => 
+signature => 2048 bits
+
+
+mode (1 = change key, 2 = transaction, 3 = modify, 4 = save file)
