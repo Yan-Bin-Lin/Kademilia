@@ -5,7 +5,7 @@ Created on 2019年9月1日
 @author: danny
 '''
 
-from network.connect import Connect
+from src.network.connect import Connect
 
 serveport = 6687
 

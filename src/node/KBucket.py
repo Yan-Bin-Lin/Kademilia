@@ -7,6 +7,7 @@ Created on 2019年9月3日
 
 from collections import OrderedDict
 
+from ..handler.communicate import ping
     
 class KBucket():
     '''
@@ -44,8 +45,11 @@ class KBucket():
         if there is a parmeter "ID", return the node if it is in the bucket, else return none 
         if you don't give any parmeter, return a alive node, or return false if there is no alive node       
         '''
+        #print('args = ' + args[0])
         # if receive parmeter "ID"
         if len(args) == 1:
+            print('i am in GetNode(ID) len1, i will return')
+            print(self.bucket[args[0]])
             return self.bucket[args[0]] if self.CheckNode(args[0]) else None
         # if no parmeter
         else:
@@ -57,9 +61,7 @@ class KBucket():
     
     # check if the node in bucket is exist
     def IsExist(self, ID):
-        # call handler function here...
-        
-        return True# return true or false
+        return ping(self.bucket[ID].GetAddress())
         
             
     # return number of node in the Kbucket

@@ -4,6 +4,7 @@ Created on 2019年9月3日
 
 @author: danny
 '''
+from cryptography.hazmat.primitives import serialization
 
 class NodeData():
     '''
@@ -15,7 +16,16 @@ class NodeData():
         self._address = address
         self._PublicKey = PublicKey
         self._ID = ID
-        
+    
+    
+    # return self id dict format
+    def GetData(self): 
+        return {
+                    'address' : self._address,
+                    'PublicKey' : self.GetBytePubKey(),
+                    'ID' : self._ID
+                }
+    
         
     def GetID(self):
         return self._ID
@@ -35,4 +45,11 @@ class NodeData():
     
     def GetPublicKey(self):
         return self._PublicKey
-     
+    
+    
+    # convert public key to byte format if you need to send to other or save at disk
+    def GetBytePubKey(self):
+        return self._PublicKey.public_bytes(
+                encoding=serialization.Encoding.PEM,
+                format=serialization.PublicFormat.SubjectPublicKeyInfo
+                )

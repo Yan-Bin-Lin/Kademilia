@@ -21,7 +21,6 @@ class RSA(asycalgori):
             self.LoadKey(SaveKeyPath)
         
         
-        
     # create new RSA KEY
     def NewKey(self):
         self.PrivateKey = rsa.generate_private_key(

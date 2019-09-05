@@ -8,7 +8,7 @@ import threading
 
 from .client import Client
 from .server import Server
-
+from ..handler import communicate
 
 # handle server and client connect
 class Connect():
@@ -26,24 +26,30 @@ class Connect():
         return self.server.GetAddress() 
     
         
-    def _request(self, ConnectIP, msg):        
-        result = self.clients[ConnectIP].request(msg)    
-        if result == 'ERROR':
-            del self.clients[ConnectIP]
-            #do something...
-        
-        
-    def _CheckClient(self, ConnectIP, port):
-        if ConnectIP not in self.clients:
-            self.clients[ConnectIP] = Client(ConnectIP, port)
+    def _CheckClient(self, address):
+        if address not in self.clients:
+            self.clients[address] = Client(address)
       
       
-    # send message to other IP    
-    def send(self, ConnectIP, port, msg):
-        self._CheckClient(ConnectIP, port)
-        threading._start_new_thread(self._request, (ConnectIP, msg))                 
-
-            
-
+    # send message to other node that don't need to respond in a few time
+    # no blocking    
+    def send(self, address, msg):
+        self._CheckClient(address)
+        threading._start_new_thread(self.clients[address].request(msg), (self.clients[address], msg))                 
+    
+    
+    # send message to other node that need to respond in a few time, ex. ping...   
+    # blocking        
+    def request(self, address, msg):  
+        self._CheckClient(address)      
+        result = self.clients[address].request(msg)
         
-        
+    
+    # send message to other node that need to respond in a few time, ex. ping...   
+    # blocking
+    def CheckResponse(self, address):
+        if self.clients[address].RequestStatus:
+            return True
+        else:
+            del self.clients[address]
+            return False

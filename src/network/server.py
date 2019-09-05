@@ -7,8 +7,8 @@ Created on 2019年9月1日
 import socket
 import threading
 
-from ..handler.communicate import writefile
-from ..handler.communicate import testwrite
+#from kademilia.src.handler.file import writefile
+#from kademilia.src.handler.file import testwrite
 from ..util.web import GetLocalIP
 from ..handler.handler import MainHandle
 
@@ -24,7 +24,7 @@ class Server():
         self.server.bind((self.LocalIP, ServePort)) 
         # 开始监听，并设置最大连接数
         self.server.listen(5)        
-        print(self.LocalIP)
+        print(self.GetAddress())
         self.receive_data = False
         self.receiver = ''
     
@@ -40,10 +40,16 @@ class Server():
 
         
     def _communicate(self, connect, host, port):
+        i = 0
         while True:
+            # block to wait for receive
+            connect.setblocking(1)
             # 接受客户端的数据
             data = connect.recv(1024)
-            MainHandle(data)
+            # 由main handle決定處理方法
+            print(f'i am in communicate, loop time = {i}')
+            i += 1
+            MainHandle(connect, data)
             # 下面這一坨讓main handle決定要用哪些function
             '''
             # 如果接受到客户端要quit就结束循环
@@ -69,6 +75,7 @@ class Server():
                     self.receive_data = True
             '''
             # 上面這一坨讓main handle決定要用哪些function
+            
             
     def _WaitConnect(self):
         while True:

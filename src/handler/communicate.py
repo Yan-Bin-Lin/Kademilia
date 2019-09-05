@@ -1,52 +1,64 @@
 # -*- coding: UTF-8 -*-
 '''
-Created on 2019年9月2日
+Created on 2019年9月4日
 
 @author: danny
 '''
-def writefile(data,receive,transaction): #receive代表要開啟的檔案 data是要存入的內容 功能是寫入內容
-    if data != 'end' and receive != '':
-        if transaction >= 0:
-            filename = '/Users/jerrylin/Desktop/105703044/專題/Kademilia-master-3/Kademilia/' + 'temp' +'.txt'
-        else:
-            filename = '/Users/jerrylin/Desktop/105703044/專題/Kademilia-master-3/Kademilia/' + receive +'.txt'
-        f = open(filename,'a',encoding = 'UTF-8')
-        if transaction >= 0:
-            transaction_template = copy(transaction)
-            f.write(transaction_template)
-        f.write(data) #finish write
-        f.close()
-        return True
-    elif transaction >= 0:
-        return False
-    else:
-        return False
 
-def testwrite(receive,data,receiver,transaction): #receive 代表是否正在寫入某個檔案 receiver代表要開啟的檔案 data是要存入的內容 功能是判段是否正在寫入 
-    if receive == False:
-        receive = True
-        receiver = data
-        receive = writefile(data,receiver,transaction)
-        if receive == False: #代表不再需要存入
-            receiver = ''
-        return receiver
-    else:
-        receive = writefile(data,receiver,transaction)
-        if receive == False: #代表不再需要存入
-            receiver = ''
-        return receiver
+import threading
+import time
+import socket
 
-def modify(receive,line,data):
-    filename = '/Users/jerrylin/Desktop/105703044/專題/Kademilia-master-3/Kademilia/' + receive +'.txt'
-    f = open(filename,'r')
-    filelist = f.readlines()
-    filelist[line] = data
-    f = open(filename,'w')
-    f.writelines(filelist)
-    f.close()
+# msg, connect(a client socket to send*), wait(wait time), 
+# args only exist when connect is None, args[0] sould be an address
+#def request(msg, connect = None, *args, wait = 2): 
 
-def copy(transaction):
-    filename = '/Users/jerrylin/Desktop/105703044/專題/Kademilia-master-3/Kademilia/transaction.txt'
-    f = open(filename,'r')
-    filelist = f.readlines()
-    return filelist[transaction]
+
+# create a client socket and connect to server
+def link(address, wait = 5):
+    # create a new client
+    peer = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # set connect time limit
+    peer.settimeout(wait)
+    try:
+        peer.connect(address)
+    except:
+        # connect fail
+        peer = None
+    return peer
+    
+
+# send message to other node that need to respond in a few time, ex. ping,...  
+# a connect should be a socket that has connect or accept
+# if connect = None, create a new socket and "address" should be gave
+# blocking
+def request(msg, connect = None, address = None, wait = 5):
+    if connect == None:
+        connect = link(address, wait)
+        if connect == None:
+            # create socket fail
+            print(' create socket fail')
+            return None
+        
+    # 发送数据
+    connect.sendall(msg.encode('utf-8'))
+    time.sleep(wait)
+    try:
+        print('try receive..')
+        response = connect.recv(1024)
+    except:
+        response = None
+    print('request response = ' + str(response))
+    return response
+    
+    
+# send message to other node that don't need to respond in a few time
+# no blocking    
+def send(msg, connect = None, address = None):
+    threading._start_new_thread(request, (msg, connect, address))                 
+
+
+# test if a node is online
+def ping(address):
+    print('ping address is ' + str(address))
+    return True if request('ping', None, address) != None else False
