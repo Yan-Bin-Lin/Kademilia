@@ -8,7 +8,7 @@ import threading
 
 from .client import Client
 from .server import Server
-from ..handler import communicate
+from ..network import communicate
 
 # handle server and client connect
 class Connect():
@@ -26,17 +26,18 @@ class Connect():
         return self.server.GetAddress() 
     
         
-    def _CheckClient(self, address):
-        if address not in self.clients:
-            self.clients[address] = Client(address)
-      
+    def _CheckConnect(self, ID, connect, address, wait = 5):
+        self.clients[ID] = communicate.link(address, connect, wait)
+        
       
     # send message to other node that don't need to respond in a few time
-    # no blocking    
-    def send(self, address, msg):
-        self._CheckClient(address)
-        threading._start_new_thread(self.clients[address].request(msg), (self.clients[address], msg))                 
-    
+    # no blocking
+    #def send(msg, peer, connect = None, address = None, wait = 5):
+    def send(self, msg, node, connect):
+        ID = node.GetID()
+        self._CheckClient(ID, connect)
+        communicate.send(msg, self.clients[ID], node.GetAddress())
+            
     
     # send message to other node that need to respond in a few time, ex. ping...   
     # blocking        

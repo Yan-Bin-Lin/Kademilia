@@ -1,0 +1,20 @@
+data = {
+	# which node request
+	'origin' : 'OriginNodeData'
+	
+	# the node origin node request to
+	'destination' : ''
+	
+	
+	#the node request for what?
+    '''
+	instruct[0] = http method
+	instruct[1] = call function
+	instruct[2:] = argument...
+	'''
+	'instruct' : ['GET', 'ID', 'args...', ]
+	#'instruct' : ['REPLY', 'ID', 'args...', ]
+	
+	# this request has handle by which node?
+	'path' : ['OriginNodeData', 'MiddleNodeData', '...', 'DestinationNodeData']
+}

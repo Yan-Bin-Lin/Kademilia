@@ -6,9 +6,6 @@ Created on 2019年9月3日
 '''
 
 import socket
-import time
-
-from ..handler.communicate import request
 
 #get local IP
 def GetLocalIP():

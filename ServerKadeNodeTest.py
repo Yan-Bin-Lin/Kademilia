@@ -5,14 +5,11 @@ Created on 2019年9月5日
 @author: danny
 '''
 from src.node.KadeNode import KadeNode
-import pickle
     
 
 if __name__ == '__main__':
-    server = KadeNode(ID = '01010100')
-    
-    with open('test_save', 'wb') as file:
-        pickle.dump(server.NodeData.GetData(), file)
+    server = KadeNode(ID = '00000000')
+    server.save('server_save')
     
     while(1):
         pass

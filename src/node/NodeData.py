@@ -6,13 +6,14 @@ Created on 2019年9月3日
 '''
 from cryptography.hazmat.primitives import serialization
 
+
 class NodeData():
     '''
     a NodeData shoule content IP, PublicKey and ID
     !!you should not change data!!
     '''
     #address(IP, port), PublicKey, ID
-    def __init__(self, address, PublicKey, ID):
+    def __init__(self, address = None, PublicKey = None, ID = None):
         self._address = address
         self._PublicKey = PublicKey
         self._ID = ID
@@ -22,7 +23,7 @@ class NodeData():
     def GetData(self): 
         return {
                     'address' : self._address,
-                    'PublicKey' : self.GetBytePubKey(),
+                    'PublicKey' : self.GetByteStringPubKey(),
                     'ID' : self._ID
                 }
     
@@ -47,9 +48,9 @@ class NodeData():
         return self._PublicKey
     
     
-    # convert public key to byte format if you need to send to other or save at disk
-    def GetBytePubKey(self):
-        return self._PublicKey.public_bytes(
-                encoding=serialization.Encoding.PEM,
-                format=serialization.PublicFormat.SubjectPublicKeyInfo
-                )
+    # convert public key to string format if you need to send to other or save at disk
+    def GetByteStringPubKey(self):
+        return None if self._PublicKey == None else self._PublicKey.public_bytes(
+                                                                                encoding=serialization.Encoding.PEM,
+                                                                                format=serialization.PublicFormat.SubjectPublicKeyInfo
+                                                                                ).decode("utf-8")

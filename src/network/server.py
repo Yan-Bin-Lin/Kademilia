@@ -27,10 +27,7 @@ class Server():
         self.server.bind((self.LocalIP, ServePort)) 
         # 开始监听，并设置最大连接数
         self.server.listen(5)        
-        print(self.GetAddress())
-        
-        self.receive_data = False
-        self.receiver = ''
+        self.KadeNode = None
 
     
     def start(self):
@@ -46,11 +43,12 @@ class Server():
     def _communicate(self, connect, host, port):
         while True:
             # block to wait for receive
-            connect.setblocking(1)
+            #connect.setblocking(1)
             # 接受客户端的数据
-            data = connect.recv(1024)
-            # 由main handle決定處理方法
-            MainHandle(connect, data)
+            data = connect.recv(10240)
+            if data != b'':
+                # 由main handle決定處理方法
+                MainHandle(connect, data, self.KadeNode)
             # 下面這一坨讓main handle決定要用哪些function
             '''
 >>>>>>> 75698f102553a32e18b1516d384474d11e4394f3

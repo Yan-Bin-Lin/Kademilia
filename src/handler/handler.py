@@ -5,29 +5,35 @@ Created on 2019年9月4日
 @author: danny
 '''
 import ast
-
-from .file import *
-from .communicate import *
+import json
+from .respond import *
 
 # main handler here
-def MainHandle(connect, data):
-    print('i got handle')
-    print(f'data is {data}')
-    #刪除下面
-    connect.sendall(b'ok')
-    #刪除上面
+def MainHandle(connect, data, KadeNode):
+    print(f'server receive data, data is {data}')
     # change string to dict
+    data = json.loads(data)
+    instruct = data.get('instruct', None)
     '''
-    data = ast.literal_eval(data)
-    instruction = data.get('instruction', ping)
-    from_ = data.get('from_', '10101010')
+    origin = data.get('origin', None)
+    destination = data.get('destination', None)
+    path = data.get('data', None)
     '''
     # if condition here
-    #if instruction.find('ping'):
-    if data.find(b'ping'):
-        pass
-        '''
-        # set to no block
-        connect.setblocking(0) 
-        print(request('ok'))
-        '''
+    if instruct[0] == 'TRACE':
+        # handle for 'ping' request
+        print('Get a ping request, return ok')
+        connect.sendall(b'ping ok')
+    
+    elif instruct[0] == 'GET':
+        # handle for get node request
+        if instruct[1] == 'node':
+            print('Get a GET node request return replyGETNODE')
+            ReplyGetNode(data, KadeNode)
+    
+    elif instruct[0] == 'REPLY':
+        # handle for reply node
+        if instruct[1] == 'node':
+            ReceiveNode(data, KadeNode)
+
+        
