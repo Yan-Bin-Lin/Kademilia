@@ -13,7 +13,7 @@ from src.node.NodeData import NodeData
 
 if __name__ == '__main__':
     
-    instruct = input('please enter m for a middle node or for end node\n')
+    instruct = input('please enter "m" for a middle node, "n" for the next of middle node or else for end node\n')
     
     if instruct == 'n':
         
@@ -21,7 +21,7 @@ if __name__ == '__main__':
         middle = KadeNode(ID = '00000001')
         middle.save('00000001')
 
-        with open('server_save', 'rb') as file:
+        with open('server_save.txt', 'rb') as file:
             server = pickle.load(file)
 
         middle.update(server)
@@ -34,7 +34,7 @@ if __name__ == '__main__':
         middle = KadeNode(ID = '01010101')
         middle.save('client_save')
 
-        with open('00000001', 'rb') as file:
+        with open('00000001.txt', 'rb') as file:
             server = pickle.load(file)
 
         middle.update(server)
@@ -45,7 +45,7 @@ if __name__ == '__main__':
         print(' i am a end node...   ID = "11111111"')
         end = KadeNode(ID = '11111111')
         
-        with open('client_save', 'rb') as file:
+        with open('client_save.txt', 'rb') as file:
             middle = pickle.load(file)
             
         end.update(middle)

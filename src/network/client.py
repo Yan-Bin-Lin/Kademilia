@@ -28,6 +28,7 @@ class Client():
         self._connect = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # set connect time limit
         self._connect.settimeout(self.wait)
+        print(f'start to connect {self.address}')
         self._connect.connect(self.address)
         '''
         try:

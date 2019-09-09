@@ -26,7 +26,8 @@ class Server():
         # 绑定监听端口，这里必须填本机的IP192.168.27.238，localhost和127.0.0.1是本机之间的进程通信使用的
         self.server.bind((self.LocalIP, ServePort)) 
         # 开始监听，并设置最大连接数
-        self.server.listen(5)        
+        self.server.listen(5)
+        print(f'serve at {self.GetAddress()}')
         self.KadeNode = None
 
     

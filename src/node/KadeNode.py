@@ -74,7 +74,7 @@ class KadeNode():
     # save node data
     def save(self, path='test_save'):
         #path += '/' + self.ID
-        with open(path, 'wb') as file:
+        with open(path + '.txt', 'wb') as file:
             pickle.dump(self.NodeData.GetData(), file)
         
     
