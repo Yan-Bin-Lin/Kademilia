@@ -55,9 +55,9 @@ def ReplyGetNode(data, KadeNode):
         
 
 # receive the request node
-def ReceiveNode(data, KadeNode):
+def ReceiveGetNode(data, KadeNode):
     KadeNode.update(data['destination'])
-    print('LookUp success!!!!!!!')
+    print(f'LookUp success!!!!!!!   I find the node {data["destination"]["ID"]}')
     
 
 # test if a node is online, if true return socket else none

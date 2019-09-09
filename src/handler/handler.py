@@ -34,6 +34,6 @@ def MainHandle(connect, data, KadeNode):
     elif instruct[0] == 'REPLY':
         # handle for reply node
         if instruct[1] == 'node':
-            ReceiveNode(data, KadeNode)
+            ReceiveGetNode(data, KadeNode)
 
         
