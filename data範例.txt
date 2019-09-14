@@ -2,9 +2,8 @@ data = {
 	# which node request
 	'origin' : 'OriginNodeData'
 	
-	# the node origin node request to
+	# the origin node request to
 	'destination' : ''
-	
 	
 	#the node request for what?
     '''
@@ -17,4 +16,18 @@ data = {
 	
 	# this request has handle by which node?
 	'path' : ['OriginNodeData', 'MiddleNodeData', '...', 'DestinationNodeData']
+	
+	# the content of this request, e.q. file...
+	'content' : {
+		# hash value of content
+		'FileID' : 'content hash value'
+		
+		# who has save this file
+		'saver' : [('OriginNodeData', 2), ('MiddleNodeData', 2), '...', ('DestinationNodeData', 2)]
+		
+		# the content of content
+		'file' : {
+		
+		}
+	}
 }

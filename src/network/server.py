@@ -7,13 +7,8 @@ Created on 2019年9月1日
 import socket
 import threading
 
-from ..handler.file import read
-from ..handler.file import select_mode
-from ..handler.file import cut_ID
-from ..handler.file import cut_data
-from ..handler.file import cut_mode
 from ..util.web import GetLocalIP
-from ..handler.handler import MainHandle
+from ..handler.handler import RespondHandle
 
 
 # a server socket class
@@ -49,30 +44,7 @@ class Server():
             data = connect.recv(10240)
             if data != b'':
                 # 由main handle決定處理方法
-                MainHandle(connect, data, self.KadeNode)
-            # 下面這一坨讓main handle決定要用哪些function
-            '''
->>>>>>> 75698f102553a32e18b1516d384474d11e4394f3
-            # 如果接受到客户端要quit就结束循环
-            if msg == b'quit' or msg == b'':
-                print(b'the client has quit.')
-                break
-            else:
-                # 发送数据给客户端 
-                connect.sendall(b'your words has received.')
-                print(b'the client say:' + msg)
-                msg = str(msg, encoding = "utf-8")
-                if cut_mode(msg) == 0 : 
-                    content = read(cut_ID(msg))
-                else:
-<<<<<<< HEAD
-                    select_mode(cut_mode(msg),cut_ID(msg),cut_ID(msg),cut_data(msg))
-
-
-=======
-                    self.receive_data = True
-            '''
-            # 上面這一坨讓main handle決定要用哪些function
+                RespondHandle(connect, data, self.KadeNode)
             
             
     def _WaitConnect(self):

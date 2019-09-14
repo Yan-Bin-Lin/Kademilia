@@ -22,6 +22,24 @@ class Client():
         pass
     
     
+    def _WaitResponse(self, type_ = 'request'):
+        now = time.time()
+        ConnectStatus = False
+        while time.time() - now < self.wait and ConnectStatus == False:
+            try:
+                if type_ == 'connect':
+                    self._connect.connect(self.address)
+                else:
+                    response = self._connect.recv(10240)
+            except:
+                pass
+            else:
+                ConnectStatus = True
+        if type_ != 'connect':
+            return response.decode('utf-8') if ConnectStatus else None
+        return self._connect if ConnectStatus else None
+                
+                    
     # re connect to server
     def ReConnect(self):
         # create a client socket and connect to server
@@ -29,14 +47,7 @@ class Client():
         # set connect time limit
         self._connect.settimeout(self.wait)
         print(f'start to connect {self.address}')
-        self._connect.connect(self.address)
-        '''
-        try:
-            self._connect.connect(self.address)
-        except:
-            # connect fail
-            self._connect = None
-        '''
+        return self._WaitResponse('connect')
         
     
     def GetConnect(self):
@@ -51,19 +62,7 @@ class Client():
     def request(self, msg):
         # 发送数据
         self._connect.sendall(msg.encode('utf-8'))
-        time.sleep(self.wait)       
-        try:
-            response = self._connect.recv(1024)
-        except:
-            # response time out
-            response = None
-            print('client fail to get response')
-        else:
-            print('client success to get response')
-            # success get response
-            response = response.decode('utf-8')      
-            #self._connect.sendall(f'receive the request of respond data, data = {response}'.encode('utf-8'))
-        return response
+        return self._WaitResponse()
     
     
     '''

@@ -20,6 +20,7 @@ def link(address, connect, wait):
 def _deal(msg, connect, address, wait, instruct):
     print(f'start to try to send data, data = {msg}')
     connect = link(address, connect, wait)
+    print(f'_deal connect type = {type(connect)}')
     if connect == None:
         return None
     if instruct == 'request':

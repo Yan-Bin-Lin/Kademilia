@@ -8,7 +8,7 @@ Created on 2019年9月3日
 from collections import OrderedDict
 import copy
 
-from ..handler.respond import ping
+from ..handler.ask import Ask
     
 class KBucket():
     '''
@@ -23,6 +23,8 @@ class KBucket():
     
     # add a new node data to bucket
     def AddNode(self, node):
+        if self.bucket.get(node['ID'], False) != False:
+            return
         # if the bucket is full, delete a node
         if self.IsFull():
             self.clean()
@@ -44,30 +46,43 @@ class KBucket():
     '''
     return a NodeData 
     if there is a parmeter "ID", return the node and connect socket if it is in the bucket, else return None 
+    if there is a 'second' parmeter "except" = False, will return anothe node except of given ID
     if you don't give any parmeter, return a alive node and connect socket, or return None if there is no alive node       
     '''
-    def GetNode(self, *args):
+    def GetNode(self, *args, except_ = False, ping = True):
+        ID = ''
         # if receive parmeter "ID"
         if len(args) == 1:
             ID = args[0]
-            connect = self.CheckNode(ID)
-            return None if connect == None else [self.bucket[ID], connect]
-        # if no parmeter
-        else:
-            items = copy.deepcopy(self.bucket).items()
-            for ID, node in items:
-                connect = self.IsExist(ID)
+            # if ping is False
+            if not ping:
+                return self.bucket.get(ID, None)
+            # if not except
+            if not except_:
+                connect = self.CheckNode(ID)
+                return None if connect == None else [self.bucket[ID], connect]
+        
+        # if no parmeter or except is True
+        items = copy.deepcopy(self.bucket).items()
+        for ID_, node in items:
+            # except the given ID
+            if ID_ != ID:
+                # if not ping
+                if not ping:
+                    return self.bucket[ID_]
+                
+                connect = self.IsExist(ID_)
                 if connect != None:
-                    return  self.bucket[ID], connect
+                    return  [self.bucket[ID_], connect]
         return None
         
     
     # check if the node in bucket is exist
     def IsExist(self, ID):
-        connect = ping(self.bucket[ID], self.SelfNode.GetData())
+        connect = Ask(self.SelfNode.GetData(), 'request', 'TRACE', 'ping', destination = self.bucket[ID], address = self.bucket[ID]['address'])
         if connect == None:
             self.DelNode(ID)
-        return connect
+        return connect[1]
         
             
     # return number of node in the Kbucket
