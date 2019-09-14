@@ -13,8 +13,9 @@ from ..crypto.RSASign import RSA
 from ..network.connect import Connect
 from ..util.hash import *
 from ..handler.respond import *
-from ..handler.ask import Ask
-
+from ..handler.ask import Ask, Reject
+import logging
+logger = logging.getLogger( 'loglog' )
 
 # a single kade node
 class KadeNode():
@@ -34,19 +35,18 @@ class KadeNode():
         # start for connect
         self.run()
         # create bucket
-        node = kwargs.get('node', None)
-        if node != None:
-            self.update(node, getbucket = True)
+        if kwargs.get('node', None) != None:
+            self.update(kwargs['node'], getbucket = True)
         
         
     # add new node to bucket in the table    
     def update(self, node, getbucket = False):
-        print('update ID = ' + node['ID'])
+        logger.debug('update ID = ' + node['ID'])
         distance = CountDistance(self.ID, node['ID'])
         self.table[distance].AddNode(node)
         # get bucket of the node
         if getbucket:
-            self.GetBucket()
+            self.GetBucket(node['ID'])
         
     
     # request to other node
@@ -69,7 +69,7 @@ class KadeNode():
     # return ( nodedata, socket )
     def GetDistanceNode(self, distance, ID = None, *, except_ = False):
         return (self.table[distance].GetNode(except_ = except_) if ID == None
-                    else self.table[CountDistance(self.ID, ID)].GetNode(except_ = except_))
+                    else self.table[CountDistance(self.ID, ID)].GetNode(ID, except_ = except_))
         
     
     # if no argument is given, search for a exist node
@@ -93,15 +93,17 @@ class KadeNode():
     # find a node
     def LookUp(self, ID, data = {}):
         result = self.GetNode(ID = ID, recuricive = False)
-        print(f' LookUp result is {result}')
+        logger.debug(f' LookUp result is {result}')
         if result == None:
-            print('LookUp: ID not in local bucket, strart to send to search')
+            logger.info('LookUp: ID not in local bucket, strart to send to search')
             # if node not in table, ask other node in same distance to find the target node
             # SearchNode = [node, socket] or None
-            SearchNode = self.GetDistanceNode(0, ID)            
-            print(f' SearchNode result is {SearchNode}')
+            SearchNode = self.GetDistanceNode(0, ID, except_ = True)            
+            logger.debug(f' SearchNode result is {SearchNode}')
             if SearchNode != None:
                 Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, connect = SearchNode, destination = {'ID' : ID})
+            else:
+                Reject(self.NodeData.GetData(), data)
         elif data != {}:
             Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, connect = result)
         return result
@@ -113,13 +115,13 @@ class KadeNode():
         # get a node, start to ask for bucket
         if connect != None:
             result = Ask(self.NodeData.GetData(), 'request', 'GET', 'bucket', connect = connect)
-            print(f'nodes = {result}')
+            logger.debug(f'nodes = {result}')
             # get a dict of other table
             if result != None:
                 nodes = json.loads(result[0])
                 for node in nodes:
                     self.update(node)
-                print('GetBucket Success!!!!!!')
+                logger.info('GetBucket Success!!!!!!')
                 return connect[0]['ID']
         return None
         
@@ -132,7 +134,7 @@ class KadeNode():
         file = folder / name
         with file.open('wb') as f:
             pickle.dump(self.NodeData.GetData(), f)
-        print(file.resolve())
+        logger.info(file.resolve())
             
         
     # update a file to network
@@ -145,19 +147,19 @@ class KadeNode():
             HashCode = data['instruct'][2]
             content = data['content']
             destination = data['destination']
-        print(f'HashCode = {HashCode}')
+        logger.debug(f'HashCode = {HashCode}')
         node = self.GetNode(ID = HashCode)
         if node != None:
             Ask(self.NodeData.GetData(), 'send', 'POST', 'file', HashCode, connect = node,
                 destination = destination, data = data, content = content)
         else:
-            return 'something error'
+            Reject(self.NodeData.GetData(), data)
         
              
     # Get a file from web
     def GetFile(self, HashCode, data = {}):
         path = Path(self.SavePath, 'file', HashCode + '.txt')
-        print(f'search: {path}')
+        logger.debug(f'search: {path}')
         # strat to search file from web
         if not path.exists():
             # this request is not handle by too many node, this request can keep search
@@ -173,14 +175,14 @@ class KadeNode():
             # send to other node to search
             node = self.GetNode(ID = HashCode)
             if node == None:
-                return None
+                Reject(self.NodeData.GetData(), data)
     
             Ask(self.NodeData.GetData(), 'send', 'GET', 'file', HashCode, connect = node, data = data, content = {'FileID' : HashCode})
             return None
         
         else:
             file = json.loads(path.read_text())
-            print(f'In GetFile, file is {file}')
+            logger.debug(f'In GetFile, file is {file}')
             return file
     
     

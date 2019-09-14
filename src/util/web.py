@@ -30,11 +30,10 @@ def _DataFill(SelfNode, *args, data = {}, **kwargs):
     # update request
     else:
         #data['origin'] = kwargs.get('origin', data['origin'])
-        data['destination'] = kwargs['destination'] if kwargs['destination'] != None else data['destination']
+        data['destination'] = kwargs['destination'] if kwargs.get('destination', None) != None else data['destination']
         data['instruct'] = args if len(args) != 0 else data['instruct']
         data['path'].append(SelfNode)
-        data['content'] = kwargs['content'] if kwargs['content'] != '' else data['content']
-    print(data)
+        data['content'] = kwargs['content'] if kwargs.get('content', '') != '' else data['content']
     return json.dumps(data)#), cls=AdvancedJSONEncoder)
 
 

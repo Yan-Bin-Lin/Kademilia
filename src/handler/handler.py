@@ -9,10 +9,12 @@ import json
 from .respond import *
 from .ask import *
 from ..util.web import _DataFill
+import logging
+logger = logging.getLogger( 'loglog' )
 
 # main handler here
 def RespondHandle(connect, data, KadeNode):
-    print(f'server receive data, data is {data}')
+    logger.debug(f'server receive data, data is {data}')
     # change string to dict
     data = json.loads(data)
     instruct = data.get('instruct', None)
@@ -28,21 +30,21 @@ def RespondHandle(connect, data, KadeNode):
     # if condition here
     if instruct[0] == 'TRACE':
         # handle for 'ping' request
-        print('Get a ping request, return ok')
+        logger.debug('Get a ping request, return ok')
         connect.sendall(b'ping ok')
     
     elif instruct[0] == 'GET':
         # handle for get node request
         if instruct[1] == 'node':
-            print('Get a GET node request return replyGETNODE')
+            logger.debug('Get a GET node request return replyGETNODE')
             ReplyGetNode(data, KadeNode)
         # handle for get file request
         if instruct[1] == 'file':
-            print('Get a GET file request return replyGETFile')
+            logger.debug('Get a GET file request return replyGETFile')
             ReplyGetFile(data, KadeNode)
         # handle for get bucket request
         if instruct[1] == 'bucket':
-            print('Get a GET file request return replyGETFBUCKET')
+            logger.debug('Get a GET file request return replyGETFBUCKET')
             connect.sendall(ReplyGetBucket(KadeNode))
     
     elif instruct[0] == 'REPLY':
@@ -62,5 +64,7 @@ def RespondHandle(connect, data, KadeNode):
             ReplyPostFile(data, KadeNode)
             
     elif instruct[0] == 'REJECT':
-        # the request has reject
+        # the request has been reject
         ReceiveReject(data, KadeNode)
+            
+            

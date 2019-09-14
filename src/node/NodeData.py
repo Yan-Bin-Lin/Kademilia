@@ -23,7 +23,7 @@ class NodeData():
     def GetData(self): 
         return {
                     'address' : self._address,
-                    'PublicKey' : self.GetByteStringPubKey(),
+                    #'PublicKey' : self.GetByteStringPubKey(),
                     'ID' : self._ID
                 }
     

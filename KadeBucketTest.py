@@ -6,7 +6,6 @@ Created on 2019年9月14日
 '''
 
 import pickle
-import time
 
 from src.node.KadeNode import KadeNode
 from src.util.hash import GetHash

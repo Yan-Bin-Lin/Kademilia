@@ -11,28 +11,20 @@ from ..network.communicate import *
 from ..util.hash import *
 from ..util.web import _DataFill
 from ..node.NodeData import NodeData
-from .ask import Ask
+from .ask import Ask, Reject
 
-'''
-# send to someone for a GET node request
-def SendGetNode(SelfNode, DestinateID = None, data = {}, ToNode = None, connect = None):
-    if data == {}:
-        data = _DataFill(SelfNode, 'GET', 'node', data = data, destination = NodeData(ID = DestinateID).GetData())
-    else:
-        data = _DataFill(SelfNode, 'GET', 'node', data = data)
-    print(f'start to send to node {ToNode["ID"]} to find node {DestinateID}, the data is {data}')
-    send(data, connect)
-''' 
+import logging
+logger = logging.getLogger( 'loglog' )
     
 # reply to someone send GET node
 def ReplyGetNode(data, KadeNode):
     DestinateID = data['destination']['ID']
     SelfNode = KadeNode.NodeData.GetData()
-    print(f'receive a "Get node" request, the receive data is {data}')
-    print(f'self node is {KadeNode.NodeData.GetData()}')
+    logger.debug(f'receive a "Get node" request, the receive data is {data}')
+    logger.debug(f'self node is {KadeNode.NodeData.GetData()}')
     if SelfNode['ID'] == DestinateID:
         #SendData = _DataFill(SelfNode, 'REPLY', 'node', data = data, destination = SelfNode)
-        print(f'Reply back to origin node, origin address is {data["origin"]["address"]}')
+        logger.debug(f'Reply back to origin node, origin address is {data["origin"]["address"]}')
         Ask(SelfNode, 'send', 'REPLY', 'getnode', address = data['origin']['address'], destination = SelfNode, data = data)
     else:
         KadeNode.LookUp(DestinateID, data)
@@ -41,7 +33,7 @@ def ReplyGetNode(data, KadeNode):
 # receive the request node
 def ReceiveGetNode(data, KadeNode):
     KadeNode.update(data['destination'])
-    print(f'LookUp success!!!!!!!   I find the node {data["destination"]["ID"]}')
+    logger.info(f'LookUp success!!!!!!!   I find the node {data["destination"]["ID"]}')
     
 
 def _SaveFile(data, KadeNode):
@@ -54,7 +46,7 @@ def _SaveFile(data, KadeNode):
     
 
 def ReplyPostFile(data, KadeNode):
-    print('IN ReplyPostFile...')
+    logger.info('IN ReplyPostFile...')
     SelfNode = KadeNode.NodeData.GetData()
     data['content']['saver'].append([SelfNode, 1])
     _SaveFile(data, KadeNode)
@@ -69,7 +61,7 @@ def ReplyPostFile(data, KadeNode):
 #receive the notice of upload file result
 def ReceivePostFile(data, KadeNode):
     _SaveFile(data, KadeNode)
-    print(f'Update File success!!!!!!!')
+    logger.info(f'Update File success!!!!!!!')
     
     
 def ReplyGetFile(data, KadeNode):
@@ -77,14 +69,14 @@ def ReplyGetFile(data, KadeNode):
     file = KadeNode.GetFile(data['content']['FileID'], data)
     # if local own target file
     if file != None:
-        print('I have the file, give you')
+        logger.info('I have the file, give you')
         Ask(SelfNode, 'send', 'REPLY', 'getfile', address = data['origin']['address'], data = data, content = file, 
             destination = SelfNode)
 
             
 def ReceiveGetFile(data, KadeNode):
     _SaveFile(data, KadeNode)
-    print(f'Get File success!!!!!!!')
+    logger.info(f'Get File success!!!!!!!')
     
 
 def ReplyGetBucket(KadeNode):
@@ -92,17 +84,26 @@ def ReplyGetBucket(KadeNode):
     for distance, bucket in KadeNode.table.items():
         if KadeNode.table[distance].length() != 0:
             result.extend(KadeNode.table[distance].bucket.values())
-    print(f'IN ReplyGetBucket... result = {result}')
+    logger.debug(f'IN ReplyGetBucket... result = {result}')
     return json.dumps(result).encode('utf-8') if result != [] else None
     
     
-def ReceiveReject(dara, KadeNode):
-    pass
-    
-'''
-# test if a node is online, if true return socket else none
-def ping(DestinateNode, SelfNode = None):
-    #return connect(socket) or None
-    data = _DataFill(SelfNode, 'TRACE', 'ping', destination = DestinateNode)
-    return request(data, None, DestinateNode['address'])[1]
-'''
+def ReceiveReject(data, KadeNode):
+    logger.info('In receive reject...')
+    SelfNode = KadeNode.NodeData.GetData()
+    FailNode = data['path'].pop()
+    logger.debug(f'failnode is {FailNode["ID"]}, and I am node {SelfNode["ID"]}')
+    # delete self and it will add back later
+    del data['path'][-1]
+    logger.debug(f'from now on, the path is {data["path"]}')
+    AnotherNode = KadeNode.GetDistanceNode(0, FailNode['ID'], except_ = True)
+    logger.debug(f'the another node is {AnotherNode}')
+    #if there is another node
+    if AnotherNode != None:
+        Ask(SelfNode, 'send')
+    # if this is not the first node, continue reject
+    elif len(data['path']) > 0:
+        Reject(SelfNode, data)
+    # the request fail
+    else:    
+        logger.info('oops! the request fail!!!!!!!!!!!')

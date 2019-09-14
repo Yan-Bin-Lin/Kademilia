@@ -8,10 +8,12 @@ from ..network.communicate import *
 from ..util.web import _DataFill
 from ..node.NodeData import NodeData
 
+import logging
+logger = logging.getLogger( 'loglog' )
 
 def AskNode(data, type_, connect = None, address = None):
     connect = connect[1] if connect != None else None
-    print(f'AskNode connect type = {type(connect)}, connect is {connect}')
+    logger.debug(f'AskNode connect type = {type(connect)}, connect is {connect}')
     if type_ == 'request':
         return request(data, connect, address)
     else:
@@ -34,4 +36,4 @@ def Reject(SelfNode, data):
     data['instruct'].insert(0, 'REJECT')
     address = data['path'][-1]['address']
     data = _DataFill(SelfNode, data = data)
-    return AskNode(data, 'send', None, address)
+    AskNode(data, 'send', None, address)

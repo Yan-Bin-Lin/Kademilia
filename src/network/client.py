@@ -7,6 +7,8 @@ Created on 2019/9/1
 import socket
 import time
 
+import logging
+logger = logging.getLogger( 'loglog' )
 
 class Client():
     def __init__(self, address, wait = 5):
@@ -46,7 +48,7 @@ class Client():
         self._connect = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # set connect time limit
         self._connect.settimeout(self.wait)
-        print(f'start to connect {self.address}')
+        logger.debug(f'start to connect {self.address}')
         return self._WaitResponse('connect')
         
     

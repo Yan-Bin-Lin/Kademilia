@@ -10,6 +10,9 @@ import copy
 
 from ..handler.ask import Ask
     
+import logging
+logger = logging.getLogger( 'loglog' )      
+
 class KBucket():
     '''
     a KBucket mean each distance content number of "MAX" k bucket
@@ -50,6 +53,8 @@ class KBucket():
     if you don't give any parmeter, return a alive node and connect socket, or return None if there is no alive node       
     '''
     def GetNode(self, *args, except_ = False, ping = True):
+        logger.info('in kbucket getnode...')
+        logger.debug(f'args is {args}, except_ = {except_}, ping = {ping}')
         ID = ''
         # if receive parmeter "ID"
         if len(args) == 1:

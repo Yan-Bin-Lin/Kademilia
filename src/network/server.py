@@ -10,6 +10,8 @@ import threading
 from ..util.web import GetLocalIP
 from ..handler.handler import RespondHandle
 
+import logging
+logger = logging.getLogger( 'loglog' )
 
 # a server socket class
 class Server():
@@ -22,7 +24,7 @@ class Server():
         self.server.bind((self.LocalIP, ServePort)) 
         # 开始监听，并设置最大连接数
         self.server.listen(5)
-        print(f'serve at {self.GetAddress()}')
+        logger.debug(f'serve at {self.GetAddress()}')
         self.KadeNode = None
 
     
@@ -49,10 +51,10 @@ class Server():
             
     def _WaitConnect(self):
         while True:
-            print(u'waiting for connect...')
+            logger.debug(u'waiting for connect...')
             # 等待连接，一旦有客户端连接后，返回一个建立了连接后的套接字和连接的客户端的IP和端口元组
             connect, (host, port) = self.server.accept()
-            print(u'the client %s:%s has connected.' % (host, port))
+            logger.debug(u'the client %s:%s has connected.' % (host, port))
             threading._start_new_thread(self._communicate, (connect, host, port))        
         
     

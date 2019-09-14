@@ -5,8 +5,10 @@ Created on 2019年9月4日
 @author: danny
 '''
 from ..network.client import Client
-        
-    
+
+import logging
+logger = logging.getLogger( 'loglog' )        
+
 # create a client socket and connect to server
 def link(address, connect, wait):
     # check to create a new client or not
@@ -18,15 +20,15 @@ def link(address, connect, wait):
 
 
 def _deal(msg, connect, address, wait, instruct):
-    print(f'start to try to send data, data = {msg}')
+    logger.debug(f'start to try to send data, data = {msg}')
     connect = link(address, connect, wait)
-    print(f'_deal connect type = {type(connect)}')
+    logger.debug(f'_deal connect type = {type(connect)}')
     if connect == None:
         return None
     if instruct == 'request':
         # type = request
         response = connect.request(msg)
-        print(f'receive the request of respond data, data = {response}')
+        logger.debug(f'receive the request of respond data, data = {response}')
         return response, connect
     else:
         # type = send
