@@ -50,20 +50,21 @@ class KBucket():
     return a NodeData 
     if there is a parmeter "ID", return the node and connect socket if it is in the bucket, else return None 
     if there is a 'second' parmeter "except" = False, will return anothe node except of given ID
-    if you don't give any parmeter, return a alive node and connect socket, or return None if there is no alive node       
+    if you don't give any parmeter, return a alive node and connect socket, or return None if there is no alive node  
+    if ExceptList is given, then the node in the list will not be connect and return
     '''
-    def GetNode(self, *args, except_ = False, ping = True):
-        logger.info('in kbucket getnode...')
-        logger.debug(f'args is {args}, except_ = {except_}, ping = {ping}')
-        ID = ''
+    def GetNode(self, *args, recursive = True, ping = True, ExceptList = []):
+        logger.debug('in kbucket getnode...')
+        logger.debug(f'args is {args}, recursive = {recursive}, ping = {ping}')
+        logger.debug(f'ExceptList = {ExceptList}')
         # if receive parmeter "ID"
         if len(args) == 1:
             ID = args[0]
             # if ping is False
             if not ping:
                 return self.bucket.get(ID, None)
-            # if not except
-            if not except_:
+            # if not recursive
+            if ID not in ExceptList and not recursive:
                 connect = self.CheckNode(ID)
                 return None if connect == None else [self.bucket[ID], connect]
         
@@ -71,7 +72,7 @@ class KBucket():
         items = copy.deepcopy(self.bucket).items()
         for ID_, node in items:
             # except the given ID
-            if ID_ != ID:
+            if ID_ not in ExceptList:
                 # if not ping
                 if not ping:
                     return self.bucket[ID_]

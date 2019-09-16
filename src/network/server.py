@@ -40,14 +40,18 @@ class Server():
         
     def _communicate(self, connect, host, port):
         while True:
-            # block to wait for receive
-            #connect.setblocking(1)
-            # 接受客户端的数据
-            data = connect.recv(10240)
-            if data != b'':
-                # 由main handle決定處理方法
-                RespondHandle(connect, data, self.KadeNode)
-            
+            try:
+                # block to wait for receive
+                #connect.setblocking(1)
+                # 接受客户端的数据
+                data = connect.recv(10240)
+                if data != b'':
+                    # 由main handle決定處理方法
+                    RespondHandle(connect, data, self.KadeNode)
+            except:
+                logger.debug(f'連線失敗，關閉連線')
+                return
+                
             
     def _WaitConnect(self):
         while True:

@@ -1,0 +1,2883 @@
+2019-09-16 00:44:14,594   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 00:44:20,747   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 00:44:28,534   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 00:44:28,580   KadeNode. line:162 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 00:44:28,611    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 00:44:28,673    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 00:44:28,938   KadeNode. line:162 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 00:44:28,984    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 00:44:29,004    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 00:44:29,144    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 00:44:29,315   KadeNode. line:162 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 00:44:29,393    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 00:44:29,424    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 00:44:29,552    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 00:44:29,614    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 00:44:29,738    handler. line: 72 - INFO- 
+	node 01 的 ['REJECT', 'POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 00:44:29,800    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 00:44:29,940    handler. line: 72 - INFO- 
+	node 10 的 ['REJECT', 'REJECT', 'POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 00:44:30,086    respond. line:117 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 00:55:51,560   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 00:55:57,073   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 00:56:04,268   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 00:56:04,308   KadeNode. line:162 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 00:56:04,330    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 00:56:04,340    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 00:56:04,624   KadeNode. line:162 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 00:56:04,686    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 00:56:04,718    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 00:56:04,857    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 00:56:04,986   KadeNode. line:162 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 00:56:05,048    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 00:56:05,080    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 00:56:05,219    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 00:56:05,266    respond. line:122 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 00:56:05,405    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 00:56:05,441    respond. line:122 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 00:56:05,581    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 00:56:05,737    respond. line:118 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 00:58:13,979   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 00:58:14,014   KadeNode. line:162 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 00:58:14,030    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 00:58:14,046    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 00:58:14,268   KadeNode. line:162 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 00:58:14,330    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 00:58:14,345    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 00:58:14,563    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 00:58:36,827   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 00:58:44,076   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 00:58:50,226   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 00:58:50,268   KadeNode. line:162 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 00:58:50,284    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 00:58:50,331    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 00:58:50,610   KadeNode. line:162 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 00:58:50,672    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 00:58:50,719    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 00:58:50,848    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 00:58:51,019   KadeNode. line:162 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 00:58:51,113    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 00:58:51,159    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 00:58:51,273    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 00:58:51,318    respond. line:122 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 00:58:51,458    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 00:58:51,505    respond. line:122 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 00:58:51,645    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 01:02:22,958   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 01:02:28,502   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 01:02:33,738   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 01:02:33,783   KadeNode. line:162 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 01:02:33,814    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 01:02:33,845    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 01:02:34,036   KadeNode. line:162 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 01:02:34,098    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 01:02:34,145    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 01:02:34,269    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 01:02:34,414   KadeNode. line:162 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 01:02:34,440    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 01:02:34,462    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 01:02:34,601    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 01:02:34,679    respond. line:122 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 01:02:34,819    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 01:02:34,881    respond. line:122 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 01:02:34,977    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 01:02:35,164    respond. line:118 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 03:13:54,174   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:13:58,824   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:14:03,477   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:14:03,496   KadeNode. line:163 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 03:14:03,506    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 03:14:03,518    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:14:03,624   KadeNode. line:163 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 03:14:03,649    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 03:14:03,659    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:14:03,700    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 03:14:03,755   KadeNode. line:163 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 03:14:03,770    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 03:14:03,780    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 03:14:03,825    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 03:14:03,835    respond. line:120 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 03:14:03,871    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 03:14:03,881    respond. line:120 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 03:14:03,926    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 03:14:03,992    respond. line:116 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 03:16:43,884   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 03:16:47,608   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:16:54,686   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:17:01,178   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:17:01,197   KadeNode. line:163 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 03:17:01,207    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 03:17:01,222    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:17:01,321   KadeNode. line:163 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 03:17:01,346    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 03:17:01,366    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:17:01,417    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 03:17:01,467   KadeNode. line:163 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 03:17:01,492    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 03:17:01,503    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 03:17:01,532    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 03:17:01,553    respond. line:120 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 03:17:01,593    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 03:17:01,603    respond. line:120 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 03:17:01,664    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 03:17:01,725    respond. line:116 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 03:18:40,616   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:18:45,245   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:18:50,605   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:18:50,623   KadeNode. line:163 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 03:18:50,633    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 03:18:50,645    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:18:50,703   KadeNode. line:163 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 03:18:50,728    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 03:18:50,738    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:18:50,783    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 03:18:50,850   KadeNode. line:163 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 03:18:50,875    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 03:18:50,886    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 03:18:50,931    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 03:18:50,946    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 03:18:50,990    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 03:18:51,001    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 03:18:51,042    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 03:18:51,108    respond. line:117 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 03:20:34,577   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:20:39,928   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:20:45,606   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:20:45,624   KadeNode. line:163 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 03:20:45,634    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 03:20:45,644    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:20:45,740   KadeNode. line:163 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 03:20:45,755    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 03:20:45,760    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:20:45,796    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 03:20:45,844   KadeNode. line:163 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 03:20:45,869    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 03:20:45,879    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 03:20:45,919    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 03:20:45,930    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 03:20:45,957    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 03:20:45,967    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 03:20:46,020    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 03:20:46,080    respond. line:117 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 03:32:46,715   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:32:50,853   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:32:55,357   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:32:55,376   KadeNode. line:163 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 03:32:55,386    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 03:32:55,396    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:32:55,497   KadeNode. line:163 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 03:32:55,512    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 03:32:55,534    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:32:55,581    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 03:32:55,627   KadeNode. line:163 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 03:32:55,642    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 03:32:55,663    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 03:32:55,708    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 03:32:55,763    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 03:32:55,813    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 03:32:55,838    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 03:32:55,878    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 03:32:55,954    respond. line:117 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 03:36:55,119   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:36:59,268   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:37:05,277   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:37:05,295   KadeNode. line:164 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 03:37:05,301    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 03:37:05,312    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:37:05,393   KadeNode. line:164 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 03:37:05,423    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 03:37:05,438    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:37:05,484    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 03:37:05,548   KadeNode. line:164 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 03:37:05,568    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 03:37:05,589    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 03:37:05,639    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 03:37:05,654    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 03:37:05,690    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 03:37:05,710    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 03:37:05,747    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 03:37:05,817    respond. line:117 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 03:38:11,411   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:38:16,024   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:38:20,701   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:38:29,962   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:38:57,195   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:39:24,194   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:39:27,612   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:40:22,563   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:40:22,576   KadeNode. line:165 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 03:40:22,587    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 03:40:22,597    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:40:22,708   KadeNode. line:165 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 03:40:22,728    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 03:40:22,738    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:40:22,779    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 03:40:22,854   KadeNode. line:165 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 03:40:22,874    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 03:40:22,884    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 03:40:22,929    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 03:40:22,944    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 03:40:23,004    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 03:40:23,019    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 03:40:23,054    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 03:40:23,125    respond. line:117 - INFO- 
+	找另一節點node 00 傳送資料
+
+2019-09-16 03:42:40,236   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:42:43,795   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:42:48,122   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:42:48,140   KadeNode. line:165 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 03:42:48,151    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 03:42:48,161    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:42:48,272   KadeNode. line:165 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 03:42:48,287    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 03:42:48,307    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:42:48,347    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 03:42:48,423   KadeNode. line:165 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 03:42:48,454    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 03:42:48,465    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 03:42:48,505    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 03:42:48,520    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 03:42:48,581    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 03:42:48,601    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 03:42:48,646    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 03:42:48,661    respond. line:125 - INFO- 
+	oops! the request fail!!!!!!!!!!!
+
+2019-09-16 03:54:47,205   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:54:55,195   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:55:01,096   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:55:10,090   KadeNode. line:127 - INFO- 
+	node 11 開始向 node 10， 請求bucket
+
+2019-09-16 03:55:10,100    handler. line: 47 - INFO- 
+	node 10 Get a GET bucket request from node 11
+
+2019-09-16 03:55:10,110    respond. line:102 - INFO- 
+	即將回傳bucket中其他節點資料
+
+2019-09-16 03:55:10,120   KadeNode. line:132 - INFO- 
+	node 11 成功取得bucket，開始跟新到己方bucket
+
+2019-09-16 03:55:10,121   KadeNode. line:136 - INFO- 
+	node 11 跟新bucket成功
+
+2019-09-16 03:55:10,122   KadeNode. line: 40 - INFO- 
+	node 11 上線了!!!
+
+2019-09-16 03:55:10,141   KadeNode. line:127 - INFO- 
+	node 11 開始向 node 10， 請求bucket
+
+2019-09-16 03:55:10,151    handler. line: 47 - INFO- 
+	node 10 Get a GET bucket request from node 11
+
+2019-09-16 03:55:10,161    respond. line:102 - INFO- 
+	即將回傳bucket中其他節點資料
+
+2019-09-16 03:55:10,182   KadeNode. line:132 - INFO- 
+	node 11 成功取得bucket，開始跟新到己方bucket
+
+2019-09-16 03:55:10,182   KadeNode. line:136 - INFO- 
+	node 11 跟新bucket成功
+
+2019-09-16 03:55:44,203   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 03:55:50,234   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 03:55:54,754   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 03:55:54,772   KadeNode. line:165 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 03:55:54,782    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 03:55:54,792    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 03:55:54,887   KadeNode. line:165 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 03:55:54,907    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 03:56:05,320   KadeNode. line: 40 - INFO- 
+	node 11 上線了!!!
+
+2019-09-16 03:56:05,322   KadeNode. line:175 - INFO- 
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-09-16 03:56:05,322   KadeNode. line:202 - INFO- 
+	node 11 本地擁有該檔案，回傳該檔
+
+2019-09-16 04:01:55,980    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 04:01:56,028    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 04:01:56,088   KadeNode. line:165 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 04:01:56,113    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 04:01:56,133    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 04:01:56,178    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 04:01:56,193    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 04:01:56,237    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 04:01:56,258    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 04:01:56,298    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 04:01:56,318    respond. line:125 - INFO- 
+	oops! the request fail!!!!!!!!!!!
+
+2019-09-16 04:02:11,005   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 04:02:17,263   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 04:02:22,688   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 04:02:22,705   KadeNode. line:165 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 04:02:22,710    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 04:02:22,720    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 04:02:22,816   KadeNode. line:165 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 04:02:22,836    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 04:02:22,846    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 04:02:22,898    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 04:02:22,953   KadeNode. line:165 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 04:02:22,978    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 04:02:22,988    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 04:02:23,039    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 04:02:23,059    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 04:02:23,099    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 04:02:23,114    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 10 請求拒絕
+
+2019-09-16 04:02:23,179    handler. line: 72 - INFO- 
+	node 10 的 ['POST', 'file', '11'] 請求被node 01 退回了
+
+2019-09-16 04:02:23,189    respond. line:125 - INFO- 
+	oops! the request fail!!!!!!!!!!!
+
+2019-09-16 04:02:42,840   KadeNode. line: 40 - INFO- 
+	node 11 上線了!!!
+
+2019-09-16 04:02:42,842   KadeNode. line:175 - INFO- 
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-09-16 04:02:42,842   KadeNode. line:180 - INFO- 
+	本地查無該檔案，即將判斷是否要向其他節點查找
+
+2019-09-16 04:02:42,855   KadeNode. line:197 - INFO- 
+	向node 01 發出GET file 請求
+
+2019-09-16 04:02:42,870    handler. line: 43 - INFO- 
+	node 01 Get a GET file request from node 11
+
+2019-09-16 04:02:42,880   KadeNode. line:175 - INFO- 
+	node 01 收到GET file請求，開始查找本地有無該檔案
+
+2019-09-16 04:02:42,895   KadeNode. line:202 - INFO- 
+	node 01 本地擁有該檔案，回傳該檔
+
+2019-09-16 04:02:42,950    respond. line: 86 - INFO- 
+	node 01 擁有指定檔案 ，回傳給node 11
+
+2019-09-16 04:02:43,006    handler. line: 61 - INFO- 
+	node 11 的 GET file 請求收到回應了
+
+2019-09-16 04:02:43,016    respond. line: 42 - INFO- 
+	node 11 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 04:02:43,061    respond. line: 93 - INFO- 
+	Get File success!!!!!!! 我拿到檔案了!!!!!!!!
+
+2019-09-16 04:10:27,749   KadeNode. line: 40 - INFO- 
+	node 111 上線了!!!
+
+2019-09-16 04:10:39,473   KadeNode. line: 40 - INFO- 
+	node 001 上線了!!!
+
+2019-09-16 04:10:50,203   KadeNode. line: 40 - INFO- 
+	node 010 上線了!!!
+
+2019-09-16 04:10:59,872   KadeNode. line: 40 - INFO- 
+	node 100 上線了!!!
+
+2019-09-16 04:10:59,873   KadeNode. line:100 - INFO- 
+	node 100 開始查找 node 000 ， 雙方距離差距為 3
+
+2019-09-16 04:10:59,873   KadeNode. line:104 - INFO- 
+	查找結果： node 000 並不在 node 100 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 04:10:59,890   KadeNode. line:109 - INFO- 
+	node 100 準備向  node 010 發出查找 node 000 的請求
+
+2019-09-16 04:10:59,900    handler. line: 39 - INFO- 
+	node 010 Get a GET node request from node 100
+
+2019-09-16 04:10:59,910    respond. line: 31 - INFO- 
+	此node 010 非查找目標，執行LookUP function
+
+2019-09-16 04:10:59,921   KadeNode. line:100 - INFO- 
+	node 010 開始查找 node 000 ， 雙方距離差距為 2
+
+2019-09-16 04:10:59,941   KadeNode. line:104 - INFO- 
+	查找結果： node 000 並不在 node 010 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 04:10:59,992   KadeNode. line:109 - INFO- 
+	node 010 準備向  node 001 發出查找 node 000 的請求
+
+2019-09-16 04:11:00,017    handler. line: 39 - INFO- 
+	node 001 Get a GET node request from node 010
+
+2019-09-16 04:11:00,022    respond. line: 31 - INFO- 
+	此node 001 非查找目標，執行LookUP function
+
+2019-09-16 04:11:00,032   KadeNode. line:100 - INFO- 
+	node 001 開始查找 node 000 ， 雙方距離差距為 1
+
+2019-09-16 04:11:00,047   KadeNode. line:104 - INFO- 
+	查找結果： node 000 並不在 node 001 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 04:11:00,067   KadeNode. line:112 - INFO- 
+	同距離節點不存在或無法回應，請求拒絕，即將回退資料
+
+2019-09-16 04:11:00,112    handler. line: 72 - INFO- 
+	node 010 的 ['GET', 'node', '000'] 請求被node 001 退回了
+
+2019-09-16 04:11:00,132    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 100 請求拒絕
+
+2019-09-16 04:11:00,163    handler. line: 72 - INFO- 
+	node 100 的 ['GET', 'node', '000'] 請求被node 010 退回了
+
+2019-09-16 04:11:00,173    respond. line:125 - INFO- 
+	oops! the request fail!!!!!!!!!!!
+
+2019-09-16 04:11:38,886   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 04:12:08,667   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 04:12:08,669   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 04:12:08,686   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 04:12:19,871   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 04:12:19,873   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 04:12:19,890   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 04:12:26,895   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 04:12:26,896   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 04:12:26,896   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 04:12:26,913   KadeNode. line:109 - INFO- 
+	node 11111111 準備向  node 01010101 發出查找 node 00000000 的請求
+
+2019-09-16 04:12:26,923    handler. line: 39 - INFO- 
+	node 01010101 Get a GET node request from node 11111111
+
+2019-09-16 04:12:26,943    respond. line: 31 - INFO- 
+	此node 01010101 非查找目標，執行LookUP function
+
+2019-09-16 04:12:26,954   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000000 ， 雙方距離差距為 7
+
+2019-09-16 04:12:26,964   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 01010101 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 04:12:27,014   KadeNode. line:109 - INFO- 
+	node 01010101 準備向  node 00000001 發出查找 node 00000000 的請求
+
+2019-09-16 04:12:27,036    handler. line: 39 - INFO- 
+	node 00000001 Get a GET node request from node 01010101
+
+2019-09-16 04:12:27,046    respond. line: 31 - INFO- 
+	此node 00000001 非查找目標，執行LookUP function
+
+2019-09-16 04:12:27,062   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 04:12:27,077   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 00000001 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 04:12:27,087   KadeNode. line:112 - INFO- 
+	同距離節點不存在或無法回應，請求拒絕，即將回退資料
+
+2019-09-16 04:12:27,135    handler. line: 72 - INFO- 
+	node 01010101 的 ['GET', 'node', '00000000'] 請求被node 00000001 退回了
+
+2019-09-16 04:12:27,145    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 11111111 請求拒絕
+
+2019-09-16 04:12:27,185    handler. line: 72 - INFO- 
+	node 11111111 的 ['GET', 'node', '00000000'] 請求被node 01010101 退回了
+
+2019-09-16 04:12:27,195    respond. line:125 - INFO- 
+	oops! the request fail!!!!!!!!!!!
+
+2019-09-16 13:41:31,970   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 13:41:38,200   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 13:41:38,202   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 13:41:38,252   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 13:41:51,082   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 13:41:51,085   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 13:41:51,103   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 13:41:56,878   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 13:41:56,879   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 13:41:56,880   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 13:41:56,896   KadeNode. line:109 - INFO- 
+	node 11111111 準備向  node 01010101 發出查找 node 00000000 的請求
+
+2019-09-16 13:41:56,901    handler. line: 39 - INFO- 
+	node 01010101 Get a GET node request from node 11111111
+
+2019-09-16 13:41:56,922    respond. line: 31 - INFO- 
+	此node 01010101 非查找目標，執行LookUP function
+
+2019-09-16 13:41:56,932   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000000 ， 雙方距離差距為 7
+
+2019-09-16 13:41:56,943   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 01010101 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 13:41:56,988   KadeNode. line:109 - INFO- 
+	node 01010101 準備向  node 00000001 發出查找 node 00000000 的請求
+
+2019-09-16 13:41:57,008    handler. line: 39 - INFO- 
+	node 00000001 Get a GET node request from node 01010101
+
+2019-09-16 13:41:57,018    respond. line: 31 - INFO- 
+	此node 00000001 非查找目標，執行LookUP function
+
+2019-09-16 13:41:57,029   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 13:41:57,039   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 00000001 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 13:41:57,050   KadeNode. line:112 - INFO- 
+	同距離節點不存在或無法回應，請求拒絕，即將回退資料
+
+2019-09-16 13:41:57,096    handler. line: 72 - INFO- 
+	node 01010101 的 ['GET', 'node', '00000000'] 請求被node 00000001 退回了
+
+2019-09-16 13:41:57,106    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 11111111 請求拒絕
+
+2019-09-16 13:41:57,147    handler. line: 72 - INFO- 
+	node 11111111 的 ['GET', 'node', '00000000'] 請求被node 01010101 退回了
+
+2019-09-16 13:41:57,158    respond. line:125 - INFO- 
+	oops! the request fail!!!!!!!!!!!
+
+2019-09-16 14:15:34,136   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 14:15:38,063   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 14:15:38,065   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:15:38,081   KadeNode. line:119 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 14:15:42,671   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 14:15:42,675   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 14:15:42,692   KadeNode. line:119 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 14:15:47,810   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 14:15:47,811   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 14:15:47,811   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 14:15:47,829   KadeNode. line:110 - INFO- 
+	node 11111111 準備向  node 01010101 發出查找 node 00000000 的請求
+
+2019-09-16 14:15:47,839    handler. line: 39 - INFO- 
+	node 01010101 Get a GET node request from node 11111111
+
+2019-09-16 14:15:47,849    respond. line: 31 - INFO- 
+	此node 01010101 非查找目標，執行LookUP function
+
+2019-09-16 14:15:47,864   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000000 ， 雙方距離差距為 7
+
+2019-09-16 14:15:47,874   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 01010101 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 14:15:47,932   KadeNode. line:110 - INFO- 
+	node 01010101 準備向  node 00000001 發出查找 node 00000000 的請求
+
+2019-09-16 14:15:47,953    handler. line: 39 - INFO- 
+	node 00000001 Get a GET node request from node 01010101
+
+2019-09-16 14:15:47,963    respond. line: 31 - INFO- 
+	此node 00000001 非查找目標，執行LookUP function
+
+2019-09-16 14:15:47,973   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:15:47,988   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 00000001 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 14:15:48,004   KadeNode. line:113 - INFO- 
+	同距離節點不存在或無法回應，請求拒絕，即將回退資料
+
+2019-09-16 14:15:48,057    handler. line: 72 - INFO- 
+	node 01010101 的 ['GET', 'node', '00000000'] 請求被node 00000001 退回了
+
+2019-09-16 14:15:48,072    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 11111111 請求拒絕
+
+2019-09-16 14:15:48,122    handler. line: 72 - INFO- 
+	node 11111111 的 ['GET', 'node', '00000000'] 請求被node 01010101 退回了
+
+2019-09-16 14:15:48,133    respond. line:125 - INFO- 
+	oops! the request fail!!!!!!!!!!!
+
+2019-09-16 14:16:38,986     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1354)
+
+2019-09-16 14:16:38,988   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 14:16:38,988     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:16:38,990   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000000.txt
+
+2019-09-16 14:16:45,041     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1358)
+
+2019-09-16 14:16:45,043   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 14:16:45,043     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:16:45,045   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000001.txt
+
+2019-09-16 14:16:45,046   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 00000000 資料跟新於本地bucket中
+
+2019-09-16 14:16:45,046   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:16:45,047   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:16:45,048   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:16:45,049    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:16:45,049    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:16:45,050    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:16:45,052        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:16:45,053 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1358], "ID": "00000001"}, "destination": {"address": ["192.168.1.113", 1354], "ID": "00000000"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1358], "ID": "00000001"}], "content": "", "fail": []}
+
+2019-09-16 14:16:45,053     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1354)
+
+2019-09-16 14:16:45,054 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:16:45,059     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1359 has connected.
+
+2019-09-16 14:16:45,064     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:16:45,074    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1358], "ID": "00000001"}, "destination": {"address": ["192.168.1.113", 1354], "ID": "00000000"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1358], "ID": "00000001"}], "content": "", "fail": []}'
+
+2019-09-16 14:16:45,094   KadeNode. line: 47 -DEBUG- 
+	node 00000000 開始將 node 00000001 資料跟新於本地bucket中
+
+2019-09-16 14:16:45,104    handler. line: 33 -DEBUG- 
+	node 00000000 收到 node 00000001 的ping 請求，回傳OK
+
+2019-09-16 14:16:45,119 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:16:45,120   KadeNode. line:102 -DEBUG- 
+	 LookUp result is [{'address': ('192.168.1.113', 1354), 'ID': '00000000'}, <src.network.client.Client object at 0x000002562DC18E80>]
+
+2019-09-16 14:16:45,121   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 14:16:54,287     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1364)
+
+2019-09-16 14:16:54,289   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 14:16:54,289     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:16:54,290   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\01010101.txt
+
+2019-09-16 14:16:54,291   KadeNode. line: 47 -DEBUG- 
+	node 01010101 開始將 node 00000001 資料跟新於本地bucket中
+
+2019-09-16 14:16:54,291   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 14:16:54,292   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:16:54,292   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:16:54,293    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:16:54,293    KBucket. line: 58 -DEBUG- 
+	args is ('00000001',), except_ = False, ping = True
+
+2019-09-16 14:16:54,294    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:16:54,295        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:16:54,295 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1364], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 1358], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1364], "ID": "01010101"}], "content": "", "fail": []}
+
+2019-09-16 14:16:54,296     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1358)
+
+2019-09-16 14:16:54,298 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:16:54,303     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1365 has connected.
+
+2019-09-16 14:16:54,319     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:16:54,324    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1364], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 1358], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1364], "ID": "01010101"}], "content": "", "fail": []}'
+
+2019-09-16 14:16:54,339   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:16:54,349    handler. line: 33 -DEBUG- 
+	node 00000001 收到 node 01010101 的ping 請求，回傳OK
+
+2019-09-16 14:16:54,360 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:16:54,361   KadeNode. line:102 -DEBUG- 
+	 LookUp result is [{'address': ('192.168.1.113', 1358), 'ID': '00000001'}, <src.network.client.Client object at 0x000001E83FCC8DD8>]
+
+2019-09-16 14:16:54,361   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 14:17:17,200     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1378)
+
+2019-09-16 14:17:17,202   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 14:17:17,202     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:17:17,203   KadeNode. line: 47 -DEBUG- 
+	node 11111111 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:17:17,205   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 14:17:17,205   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:17:17,206   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:17:17,207    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:17:17,207    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:17:17,208    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:17:17,208   KadeNode. line:102 -DEBUG- 
+	 LookUp result is None
+
+2019-09-16 14:17:17,209   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 14:17:17,210    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:17:17,212    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = True, ping = True
+
+2019-09-16 14:17:17,213    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:17:17,214        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:17:17,214 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"address": ["192.168.1.113", 1364], "ID": "01010101"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}], "content": "", "fail": []}
+
+2019-09-16 14:17:17,215     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1364)
+
+2019-09-16 14:17:17,216 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:17:17,221     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1379 has connected.
+
+2019-09-16 14:17:17,232     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:17:17,242    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"address": ["192.168.1.113", 1364], "ID": "01010101"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}], "content": "", "fail": []}'
+
+2019-09-16 14:17:17,267   KadeNode. line: 47 -DEBUG- 
+	node 01010101 開始將 node 11111111 資料跟新於本地bucket中
+
+2019-09-16 14:17:17,278    handler. line: 33 -DEBUG- 
+	node 01010101 收到 node 11111111 的ping 請求，回傳OK
+
+2019-09-16 14:17:17,288 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:17:17,289   KadeNode. line:109 - INFO- 
+	node 11111111 準備向  node 01010101 發出查找 node 00000000 的請求
+
+2019-09-16 14:17:17,290        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'src.network.client.Client'>, connect is <src.network.client.Client object at 0x00000268CF498CF8>
+
+2019-09-16 14:17:17,291 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"ID": "00000000"}, "instruct": ["GET", "node", "00000000"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}], "content": "", "fail": []}
+
+2019-09-16 14:17:17,291 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:17:17,299    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"ID": "00000000"}, "instruct": ["GET", "node", "00000000"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}], "content": "", "fail": []}'
+
+2019-09-16 14:17:17,309   KadeNode. line: 47 -DEBUG- 
+	node 01010101 開始將 node 11111111 資料跟新於本地bucket中
+
+2019-09-16 14:17:17,319    handler. line: 39 - INFO- 
+	node 01010101 Get a GET node request from node 11111111
+
+2019-09-16 14:17:17,329    respond. line: 23 -DEBUG- 
+	receive a "Get node" request, the receive data is {'origin': {'address': ['192.168.1.113', 1378], 'ID': '11111111'}, 'destination': {'ID': '00000000'}, 'instruct': ['GET', 'node', '00000000'], 'path': [{'address': ['192.168.1.113', 1378], 'ID': '11111111'}], 'content': '', 'fail': []}
+
+2019-09-16 14:17:17,340    respond. line: 24 -DEBUG- 
+	self node is {'address': ('192.168.1.113', 1364), 'ID': '01010101'}
+
+2019-09-16 14:17:17,350    respond. line: 31 - INFO- 
+	此node 01010101 非查找目標，執行LookUP function
+
+2019-09-16 14:17:17,360   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000000 ， 雙方距離差距為 7
+
+2019-09-16 14:17:17,371   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = []
+
+2019-09-16 14:17:17,381   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:17:17,391    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:17:17,401    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:17:17,411    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:17:17,421   KadeNode. line:102 -DEBUG- 
+	 LookUp result is None
+
+2019-09-16 14:17:17,431   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 01010101 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 14:17:17,441    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:17:17,451    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = True, ping = True
+
+2019-09-16 14:17:17,462    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:17:17,472        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:17:17,492 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1364], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 1358], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1364], "ID": "01010101"}, {"address": ["192.168.1.113", 1364], "ID": "01010101"}], "content": "", "fail": []}
+
+2019-09-16 14:17:17,512     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1358)
+
+2019-09-16 14:17:17,526     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1380 has connected.
+
+2019-09-16 14:17:17,542     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:17:17,539 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:17:17,562    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1364], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 1358], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1364], "ID": "01010101"}, {"address": ["192.168.1.113", 1364], "ID": "01010101"}], "content": "", "fail": []}'
+
+2019-09-16 14:17:17,573   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:17:17,583    handler. line: 33 -DEBUG- 
+	node 00000001 收到 node 01010101 的ping 請求，回傳OK
+
+2019-09-16 14:17:17,604 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:17:17,614   KadeNode. line:109 - INFO- 
+	node 01010101 準備向  node 00000001 發出查找 node 00000000 的請求
+
+2019-09-16 14:17:17,625        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'src.network.client.Client'>, connect is <src.network.client.Client object at 0x000001E83FCC8E10>
+
+2019-09-16 14:17:17,635 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"ID": "00000000"}, "instruct": ["GET", "node", "00000000"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}, {"address": ["192.168.1.113", 1364], "ID": "01010101"}], "content": "", "fail": ["00000000"]}
+
+2019-09-16 14:17:17,645 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:17:17,670    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"ID": "00000000"}, "instruct": ["GET", "node", "00000000"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}, {"address": ["192.168.1.113", 1364], "ID": "01010101"}], "content": "", "fail": ["00000000"]}'
+
+2019-09-16 14:17:17,680   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 11111111 資料跟新於本地bucket中
+
+2019-09-16 14:17:17,690   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:17:17,700    handler. line: 39 - INFO- 
+	node 00000001 Get a GET node request from node 01010101
+
+2019-09-16 14:17:17,710    respond. line: 23 -DEBUG- 
+	receive a "Get node" request, the receive data is {'origin': {'address': ['192.168.1.113', 1378], 'ID': '11111111'}, 'destination': {'ID': '00000000'}, 'instruct': ['GET', 'node', '00000000'], 'path': [{'address': ['192.168.1.113', 1378], 'ID': '11111111'}, {'address': ['192.168.1.113', 1364], 'ID': '01010101'}], 'content': '', 'fail': ['00000000']}
+
+2019-09-16 14:17:17,721    respond. line: 24 -DEBUG- 
+	self node is {'address': ('192.168.1.113', 1358), 'ID': '00000001'}
+
+2019-09-16 14:17:17,731    respond. line: 31 - INFO- 
+	此node 00000001 非查找目標，執行LookUP function
+
+2019-09-16 14:17:17,746   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:17:17,766   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = ['00000000']
+
+2019-09-16 14:17:17,771   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = ['00000000']
+
+2019-09-16 14:17:17,781    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:17:17,791    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:17:17,801    KBucket. line: 59 -DEBUG- 
+	ExceptList = ['00000000']
+
+2019-09-16 14:17:17,811   KadeNode. line:102 -DEBUG- 
+	 LookUp result is None
+
+2019-09-16 14:17:17,821   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 00000001 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 14:17:17,827    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:17:17,837    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = True, ping = True
+
+2019-09-16 14:17:17,847    KBucket. line: 59 -DEBUG- 
+	ExceptList = ['00000000']
+
+2019-09-16 14:17:17,857   KadeNode. line:112 - INFO- 
+	同距離節點不存在或無法回應，請求拒絕，即將回退資料
+
+2019-09-16 14:17:17,868        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:17:17,873 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"ID": "00000000"}, "instruct": ["REJECT", "GET", "node", "00000000"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}, {"address": ["192.168.1.113", 1364], "ID": "01010101"}, {"address": ["192.168.1.113", 1358], "ID": "00000001"}], "content": "", "fail": ["00000000", "00000000", "00000001"]}
+
+2019-09-16 14:17:17,894     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1364)
+
+2019-09-16 14:17:17,906     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1381 has connected.
+
+2019-09-16 14:17:17,917     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:17:17,925 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:17:17,947    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"ID": "00000000"}, "instruct": ["REJECT", "GET", "node", "00000000"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}, {"address": ["192.168.1.113", 1364], "ID": "01010101"}, {"address": ["192.168.1.113", 1358], "ID": "00000001"}], "content": "", "fail": ["00000000", "00000000", "00000001"]}'
+
+2019-09-16 14:17:17,959   KadeNode. line: 47 -DEBUG- 
+	node 01010101 開始將 node 11111111 資料跟新於本地bucket中
+
+2019-09-16 14:17:17,969   KadeNode. line: 47 -DEBUG- 
+	node 01010101 開始將 node 00000001 資料跟新於本地bucket中
+
+2019-09-16 14:17:17,974    handler. line: 72 - INFO- 
+	node 01010101 的 ['GET', 'node', '00000000'] 請求被node 00000001 退回了
+
+2019-09-16 14:17:17,994    respond. line:107 -DEBUG- 
+	In receive reject...
+
+2019-09-16 14:17:18,004    respond. line:112 -DEBUG- 
+	from now on, the path is [{'address': ['192.168.1.113', 1378], 'ID': '11111111'}]
+
+2019-09-16 14:17:18,010    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:17:18,020    KBucket. line: 58 -DEBUG- 
+	args is ('00000001',), except_ = True, ping = True
+
+2019-09-16 14:17:18,030    KBucket. line: 59 -DEBUG- 
+	ExceptList = ['00000000', '00000000', '00000001']
+
+2019-09-16 14:17:18,040    respond. line:121 - INFO- 
+	找無其他節點傳送 ，回傳給node 11111111 請求拒絕
+
+2019-09-16 14:17:18,050        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:17:18,055 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"ID": "00000000"}, "instruct": ["REJECT", "GET", "node", "00000000"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}, {"address": ["192.168.1.113", 1364], "ID": "01010101"}], "content": "", "fail": ["00000000", "00000000", "00000001", "00000001", "01010101"]}
+
+2019-09-16 14:17:18,076     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1378)
+
+2019-09-16 14:17:18,091     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1382 has connected.
+
+2019-09-16 14:17:18,101 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:17:18,101     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:17:18,117    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1378], "ID": "11111111"}, "destination": {"ID": "00000000"}, "instruct": ["REJECT", "GET", "node", "00000000"], "path": [{"address": ["192.168.1.113", 1378], "ID": "11111111"}, {"address": ["192.168.1.113", 1364], "ID": "01010101"}], "content": "", "fail": ["00000000", "00000000", "00000001", "00000001", "01010101"]}'
+
+2019-09-16 14:17:18,128   KadeNode. line: 47 -DEBUG- 
+	node 11111111 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:17:18,138    handler. line: 72 - INFO- 
+	node 11111111 的 ['GET', 'node', '00000000'] 請求被node 01010101 退回了
+
+2019-09-16 14:17:18,143    respond. line:107 -DEBUG- 
+	In receive reject...
+
+2019-09-16 14:17:18,154    respond. line:112 -DEBUG- 
+	from now on, the path is []
+
+2019-09-16 14:17:18,164    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:17:18,174    KBucket. line: 58 -DEBUG- 
+	args is ('01010101',), except_ = True, ping = True
+
+2019-09-16 14:17:18,184    KBucket. line: 59 -DEBUG- 
+	ExceptList = ['00000000', '00000000', '00000001', '00000001', '01010101']
+
+2019-09-16 14:17:18,194    respond. line:125 - INFO- 
+	oops! the request fail!!!!!!!!!!!
+
+2019-09-16 14:22:38,382     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1652)
+
+2019-09-16 14:22:38,383   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 14:22:38,384     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:22:38,386   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000000.txt
+
+2019-09-16 14:22:44,080     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1655)
+
+2019-09-16 14:22:44,082   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 14:22:44,082     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:22:44,084   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000001.txt
+
+2019-09-16 14:22:44,085   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 00000000 資料跟新於本地bucket中
+
+2019-09-16 14:22:44,086   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:22:44,087   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:22:44,088   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:22:44,090    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:22:44,091    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:22:44,091    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:22:44,092        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:22:44,093 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1655], "ID": "00000001"}, "destination": {"address": ["192.168.1.113", 1652], "ID": "00000000"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1655], "ID": "00000001"}], "content": "", "fail": []}
+
+2019-09-16 14:22:44,094     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1652)
+
+2019-09-16 14:22:44,097 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:22:44,102     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1656 has connected.
+
+2019-09-16 14:22:44,107     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:22:44,113    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1655], "ID": "00000001"}, "destination": {"address": ["192.168.1.113", 1652], "ID": "00000000"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1655], "ID": "00000001"}], "content": "", "fail": []}'
+
+2019-09-16 14:22:44,133   KadeNode. line: 47 -DEBUG- 
+	node 00000000 開始將 node 00000001 資料跟新於本地bucket中
+
+2019-09-16 14:22:44,143    handler. line: 33 -DEBUG- 
+	node 00000000 收到 node 00000001 的ping 請求，回傳OK
+
+2019-09-16 14:22:44,158 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:22:44,160   KadeNode. line:102 -DEBUG- 
+	 LookUp result is [{'address': ('192.168.1.113', 1652), 'ID': '00000000'}, <src.network.client.Client object at 0x00000265E3078EB8>]
+
+2019-09-16 14:22:44,164   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 14:22:49,605     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1660)
+
+2019-09-16 14:22:49,607   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 14:22:49,610     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:22:49,612   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\01010101.txt
+
+2019-09-16 14:22:49,612   KadeNode. line: 47 -DEBUG- 
+	node 01010101 開始將 node 00000001 資料跟新於本地bucket中
+
+2019-09-16 14:22:49,613   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 14:22:49,618   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:22:49,620   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:22:49,620    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:22:49,621    KBucket. line: 58 -DEBUG- 
+	args is ('00000001',), except_ = False, ping = True
+
+2019-09-16 14:22:49,621    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:22:49,622        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:22:49,622 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1660], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 1655], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1660], "ID": "01010101"}], "content": "", "fail": []}
+
+2019-09-16 14:22:49,623     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1655)
+
+2019-09-16 14:22:49,624 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:22:49,629     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1661 has connected.
+
+2019-09-16 14:22:49,639     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:22:49,650    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1660], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 1655], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1660], "ID": "01010101"}], "content": "", "fail": []}'
+
+2019-09-16 14:22:49,676   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:22:49,686    handler. line: 33 -DEBUG- 
+	node 00000001 收到 node 01010101 的ping 請求，回傳OK
+
+2019-09-16 14:22:49,696 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:22:49,698   KadeNode. line:102 -DEBUG- 
+	 LookUp result is [{'address': ('192.168.1.113', 1655), 'ID': '00000001'}, <src.network.client.Client object at 0x0000021061858E48>]
+
+2019-09-16 14:22:49,698   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 14:22:54,720     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1665)
+
+2019-09-16 14:22:54,721   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 14:22:54,721     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:22:54,723   KadeNode. line: 47 -DEBUG- 
+	node 11111111 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:22:54,724   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 14:22:54,725   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:22:54,726   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:22:54,726    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:22:54,727    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:22:54,728    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:22:54,729   KadeNode. line:102 -DEBUG- 
+	 LookUp result is None
+
+2019-09-16 14:22:54,731   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 14:22:54,731    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:22:54,732    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:22:54,733    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:22:54,734   KadeNode. line:112 - INFO- 
+	同距離節點不存在或無法回應，請求拒絕，即將回退資料
+
+2019-09-16 14:23:35,989     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1686)
+
+2019-09-16 14:23:35,991   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 14:23:35,991     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:23:35,993   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000000.txt
+
+2019-09-16 14:23:40,282     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1690)
+
+2019-09-16 14:23:40,284   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 14:23:40,284     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:23:40,285   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000001.txt
+
+2019-09-16 14:23:40,287   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 00000000 資料跟新於本地bucket中
+
+2019-09-16 14:23:40,288   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:23:40,289   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:23:40,289   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:23:40,290    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:23:40,291    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:23:40,293    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:23:40,294        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:23:40,294 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1690], "ID": "00000001"}, "destination": {"address": ["192.168.1.113", 1686], "ID": "00000000"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1690], "ID": "00000001"}], "content": "", "fail": []}
+
+2019-09-16 14:23:40,295     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1686)
+
+2019-09-16 14:23:40,296 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:23:40,302     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1691 has connected.
+
+2019-09-16 14:23:40,313     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:23:40,328    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1690], "ID": "00000001"}, "destination": {"address": ["192.168.1.113", 1686], "ID": "00000000"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1690], "ID": "00000001"}], "content": "", "fail": []}'
+
+2019-09-16 14:23:40,344   KadeNode. line: 47 -DEBUG- 
+	node 00000000 開始將 node 00000001 資料跟新於本地bucket中
+
+2019-09-16 14:23:40,354    handler. line: 33 -DEBUG- 
+	node 00000000 收到 node 00000001 的ping 請求，回傳OK
+
+2019-09-16 14:23:40,364 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:23:40,365   KadeNode. line:102 -DEBUG- 
+	 LookUp result is [{'address': ('192.168.1.113', 1686), 'ID': '00000000'}, <src.network.client.Client object at 0x000001C2F39F8DD8>]
+
+2019-09-16 14:23:40,371   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 14:23:43,651     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1695)
+
+2019-09-16 14:23:43,653   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 14:23:43,654     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:23:43,655   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\01010101.txt
+
+2019-09-16 14:23:43,656   KadeNode. line: 47 -DEBUG- 
+	node 01010101 開始將 node 00000001 資料跟新於本地bucket中
+
+2019-09-16 14:23:43,656   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 14:23:43,657   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:23:43,658   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:23:43,659    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:23:43,660    KBucket. line: 58 -DEBUG- 
+	args is ('00000001',), except_ = False, ping = True
+
+2019-09-16 14:23:43,660    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:23:43,661        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:23:43,663 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 1695], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 1690], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1695], "ID": "01010101"}], "content": "", "fail": []}
+
+2019-09-16 14:23:43,664     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 1690)
+
+2019-09-16 14:23:43,665 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:23:43,670     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:1696 has connected.
+
+2019-09-16 14:23:43,682     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:23:43,692    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 1695], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 1690], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 1695], "ID": "01010101"}], "content": "", "fail": []}'
+
+2019-09-16 14:23:43,708   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:23:43,719    handler. line: 33 -DEBUG- 
+	node 00000001 收到 node 01010101 的ping 請求，回傳OK
+
+2019-09-16 14:23:43,735 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:23:43,738   KadeNode. line:102 -DEBUG- 
+	 LookUp result is [{'address': ('192.168.1.113', 1690), 'ID': '00000001'}, <src.network.client.Client object at 0x00000229520F8EB8>]
+
+2019-09-16 14:23:43,739   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 14:23:46,347     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 1698)
+
+2019-09-16 14:23:46,349   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 14:23:46,349     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:23:46,351   KadeNode. line: 47 -DEBUG- 
+	node 11111111 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:23:46,352   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 14:23:46,353   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:23:46,354   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:23:46,358    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:23:46,358    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:23:46,359    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:23:46,359   KadeNode. line:102 -DEBUG- 
+	 LookUp result is None
+
+2019-09-16 14:23:46,360   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 14:23:46,361    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:23:46,362    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), except_ = False, ping = True
+
+2019-09-16 14:23:46,362    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:23:46,363   KadeNode. line:112 - INFO- 
+	同距離節點不存在或無法回應，請求拒絕，即將回退資料
+
+2019-09-16 14:40:35,756     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 2624)
+
+2019-09-16 14:40:35,757   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 14:40:35,758     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:40:35,759   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000000.txt
+
+2019-09-16 14:40:38,865     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 2627)
+
+2019-09-16 14:40:38,866   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 14:40:38,866     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:40:38,868   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000001.txt
+
+2019-09-16 14:40:38,869   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 00000000 資料跟新於本地bucket中
+
+2019-09-16 14:40:38,870   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:40:38,871   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:40:38,872   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:40:38,872    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:40:46,306     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 2632)
+
+2019-09-16 14:40:46,307   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 14:40:46,308     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:40:46,309   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000001.txt
+
+2019-09-16 14:40:46,310   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 00000000 資料跟新於本地bucket中
+
+2019-09-16 14:40:46,311   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:40:46,311   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:40:46,312   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:40:46,313    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:41:10,848     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 2645)
+
+2019-09-16 14:41:10,849   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 14:41:10,850     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:41:10,851   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000000.txt
+
+2019-09-16 14:41:13,711     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 2647)
+
+2019-09-16 14:41:13,712   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 14:41:13,713     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:41:13,714   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\00000001.txt
+
+2019-09-16 14:41:13,715   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 00000000 資料跟新於本地bucket中
+
+2019-09-16 14:41:13,715   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:41:13,716   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:41:13,716   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:41:13,717    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:41:13,717    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), recursive = True, ping = True
+
+2019-09-16 14:41:13,718    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:41:13,719        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:41:13,719 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 2647], "ID": "00000001"}, "destination": {"address": ["192.168.1.113", 2645], "ID": "00000000"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 2647], "ID": "00000001"}], "content": "", "fail": []}
+
+2019-09-16 14:41:13,720     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 2645)
+
+2019-09-16 14:41:13,722 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:41:13,727     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:2648 has connected.
+
+2019-09-16 14:41:13,737     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:41:13,752    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 2647], "ID": "00000001"}, "destination": {"address": ["192.168.1.113", 2645], "ID": "00000000"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 2647], "ID": "00000001"}], "content": "", "fail": []}'
+
+2019-09-16 14:41:13,787   KadeNode. line: 47 -DEBUG- 
+	node 00000000 開始將 node 00000001 資料跟新於本地bucket中
+
+2019-09-16 14:41:13,797    handler. line: 33 -DEBUG- 
+	node 00000000 收到 node 00000001 的ping 請求，回傳OK
+
+2019-09-16 14:41:13,812 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:41:13,813   KadeNode. line:102 -DEBUG- 
+	 LookUp result is [{'address': ('192.168.1.113', 2645), 'ID': '00000000'}, <src.network.client.Client object at 0x000001AE46FC8E48>]
+
+2019-09-16 14:41:13,814   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 14:41:17,674     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 2651)
+
+2019-09-16 14:41:17,676   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 14:41:17,676     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:41:17,678   KadeNode. line:149 -DEBUG- 
+	D:\eclipse\python\hw\kademilia\Save\01010101.txt
+
+2019-09-16 14:41:17,678   KadeNode. line: 47 -DEBUG- 
+	node 01010101 開始將 node 00000001 資料跟新於本地bucket中
+
+2019-09-16 14:41:17,678   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 14:41:17,679   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:41:17,679   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:41:17,680    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:41:17,680    KBucket. line: 58 -DEBUG- 
+	args is ('00000001',), recursive = True, ping = True
+
+2019-09-16 14:41:17,681    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:41:17,682        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:41:17,682 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 2651], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 2647], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 2651], "ID": "01010101"}], "content": "", "fail": []}
+
+2019-09-16 14:41:17,683     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 2647)
+
+2019-09-16 14:41:17,684 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:41:17,690     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:2652 has connected.
+
+2019-09-16 14:41:17,715     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:41:17,715    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 2651], "ID": "01010101"}, "destination": {"address": ["192.168.1.113", 2647], "ID": "00000001"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 2651], "ID": "01010101"}], "content": "", "fail": []}'
+
+2019-09-16 14:41:17,750   KadeNode. line: 47 -DEBUG- 
+	node 00000001 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:41:17,770    handler. line: 33 -DEBUG- 
+	node 00000001 收到 node 01010101 的ping 請求，回傳OK
+
+2019-09-16 14:41:17,780 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:41:17,780   KadeNode. line:102 -DEBUG- 
+	 LookUp result is [{'address': ('192.168.1.113', 2647), 'ID': '00000001'}, <src.network.client.Client object at 0x000002059C658EF0>]
+
+2019-09-16 14:41:17,781   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 14:41:20,489     server. line: 27 -DEBUG- 
+	serve at ('192.168.1.113', 2655)
+
+2019-09-16 14:41:20,490   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 14:41:20,491     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:41:20,491   KadeNode. line: 47 -DEBUG- 
+	node 11111111 開始將 node 01010101 資料跟新於本地bucket中
+
+2019-09-16 14:41:20,492   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 14:41:20,493   KadeNode. line: 81 -DEBUG- 
+	data["fail"] = None
+
+2019-09-16 14:41:20,494   KadeNode. line: 83 -DEBUG- 
+	In GetNode ... ExceptList = []
+
+2019-09-16 14:41:20,494    KBucket. line: 57 -DEBUG- 
+	in kbucket getnode...
+
+2019-09-16 14:41:20,495    KBucket. line: 58 -DEBUG- 
+	args is ('00000000',), recursive = True, ping = True
+
+2019-09-16 14:41:20,496    KBucket. line: 59 -DEBUG- 
+	ExceptList = []
+
+2019-09-16 14:41:20,496        ask. line: 16 -DEBUG- 
+	AskNode connect type = <class 'NoneType'>, connect is None
+
+2019-09-16 14:41:20,497 communicate. line: 23 -DEBUG- 
+	start to try to send data, data = {"origin": {"address": ["192.168.1.113", 2655], "ID": "11111111"}, "destination": {"address": ["192.168.1.113", 2651], "ID": "01010101"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 2655], "ID": "11111111"}], "content": "", "fail": []}
+
+2019-09-16 14:41:20,498     client. line: 51 -DEBUG- 
+	start to connect ('192.168.1.113', 2651)
+
+2019-09-16 14:41:20,499 communicate. line: 25 -DEBUG- 
+	_deal connect type = <class 'src.network.client.Client'>
+
+2019-09-16 14:41:20,504     server. line: 61 -DEBUG- 
+	the client 192.168.1.113:2656 has connected.
+
+2019-09-16 14:41:20,524     server. line: 58 -DEBUG- 
+	waiting for connect...
+
+2019-09-16 14:41:20,534    handler. line: 17 -DEBUG- 
+	server receive data, data is b'{"origin": {"address": ["192.168.1.113", 2655], "ID": "11111111"}, "destination": {"address": ["192.168.1.113", 2651], "ID": "01010101"}, "instruct": ["TRACE", "ping"], "path": [{"address": ["192.168.1.113", 2655], "ID": "11111111"}], "content": "", "fail": []}'
+
+2019-09-16 14:41:20,559   KadeNode. line: 47 -DEBUG- 
+	node 01010101 開始將 node 11111111 資料跟新於本地bucket中
+
+2019-09-16 14:41:20,569    handler. line: 33 -DEBUG- 
+	node 01010101 收到 node 11111111 的ping 請求，回傳OK
+
+2019-09-16 14:41:20,579 communicate. line: 31 -DEBUG- 
+	receive the request of respond data, data = ping ok
+
+2019-09-16 14:41:20,579   KadeNode. line:102 -DEBUG- 
+	 LookUp result is [{'address': ('192.168.1.113', 2651), 'ID': '01010101'}, <src.network.client.Client object at 0x000001BC9F248E80>]
+
+2019-09-16 14:41:20,580   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 14:57:58,171   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 14:58:01,134   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 14:58:01,150   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 14:58:01,196   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 14:58:05,210   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 14:58:05,210   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 14:58:05,257   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 14:58:07,984   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 14:58:07,985   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 14:58:08,024   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:07:38,765   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 15:07:41,964   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 15:07:41,979   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 15:07:42,026   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:07:45,556   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 15:07:45,556   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 15:07:45,587   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 15:07:48,422   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:07:48,422   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:07:48,469   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:09:20,056   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:09:20,056   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:09:20,119   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:10:00,150   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:10:00,150   KadeNode. line:101 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:10:00,197   KadeNode. line:119 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:10:16,222   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:10:16,222   KadeNode. line:101 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:10:16,269   KadeNode. line:119 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:10:46,390   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:10:46,390   KadeNode. line:101 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:10:46,468   KadeNode. line:119 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:11:11,368   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:11:11,368   KadeNode. line:101 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:11:11,446   KadeNode. line:119 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:11:36,346   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:11:36,346   KadeNode. line:101 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:11:36,362   KadeNode. line:119 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:12:01,090   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:14:57,426   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:14:57,426   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:15:40,043   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:15:40,043   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:16:01,212   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:16:01,212   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:16:01,212   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 15:20:12,978   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:20:12,979   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:20:12,980   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 15:20:13,000   KadeNode. line:109 - INFO- 
+	node 11111111 準備向  node 01010101 發出查找 node 00000000 的請求
+
+2019-09-16 15:20:13,010    handler. line: 39 - INFO- 
+	node 01010101 Get a GET node request from node 11111111
+
+2019-09-16 15:20:13,031    respond. line: 31 - INFO- 
+	此node 01010101 非查找目標，執行LookUP function
+
+2019-09-16 15:20:13,041   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000000 ， 雙方距離差距為 7
+
+2019-09-16 15:20:13,111   KadeNode. line:115 - INFO- 
+	查找結果： node 00000000 存在於 node 01010101 的 bucket中，開始請求node 00000000 聯繫 node 11111111
+
+2019-09-16 15:20:13,123    handler. line: 39 - INFO- 
+	node 00000001 Get a GET node request from node 01010101
+
+2019-09-16 15:20:13,138    respond. line: 31 - INFO- 
+	此node 00000001 非查找目標，執行LookUP function
+
+2019-09-16 15:20:13,148   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 15:20:13,215   KadeNode. line:115 - INFO- 
+	查找結果： node 00000000 存在於 node 00000001 的 bucket中，開始請求node 00000000 聯繫 node 11111111
+
+2019-09-16 15:20:13,232    handler. line: 39 - INFO- 
+	node 00000000 Get a GET node request from node 00000001
+
+2019-09-16 15:20:13,242    respond. line: 26 - INFO- 
+	此node 00000000 即為查找目標，回傳此node資料給予node 11111111
+
+2019-09-16 15:20:13,289    handler. line: 53 - INFO- 
+	node 11111111 的 GET node 請求收到回應了
+
+2019-09-16 15:20:13,299    respond. line: 38 - INFO- 
+	LookUp success!!!!!!!   I find the node 00000000
+
+2019-09-16 15:21:16,014   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 15:21:19,035   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 15:21:19,038   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 15:21:19,055   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:21:25,076   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 15:21:25,078   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 15:21:25,095   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 15:21:31,009   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:21:31,010   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:21:31,010   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 15:21:31,027   KadeNode. line:109 - INFO- 
+	node 11111111 準備向  node 01010101 發出查找 node 00000000 的請求
+
+2019-09-16 15:21:31,037    handler. line: 39 - INFO- 
+	node 01010101 Get a GET node request from node 11111111
+
+2019-09-16 15:21:31,052    respond. line: 31 - INFO- 
+	此node 01010101 非查找目標，執行LookUP function
+
+2019-09-16 15:21:31,072   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000000 ， 雙方距離差距為 7
+
+2019-09-16 15:21:31,082   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 01010101 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 15:21:31,148   KadeNode. line:109 - INFO- 
+	node 01010101 準備向  node 00000001 發出查找 node 00000000 的請求
+
+2019-09-16 15:21:31,171    handler. line: 39 - INFO- 
+	node 00000001 Get a GET node request from node 01010101
+
+2019-09-16 15:21:31,176    respond. line: 31 - INFO- 
+	此node 00000001 非查找目標，執行LookUP function
+
+2019-09-16 15:21:31,186   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 15:21:31,256   KadeNode. line:115 - INFO- 
+	查找結果： node 00000000 存在於 node 00000001 的 bucket中，開始請求node 00000000 聯繫 node 11111111
+
+2019-09-16 15:21:31,272    handler. line: 39 - INFO- 
+	node 00000000 Get a GET node request from node 00000001
+
+2019-09-16 15:21:31,282    respond. line: 26 - INFO- 
+	此node 00000000 即為查找目標，回傳此node資料給予node 11111111
+
+2019-09-16 15:21:31,338    handler. line: 53 - INFO- 
+	node 11111111 的 GET node 請求收到回應了
+
+2019-09-16 15:21:31,348    respond. line: 38 - INFO- 
+	LookUp success!!!!!!!   I find the node 00000000
+
+2019-09-16 15:21:35,251   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 15:21:41,182   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 15:21:46,505   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 15:21:46,506   KadeNode. line:169 - INFO- 
+	node 10 沒有其他節點可以通往目標，請求拒絕
+
+2019-09-16 15:24:14,968   KadeNode. line: 40 - INFO- 
+	node 100 上線了!!!
+
+2019-09-16 15:24:14,969   KadeNode. line:100 - INFO- 
+	node 100 開始查找 node 000 ， 雙方距離差距為 3
+
+2019-09-16 15:24:14,969   KadeNode. line:104 - INFO- 
+	查找結果： node 000 並不在 node 100 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 15:24:20,380   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 15:24:25,069   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 15:24:28,330   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 15:24:28,331   KadeNode. line:169 - INFO- 
+	node 10 沒有其他節點可以通往目標，請求拒絕
+
+2019-09-16 15:25:56,717   KadeNode. line: 40 - INFO- 
+	node 00000000 上線了!!!
+
+2019-09-16 15:26:00,495   KadeNode. line: 40 - INFO- 
+	node 00000001 上線了!!!
+
+2019-09-16 15:26:00,497   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 15:26:00,515   KadeNode. line:118 - INFO- 
+	node 00000000 存於本地，無需向網路查找
+
+2019-09-16 15:26:04,133   KadeNode. line: 40 - INFO- 
+	node 01010101 上線了!!!
+
+2019-09-16 15:26:04,136   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000001 ， 雙方距離差距為 7
+
+2019-09-16 15:26:04,152   KadeNode. line:118 - INFO- 
+	node 00000001 存於本地，無需向網路查找
+
+2019-09-16 15:26:06,638   KadeNode. line: 40 - INFO- 
+	node 11 上線了!!!
+
+2019-09-16 15:26:06,641   KadeNode. line:175 - INFO- 
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-09-16 15:26:06,641   KadeNode. line:180 - INFO- 
+	本地查無該檔案，即將判斷是否要向其他節點查找
+
+2019-09-16 15:26:09,794   KadeNode. line: 40 - INFO- 
+	node 11111111 上線了!!!
+
+2019-09-16 15:26:09,795   KadeNode. line:100 - INFO- 
+	node 11111111 開始查找 node 00000000 ， 雙方距離差距為 8
+
+2019-09-16 15:26:09,796   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 11111111 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 15:26:09,813   KadeNode. line:109 - INFO- 
+	node 11111111 準備向  node 01010101 發出查找 node 00000000 的請求
+
+2019-09-16 15:26:09,823    handler. line: 39 - INFO- 
+	node 01010101 Get a GET node request from node 11111111
+
+2019-09-16 15:26:09,833    respond. line: 31 - INFO- 
+	此node 01010101 非查找目標，執行LookUP function
+
+2019-09-16 15:26:09,843   KadeNode. line:100 - INFO- 
+	node 01010101 開始查找 node 00000000 ， 雙方距離差距為 7
+
+2019-09-16 15:26:09,858   KadeNode. line:104 - INFO- 
+	查找結果： node 00000000 並不在 node 01010101 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 15:26:09,913   KadeNode. line:109 - INFO- 
+	node 01010101 準備向  node 00000001 發出查找 node 00000000 的請求
+
+2019-09-16 15:26:09,938    handler. line: 39 - INFO- 
+	node 00000001 Get a GET node request from node 01010101
+
+2019-09-16 15:26:09,948    respond. line: 31 - INFO- 
+	此node 00000001 非查找目標，執行LookUP function
+
+2019-09-16 15:26:09,958   KadeNode. line:100 - INFO- 
+	node 00000001 開始查找 node 00000000 ， 雙方距離差距為 1
+
+2019-09-16 15:26:10,028   KadeNode. line:115 - INFO- 
+	查找結果： node 00000000 存在於 node 00000001 的 bucket中，開始請求node 00000000 聯繫 node 11111111
+
+2019-09-16 15:26:10,047    handler. line: 39 - INFO- 
+	node 00000000 Get a GET node request from node 00000001
+
+2019-09-16 15:26:10,057    respond. line: 26 - INFO- 
+	此node 00000000 即為查找目標，回傳此node資料給予node 11111111
+
+2019-09-16 15:26:10,108    handler. line: 53 - INFO- 
+	node 11111111 的 GET node 請求收到回應了
+
+2019-09-16 15:26:10,118    respond. line: 38 - INFO- 
+	LookUp success!!!!!!!   I find the node 00000000
+
+2019-09-16 15:26:15,299   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 15:26:18,231   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 15:26:20,685   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 15:26:20,699   KadeNode. line:165 - INFO- 
+	node 10 開始上傳檔案到網路，將資料傳給node 01
+
+2019-09-16 15:26:20,704    handler. line: 67 - INFO- 
+	node 01 Get a POST file request from node 10
+
+2019-09-16 15:26:20,714    respond. line: 42 - INFO- 
+	node 01 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 15:26:20,834   KadeNode. line:165 - INFO- 
+	node 01 開始上傳檔案到網路，將資料傳給node 00
+
+2019-09-16 15:26:20,859    handler. line: 67 - INFO- 
+	node 00 Get a POST file request from node 01
+
+2019-09-16 15:26:20,869    respond. line: 42 - INFO- 
+	node 00 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 15:26:20,914    respond. line: 68 - INFO- 
+	這份檔案已送達目標，再次hash將檔案送往node 11
+
+2019-09-16 15:26:20,944   KadeNode. line:165 - INFO- 
+	node 00 開始上傳檔案到網路，將資料傳給node 10
+
+2019-09-16 15:26:20,961    handler. line: 67 - INFO- 
+	node 10 Get a POST file request from node 00
+
+2019-09-16 15:26:20,971    respond. line: 58 - INFO- 
+	node 10 已經將FileID為 00 的檔案存於本地了，請求拒絕
+
+2019-09-16 15:26:21,045    handler. line: 72 - INFO- 
+	node 00 的 ['POST', 'file', '11'] 請求被node 10 退回了
+
+2019-09-16 15:26:21,055    respond. line:123 - INFO- 
+	找無其他節點傳送 ，回傳給node 01 請求拒絕
+
+2019-09-16 15:26:21,110    handler. line: 72 - INFO- 
+	node 01 的 ['POST', 'file', '11'] 請求被node 00 退回了
+
+2019-09-16 15:26:26,158    respond. line:119 - INFO- 
+	找另一節點node 01010101 傳送資料
+
+2019-09-16 15:28:53,942   KadeNode. line: 40 - INFO- 
+	node 11 上線了!!!
+
+2019-09-16 15:28:53,944   KadeNode. line:175 - INFO- 
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-09-16 15:28:53,945   KadeNode. line:180 - INFO- 
+	本地查無該檔案，即將判斷是否要向其他節點查找
+
+2019-09-16 15:28:53,970   KadeNode. line:197 - INFO- 
+	向node 01 發出GET file 請求
+
+2019-09-16 15:28:53,975    handler. line: 43 - INFO- 
+	node 01 Get a GET file request from node 11
+
+2019-09-16 15:28:53,985   KadeNode. line:175 - INFO- 
+	node 01 收到GET file請求，開始查找本地有無該檔案
+
+2019-09-16 15:28:54,000   KadeNode. line:202 - INFO- 
+	node 01 本地擁有該檔案，回傳該檔
+
+2019-09-16 15:28:54,050    respond. line: 86 - INFO- 
+	node 01 擁有指定檔案 ，回傳給node 11
+
+2019-09-16 15:28:54,091    handler. line: 61 - INFO- 
+	node 11 的 GET file 請求收到回應了
+
+2019-09-16 15:28:54,101    respond. line: 42 - INFO- 
+	node 11 開始將FileID為 00 的檔案存於本地
+
+2019-09-16 15:28:54,428    respond. line: 93 - INFO- 
+	Get File success!!!!!!! 我拿到檔案了!!!!!!!!
+
+2019-09-16 15:32:36,034   KadeNode. line: 40 - INFO- 
+	node 00 上線了!!!
+
+2019-09-16 15:32:39,443   KadeNode. line: 40 - INFO- 
+	node 01 上線了!!!
+
+2019-09-16 15:32:43,655   KadeNode. line: 40 - INFO- 
+	node 10 上線了!!!
+
+2019-09-16 15:33:38,558   KadeNode. line: 40 - INFO- 
+	node 100 上線了!!!
+
+2019-09-16 15:33:38,558   KadeNode. line:100 - INFO- 
+	node 100 開始查找 node 000 ， 雙方距離差距為 3
+
+2019-09-16 15:33:38,559   KadeNode. line:104 - INFO- 
+	查找結果： node 000 並不在 node 100 的 bucket中，開始向同距離的其他node查找
+
+2019-09-16 15:34:46,142   KadeNode. line:127 - INFO- 
+	node 11 開始向 node 10， 請求bucket
+
+2019-09-16 15:34:46,157    handler. line: 47 - INFO- 
+	node 10 Get a GET bucket request from node 11
+
+2019-09-16 15:34:46,172    respond. line:102 - INFO- 
+	即將回傳bucket中其他節點資料
+
+2019-09-16 15:34:46,183   KadeNode. line:132 - INFO- 
+	node 11 成功取得bucket，開始跟新到己方bucket
+
+2019-09-16 15:34:46,184   KadeNode. line:136 - INFO- 
+	node 11 跟新bucket成功
+
+2019-09-16 15:34:46,185   KadeNode. line: 40 - INFO- 
+	node 11 上線了!!!
+
+2019-09-16 15:34:46,209   KadeNode. line:127 - INFO- 
+	node 11 開始向 node 10， 請求bucket
+
+2019-09-16 15:34:46,219    handler. line: 47 - INFO- 
+	node 10 Get a GET bucket request from node 11
+
+2019-09-16 15:34:46,229    respond. line:102 - INFO- 
+	即將回傳bucket中其他節點資料
+
+2019-09-16 15:34:46,244   KadeNode. line:132 - INFO- 
+	node 11 成功取得bucket，開始跟新到己方bucket
+
+2019-09-16 15:34:46,245   KadeNode. line:136 - INFO- 
+	node 11 跟新bucket成功
+
+2019-09-16 18:50:20,554   KadeNode. line: 40 - INFO- 
+	node 111 上線了!!!
+
+2019-09-16 18:50:23,831   KadeNode. line: 40 - INFO- 
+	node 001 上線了!!!
+
+2019-09-16 18:50:28,192   KadeNode. line: 40 - INFO- 
+	node 010 上線了!!!
+

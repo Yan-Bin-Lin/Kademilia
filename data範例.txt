@@ -17,6 +17,9 @@ data = {
 	# this request has handle by which node?
 	'path' : ['OriginNodeData', 'MiddleNodeData', '...', 'DestinationNodeData']
 	
+	# this request should avoid transfering to these node
+	'fail' : ['FaileNodeData1', 'FaileNodeData2', '...'. 'FaileNodeDataN']
+	
 	# the content of this request, e.q. file...
 	'content' : {
 		# hash value of content

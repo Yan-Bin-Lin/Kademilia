@@ -27,6 +27,7 @@ def _DataFill(SelfNode, *args, data = {}, **kwargs):
         data['instruct'] = args
         data['path'] = [SelfNode]
         data['content'] = kwargs.get('content', '')
+        data['fail'] = []
     # update request
     else:
         #data['origin'] = kwargs.get('origin', data['origin'])

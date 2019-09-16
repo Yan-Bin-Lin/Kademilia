@@ -35,5 +35,6 @@ def Ask(SelfNode, type_, *instruct, connect = None, address = None, data = {}, d
 def Reject(SelfNode, data):
     data['instruct'].insert(0, 'REJECT')
     address = data['path'][-1]['address']
+    data['fail'].append(SelfNode['ID'])
     data = _DataFill(SelfNode, data = data)
     AskNode(data, 'send', None, address)
