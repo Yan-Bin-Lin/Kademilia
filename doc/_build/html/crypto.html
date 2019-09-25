@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>crypto package &mdash; Kademlia 3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'3.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Kademlia
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">crypto package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-crypto.AEAD">crypto.AEAD module</a></li>
+<li><a class="reference internal" href="#module-crypto.DHKeyExchange">crypto.DHKeyExchange module</a></li>
+<li><a class="reference internal" href="#module-crypto.RSASign">crypto.RSASign module</a></li>
+<li><a class="reference internal" href="#module-crypto.asycrypto">crypto.asycrypto module</a></li>
+<li><a class="reference internal" href="#module-crypto">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kademlia</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>crypto package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/crypto.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="crypto-package">
+<h1>crypto package<a class="headerlink" href="#crypto-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-crypto.AEAD">
+<span id="crypto-aead-module"></span><h2>crypto.AEAD module<a class="headerlink" href="#module-crypto.AEAD" title="Permalink to this headline">¶</a></h2>
+<p>Created on 2019年9月2日</p>
+<p>&#64;author: danny</p>
+<dl class="class">
+<dt id="crypto.AEAD.AEAD">
+<em class="property">class </em><code class="descclassname">crypto.AEAD.</code><code class="descname">AEAD</code><span class="sig-paren">(</span><em>key</em>, <em>nonce=b'&amp;fxa6B xaaIxferxf2Sxb8'</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.AEAD.AEAD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Authenticated encryption with associated data (AEAD)</p>
+<dl class="method">
+<dt id="crypto.AEAD.AEAD.GetKey">
+<code class="descname">GetKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crypto.AEAD.AEAD.GetKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.AEAD.AEAD.GetNonce">
+<code class="descname">GetNonce</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crypto.AEAD.AEAD.GetNonce" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.AEAD.AEAD.NewNonce">
+<code class="descname">NewNonce</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crypto.AEAD.AEAD.NewNonce" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.AEAD.AEAD.decrypt">
+<code class="descname">decrypt</code><span class="sig-paren">(</span><em>ct</em>, <em>nonce=None</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.AEAD.AEAD.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.AEAD.AEAD.encrypt">
+<code class="descname">encrypt</code><span class="sig-paren">(</span><em>msg</em>, <em>nonce=None</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.AEAD.AEAD.encrypt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.DHKeyExchange">
+<span id="crypto-dhkeyexchange-module"></span><h2>crypto.DHKeyExchange module<a class="headerlink" href="#module-crypto.DHKeyExchange" title="Permalink to this headline">¶</a></h2>
+<p>Created on 2019年9月2日</p>
+<p>&#64;author: danny</p>
+<dl class="class">
+<dt id="crypto.DHKeyExchange.DH">
+<em class="property">class </em><code class="descclassname">crypto.DHKeyExchange.</code><code class="descname">DH</code><span class="sig-paren">(</span><em>PublicKey=None</em>, <em>parameters=&lt;cryptography.hazmat.backends.openssl.dh._DHParameters object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.DHKeyExchange.DH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.asycrypto.asycalgori" title="crypto.asycrypto.asycalgori"><code class="xref py py-class docutils literal"><span class="pre">crypto.asycrypto.asycalgori</span></code></a></p>
+<dl class="method">
+<dt id="crypto.DHKeyExchange.DH.CreateShareKey">
+<code class="descname">CreateShareKey</code><span class="sig-paren">(</span><em>OtherPublicKey</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.DHKeyExchange.DH.CreateShareKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.DHKeyExchange.DH.GetShareKey">
+<code class="descname">GetShareKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crypto.DHKeyExchange.DH.GetShareKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.RSASign">
+<span id="crypto-rsasign-module"></span><h2>crypto.RSASign module<a class="headerlink" href="#module-crypto.RSASign" title="Permalink to this headline">¶</a></h2>
+<p>Created on 2019年9月2日</p>
+<p>&#64;author: danny</p>
+<dl class="class">
+<dt id="crypto.RSASign.RSA">
+<em class="property">class </em><code class="descclassname">crypto.RSASign.</code><code class="descname">RSA</code><span class="sig-paren">(</span><em>SaveKeyPath=None</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#crypto.asycrypto.asycalgori" title="crypto.asycrypto.asycalgori"><code class="xref py py-class docutils literal"><span class="pre">crypto.asycrypto.asycalgori</span></code></a></p>
+<dl class="method">
+<dt id="crypto.RSASign.RSA.NewKey">
+<code class="descname">NewKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.NewKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.RSASign.RSA.decrypt">
+<code class="descname">decrypt</code><span class="sig-paren">(</span><em>ciphertext</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.decrypt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.RSASign.RSA.encrypt">
+<code class="descname">encrypt</code><span class="sig-paren">(</span><em>public_key</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.encrypt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.RSASign.RSA.sign">
+<code class="descname">sign</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.sign" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.RSASign.RSA.verify">
+<code class="descname">verify</code><span class="sig-paren">(</span><em>public_key</em>, <em>signature</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.verify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto.asycrypto">
+<span id="crypto-asycrypto-module"></span><h2>crypto.asycrypto module<a class="headerlink" href="#module-crypto.asycrypto" title="Permalink to this headline">¶</a></h2>
+<p>Created on 2019年9月2日</p>
+<p>&#64;author: danny</p>
+<dl class="class">
+<dt id="crypto.asycrypto.asycalgori">
+<em class="property">class </em><code class="descclassname">crypto.asycrypto.</code><code class="descname">asycalgori</code><a class="headerlink" href="#crypto.asycrypto.asycalgori" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="crypto.asycrypto.asycalgori.GetPrivateKey">
+<code class="descname">GetPrivateKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crypto.asycrypto.asycalgori.GetPrivateKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.asycrypto.asycalgori.GetPublicKey">
+<code class="descname">GetPublicKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crypto.asycrypto.asycalgori.GetPublicKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.asycrypto.asycalgori.LoadKey">
+<code class="descname">LoadKey</code><span class="sig-paren">(</span><em>SavePath</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.asycrypto.asycalgori.LoadKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="crypto.asycrypto.asycalgori.SaveKey">
+<code class="descname">SaveKey</code><span class="sig-paren">(</span><em>SavePath</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.asycrypto.asycalgori.SaveKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-crypto">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-crypto" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, P2P Lending
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

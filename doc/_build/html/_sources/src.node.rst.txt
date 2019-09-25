@@ -1,0 +1,46 @@
+src\.node package
+=================
+
+Submodules
+----------
+
+src\.node\.KBucket module
+-------------------------
+
+.. automodule:: src.node.KBucket
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+src\.node\.KadeNode module
+--------------------------
+
+.. automodule:: src.node.KadeNode
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+src\.node\.NodeData module
+--------------------------
+
+.. automodule:: src.node.NodeData
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+src\.node\.RouteTable module
+----------------------------
+
+.. automodule:: src.node.RouteTable
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: src.node
+    :members:
+    :undoc-members:
+    :show-inheritance:

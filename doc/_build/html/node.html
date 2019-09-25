@@ -1,0 +1,587 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>node package &mdash; Kademlia 3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'3.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="util package" href="util.html" />
+    <link rel="prev" title="network package" href="network.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Kademlia
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="crypto.html">crypto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handler.html">handler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.html">network package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">node package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-node.KBucket">node.KBucket module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-node.KadeNode">node.KadeNode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-node.NodeData">node.NodeData module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#node-routetable-module">node.RouteTable module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-node">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="util.html">util package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kademlia</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>node package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/node.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="node-package">
+<h1>node package<a class="headerlink" href="#node-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-node.KBucket">
+<span id="node-kbucket-module"></span><h2>node.KBucket module<a class="headerlink" href="#module-node.KBucket" title="Permalink to this headline">¶</a></h2>
+<p>Created on 2019年9月3日</p>
+<p>&#64;author: danny</p>
+<dl class="class">
+<dt id="node.KBucket.KBucket">
+<em class="property">class </em><code class="descclassname">node.KBucket.</code><code class="descname">KBucket</code><span class="sig-paren">(</span><em>SelfNode</em>, <em>K=8</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KBucket.KBucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>a KBucket mean each distance content number of “MAX” k node</p>
+<dl class="method">
+<dt id="node.KBucket.KBucket.AddNode">
+<code class="descname">AddNode</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KBucket.KBucket.AddNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the node if the bucket is not full or the last node in bucket not exist(clean node success)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>node</strong> (<em>dict</em>) – NodeData to save</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KBucket.KBucket.CheckNode">
+<code class="descname">CheckNode</code><span class="sig-paren">(</span><em>ID</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KBucket.KBucket.CheckNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if a node is in bucket and alive
+:param ID: the node to delete</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KBucket.KBucket.DelNode">
+<code class="descname">DelNode</code><span class="sig-paren">(</span><em>ID</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KBucket.KBucket.DelNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete a node data of a bucket
+:param ID: the node to delete</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KBucket.KBucket.GetNode">
+<code class="descname">GetNode</code><span class="sig-paren">(</span><em>*args</em>, <em>recursive=True</em>, <em>closest=False</em>, <em>ping=True</em>, <em>ExceptList=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KBucket.KBucket.GetNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a NodeData</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>closest</strong> – if true, return “k” most closest node if the node not found in the bucket</li>
+<li><strong>ping</strong> – if true, check if the node is exist before return</li>
+<li><strong>*args</strong> (<em>tuple</em>) – For ID to get specufy node,
+if return the node and connect socket if it is in the bucket, else return None</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">(ConnectNode, ConnectSocket) if success connect else None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">connect (tuple)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KBucket.KBucket.IsExist">
+<code class="descname">IsExist</code><span class="sig-paren">(</span><em>ID</em>, <em>NodeData=None</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KBucket.KBucket.IsExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if the node in bucket is exist</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KBucket.KBucket.IsFull">
+<code class="descname">IsFull</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.KBucket.KBucket.IsFull" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if the number of node in Kbucket &gt;= k</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KBucket.KBucket.clean">
+<code class="descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.KBucket.KBucket.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>del a no response node. return True
+if all node exist, check the oldest(first) node is exist or not
+if the oldest node exist still exist, move the nose to the newest(first) and return fail</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KBucket.KBucket.length">
+<code class="descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.KBucket.KBucket.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>return number of node in the Kbucket</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-node.KadeNode">
+<span id="node-kadenode-module"></span><h2>node.KadeNode module<a class="headerlink" href="#module-node.KadeNode" title="Permalink to this headline">¶</a></h2>
+<p>Created on 2019年9月1日</p>
+<p>&#64;author: danny</p>
+<dl class="class">
+<dt id="node.KadeNode.KadeNode">
+<em class="property">class </em><code class="descclassname">node.KadeNode.</code><code class="descname">KadeNode</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="docutils">
+<dt>Kademlia 最基礎結構，每個KadeNode代表一個peer，</dt>
+<dd>作為網路通信的一員</dd>
+</dl>
+<dl class="attribute">
+<dt id="node.KadeNode.KadeNode.RSA">
+<code class="descname">RSA</code><a class="headerlink" href="#node.KadeNode.KadeNode.RSA" title="Permalink to this definition">¶</a></dt>
+<dd><p>a RSA class use for rsa method</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.KadeNode.KadeNode.web">
+<code class="descname">web</code><a class="headerlink" href="#node.KadeNode.KadeNode.web" title="Permalink to this definition">¶</a></dt>
+<dd><p>a connect class content server and client socket for connect</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.KadeNode.KadeNode.address">
+<code class="descname">address</code><a class="headerlink" href="#node.KadeNode.KadeNode.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>a tuple of (IPAddress, port) of server socket bind</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.KadeNode.KadeNode.ID">
+<code class="descname">ID</code><a class="headerlink" href="#node.KadeNode.KadeNode.ID" title="Permalink to this definition">¶</a></dt>
+<dd><p>the only ID of this node in the network</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.KadeNode.KadeNode.NodeData">
+<code class="descname">NodeData</code><a class="headerlink" href="#node.KadeNode.KadeNode.NodeData" title="Permalink to this definition">¶</a></dt>
+<dd><p>a NodeData class present this node, conntent RSA publicKey, address and ID</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.KadeNode.KadeNode.table">
+<code class="descname">table</code><a class="headerlink" href="#node.KadeNode.KadeNode.table" title="Permalink to this definition">¶</a></dt>
+<dd><p>a dict with key i: subtree split of the network and value:the bucket class of NodeData containt
+the route table of this node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.KadeNode.KadeNode.Savepath">
+<code class="descname">Savepath</code><a class="headerlink" href="#node.KadeNode.KadeNode.Savepath" title="Permalink to this definition">¶</a></dt>
+<dd><p>path for the file save</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.GetAllNode">
+<code class="descname">GetAllNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.GetAllNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>get all NodeData in table, return list of node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.GetBucket">
+<code class="descname">GetBucket</code><span class="sig-paren">(</span><em>ID=None</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.GetBucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the bucket of any node or a given ID node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.GetDistanceNode">
+<code class="descname">GetDistanceNode</code><span class="sig-paren">(</span><em>distance</em>, <em>ID=None</em>, <em>*</em>, <em>recursive=True</em>, <em>ExceptList=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.GetDistanceNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.GetFile">
+<code class="descname">GetFile</code><span class="sig-paren">(</span><em>HashCode</em>, <em>data={}</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.GetFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a file from network</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>HashCode</strong> – the Hashcode of file content</li>
+<li><strong>data</strong> – the request data from other node, default = {}</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.GetNode">
+<code class="descname">GetNode</code><span class="sig-paren">(</span><em>*</em>, <em>ID=None</em>, <em>recursive=True</em>, <em>data={}</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.GetNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>get a node data, if the node not found, will return a same distance node if recurive is True</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.LookUp">
+<code class="descname">LookUp</code><span class="sig-paren">(</span><em>ID</em>, <em>data={}</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.LookUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>find a node from network</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ID</strong> – the node ID to find</li>
+<li><strong>data</strong> – the request data from other node, default = {}</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.UpLoadFile">
+<code class="descname">UpLoadFile</code><span class="sig-paren">(</span><em>file</em>, <em>data={}</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.UpLoadFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>upload a file to network</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file</strong> – file to upload</li>
+<li><strong>data</strong> – the request data from other node, default = {}</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.closs">
+<code class="descname">closs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.closs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.request">
+<code class="descname">request</code><span class="sig-paren">(</span><em>ID</em>, <em>*instruct</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>name=''</em>, <em>json=False</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>save self NodeData to a file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.send">
+<code class="descname">send</code><span class="sig-paren">(</span><em>ID</em>, <em>instruct</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.send" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.KadeNode.KadeNode.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>node</em>, <em>getbucket=False</em><span class="sig-paren">)</span><a class="headerlink" href="#node.KadeNode.KadeNode.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>add new node to bucket in the table</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-node.NodeData">
+<span id="node-nodedata-module"></span><h2>node.NodeData module<a class="headerlink" href="#module-node.NodeData" title="Permalink to this headline">¶</a></h2>
+<p>Created on 2019年9月3日</p>
+<p>&#64;author: danny</p>
+<dl class="class">
+<dt id="node.NodeData.NodeData">
+<em class="property">class </em><code class="descclassname">node.NodeData.</code><code class="descname">NodeData</code><span class="sig-paren">(</span><em>address=None</em>, <em>PublicKey=None</em>, <em>ID=None</em><span class="sig-paren">)</span><a class="headerlink" href="#node.NodeData.NodeData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>a NodeData should content IP, PublicKey and ID</p>
+<dl class="attribute">
+<dt id="node.NodeData.NodeData._address">
+<code class="descname">_address</code><a class="headerlink" href="#node.NodeData.NodeData._address" title="Permalink to this definition">¶</a></dt>
+<dd><p>binding (IPAddress, port)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">tuple</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.NodeData.NodeData._PublicKey">
+<code class="descname">_PublicKey</code><a class="headerlink" href="#node.NodeData.NodeData._PublicKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>RSA PublicKey for sign</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.NodeData.NodeData._ID">
+<code class="descname">_ID</code><a class="headerlink" href="#node.NodeData.NodeData._ID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node ID</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">you should not change data!!</p>
+</div>
+<dl class="method">
+<dt id="node.NodeData.NodeData.GetAddress">
+<code class="descname">GetAddress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.NodeData.NodeData.GetAddress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.NodeData.NodeData.GetByteStringPubKey">
+<code class="descname">GetByteStringPubKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.NodeData.NodeData.GetByteStringPubKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert public key to “string” format if you need to send to other or save at disk</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.NodeData.NodeData.GetData">
+<code class="descname">GetData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.NodeData.NodeData.GetData" title="Permalink to this definition">¶</a></dt>
+<dd><p>return self in “dict” format</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">{
+‘address’ : self._address,
+‘PublicKey’ : self.GetByteStringPubKey(),
+‘ID’ : self._ID
+}</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.NodeData.NodeData.GetID">
+<code class="descname">GetID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.NodeData.NodeData.GetID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.NodeData.NodeData.GetIP">
+<code class="descname">GetIP</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.NodeData.NodeData.GetIP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.NodeData.NodeData.GetPort">
+<code class="descname">GetPort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.NodeData.NodeData.GetPort" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.NodeData.NodeData.GetPublicKey">
+<code class="descname">GetPublicKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#node.NodeData.NodeData.GetPublicKey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="node-routetable-module">
+<h2>node.RouteTable module<a class="headerlink" href="#node-routetable-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-node">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-node" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="util.html" class="btn btn-neutral float-right" title="util package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="network.html" class="btn btn-neutral float-left" title="network package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, P2P Lending
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

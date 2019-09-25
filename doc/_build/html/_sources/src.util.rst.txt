@@ -1,0 +1,30 @@
+src\.util package
+=================
+
+Submodules
+----------
+
+src\.util\.hash module
+----------------------
+
+.. automodule:: src.util.hash
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+src\.util\.web module
+---------------------
+
+.. automodule:: src.util.web
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: src.util
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,38 @@
+src\.handler package
+====================
+
+Submodules
+----------
+
+src\.handler\.ask module
+------------------------
+
+.. automodule:: src.handler.ask
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+src\.handler\.handler module
+----------------------------
+
+.. automodule:: src.handler.handler
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+src\.handler\.respond module
+----------------------------
+
+.. automodule:: src.handler.respond
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: src.handler
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>What is DHT? &mdash; Kademlia 3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'3.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Kademlia
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">What is DHT?</a></li>
+<li><a class="reference internal" href="#what-is-kademlia">What is Kademlia?</a></li>
+<li><a class="reference internal" href="#how-kademlia-work">How Kademlia work?</a><ul>
+<li><a class="reference internal" href="#xor">XOR距離運算</a></li>
+<li><a class="reference internal" href="#kbucket">Kbucket</a></li>
+<li><a class="reference internal" href="#id1">路由機制</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-start">Getting start</a><ul>
+<li><a class="reference internal" href="#kademlia-initial">Kademlia initial</a></li>
+<li><a class="reference internal" href="#update">update</a></li>
+<li><a class="reference internal" href="#lookup">LookUp</a></li>
+<li><a class="reference internal" href="#upload">UpLoad</a></li>
+<li><a class="reference internal" href="#download">DownLoad</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Kademlia</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>What is DHT?</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="what-is-dht">
+<h1>What is DHT?<a class="headerlink" href="#what-is-dht" title="Permalink to this headline">¶</a></h1>
+<p>在解釋Kademlia前先說說DHT的概念，DHT為<strong>distributed hash
+table</strong>(分散式雜湊表)的縮寫，概念上來說，每筆**data**都有對應的<strong>key</strong>，只要給定<strong>key</strong>就能從網路上取得<strong>data</strong>。</p>
+<div class="figure">
+<img alt="" src="https://zh.wikipedia.org/wiki/%E5%88%86%E6%95%A3%E5%BC%8F%E9%9B%9C%E6%B9%8A%E8%A1%A8#/media/File:DHT_en.svg,%20圖片引用自wiki" />
+</div>
+<p>應用在這專案中(P2PLending)來解釋，只要有ID，就能找到對應的借貸資料，或是另一位peer</p>
+</div>
+<div class="section" id="what-is-kademlia">
+<h1>What is Kademlia?<a class="headerlink" href="#what-is-kademlia" title="Permalink to this headline">¶</a></h1>
+<p>Kademlia是一種DHT演算法，將peer與檔案視為同構，也就是說檔案ID與peer
+ID可以相同，而演萬法上也會把檔案存在相同ID的peer上。</p>
+</div>
+<div class="section" id="how-kademlia-work">
+<h1>How Kademlia work?<a class="headerlink" href="#how-kademlia-work" title="Permalink to this headline">¶</a></h1>
+<p>Kademlia將整個系統映射至二元樹上，所有ID都是一組只有0或1的bit字串，0為左子樹，1為右子樹。以下先解釋幾個概念</p>
+<div class="section" id="xor">
+<h2>XOR距離運算<a class="headerlink" href="#xor" title="Permalink to this headline">¶</a></h2>
+<p>任意兩ID進行XOR運算結果定義為彼此的距離</p>
+</div>
+<div class="section" id="kbucket">
+<h2>Kbucket<a class="headerlink" href="#kbucket" title="Permalink to this headline">¶</a></h2>
+<p>對於任何一個節點來說，由root開始算，將<strong>不包含</strong>自己的子樹劃分出來即為一個Kbucket，<strong>K</strong>代表這bucket最多會存著<strong>K</strong>個節點。只要所有Kbucket都至少存有一個節點，該節點就可以遍歷整個網路</p>
+<div class="figure">
+<img alt="" src="https://en.wikipedia.org/wiki/Kademlia#/media/File:Dht_example_SVG.svg,%20圖片引用自wiki" />
+</div>
+</div>
+<div class="section" id="id1">
+<h2>路由機制<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">為甚麼這樣就能遍歷網路？</div>
+<div class="line">由於Kbucket是拆分出來的子樹，同bucket內的節點前綴會相同，當今天把資料送給某個位置未知的節點X時，只要把資料交給同Kbucket內的節點Y，這樣等於把距離收斂至bucket內，節點Y再以自己的視角找尋bucket內的其他節點，就能將距離收斂至找到目標。</div>
+</div>
+<div class="figure">
+<img alt="" src="https://lh6.googleusercontent.com/J9ebpRdPW788CCFetj0KJhS4mTwHGeOwppibQ2-dBuwlMWjQoKdPi5VBbWMJpI_04XYvULA3Hm4kGIQF15RSFOWkq_qI4U93V39eDHrM3lxemgESNJ8JogVIBjjGNt3EXs-141V0GBg,%20圖片引用自https://program-think.blogspot.com/2017/09/Introduction-DHT-Kademlia-Chord.html" />
+</div>
+</div>
+</div>
+<div class="section" id="getting-start">
+<h1>Getting start<a class="headerlink" href="#getting-start" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="kademlia-initial">
+<h2>Kademlia initial<a class="headerlink" href="#kademlia-initial" title="Permalink to this headline">¶</a></h2>
+<p>自己一人是無法構成網路的，想要拓展自己的網路就要先update一個已知節點的資料，向對方發出GET
+node
+SelfID請求，也就是請對方找<strong>自己</strong>，Kademlia節點只要收到任何請求都會先將對方update進自己的bucket然後才執行其他動作，當收到GET
+node
+SelfID的請求時，對方就會將自己加入bucket中，然後回傳對方bucket中離自己最近的其他節點，再向這些節點發出請求，如此遞迴下去，就能完備自己的bucket資料</p>
+</div>
+<div class="section" id="update">
+<h2>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
+<p>跟新一個節點到自己的bucket內，如果bucket已到達上限<strong>K</strong>，就會檢查最舊的節點有無響應(ping他)，如果有，就把該節點移到最前面(視為最新)，並捨棄新加入的節點，否則就刪除舊節點加入新節點。</p>
+</div>
+<div class="section" id="lookup">
+<h2>LookUp<a class="headerlink" href="#lookup" title="Permalink to this headline">¶</a></h2>
+<p>當執行LookUp會看自己的bucket內有無該節點，有就直接回傳，否則會開始依參數<strong>a</strong>分<strong>a</strong>個thread下去調度同bucket內的其他節點發出GET
+node請求，其他節點收到請求後，如果自己存有該節點資料就會直接回傳，否則會回傳<strong>K</strong>個最接近的節點</p>
+</div>
+<div class="section" id="upload">
+<h2>UpLoad<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="download">
+<h2>DownLoad<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, P2P Lending
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

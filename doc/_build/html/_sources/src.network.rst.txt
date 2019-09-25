@@ -1,0 +1,46 @@
+src\.network package
+====================
+
+Submodules
+----------
+
+src\.network\.client module
+---------------------------
+
+.. automodule:: src.network.client
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+src\.network\.communicate module
+--------------------------------
+
+.. automodule:: src.network.communicate
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+src\.network\.connect module
+----------------------------
+
+.. automodule:: src.network.connect
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+src\.network\.server module
+---------------------------
+
+.. automodule:: src.network.server
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: src.network
+    :members:
+    :undoc-members:
+    :show-inheritance:

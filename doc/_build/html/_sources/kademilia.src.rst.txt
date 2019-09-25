@@ -1,0 +1,10 @@
+kademilia\.src package
+======================
+
+Module contents
+---------------
+
+.. automodule:: kademilia.src
+    :members:
+    :undoc-members:
+    :show-inheritance:
