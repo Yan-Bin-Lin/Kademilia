@@ -11,13 +11,16 @@ from ..network.communicate import *
 from ..util.hash import *
 from ..util.web import _DataFill
 from ..node.NodeData import NodeData
-from .ask import Ask, Reject
+from .ask import Ask #Reject
 
 import logging
 logger = logging.getLogger( 'loglog' )
     
-# reply to someone send GET node
+
 def ReplyGetNode(data, KadeNode):
+    '''
+    reply to GET node request
+    '''
     DestinateID = data['destination']['ID']
     SelfNode = KadeNode.NodeData.GetData()
     logger.debug(f'receive a "Get node" request, the receive data is {data}')
@@ -28,15 +31,22 @@ def ReplyGetNode(data, KadeNode):
         logger.debug(f'Reply back to origin node, origin address is {data["origin"]["address"]}')
         Ask(SelfNode, 'send', 'REPLY', 'getnode', address = data['origin']['address'], destination = SelfNode, data = data)
     else:
-        logger.info(f'此node {SelfNode["ID"]} 非查找目標，執行LookUP function')       
-        KadeNode.LookUp(DestinateID, data)
+        logger.info(f'此node {SelfNode["ID"]} 非查找目標，執行LookUP function')
+        Ask(SelfNode, 'send', 'REPLY', 'getnode', address = data['origin']['address'], data = data,
+             content = KadeNode.LookUp(DestinateID, data))       
+        
         
 
-# receive the request node
 def ReceiveGetNode(data, KadeNode):
-    KadeNode.update(data['destination'])
-    logger.info(f'LookUp success!!!!!!!   I find the node {data["destination"]["ID"]}')
-    
+    '''receive the request node'''
+    if data['destination'].get('address', None) != None:
+        KadeNode.update(data['destination'])
+        logger.info(f'LookUp success!!!!!!!   I find the node {data["destination"]["ID"]}')
+    else:
+        logger.info(f'Get node receive reply, add the node into bucket {data["content"]}')
+        for node in data['content']:
+            KadeNode.update(node)
+        
 
 def _SaveFile(data, KadeNode):
     logger.info(f'node {KadeNode.ID} 開始將FileID為 {data["content"]["FileID"]} 的檔案存於本地')
@@ -49,36 +59,37 @@ def _SaveFile(data, KadeNode):
     
 
 def ReplyPostFile(data, KadeNode):
-    logger.debug('IN ReplyPostFile...')
+    '''
+    reply to POST node request
+    '''
     SelfNode = KadeNode.NodeData.GetData()
-    # check if this node has self before or not
-    for saver in data['content']['saver']:
-        # if this node has saved the file, reject
-        if saver[0]['ID'] == KadeNode.ID:
-            logger.info(f'node {KadeNode.ID} 已經將FileID為 {data["content"]["FileID"]} 的檔案存於本地了，請求拒絕')
-            Reject(SelfNode, data)
-            return None
     
     data['content']['saver'].append([SelfNode, 1])
     _SaveFile(data, KadeNode)
-    if len(data['path']) < 7:
-        if data['instruct'][2] == SelfNode['ID']:
-            data['instruct'][2] = GetHash(SelfNode['ID'])
-            data['destination'] = SelfNode
-            logger.info(f'這份檔案已送達目標，再次hash將檔案送往node {data["instruct"][2]}')
-        KadeNode.UpLoadFile('not need', data)
-    else:
-        logger.info(f'這份資料已到達上限，回傳通知node {data["origin"]["ID"]}')  
-        Ask(SelfNode, 'send', 'REPLY', 'postfile', address = data['origin']['address'], destination = SelfNode, data = data)        
-
+    
+    # if no distination, just save the file
+    if len(data['instruct']) < 3:
+        return 
+    # if this node is the distanation
+    elif data['instruct'][2] == SelfNode['ID']:
+        del data['instruct'][2]
+        data['destination'] = SelfNode
+        logger.info(f'這份檔案已送達目標，將檔案送往靠近自己的node')
+        
+    KadeNode.UpLoadFile('', data)        
+        
 
 #receive the notice of upload file result
 def ReceivePostFile(data, KadeNode):
+    '''receive the reply of post node request'''
     _SaveFile(data, KadeNode)
     logger.info(f'Update File success!!!!!!!  存到檔案的節點有{[peer[0]["ID"] for peer in data["content"]["saver"][1:]]}')
     
     
 def ReplyGetFile(data, KadeNode):
+    '''
+    reply to GET file request
+    '''
     SelfNode = KadeNode.NodeData.GetData()
     file = KadeNode.GetFile(data['content']['FileID'], data)
     # if local own target file
@@ -94,6 +105,9 @@ def ReceiveGetFile(data, KadeNode):
     
 
 def ReplyGetBucket(KadeNode):
+    '''
+    reply to GET bucket request
+    '''
     result = []
     for distance, bucket in KadeNode.table.items():
         if KadeNode.table[distance].length() != 0:
@@ -117,6 +131,7 @@ def ReceiveReject(data, KadeNode):
     if AnotherNode != None:
         logger.debug(data['fail'])
         logger.info(f'找另一節點node {AnotherNode[0]["ID"]} 傳送資料')
+        KadeNode._getallnode()
         Ask(SelfNode, 'send', connect = AnotherNode)
     # if this is not the first node, continue reject
     elif len(data['path']) > 0:

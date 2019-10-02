@@ -17,7 +17,6 @@ default_parameters = dh.generate_parameters(generator=2, key_size=2048,
 
 class DH(asycalgori):
     def __init__(self, PublicKey = None, parameters = default_parameters):
-        super()
         # Generate a private key for use in the exchange.
         self.PrivateKey = parameters.generate_private_key()
         # create public key
@@ -25,7 +24,7 @@ class DH(asycalgori):
         
         if PublicKey != None:
             self.CreateShareKey(PublicKey)
-            
+        
     
     # use other public key to generate share key
     def CreateShareKey(self, OtherPublicKey):
@@ -41,4 +40,3 @@ class DH(asycalgori):
         
     def GetShareKey(self):
         return self.ShareKey
-

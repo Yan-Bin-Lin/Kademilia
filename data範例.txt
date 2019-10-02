@@ -28,6 +28,9 @@ data = {
 		# who has save this file
 		'saver' : [('OriginNodeData', 2), ('MiddleNodeData', 2), '...', ('DestinationNodeData', 2)]
 		
+		# sign for verify
+		'sign' : {'plaintext' : 'text...', 'cyphertext' : "b'\x06..."}
+		
 		# the content of content
 		'file' : {
 		

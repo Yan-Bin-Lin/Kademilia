@@ -5,15 +5,23 @@ Created on 2019年9月3日
 @author: danny
 '''
 import hashlib
-
+from pathlib import Path
 
 # return bit like string(0110101.......)
 def _HashFormat(HashHexCode, OutSize = 8):
-    return bin(int(HashHexCode, 16))[2:].zfill(OutSize)[-OutSize:]
+    return bin(int(HashHexCode, 16)).zfill(OutSize)[-OutSize:]
     
 
-# hash a data, which length is OutSize
-def GetHash(data, OutSize=2):
+def GetHash(data, OutSize=8):
+    '''
+    hash a data
+    
+    Args:
+        OutSize (int): output length
+        
+    Returns:
+        str: hash string in bit string format
+    '''
     HashFunc = hashlib.md5()
     HashFunc.update(data.encode(encoding='utf-8')) 
     return _HashFormat(HashFunc.hexdigest(), OutSize)
@@ -28,16 +36,21 @@ def GetHashFile(path, OutSize=8):
     return _HashFormat(HashFunc.hexdigest(), OutSize)
     
 
-# count the distance of other node and self
 def CountDistance(SelfID, OtherID):
-    length = len(SelfID)
-    for i in range(length):
-        if SelfID[i] != OtherID[i]:
-            break
-    return length - i
+    '''
+    count the distance of two node ID(by xor)
+    
+    Returns:
+        str: distance in bit string format
+    '''
+    return ''.join(str(r) for r in (ord(x) ^ ord(y) for x, y in zip(SelfID, OtherID)))
 
 
 if __name__ == '__main__':
-    data = ('122331', 'pooe')
+    data = '10101010'
     print(GetHash(data))
 
+    compare = '10110101'
+    print(int(CountDistance(data, compare), 2))
+    
+    print(GetHashFile(Path('../../Test.log')))

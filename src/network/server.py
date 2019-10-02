@@ -6,6 +6,8 @@ Created on 2019年9月1日
 '''
 import socket
 import threading
+import sys
+import traceback
 
 from ..util.web import GetLocalIP
 from ..handler.handler import RespondHandle
@@ -37,6 +39,11 @@ class Server():
     def GetAddress(self):
         return self.server.getsockname()
 
+    
+    def _CallHandle(self, connect, data, KadeNode):
+        '''call handler'''
+        RespondHandle(connect, data, KadeNode)
+        
         
     def _communicate(self, connect, host, port):
         while True:
@@ -47,9 +54,19 @@ class Server():
                 data = connect.recv(10240)
                 if data != b'':
                     # 由main handle決定處理方法
-                    RespondHandle(connect, data, self.KadeNode)
-            except:
-                logger.debug(f'連線失敗，關閉連線')
+                    self._CallHandle(connect, data, self.KadeNode)
+            except Exception as e:
+                raise
+                error_class = e.__class__.__name__ #取得錯誤類型
+                detail = e.args[0] #取得詳細內容
+                cl, exc, tb = sys.exc_info() #取得Call Stack
+                lastCallStack = traceback.extract_tb(tb)[-1] #取得Call Stack的最後一筆資料
+                fileName = lastCallStack[0] #取得發生的檔案名稱
+                lineNum = lastCallStack[1] #取得發生的行號
+                funcName = lastCallStack[2] #取得發生的函數名稱
+                errMsg = "File \"{}\", line {}, in {}: [{}] \n\t {}".format(fileName, lineNum, funcName, error_class, detail)
+                
+                logger.debug(f'連線失敗，關閉連線, 以下為錯誤訊息 \n {errMsg}')
                 return
                 
             

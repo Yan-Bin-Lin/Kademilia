@@ -9,22 +9,45 @@ from cryptography.hazmat.primitives import serialization
 
 class NodeData():
     '''
-    a NodeData shoule content IP, PublicKey and ID
-    !!you should not change data!!
+    a NodeData should content IP, PublicKey and ID
+    
+    Attributes:
+        _address (tuple): binding (IPAddress, port)
+        _PublicKey: RSA PublicKey for sign
+        _ID: Node ID
+        
+    note:
+        you should not change data!!
     '''
+    
     #address(IP, port), PublicKey, ID
     def __init__(self, address = None, PublicKey = None, ID = None):
+        '''
+        Args:
+            address (tuple): binding (IPAddress, port)
+            PublicKey: RSA PublicKey for sign
+            ID: Node ID
+        '''
         self._address = address
         self._PublicKey = PublicKey
         self._ID = ID
     
     
-    # return self id dict format
     def GetData(self): 
+        '''
+        return self in "dict" format
+        
+        Returns:
+            {
+            'address' : self._address,
+            'PublicKey' : self.GetByteStringPubKey(),
+            'ID' : self._ID
+            }
+        '''
         return {
+                    'ID' : self._ID,
                     'address' : self._address,
                     #'PublicKey' : self.GetByteStringPubKey(),
-                    'ID' : self._ID
                 }
     
         
@@ -48,8 +71,8 @@ class NodeData():
         return self._PublicKey
     
     
-    # convert public key to string format if you need to send to other or save at disk
     def GetByteStringPubKey(self):
+        '''convert public key to "string" format if you need to send to other or save at disk'''
         return None if self._PublicKey == None else self._PublicKey.public_bytes(
                                                                                 encoding=serialization.Encoding.PEM,
                                                                                 format=serialization.PublicFormat.SubjectPublicKeyInfo

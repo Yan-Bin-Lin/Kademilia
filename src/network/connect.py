@@ -9,6 +9,7 @@ import threading
 from .client import Client
 from .server import Server
 from ..network import communicate
+from ..handler import ask
 
 # handle server and client connect
 class Connect():
@@ -29,7 +30,7 @@ class Connect():
     def _CheckConnect(self, ID, connect, address, wait = 5):
         self.clients[ID] = communicate.link(address, connect, wait)
         
-      
+
     # send message to other node that don't need to respond in a few time
     # no blocking
     #def send(msg, peer, connect = None, address = None, wait = 5):
@@ -46,11 +47,8 @@ class Connect():
         result = self.clients[address].request(msg)
         
     
-    # send message to other node that need to respond in a few time, ex. ping...   
-    # blocking
-    def CheckResponse(self, address):
-        if self.clients[address].RequestStatus:
-            return True
+    def Ask(self, SelfNode, type_, *instruct, **kwargs):
+        if type_ == 'request':
+            return ask.Ask(SelfNode, type_, *instruct, **kwargs)
         else:
-            del self.clients[address]
-            return False
+            threading._start_new_thread(self._WaitConnect, (SelfNode, type_), kwargs = kwargs)

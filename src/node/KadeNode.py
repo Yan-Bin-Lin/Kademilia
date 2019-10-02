@@ -4,24 +4,35 @@ Created on 2019年9月1日
 @author: danny
 '''
 import pickle
-import json
 from pathlib import Path
+import time
 
 from .KBucket import KBucket
 from .NodeData import NodeData
+from .RouteTable import RouteTable
 from ..crypto.RSASign import RSA
 from ..network.connect import Connect
 from ..util.hash import *
 from ..handler.respond import *
-from ..handler.ask import Ask, Reject
+from ..handler.ask import Ask#, Reject
+
 import logging
 logger = logging.getLogger( 'loglog' )
-
 # a single kade node
 class KadeNode():
     '''
-    a kadenode should content node data
-    node data should content IP, port, PublicKey, ID
+    Kademlia 最基礎結構，每個KadeNode代表一個peer，
+       作為網路通信的一員
+    
+    Attributes:
+        RSA: a RSA class use for rsa method
+        web: a connect class content server and client socket for connect
+        address: a tuple of (IPAddress, port) of server socket bind
+        ID: the only ID of this node in the network
+        NodeData: a NodeData class present this node, conntent RSA publicKey, address and ID
+        table: a dict with key i: subtree split of the network and value:the bucket class of NodeData containt
+             the route table of this node
+        Savepath: path for the file save
     '''
     def __init__(self, **kwargs):
         self.RSA = RSA()
@@ -30,23 +41,25 @@ class KadeNode():
         self.ID = kwargs.get('ID', GetHash(self.address[0] + str(self.address[1])))#random ID here
         self.NodeData = NodeData(self.address, self.RSA.GetPublicKey(), self.ID)
         # routing table content all Kbucket, initial create empty table, key = distance, value = bucket
-        self.table = {i : KBucket(self.NodeData) for i in range(1, 128)}
+        #self.table = {i : KBucket(self.NodeData) for i in range(1, 128)}
+        self.table = RouteTable(self.NodeData)
         self.SavePath = 'Save'
         # start for connect
         self.run()
-        # create bucket
+        # create bucketj
         if kwargs.get('node', None) != None:
             self.update(kwargs['node'], getbucket = True)
         logger.info(f'node {self.ID} 上線了!!!')
         
         
-    # add new node to bucket in the table    
     def update(self, node, getbucket = False):
+        '''add new node to bucket in the table'''
         if node['ID'] == self.ID:
             return
         logger.debug(f'node {self.ID} 開始將 node {node["ID"]} 資料跟新於本地bucket中')
-        distance = CountDistance(self.ID, node['ID'])
-        self.table[distance].AddNode(node)
+        #distance = CountDistance(self.ID, node['ID'])
+        #self.table[distance].AddNode(node)
+        self.table.AddNode(node)
         # get bucket of the node
         if getbucket:
             self.GetBucket(node['ID'])
@@ -54,16 +67,18 @@ class KadeNode():
     
     # request to other node
     # blocking
-    def request(self, ID, *instruct):
-        result = self.GetNode(ID)
-        Ask(self.NodeData.GetData(), 'request', instruct, connect = result)
+    def request(self, ID, *instruct, node = None):
+        if node == None:
+            node = self.GetNode(ID, closest = False)
+        return Ask(self.NodeData.GetData(), 'request', *instruct,  address = node['address']) if node != None else None
           
           
     # send to other node
     # no blocking
-    def send(self, ID, instruct):
-        result = self.GetNode(ID)
-        Ask(self.NodeData.GetData(), 'request', instruct, connect = result)
+    def send(self, ID, *instruct, node = None, content = ''):
+        if node == None:
+            node = self.GetNode(ID, closest = False)
+        Ask(self.NodeData.GetData(), 'send', *instruct, address = node['address'], content = content)
         
     
     # get a node in the distance bucket, 
@@ -77,7 +92,12 @@ class KadeNode():
     # if no argument is given, search for a exist node
     # get a node data, if the node not found, will return a same distance node if recurive is True
     # return ( nodedata, socket )
-    def GetNode(self, *, ID = None, recursive = True, data = {}):
+    def GetNode(self, ID, *, closest = True, ping = True, recursive = True, data = {}, ExceptList = []):
+        '''
+        get a node data, if the node not found, will return a same distance node if recurive is True
+        '''
+        return self.table.GetNode(ID, closest = closest, ping = ping, data = data, ExceptList = ExceptList)
+        '''
         logger.debug(f'data["fail"] = {data.get("fail", None)}')
         ExceptList = data.get('fail', [])
         logger.debug(f'In GetNode ... ExceptList = {ExceptList}')
@@ -93,13 +113,48 @@ class KadeNode():
                     if result != None:
                         break            
         return result
-    
+        '''
+        
             
-    # find a node
     def LookUp(self, ID, data = {}):
-        logger.info(f'node {self.ID} 開始查找 node {ID} ， 雙方距離差距為 {CountDistance(self.ID, ID)}')
-        result = self.GetNode(ID = ID, recursive = False, data = data)
-        logger.debug(f' LookUp result is {result}')
+        '''
+        find a node from network
+        
+        Args:
+            ID: the node ID to find
+            data: the request data from other node, default = {}
+        '''
+        logger.debug(f" in lookup data is {data}")
+        logger.info(f'node {self.ID} 開始查找 node {ID} ， 雙方距離差距為 {int(CountDistance(self.ID, ID), 2)}')
+        
+        result = self.GetNode(ID, data = data)
+        logger.info(f' LookUp result is {result}')
+        
+        if len(result) == 0:
+            logger.info(f'no node has find...')
+            # no node has find
+            return ''
+        
+        elif result[0]['ID'] != ID or data.get('destination', {}).get('address', False):
+            # the node not in bucket, start to search
+            logger.info(f'node {self.ID} 準備向  result 中的 node 發出查找 node {ID} 的請求')
+            for r in result:
+                Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, address = r['address'],
+                    destination = data.get('destination', {'ID' : ID}))       
+             
+        elif data == {}:
+            # return the correct node
+            logger.info(f'node {ID} 存於本地， 回傳{result[0]}')
+            return result[0]
+        
+        else:
+            logger.info(f'node {ID} 存於本地， 向 node {result[0]["ID"]} 發出請求')
+            Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, address = result[0]['address'])
+        
+        return result
+
+            
+        '''
         if result == None:
             logger.info(f'查找結果： node {ID} 並不在 node {self.ID} 的 bucket中，開始向同距離的其他node查找')
             # if node not in table, ask other node in same distance to find the target node
@@ -117,15 +172,20 @@ class KadeNode():
         else:
             logger.info(f'node {ID} 存於本地，無需向網路查找')
         return result
-        
+        '''
+       
     
-    # get the bucket of any node or given ID node
     def GetBucket(self, ID = None):
-        connect = self.GetNode(ID = ID, recursive = False)        
+        '''    
+        initial to fullfill self bucket by ask other node to find self
+        '''
+        nodes = self.GetNode(ID)     
         # get a node, start to ask for bucket
-        if connect != None:
-            logger.info(f'node {self.ID} 開始向 node {connect[0]["ID"]}， 請求bucket')
-            result = Ask(self.NodeData.GetData(), 'request', 'GET', 'bucket', connect = connect)
+        for node in nodes:
+            logger.info(f'node {self.ID} 開始向 node {node["ID"]}， 請求find self')
+            Ask(self.NodeData.GetData(), 'send', 'GET', 'node', self.ID, address = node['address'], destination = self.NodeData.GetData())       
+        '''
+            result = Ask(self.NodeData.GetData(), 'request', 'GET', 'bucket', address = connect)
             logger.debug(f'nodes = {result}')
             # get a dict of other table
             if result != None:
@@ -136,10 +196,11 @@ class KadeNode():
                 logger.info(f'node {self.ID} 跟新bucket成功')
                 return connect[0]['ID']
         return None
-        
+        '''
     
     # save node data
     def save(self, name = '', json = False):
+        '''save self NodeData to a file'''
         name = (self.ID if name == '' else name) + '.txt'
         Path(self.SavePath).mkdir(parents=True, exist_ok=True) 
         folder = Path(self.SavePath)
@@ -149,53 +210,56 @@ class KadeNode():
         logger.debug(file.resolve())
             
         
-    # update a file to network
-    def UpLoadFile(self, file, data = {}):
-        if data == {}:
-            HashCode = GetHash(file)
-            content = {'FileID' : HashCode, 'saver' : [[self.NodeData.GetData(), 1]], 'file' : file}
-            destination = {'ID' : HashCode}
-        else:
+    def UpLoadFile(self, file, data = {}, *, FilePath = ''):
+        '''
+        upload a file to network
+        
+        Args:
+            file: file to upload, nust be a hashable value
+            data: the request data from other node, default = {}
+        '''
+        
+        # initial for kwargs
+        kwargs = {}
+        if data != {}:
+            ExceptList = [saver[0]['ID'] for saver in data['content']['saver'] if (time.time() - saver[1]) < 86400]
             HashCode = data['instruct'][2]
-            content = data['content']
-            destination = data['destination']
-        logger.debug(f'HashCode = {HashCode}')
-        node = self.GetNode(ID = HashCode, data = data)
-        if node != None:
-            logger.info(f'node {self.ID} 開始上傳檔案到網路，將資料傳給node {node[0]["ID"]}')            
-            Ask(self.NodeData.GetData(), 'send', 'POST', 'file', HashCode, connect = node,
-                destination = destination, data = data, content = content)
+            logger.debug(f"ExceptList = {ExceptList}, data['content']['saver'] = {data['content']['saver']}")    
         else:
-            logger.info(f'node {self.ID} 沒有其他節點可以通往目標，請求拒絕')
-            Reject(self.NodeData.GetData(), data)
+            ExceptList = []
+            HashCode = GetHashFile(Path(FilePath)) if FilePath != '' else GetHash(file)
+            kwargs['content'] = {'FileID' : HashCode, 'saver' : [[self.NodeData.GetData(), time.time()]], 'file' : file}
+            kwargs['destination'] = {'ID' : HashCode}
+            
+        logger.debug(f'HashCode = {HashCode}')    
+        nodes = self.GetNode(HashCode, data = data, ExceptList = ExceptList)
+        for node in nodes:
+            logger.info(f'node {self.ID} 開始上傳檔案到網路，將資料傳給node {node["ID"]}')            
+            Ask(self.NodeData.GetData(), 'send', 'POST', 'file', HashCode, address = node['address'],
+                data = data, **kwargs)
+        
+        return nodes
         
              
-    # Get a file from web
     def GetFile(self, HashCode, data = {}):
+        '''
+        Get a file from network
+        
+        Args:
+            HashCode: the Hashcode of file content
+            data: the request data from other node, default = {}
+        '''
         logger.info(f'node {self.ID} 收到GET file請求，開始查找本地有無該檔案')
         path = Path(self.SavePath, 'file', HashCode + '.txt')
         logger.debug(f'search: {path}')
         # strat to search file from web
         if not path.exists():
-            logger.info(f'本地查無該檔案，即將判斷是否要向其他節點查找')
-            # this request is not handle by too many node, this request can keep search
-            if data != {}:
-                # this request is handle by too many node
-                if len(data['path']) > 10:
-                    logger.info(f'這份資料已經超過轉手上限，請求拒絕')
-                    return None
-                # if target file not in target node, hash the HashCodeone more time and keep search
-                if data['instruct'][2] == self.ID:
-                    data['instruct'][2] = GetHash(data['instruct'][2])
-                    HashCode = data['instruct'][2]
-    
+            logger.info(f'本地查無該檔案，向其他節點查找')
             # send to other node to search
-            node = self.GetNode(ID = HashCode, data = data)
-            if node == None:
-                Reject(self.NodeData.GetData(), data)
-           
-            logger.info(f'向node {node[0]["ID"]} 發出GET file 請求')
-            Ask(self.NodeData.GetData(), 'send', 'GET', 'file', HashCode, connect = node, data = data, content = {'FileID' : HashCode})
+            nodes = self.GetNode(HashCode, data = data)
+            for node in nodes:
+                logger.info(f'向node {node["ID"]} 發出GET file 請求')
+                Ask(self.NodeData.GetData(), 'send', 'GET', 'file', HashCode, address = node['address'], data = data, content = {'FileID' : HashCode})
             return None
         
         else:
@@ -204,6 +268,21 @@ class KadeNode():
             logger.debug(f'In GetFile, file is {file}')
             return file
     
+    
+    def GetAllNode(self):
+        '''
+        get all NodeData in table, return list of node
+        
+        Returns:
+            list with all node in this
+        '''
+        result = {}
+        for i in range(128):
+            if self.table.amount[i] > 0:
+                for k in self.table.table[i].bucket.keys():
+                    result.update({i : self.table.table[i].bucket[k]})
+        return result
+            
     
     def run(self):
         # giveout self instance to server which will call handler to handle

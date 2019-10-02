@@ -13,11 +13,14 @@ from logging.handlers import QueueListener
 logger = logging.getLogger( 'loglog' )
 
 def some_method():
-    
+    '''
+    print('開始自由測試')
+    from KadeBucketTest import BucketTest
+    BucketTest()
+    '''
     print('開始測試跟新bucket')
     from KadeBucketTest import BucketTest
     BucketTest()
-      
     try:
         print('開始測試查找節點')
         from KadeFindNodeTest import FindNodeTest
@@ -36,12 +39,7 @@ def some_method():
         BucketTest()
     except:
         pass
-    try:
-        print('開始測試reject')
-        from KadeRejectTest import RejectTest 
-        RejectTest()
-    except:
-        pass
+
 
 def main():
     
@@ -61,7 +59,7 @@ def main():
     ch.setLevel(logging.DEBUG)
     # create formatter and add it to the handlers
     # log 印出來的格式
-    formatter = logging.Formatter('%(asctime)s %(module)10s. line:%(lineno)3d -%(levelname)5s- \n\t%(message)s\n')
+    formatter = logging.Formatter('%(asctime)s %(module)10s. line:%(lineno)3d - %(levelname)5s - Thread: %(thread)d\n\t%(message)s\n')
     #將 印出來的格式和 File Handle, Console Handle 物件組合在一起
     fh.setFormatter(formatter)
     ch.setFormatter(formatter)

@@ -16,10 +16,16 @@ class AdvancedJSONEncoder(json.JSONEncoder):
         
         return json.JSONEncoder.default(self, obj)
 '''
-# return the data in protocol format
-# *args = ['REPLY', 'ID', 'args...', ] (instruct)
-# **kwargs = origin, destination, instruct, SelfNodes
+
 def _DataFill(SelfNode, *args, data = {}, **kwargs):
+    '''
+    fill up the header of data need to send
+    
+    Args:
+        data: the request data from other node, default = {}
+        *args: remain for instruct ( ['REPLY', 'ID', 'args...', ] )
+        **kwargs: for origin, destination, instruct, SelfNodes that need to write in data
+    '''
     # new request
     if data == {}:
         data['origin'] = SelfNode
@@ -38,8 +44,9 @@ def _DataFill(SelfNode, *args, data = {}, **kwargs):
     return json.dumps(data)#), cls=AdvancedJSONEncoder)
 
 
-#get local IP
+
 def GetLocalIP():
+    '''get local IP'''
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.connect(('8.8.8.8', 80))

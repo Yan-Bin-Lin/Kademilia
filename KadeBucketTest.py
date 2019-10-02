@@ -6,6 +6,7 @@ Created on 2019年9月14日
 '''
 
 import pickle
+import time
 
 from src.node.KadeNode import KadeNode
 from src.util.hash import GetHash
@@ -39,7 +40,8 @@ def BucketTest():
             m = pickle.load(file)
                 
         end = KadeNode(ID = '11', node = m)        
-        
+        time.sleep(3)
+        print(end.GetAllNode())
     while(1):
         pass
 

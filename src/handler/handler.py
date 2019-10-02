@@ -6,26 +6,31 @@ Created on 2019年9月4日
 '''
 import ast
 import json
+
 from .respond import *
 from .ask import *
 from ..util.web import _DataFill
 import logging
 logger = logging.getLogger( 'loglog' )
 
-# main handler here
+
 def RespondHandle(connect, data, KadeNode):
+    '''
+    main handler to deal with the receive data
+    
+    Args:
+        data: the request data from other node
+        KadeNode: a KadeNode object who call this function
+    '''
     logger.debug(f'server receive data, data is {data}')
     # change string to dict
     data = json.loads(data)
     instruct = data.get('instruct', None)
     
-    # update Kbucket
-    path = data.get('path', None)
-    tmp = {}
-    for node in path:
-        if node['ID'] not in tmp:
-            tmp[node['ID']] = True
-            KadeNode.update(node)
+    # update Kbucket of the last node in path(from_ node)
+    KadeNode.update(data['path'][-1])
+    if len(data['path']) >= 8:
+        return False
     
     # if condition here
     if instruct[0] == 'TRACE':
@@ -39,11 +44,11 @@ def RespondHandle(connect, data, KadeNode):
             logger.info(f'node {KadeNode.ID} Get a GET node request from node {data["path"][-1]["ID"]}')
             ReplyGetNode(data, KadeNode)
         # handle for get file request
-        if instruct[1] == 'file':
+        elif instruct[1] == 'file':
             logger.info(f'node {KadeNode.ID} Get a GET file request from node {data["path"][-1]["ID"]}')
             ReplyGetFile(data, KadeNode)
         # handle for get bucket request
-        if instruct[1] == 'bucket':
+        elif instruct[1] == 'bucket':
             logger.info(f'node {KadeNode.ID} Get a GET bucket request from node {data["path"][-1]["ID"]}')
             connect.sendall(ReplyGetBucket(KadeNode))
     
@@ -53,11 +58,11 @@ def RespondHandle(connect, data, KadeNode):
             logger.info(f'node {KadeNode.ID} 的 GET node 請求收到回應了')
             ReceiveGetNode(data, KadeNode)
         # handle for reply POST file
-        if instruct[1] == 'postfile':
+        elif instruct[1] == 'postfile':
             logger.info(f'node {KadeNode.ID} 的 update file 請求收到回應了')
             ReceivePostFile(data, KadeNode)
         # handle for reply GET file
-        if instruct[1] == 'getfile':
+        elif instruct[1] == 'getfile':
             logger.info(f'node {KadeNode.ID} 的 GET file 請求收到回應了')
             ReceiveGetFile(data, KadeNode)
     
@@ -66,12 +71,19 @@ def RespondHandle(connect, data, KadeNode):
         if instruct[1] == 'file':
             logger.info(f'node {KadeNode.ID} Get a POST file request from node {data["path"][-1]["ID"]}')
             ReplyPostFile(data, KadeNode)
-            
+        '''        
     elif instruct[0] == 'REJECT':
         # the request has been reject
         logger.info(f'node {KadeNode.ID} 的 {data["instruct"][1:]} 請求被node {data["path"][-1]["ID"]} 退回了')
         #delete 'REJECT' request
         del data['instruct'][0]
         ReceiveReject(data, KadeNode)
-            
+        '''    
+    else:
+        # the extend function will be call here
+        logger.info(f'無符合的 KadeNode 內建  handle function ，呼叫P2P擴充function')
+        return False
+        #extend(connect, data, KadeNode)
+    
+    return True
             

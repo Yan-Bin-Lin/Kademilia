@@ -12,27 +12,27 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.exceptions import InvalidSignature
 
+
 class RSA(asycalgori):
     def __init__(self, SaveKeyPath = None):
-        super()
         if SaveKeyPath == None:
             self.NewKey()
         else:
             self.LoadKey(SaveKeyPath)
+        self._CreatePublicKey()
         
         
-    # create new RSA KEY
     def NewKey(self):
+        '''create new RSA KEY'''
         self.PrivateKey = rsa.generate_private_key(
             public_exponent=65537,
             key_size=2048,
             backend=default_backend()
         )
-        self._CreatePublicKey()
 
 
-    # use private to sign data
     def sign(self, message):
+        '''use private to sign data'''
         return self.PrivateKey.sign(
                     message.encode(encoding='utf_8'),
                     padding.PSS(
@@ -41,14 +41,14 @@ class RSA(asycalgori):
                     ),
                     hashes.SHA256()
                 )
-        
-            
-    # use "others" public key to vertify data            
+    
+                      
     def verify(self, public_key, signature, message):
+        '''use "others" public key to verify data'''
         try:
             public_key.verify(
                 signature,
-                message,
+                message.encode(encoding='utf_8'),
                 padding.PSS(
                     mgf=padding.MGF1(hashes.SHA256()),
                     salt_length=padding.PSS.MAX_LENGTH
@@ -66,9 +66,8 @@ class RSA(asycalgori):
             return True
     
         
-    
-    # use "others" public key to encrypt data      
     def encrypt(self, public_key, message):
+        '''use "others" public key to encrypt data'''
         return public_key.encrypt(
                     message.encode(encoding='utf_8'),
                     padding.OAEP(
@@ -79,8 +78,8 @@ class RSA(asycalgori):
                 )
 
     
-    # use private key to decrypt data
     def decrypt(self, ciphertext):
+        '''use private key to decrypt data'''
         return self.PrivateKey.decrypt(
                     ciphertext,
                     padding.OAEP(
