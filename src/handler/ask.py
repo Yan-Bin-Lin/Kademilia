@@ -11,8 +11,8 @@ from ..util.web import _DataFill
 from ..node.NodeData import NodeData
 
 
-import logging
-logger = logging.getLogger( 'loglog' )
+from ..util.log import log
+logger = log()
 
 def AskNode(data, type_, connect = None, address = None):
     connect = connect[1] if connect != None else None

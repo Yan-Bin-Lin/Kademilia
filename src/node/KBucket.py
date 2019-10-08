@@ -12,8 +12,8 @@ from ..handler.ask import Ask
 from ..util.hash import CountDistance
 from ..util.thread import TreadPool
     
-import logging
-logger = logging.getLogger( 'loglog' )      
+from ..util.log import log
+logger = log()      
 
 class KBucket():
     '''

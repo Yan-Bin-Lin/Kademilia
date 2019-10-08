@@ -4,6 +4,9 @@ Created on 2019年9月15日
 
 @author: danny
 '''
+from src.util import setup
+
+from configparser import ConfigParser
 import logging
 import queue
 from logging.handlers import QueueHandler
@@ -12,15 +15,24 @@ from logging.handlers import QueueListener
 #請你給我一個 Log 的分身，他的名字叫做.... loglog (function 的名稱)！！
 logger = logging.getLogger( 'loglog' )
 
+
+def Setup():
+    # read config setup
+    path_ = 'Config.ini'
+    cfg = ConfigParser()
+    cfg.read(path_)
+    setup.init(cfg.get('log', 'wait'))
+
+
 def some_method():
     '''
-    print('開始自由測試')
-    from KadeBucketTest import BucketTest
-    BucketTest()
+    print('開始測試P2PNode')
+    from P2PChatTest import ChatTest
+    ChatTest()
     '''
-    print('開始測試跟新bucket')
-    from KadeBucketTest import BucketTest
-    BucketTest()
+    print('開始測試查找節點')
+    from KadeFindNodeTest import FindNodeTest
+    FindNodeTest()
     try:
         print('開始測試查找節點')
         from KadeFindNodeTest import FindNodeTest
@@ -77,31 +89,7 @@ def main():
     
     listener.stop()
 
+
 if __name__ == '__main__':
+    Setup()
     main()   
-
-
-'''     
-import logging
-logger = logging.getLogger( 'my_module' )
-def some_method():
-    logger.debug('begin of some_method')
-def main():
-
-    # Produce formater first
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-
-    # Setup Handler
-    console = logging.StreamHandler()
-    console.setLevel(logging.DEBUG)
-    console.setFormatter(formatter)
-
-    # Setup Logger
-    logger.addHandler(console)
-    logger.setLevel(logging.DEBUG)
-
-    some_method()
-
-if __name__ == '__main__':
-    main()
-'''

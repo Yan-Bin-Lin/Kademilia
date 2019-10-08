@@ -5,9 +5,10 @@ Created on 2019年10月2日
 @author: danny
 '''
 import json
+import pathlib
 
-import logging
-logger = logging.getLogger( 'loglog' )
+from ..util.log import log
+logger = log()
 
 
 def ReplyPostPost(data, KadeNode):
@@ -28,10 +29,11 @@ def P2PHandle(connect, data, KadeNode):
         data: the request data from other node
         KadeNode: a KadeNode object who call this function    
     '''
-    logger.debug(f'server receive data, data is {data}')
+    logger.info(f'In P2PHandle, data is {data}, node is {KadeNode.ID}')
     # change string to dict
     data = json.loads(data)
     instruct = data.get('instruct', None)
+    logger.info(f'{KadeNode.ID} areceive a {instruct}')
     
     # update Kbucket of the last node in path(from_ node)
     KadeNode.update(data['path'][-1])

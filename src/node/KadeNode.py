@@ -6,6 +6,7 @@ Created on 2019年9月1日
 import pickle
 from pathlib import Path
 import time
+import threading
 
 from .KBucket import KBucket
 from .NodeData import NodeData
@@ -16,8 +17,8 @@ from ..util.hash import *
 from ..handler.respond import *
 from ..handler.ask import Ask#, Reject
 
-import logging
-logger = logging.getLogger( 'loglog' )
+from ..util.log import log
+logger = log()
 # a single kade node
 class KadeNode():
     '''
@@ -33,17 +34,18 @@ class KadeNode():
         table: a dict with key i: subtree split of the network and value:the bucket class of NodeData containt
              the route table of this node
         Savepath: path for the file save
+        lock: lock for write file
     '''
     def __init__(self, **kwargs):
         self.RSA = RSA()
-        self.web = Connect()
+        self.WebInit()
         self.address = self.web.GetServeAddress()
         self.ID = kwargs.get('ID', GetHash(self.address[0] + str(self.address[1])))#random ID here
         self.NodeData = NodeData(self.address, self.RSA.GetPublicKey(), self.ID)
         # routing table content all Kbucket, initial create empty table, key = distance, value = bucket
-        #self.table = {i : KBucket(self.NodeData) for i in range(1, 128)}
         self.table = RouteTable(self.NodeData)
         self.SavePath = 'Save'
+        self.lock = threading.Lock()
         # start for connect
         self.run()
         # create bucketj
@@ -51,6 +53,10 @@ class KadeNode():
             self.update(kwargs['node'], getbucket = True)
         logger.info(f'node {self.ID} 上線了!!!')
         
+    
+    def WebInit(self):
+        self.web = Connect()
+            
         
     def update(self, node, getbucket = False):
         '''add new node to bucket in the table'''
@@ -67,18 +73,18 @@ class KadeNode():
     
     # request to other node
     # blocking
-    def request(self, ID, *instruct, node = None):
+    def request(self, ID, *instruct, node = None, content = '', destination = None):
         if node == None:
             node = self.GetNode(ID, closest = False)
-        return Ask(self.NodeData.GetData(), 'request', *instruct,  address = node['address']) if node != None else None
+        return self.web.Ask(self.NodeData.GetData(), 'request', *instruct,  address = node['address'], content = '', destination = None) if node != None else None
           
           
     # send to other node
     # no blocking
-    def send(self, ID, *instruct, node = None, content = ''):
+    def send(self, ID, *instruct, node = None, content = '', destination = None):
         if node == None:
-            node = self.GetNode(ID, closest = False)
-        Ask(self.NodeData.GetData(), 'send', *instruct, address = node['address'], content = content)
+            node = self.GetNode(ID, closest = False)[0]
+        self.web.Ask(self.NodeData.GetData(), 'send', *instruct, address = node['address'], content = content, destination = destination)
         
     
     # get a node in the distance bucket, 
@@ -97,23 +103,6 @@ class KadeNode():
         get a node data, if the node not found, will return a same distance node if recurive is True
         '''
         return self.table.GetNode(ID, closest = closest, ping = ping, data = data, ExceptList = ExceptList)
-        '''
-        logger.debug(f'data["fail"] = {data.get("fail", None)}')
-        ExceptList = data.get('fail', [])
-        logger.debug(f'In GetNode ... ExceptList = {ExceptList}')
-        if ID != None:
-            distance = CountDistance(self.ID, ID)
-            result = self.table[distance].GetNode(ID, recursive = recursive, ExceptList = ExceptList)
-            if result == None and recursive:
-                return self.GetDistanceNode(distance, ExceptList = ExceptList)
-        else:
-            for distance, bucket in self.table.items():
-                if self.table[distance].length() != 0:
-                    result = self.table[distance].GetNode(ExceptList = ExceptList)
-                    if result != None:
-                        break            
-        return result
-        '''
         
             
     def LookUp(self, ID, data = {}):
@@ -139,7 +128,7 @@ class KadeNode():
             # the node not in bucket, start to search
             logger.info(f'node {self.ID} 準備向  result 中的 node 發出查找 node {ID} 的請求')
             for r in result:
-                Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, address = r['address'],
+                self.web.Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, address = r['address'],
                     destination = data.get('destination', {'ID' : ID}))       
              
         elif data == {}:
@@ -149,30 +138,9 @@ class KadeNode():
         
         else:
             logger.info(f'node {ID} 存於本地， 向 node {result[0]["ID"]} 發出請求')
-            Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, address = result[0]['address'])
+            self.web.Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, address = result[0]['address'])
         
         return result
-
-            
-        '''
-        if result == None:
-            logger.info(f'查找結果： node {ID} 並不在 node {self.ID} 的 bucket中，開始向同距離的其他node查找')
-            # if node not in table, ask other node in same distance to find the target node
-            # SearchNode = [node, socket] or None
-            SearchNode = self.GetDistanceNode(0, ID, ExceptList = data.get('fail', []))  
-            if SearchNode != None:
-                logger.info(f'node {self.ID} 準備向  node {SearchNode[0]["ID"]} 發出查找 node {ID} 的請求')
-                Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, connect = SearchNode, destination = {'ID' : ID})
-            else:
-                logger.info(f'同距離節點不存在或無法回應，請求拒絕，即將回退資料')
-                Reject(self.NodeData.GetData(), data)
-        elif data != {}:
-            logger.info(f'查找結果： node {ID} 存在於 node {self.ID} 的 bucket中，開始請求node {ID} 聯繫 node {data["origin"]["ID"]}')
-            Ask(self.NodeData.GetData(), 'send', 'GET', 'node', ID, data = data, connect = result)
-        else:
-            logger.info(f'node {ID} 存於本地，無需向網路查找')
-        return result
-        '''
        
     
     def GetBucket(self, ID = None):
@@ -183,20 +151,8 @@ class KadeNode():
         # get a node, start to ask for bucket
         for node in nodes:
             logger.info(f'node {self.ID} 開始向 node {node["ID"]}， 請求find self')
-            Ask(self.NodeData.GetData(), 'send', 'GET', 'node', self.ID, address = node['address'], destination = self.NodeData.GetData())       
-        '''
-            result = Ask(self.NodeData.GetData(), 'request', 'GET', 'bucket', address = connect)
-            logger.debug(f'nodes = {result}')
-            # get a dict of other table
-            if result != None:
-                logger.info(f'node {self.ID} 成功取得bucket，開始跟新到己方bucket')
-                nodes = json.loads(result[0])
-                for node in nodes:
-                    self.update(node)
-                logger.info(f'node {self.ID} 跟新bucket成功')
-                return connect[0]['ID']
-        return None
-        '''
+            self.web.Ask(self.NodeData.GetData(), 'send', 'GET', 'node', self.ID, address = node['address'], destination = self.NodeData.GetData())       
+
     
     # save node data
     def save(self, name = '', json = False):
@@ -235,10 +191,10 @@ class KadeNode():
         nodes = self.GetNode(HashCode, data = data, ExceptList = ExceptList)
         for node in nodes:
             logger.info(f'node {self.ID} 開始上傳檔案到網路，將資料傳給node {node["ID"]}')            
-            Ask(self.NodeData.GetData(), 'send', 'POST', 'file', HashCode, address = node['address'],
+            self.web.Ask(self.NodeData.GetData(), 'send', 'POST', 'file', HashCode, address = node['address'],
                 data = data, **kwargs)
         
-        return nodes
+        return [[node, 0] for node in nodes]
         
              
     def GetFile(self, HashCode, data = {}):
@@ -259,8 +215,8 @@ class KadeNode():
             nodes = self.GetNode(HashCode, data = data)
             for node in nodes:
                 logger.info(f'向node {node["ID"]} 發出GET file 請求')
-                Ask(self.NodeData.GetData(), 'send', 'GET', 'file', HashCode, address = node['address'], data = data, content = {'FileID' : HashCode})
-            return None
+                self.web.Ask(self.NodeData.GetData(), 'send', 'GET', 'file', HashCode, address = node['address'], data = data, content = {'FileID' : HashCode})
+            return nodes
         
         else:
             logger.info(f'node {self.ID} 本地擁有該檔案，回傳該檔')

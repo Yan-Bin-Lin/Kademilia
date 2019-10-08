@@ -7,8 +7,8 @@ Created on 2019/9/1
 import socket
 import time
 
-import logging
-logger = logging.getLogger( 'loglog' )
+from ..util.log import log
+logger = log()
 
 class Client():
     def __init__(self, address, wait = 5):

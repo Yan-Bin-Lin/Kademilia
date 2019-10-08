@@ -8,8 +8,8 @@ import threading
 import copy
 import time
 
-import logging
-logger = logging.getLogger( 'loglog' ) 
+from ..util.log import log
+logger = log() 
     
 class ReturnTread():
     '''

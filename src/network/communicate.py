@@ -6,8 +6,8 @@ Created on 2019年9月4日
 '''
 from ..network.client import Client
 
-import logging
-logger = logging.getLogger( 'loglog' )        
+from ..util.log import log
+logger = log()        
 
 
 def link(address, connect, wait):

@@ -26,15 +26,16 @@ class RSA(asycalgori):
         '''create new RSA KEY'''
         self.PrivateKey = rsa.generate_private_key(
             public_exponent=65537,
-            key_size=2048,
+            key_size=512,
             backend=default_backend()
         )
 
 
     def sign(self, message):
         '''use private to sign data'''
+        message = message.encode(encoding='utf_8') if type(message) != type(b'') else message
         return self.PrivateKey.sign(
-                    message.encode(encoding='utf_8'),
+                    message,
                     padding.PSS(
                         mgf=padding.MGF1(hashes.SHA256()),
                         salt_length=padding.PSS.MAX_LENGTH
@@ -45,10 +46,11 @@ class RSA(asycalgori):
                       
     def verify(self, public_key, signature, message):
         '''use "others" public key to verify data'''
+        message = message.encode(encoding='utf_8') if type(message) != type(b'') else message
         try:
             public_key.verify(
                 signature,
-                message.encode(encoding='utf_8'),
+                message,
                 padding.PSS(
                     mgf=padding.MGF1(hashes.SHA256()),
                     salt_length=padding.PSS.MAX_LENGTH
@@ -68,8 +70,9 @@ class RSA(asycalgori):
         
     def encrypt(self, public_key, message):
         '''use "others" public key to encrypt data'''
+        message = message.encode(encoding='utf_8') if type(message) != type(b'') else message
         return public_key.encrypt(
-                    message.encode(encoding='utf_8'),
+                    message,
                     padding.OAEP(
                         mgf=padding.MGF1(algorithm=hashes.SHA256()),
                         algorithm=hashes.SHA256(),

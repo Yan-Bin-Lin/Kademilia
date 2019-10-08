@@ -12,8 +12,8 @@ from ..network.server import Server
 from ..handler.handler import RespondHandle
 from .P2Phandler import P2PHandle
 
-import logging
-logger = logging.getLogger( 'loglog' )
+from ..util.log import log
+logger = log()
 
 
 class P2PServer(Server):
@@ -24,12 +24,13 @@ class P2PServer(Server):
         super().__init__(ServePort)
     
     
-    def _CallHandle(self, connect, data, KadeNode):
+    def CallHandle(self, connect, data, KadeNode):
         '''overwrite call handler to extend P2Phandler'''
+        logger.info(f'P2P server receive data, data is {data}')
         if not RespondHandle(connect, data, KadeNode):
+            logger.info(f'start to call P2PHandle...')
             P2PHandle(connect, data, self.KadeNode)
-     
-            
+
 
 class P2PConnect(Connect):
     '''
@@ -39,8 +40,6 @@ class P2PConnect(Connect):
         '''
         Constructor
         '''
-        super().__init__()
         self.server = P2PServer(ServePort)
-
-
+        self.clients = {}
         

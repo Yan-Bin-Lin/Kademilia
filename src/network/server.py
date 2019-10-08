@@ -12,8 +12,8 @@ import traceback
 from ..util.web import GetLocalIP
 from ..handler.handler import RespondHandle
 
-import logging
-logger = logging.getLogger( 'loglog' )
+from ..util.log import log
+logger = log()
 
 # a server socket class
 class Server():
@@ -32,7 +32,7 @@ class Server():
     
     def start(self):
         #start serving
-        threading._start_new_thread(self._WaitConnect, ())                     
+        threading._start_new_thread(self.WaitConnect, ())                     
         
         
     # get the sever socket bindind address    
@@ -40,12 +40,12 @@ class Server():
         return self.server.getsockname()
 
     
-    def _CallHandle(self, connect, data, KadeNode):
+    def CallHandle(self, connect, data, KadeNode):
         '''call handler'''
         RespondHandle(connect, data, KadeNode)
         
         
-    def _communicate(self, connect, host, port):
+    def communicate(self, connect, host, port):
         while True:
             try:
                 # block to wait for receive
@@ -54,7 +54,7 @@ class Server():
                 data = connect.recv(10240)
                 if data != b'':
                     # 由main handle決定處理方法
-                    self._CallHandle(connect, data, self.KadeNode)
+                    self.CallHandle(connect, data, self.KadeNode)
             except Exception as e:
                 raise
                 error_class = e.__class__.__name__ #取得錯誤類型
@@ -70,12 +70,12 @@ class Server():
                 return
                 
             
-    def _WaitConnect(self):
+    def WaitConnect(self):
         while True:
             logger.debug(u'waiting for connect...')
             # 等待连接，一旦有客户端连接后，返回一个建立了连接后的套接字和连接的客户端的IP和端口元组
             connect, (host, port) = self.server.accept()
             logger.debug(u'the client %s:%s has connected.' % (host, port))
-            threading._start_new_thread(self._communicate, (connect, host, port))        
+            threading._start_new_thread(self.communicate, (connect, host, port))        
         
     

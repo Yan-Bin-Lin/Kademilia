@@ -12,7 +12,7 @@ from cryptography.hazmat.primitives.asymmetric import dh
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 
 # Generate some parameters. These can be reused.
-default_parameters = dh.generate_parameters(generator=2, key_size=2048,
+default_parameters = dh.generate_parameters(generator=2, key_size=512,
                                     backend=default_backend())
 
 class DH(asycalgori):
@@ -21,10 +21,11 @@ class DH(asycalgori):
         self.PrivateKey = parameters.generate_private_key()
         # create public key
         self._CreatePublicKey()
-        
+
         if PublicKey != None:
             self.CreateShareKey(PublicKey)
-        
+        else:
+            self.ShareKey = None
     
     # use other public key to generate share key
     def CreateShareKey(self, OtherPublicKey):

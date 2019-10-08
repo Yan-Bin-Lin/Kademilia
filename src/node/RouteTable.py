@@ -7,8 +7,8 @@ Created on 2019年9月24日
 from ..util.hash import CountDistance
 from .KBucket import KBucket
 
-import logging
-logger = logging.getLogger( 'loglog' )
+from ..util.log import log
+logger = log()
 
 
 class RouteTable():

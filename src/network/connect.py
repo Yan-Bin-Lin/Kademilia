@@ -16,7 +16,7 @@ class Connect():
     def __init__(self, ServePort=0):
         self.server = Server(ServePort)
         self.clients = {}
-    
+        
     
     def run(self):
         self.server.start()
@@ -26,7 +26,7 @@ class Connect():
     def GetServeAddress(self):
         return self.server.GetAddress() 
     
-        
+    '''
     def _CheckConnect(self, ID, connect, address, wait = 5):
         self.clients[ID] = communicate.link(address, connect, wait)
         
@@ -45,10 +45,12 @@ class Connect():
     def request(self, address, msg):  
         self._CheckClient(address)      
         result = self.clients[address].request(msg)
-        
+    '''
+    
     
     def Ask(self, SelfNode, type_, *instruct, **kwargs):
         if type_ == 'request':
             return ask.Ask(SelfNode, type_, *instruct, **kwargs)
         else:
-            threading._start_new_thread(self._WaitConnect, (SelfNode, type_), kwargs = kwargs)
+            ask.Ask(SelfNode, type_, *instruct, **kwargs)
+            #threading._start_new_thread(ask.Ask, (SelfNode, type_, *instruct,), kwargs)
