@@ -28,7 +28,7 @@ def AskNode(data, type_, connect = None, address = None):
 # connect = (ConnectNode, ConnectSocket)
 # instruct = ('GET', 'node', '00000000')
 # type_ should be 'request' or 'send'
-def Ask(SelfNode, type_, *instruct, connect = None, address = None, data = {}, destination = None, content = ''):
+def Ask(SelfNode, type_, *instruct, connect = None, address = None, data = None, destination = None, content = ''):
     '''
     send a request to other node
     

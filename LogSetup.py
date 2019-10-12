@@ -5,6 +5,7 @@ Created on 2019年9月15日
 @author: danny
 '''
 from src.util import setup
+from src.util.error import CheckError
 
 from configparser import ConfigParser
 import logging
@@ -16,23 +17,37 @@ from logging.handlers import QueueListener
 logger = logging.getLogger( 'loglog' )
 
 
+from pathlib import Path
 def Setup():
     # read config setup
     path_ = 'Config.ini'
     cfg = ConfigParser()
     cfg.read(path_)
-    setup.init(cfg.get('log', 'wait'))
+    setup.init(
+        cfg.get('log', 'wait'),
+        cfg.get('hash', 'OutSize')
+    )
 
 
 def some_method():
-    '''
-    print('開始測試P2PNode')
-    from P2PChatTest import ChatTest
-    ChatTest()
-    '''
-    print('開始測試查找節點')
-    from KadeFindNodeTest import FindNodeTest
-    FindNodeTest()
+    try:
+        print('開始測試P2P秘密聊天')
+        from P2PWhisperTest import WhisperTest
+        WhisperTest()
+    except:
+        pass
+    try:
+        print('開始測試P2P contract')
+        from P2PContractTest import ContractTest
+        ContractTest()
+    except:
+        pass
+    try:
+        print('開始測試P2PNode')
+        from P2PChatTest import ChatTest
+        ChatTest()
+    except:
+        pass
     try:
         print('開始測試查找節點')
         from KadeFindNodeTest import FindNodeTest

@@ -17,17 +17,31 @@ def FinalTest():
     if instruct == 's':
         
         node = KadeNode(ID = '00000000')
-        node.save()       
-    
+        node.save()
+        
+    elif instruct == 'c':
+        with open('Save/00000000.txt', 'rb') as file:
+            server = pickle.load(file)
+            
+        node = KadeNode(ID = '10101010', node = server)
+        
+        while(1):
+            input('waiting for user key in instruction...\n' + 
+                  '"s" = '
+            )  
     else:
 
         with open('Save/00000000.txt', 'rb') as file:
             server = pickle.load(file)
-
-        node = KadeNode(ID = '00000001', node = server)
+        
+        nodes = []
+        ID = '00000000'
+        for i in range(10):
+            ID.replace('0', '1')
+            nodes.append(KadeNode(ID = ID, node = server))
             
     while(1):
-        pass  
+        pass
 
 if __name__ == '__main__':
     FinalTest()

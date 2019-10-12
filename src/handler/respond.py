@@ -50,24 +50,41 @@ def ReceiveGetNode(data, KadeNode):
         
 
 def _SaveFile(data, KadeNode):
-    logger.info(f'node {KadeNode.ID} 開始將FileID為 {data["content"]["FileID"]} 的檔案存於本地')
-    name = data['content']['FileID'] + '.txt'
+    logger.info(f'node {KadeNode.ID} 開始將File {data["content"]} 存於本地')
+    name = data['instruct'][2] + '.txt'
     folder = Path(KadeNode.SavePath, 'file')
+    FileID = data['content']['FileID'] if type(data['content']) == type({}) else data['content'][0]['FileID']
     
     KadeNode.lock.acquire()
     
     # cirtical section
     folder.mkdir(parents=True, exist_ok=True) 
     file = folder / name
-    if file.exists():
-        print(json.loads(file.read_text())['saver'])
-        saver = {s[0]['ID'] : s for s in json.loads(file.read_text())['saver']}
-        for s in data['content']['saver']:
-            saver[s[0]['ID']] = saver.get(s[0]['ID'], 0) if saver.get(s[0]['ID'], [0, 0])[1] > s[1] else s
-        data['content']['saver'] = list(saver.values()) 
-        print(data['content']['saver'])
-    # save the file in local
-    file.write_text(json.dumps(data['content']))
+    
+    if not file.exists():
+        # save the file in local
+        file.write_text(json.dumps([data['content']]))
+    
+    else:
+        OriginFile = json.loads(file.read_text())
+        same = False
+        for of_ in OriginFile:
+            # if save file has exist, update saver
+            if of_['FileID'] == data['content']['FileID']:
+                print( json.loads(file.read_text()))
+                saver = {s[0]['ID'] : s for s in json.loads(file.read_text())[0]['saver']}
+                for s in data['content']['saver']:
+                    saver[s[0]['ID']] = saver.get(s[0]['ID'], 0) if saver.get(s[0]['ID'], [0, 0])[1] > s[1] else s
+                data['content']['saver'] = list(saver.values()) 
+                same = True
+                break
+            
+        # if there is a file but not same to this file, append to the tail
+        if not same:
+            OriginFile.append(data['content'])
+            
+        file.write_text(json.dumps(OriginFile))
+
     # cirtical section
     
     KadeNode.lock.release()
@@ -92,7 +109,7 @@ def ReplyPostFile(data, KadeNode):
         
     data['content']['saver'].extend(KadeNode.UpLoadFile('', data) ) 
     
-    Ask(SelfNode, 'send', 'REPLY', 'postfile', address = data['origin']['address'], data = data)
+    Ask(SelfNode, 'send', 'REPLY', 'postfile', data['instruct'][2], address = data['origin']['address'], data = data)
         
 
 #receive the notice of upload file result
@@ -113,10 +130,10 @@ def ReplyGetFile(data, KadeNode):
     # if local own target file
     if file != None:
         logger.info(f'node {SelfNode["ID"]} 擁有指定檔案 ，回傳給node {data["origin"]["ID"]}')
-        Ask(SelfNode, 'send', 'REPLY', 'getfile', address = data['origin']['address'], data = data, content = file, 
+        Ask(SelfNode, 'send', 'REPLY', 'getfile',  data['instruct'][2], address = data['origin']['address'], data = data, content = file, 
             destination = SelfNode)
     else:
-        Ask(SelfNode, 'send', 'REPLY', 'getfile', address = data['origin']['address'], data = data, content = '', 
+        Ask(SelfNode, 'send', 'REPLY', 'getfile', data['instruct'][2], address = data['origin']['address'], data = data, content = '', 
             destination = SelfNode)    
 
             
@@ -136,28 +153,3 @@ def ReplyGetBucket(KadeNode):
     logger.debug(f'IN ReplyGetBucket... result = {result}')
     logger.info(f'即將回傳bucket中其他節點資料')    
     return json.dumps(result).encode('utf-8') if result != [] else None
-    
-    
-def ReceiveReject(data, KadeNode):
-    logger.debug('In receive reject...')
-    SelfNode = KadeNode.NodeData.GetData()
-    # add failnode to fail
-    FailNode = data['path'].pop()
-    data['fail'].append(FailNode['ID'])
-    # delete self and it will add back later
-    del data['path'][-1]
-    logger.debug(f'from now on, the path is {data["path"]}')
-    AnotherNode = KadeNode.GetDistanceNode(0, FailNode['ID'], ExceptList = data['fail'])
-    #if there is another node
-    if AnotherNode != None:
-        logger.debug(data['fail'])
-        logger.info(f'找另一節點node {AnotherNode[0]["ID"]} 傳送資料')
-        KadeNode._getallnode()
-        Ask(SelfNode, 'send', connect = AnotherNode)
-    # if this is not the first node, continue reject
-    elif len(data['path']) > 0:
-        logger.info(f'找無其他節點傳送 ，回傳給node {data["path"][-1]["ID"]} 請求拒絕')
-        Reject(SelfNode, data)
-    # the request fail
-    else:    
-        logger.info('oops! the request fail!!!!!!!!!!!')

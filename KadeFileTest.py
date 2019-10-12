@@ -47,7 +47,8 @@ def FileTest():
         end.save()
         end.update(n)       
         end.SavePath = 'EndSave'
-        
+        end.UpLoadFile('1233211234567', TargetHash = '00101100')
+        time.sleep(2)
         end.GetFile(GetHash('4'))
         
     while(1):

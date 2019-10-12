@@ -17,7 +17,7 @@ class AdvancedJSONEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, obj)
 '''
 
-def _DataFill(SelfNode, *args, data = {}, **kwargs):
+def _DataFill(SelfNode, *args, data = None, **kwargs):
     '''
     fill up the header of data need to send
     
@@ -27,15 +27,16 @@ def _DataFill(SelfNode, *args, data = {}, **kwargs):
         **kwargs: for origin, destination, instruct, SelfNodes that need to write in data
     '''
     # new request
-    if data == {}:
+    if data == None or data == {}:
+        data = {}
         data['origin'] = SelfNode
         data['destination'] = kwargs['destination']
         data['instruct'] = args
         data['path'] = [SelfNode]
         data['content'] = kwargs.get('content', '')
-        data['fail'] = []
     # update request
     else:
+        print(f"data = {data}")
         #data['origin'] = kwargs.get('origin', data['origin'])
         data['destination'] = kwargs['destination'] if kwargs.get('destination', None) != None else data['destination']
         data['instruct'] = args if len(args) != 0 else data['instruct']

@@ -47,7 +47,7 @@ class NodeData():
         return {
                     'ID' : self._ID,
                     'address' : self._address,
-                    #'PublicKey' : self.GetByteStringPubKey(),
+                    'PublicKey' : self.GetByteStringPubKey(),
                 }
     
         

@@ -1,0 +1,14 @@
+{
+  "post": [
+    {
+    "time" : 123,
+    "from" : "NodeData",
+    "msg" : "msg_string" 
+    },
+    {
+    "time" : 124,
+    "from" : "NodeData",
+    "msg" : "msg_string" 
+    } 
+  ]
+}

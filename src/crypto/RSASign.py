@@ -11,7 +11,8 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.exceptions import InvalidSignature
-
+from cryptography.hazmat.primitives.serialization import load_pem_public_key
+import base64
 
 class RSA(asycalgori):
     def __init__(self, SaveKeyPath = None):
@@ -34,7 +35,8 @@ class RSA(asycalgori):
     def sign(self, message):
         '''use private to sign data'''
         message = message.encode(encoding='utf_8') if type(message) != type(b'') else message
-        return self.PrivateKey.sign(
+        return base64.b64encode(
+            self.PrivateKey.sign(
                     message,
                     padding.PSS(
                         mgf=padding.MGF1(hashes.SHA256()),
@@ -42,14 +44,15 @@ class RSA(asycalgori):
                     ),
                     hashes.SHA256()
                 )
-    
+            )
+        
                       
     def verify(self, public_key, signature, message):
         '''use "others" public key to verify data'''
         message = message.encode(encoding='utf_8') if type(message) != type(b'') else message
         try:
             public_key.verify(
-                signature,
+                base64.b64decode(signature),
                 message,
                 padding.PSS(
                     mgf=padding.MGF1(hashes.SHA256()),
@@ -93,6 +96,9 @@ class RSA(asycalgori):
                 ).decode(encoding='utf_8')
 
     
+    def LoadBytePublicKey(self, public_pem_data):
+        '''load byte sting publickey to a publickey class'''
+        return load_pem_public_key(public_pem_data, backend=default_backend())
     '''
     
     if data too big for sign

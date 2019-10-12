@@ -42,9 +42,9 @@ if __name__ == '__main__':
     print(bob_DH_publickey.public_numbers().y)
     
     aliceDH.CreateShareKey(bob_DH_publickey)
+    print('---------------------------------------------------')
     print(aliceDH.GetShareKey())    
     print(bobDH.GetShareKey())
-    print(len(bobDH.GetShareKey()))
     
     Alice = AEAD()
     Alice.NewKey(aliceDH.GetShareKey())

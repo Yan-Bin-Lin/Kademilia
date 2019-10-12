@@ -4,15 +4,18 @@ Created on 2019年9月3日
 
 @author: danny
 '''
+from . import setup
+
 import hashlib
 from pathlib import Path
 
+OutSize = int(setup.OutSize)
 # return bit like string(0110101.......)
-def _HashFormat(HashHexCode, OutSize = 8):
+def _HashFormat(HashHexCode, OutSize = OutSize):
     return bin(int(HashHexCode, 16)).zfill(OutSize)[-OutSize:]
     
 
-def GetHash(data, OutSize=8):
+def GetHash(data, OutSize=OutSize):
     '''
     hash a data
     
@@ -28,7 +31,7 @@ def GetHash(data, OutSize=8):
 
 
 # hash a big file
-def GetHashFile(path, OutSize=8):
+def GetHashFile(path, OutSize=OutSize):
     HashFunc = hashlib.md5()
     with open(path, 'rb') as file:
         for chunk in iter(lambda: file.read(1024), b""):
@@ -47,6 +50,7 @@ def CountDistance(SelfID, OtherID):
 
 
 if __name__ == '__main__':
+    print(GetHash('4'))
     data = '10101010'
     print(GetHash(data))
 

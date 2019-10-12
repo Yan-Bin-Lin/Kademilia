@@ -22,6 +22,16 @@ class log():
     def __init__(self):
         self.logger =  logging.getLogger( 'loglog' )
         
+        
+    def error(self, msg):     
+        '''logging error'''
+        self.logger.error(msg)
+        
+        
+    def warn(self, msg):     
+        '''logging warn'''
+        self.logger.warn(msg)
+        
     
     def debug(self, msg):
         '''logging debug'''
@@ -38,9 +48,10 @@ class log():
         lock.acquire()
         now = time.time()
         self.logger.info(msg)
-        print('waiting', end='')
-        while time.time() - now < float(setup.wait):
-            print('.', end='', flush = True)
-            time.sleep(0.5)
-        print('')
+        if float(setup.wait) > 0:
+            print('waiting', end='')
+            while time.time() - now < float(setup.wait):
+                print('.', end='', flush = True)
+                time.sleep(0.5)
+            print('')
         lock.release()

@@ -61,7 +61,7 @@ class KBucket():
         return None
     
 
-    def GetNode(self, GetID, recursive = True, closest = True, ping = True, num = 8, ExceptList = []):
+    def GetNode(self, GetID, recursive = True, closest = True, ping = True, num = 8, ExceptList = None):
         '''
         return a NodeData 
             
@@ -78,6 +78,7 @@ class KBucket():
         logger.debug(f'in kbucket getnode...\n Kbucket size = {self.length()}, GetID = {GetID}\n the bucket is {self.bucket.values()}')
         #logger.debug(f'args is {args}, recursive = {recursive}, ping = {ping}')
         logger.debug(f'ExceptList = {ExceptList}')     
+        ExceptList = ExceptList if ExceptList != None else []
         
         if self.length() == 0:
             return []

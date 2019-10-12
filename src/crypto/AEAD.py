@@ -5,6 +5,7 @@ Created on 2019年9月2日
 @author: danny
 '''
 import os
+import base64
 
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives import hashes
@@ -33,21 +34,18 @@ class AEAD():
         self._methodinit(key = key)
         if nonce == None:
             self.NewNonce()
-            return self.aead.encrypt(self.nonce, msg.encode(encoding='utf-8'), self.aad), self.nonce, self.aad
+            return base64.b64encode(self.aead.encrypt(self.nonce, msg.encode(encoding='utf-8'), self.aad)).decode(encoding='utf-8'), base64.b64encode(self.nonce).decode(encoding='utf-8'), base64.b64encode(self.aad).decode(encoding='utf-8')
         else:
-            return self.aead.encrypt(nonce, msg.encode(encoding='utf-8'),self.aad), self.nonce, self.aad
+            return base64.b64encode(self.aead.encrypt(nonce, msg.encode(encoding='utf-8'),self.aad)).decode(encoding='utf-8'), base64.b64encode(self.nonce).decode(encoding='utf-8'), base64.b64encode(self.aad).decode(encoding='utf-8')
         
     
     # decrypt chiper text
     def decrypt(self, ct, nonce=None, aad = '0', *, key = None):
-        print(ct)
-        print(nonce)
-        print(aad)
         self._methodinit(key = key)
         if nonce == None:
-            return self.aead.decrypt(self.nonce, ct, aad).decode(encoding='utf-8')
+            return self.aead.decrypt(self.nonce, base64.b64decode(ct), base64.b64decode(aad)).decode(encoding='utf-8')
         else:
-            return self.aead.decrypt(nonce, ct, aad).decode(encoding='utf-8')
+            return self.aead.decrypt(base64.b64decode(nonce.encode(encoding='utf-8')), base64.b64decode(ct), base64.b64decode(aad.encode('utf-8'))).decode(encoding='utf-8')
     
     
     # don't reuse nonce

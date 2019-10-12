@@ -40,7 +40,7 @@ class RouteTable():
         logger.debug(f'add the node {self.table[self._CheckDistanceIndex(OtherNode["ID"], distance)].bucket[OtherNode["ID"]]}')
 
     
-    def GetNode(self, NodeID = None, *, closest = True, ping = True, num = 8, data = {}, ExceptList = []):
+    def GetNode(self, NodeID = None, *, closest = True, ping = True, num = 8, data = None, ExceptList = None):
         '''
         return the most closest specify NodeData. 
         
@@ -50,7 +50,7 @@ class RouteTable():
             closest: if node not found will return k most closest NodeData of NodeID if closest is True else return None
             ping: if ping is true will ping the node before return the node 
         '''
-        logger.debug(f" NodeID is {NodeID}, closest = {closest}, ping = {ping}, num = {8}, data is {data}")
+        logger.debug(f" NodeID is {NodeID}, closest = {closest}, ping = {ping}, num = {8}, data is {data}, ExceptList = {ExceptList}")
         
         # check for no give ID
         if NodeID == None:
@@ -67,7 +67,8 @@ class RouteTable():
         exc = 0
         sign = [-1, 0]
         pre_dis = self._CheckDistanceIndex(NodeID)
-        if data != {}:
+        if data != None:
+            ExceptList = ExceptList if ExceptList != None else []
             ExceptList.extend([d['ID'] for d in data['path']])
 
         logger.debug(f"data is {data}, ExceptList is {ExceptList}")
