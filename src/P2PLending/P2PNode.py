@@ -22,6 +22,7 @@ class P2PNode(KadeNode):
     '''
     This is the main node application in p2p lending inheribit from Kademlia node
     '''
+    @CheckError()
     def __init__(self, *args, **kwargs):
         '''
         Constructor

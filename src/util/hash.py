@@ -41,11 +41,17 @@ def GetHashFile(path, OutSize=OutSize):
 
 def CountDistance(SelfID, OtherID):
     '''
-    count the distance of two node ID(by xor)
+    count the distance of two node ID(by xor), if length not same, it will add '0' 
+    in back of the short node ID to make both of ID length are saame
     
     Returns:
         str: distance in bit string format
     '''
+    difference = len(SelfID) - len(OtherID)
+    if difference < 0:
+        SelfID += '0' * (-1 * difference)
+    elif difference > 0:
+        OtherID += '0' * (-1 * difference)
     return ''.join(str(r) for r in (ord(x) ^ ord(y) for x, y in zip(SelfID, OtherID)))
 
 

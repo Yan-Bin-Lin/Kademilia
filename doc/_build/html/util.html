@@ -43,7 +43,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="node package" href="node.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,17 +92,21 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">util package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-util.hash">util.hash module</a></li>
-<li><a class="reference internal" href="#module-util.web">util.web module</a></li>
-<li><a class="reference internal" href="#module-util">Module contents</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="crypto.html">crypto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handler.html">handler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.html">network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="node.html">node package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">util package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#util-hash-module">util.hash module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-util.web">util.web module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-util">Module contents</a></li>
 </ul>
 </li>
 </ul>
-</div>
+
             
           
         </div>
@@ -169,49 +174,8 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-util.hash">
-<span id="util-hash-module"></span><h2>util.hash module<a class="headerlink" href="#module-util.hash" title="Permalink to this headline">¶</a></h2>
-<p>Created on 2019年9月3日</p>
-<p>&#64;author: danny</p>
-<dl class="function">
-<dt id="util.hash.CountDistance">
-<code class="descclassname">util.hash.</code><code class="descname">CountDistance</code><span class="sig-paren">(</span><em>SelfID</em>, <em>OtherID</em><span class="sig-paren">)</span><a class="headerlink" href="#util.hash.CountDistance" title="Permalink to this definition">¶</a></dt>
-<dd><p>count the distance of two node ID(by xor)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">distance in bit string format</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="util.hash.GetHash">
-<code class="descclassname">util.hash.</code><code class="descname">GetHash</code><span class="sig-paren">(</span><em>data</em>, <em>OutSize=8</em><span class="sig-paren">)</span><a class="headerlink" href="#util.hash.GetHash" title="Permalink to this definition">¶</a></dt>
-<dd><p>hash a data</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>OutSize</strong> (<em>int</em>) – output length</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">hash string in bit string format</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="util.hash.GetHashFile">
-<code class="descclassname">util.hash.</code><code class="descname">GetHashFile</code><span class="sig-paren">(</span><em>path</em>, <em>OutSize=8</em><span class="sig-paren">)</span><a class="headerlink" href="#util.hash.GetHashFile" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="util-hash-module">
+<h2>util.hash module<a class="headerlink" href="#util-hash-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-util.web">
 <span id="util-web-module"></span><h2>util.web module<a class="headerlink" href="#module-util.web" title="Permalink to this headline">¶</a></h2>
@@ -234,6 +198,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="node.html" class="btn btn-neutral float-left" title="node package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

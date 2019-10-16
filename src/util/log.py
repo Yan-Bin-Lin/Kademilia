@@ -28,9 +28,9 @@ class log():
         self.logger.error(msg)
         
         
-    def warn(self, msg):     
-        '''logging warn'''
-        self.logger.warn(msg)
+    def warning(self, msg):     
+        '''logging warning'''
+        self.logger.warning(msg)
         
     
     def debug(self, msg):

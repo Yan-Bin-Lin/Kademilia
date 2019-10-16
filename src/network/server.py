@@ -15,8 +15,11 @@ from ..handler.handler import RespondHandle
 from ..util.log import log
 logger = log()
 
+from ..util.error import CheckError
+
 # a server socket class
 class Server():
+    @CheckError()
     def __init__(self, ServePort=0):
         #server local IP
         self.LocalIP = GetLocalIP()#self._get_host_ip()
@@ -29,22 +32,23 @@ class Server():
         logger.debug(f'serve at {self.GetAddress()}')
         self.KadeNode = None
 
-    
+    @CheckError()
     def start(self):
         #start serving
         threading._start_new_thread(self.WaitConnect, ())                     
         
         
     # get the sever socket bindind address    
+    @CheckError()
     def GetAddress(self):
         return self.server.getsockname()
 
-    
+    @CheckError()
     def CallHandle(self, connect, data, KadeNode):
         '''call handler'''
         RespondHandle(connect, data, KadeNode)
         
-        
+    @CheckError()
     def communicate(self, connect, host, port):
         while True:
             try:
@@ -59,7 +63,7 @@ class Server():
                 raise
                 return
                 
-            
+    @CheckError()     
     def WaitConnect(self):
         while True:
             logger.debug(u'waiting for connect...')

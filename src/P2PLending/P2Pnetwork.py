@@ -15,15 +15,17 @@ from .P2Phandler import P2PHandle
 from ..util.log import log
 logger = log()
 
+from ..util.error import CheckError
 
 class P2PServer(Server):
     '''
     a class inherit from Server class
     '''
+    @CheckError()
     def __init__(self, ServePort=0):
         super().__init__(ServePort)
     
-    
+    @CheckError()
     def CallHandle(self, connect, data, KadeNode):
         '''overwrite call handler to extend P2Phandler'''
         logger.info(f'P2P server receive data, data is {data}')
@@ -36,6 +38,7 @@ class P2PConnect(Connect):
     '''
     a class inherit from Connect class
     '''
+    @CheckError()
     def __init__(self, ServePort=0):
         '''
         Constructor

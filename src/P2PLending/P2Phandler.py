@@ -42,13 +42,13 @@ def _SaveMsg(data, KadeNode, type_):
 
 def ReplyPostPost(data, KadeNode):
     '''reply to a post request'''
-    logger.info(f"node {data['path'][-1]['ID']} send a post to you, the post is: \n\t {data['instruct'][2]}")
+    logger.warning(f"node {data['path'][-1]['ID']} send a post to you, the post is: \n\t {data['instruct'][2]}")
     _SaveMsg(data, KadeNode, 'post')
     
 
 def ReplyPostMsg(data, KadeNode):
     '''reply to chat request'''
-    logger.info(f"node {data['path'][-1]['ID']} send a message to you, the message is: \n\t {data['instruct'][2]}")
+    logger.warning(f"node {data['path'][-1]['ID']} send a message to you, the message is: \n\t {data['instruct'][2]}")
     _SaveMsg(data, KadeNode, 'chat')
 
 
@@ -58,7 +58,7 @@ def ReplyPostContract(data, KadeNode):
     if KadeNode.RSA.verify(
                     KadeNode.RSA.LoadBytePublicKey(peer['public_key'].encode('utf-8')), 
                     peer['signature'], peer['message']):
-        logger.info(f"node {data['path'][-1]['ID']} send a contract to you, the contract is: \n\t {data['content']}")
+        logger.warning(f"node {data['path'][-1]['ID']} send a contract to you, the contract is: \n\t {data['content']}")
         data['instruct'].append(data['content'])
         _SaveMsg(data, KadeNode, 'contract')
     else:
@@ -92,7 +92,7 @@ def ReplyPostSecrete(data, KadeNode):
             decrypter = AEAD()
             decrypter.NewKey(KadeNode.secrete[data['origin']['ID']])
             msg = decrypter.decrypt(*data['content']['msg'])
-            logger.info(f"node {data['path'][-1]['ID']} send a Whisper to you, the Whisper is: \n\t {data['content']['msg']}, it mean {msg}")
+            logger.warning(f"node {data['path'][-1]['ID']} send a Whisper to you, the Whisper is: \n\t {data['content']['msg']}, it mean {msg}")
 
         # if the dh key got some error
         elif InitResult == 'worng DH PK !!!!!':

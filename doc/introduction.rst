@@ -2,7 +2,7 @@ What is DHT?
 ^^^^^^^^^^^^
 
 在解釋Kademlia前先說說DHT的概念，DHT為\ **distributed hash
-table**\ (分散式雜湊表)的縮寫，概念上來說，每筆**data**\ 都有對應的\ **key**\ ，只要給定\ **key**\ 就能從網路上取得\ **data**\ 。
+table**\ (分散式雜湊表)的縮寫，概念上來說，每筆\**data**\ 都有對應的\ **key**\ ，只要給定\ **key**\ 就能從網路上取得\ **data**\ 。
 
 .. figure:: https://zh.wikipedia.org/wiki/%E5%88%86%E6%95%A3%E5%BC%8F%E9%9B%9C%E6%B9%8A%E8%A1%A8#/media/File:DHT_en.svg,%20圖片引用自wiki
    :alt: 
@@ -44,6 +44,7 @@ Kbucket
 
 Getting start
 ^^^^^^^^^^^^^
+
 
 Kademlia initial
 ''''''''''''''''

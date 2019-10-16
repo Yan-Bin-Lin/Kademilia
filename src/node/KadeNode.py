@@ -65,8 +65,6 @@ class KadeNode():
         if node['ID'] == self.ID:
             return
         logger.debug(f'node {self.ID} 開始將 node {node["ID"]} 資料跟新於本地bucket中')
-        #distance = CountDistance(self.ID, node['ID'])
-        #self.table[distance].AddNode(node)
         self.table.AddNode(node)
         # get bucket of the node
         if getbucket:
@@ -129,7 +127,7 @@ class KadeNode():
         logger.info(f'node {self.ID} 開始查找 node {ID} ， 雙方距離差距為 {int(CountDistance(self.ID, ID), 2)}')
         
         result = self.GetNode(ID, data = data)
-        logger.info(f' LookUp result is {result}')
+        logger.warning(f' LookUp result is {result}')
         
         data = {} if data == None else data
         if len(result) == 0:
@@ -204,7 +202,7 @@ class KadeNode():
         TargetHash = TargetHash if TargetHash != '' else HashCode
         nodes = self.GetNode(TargetHash, data = data, ExceptList = ExceptList)
         for node in nodes:
-            logger.info(f'node {self.ID} 開始上傳檔案到網路，將資料傳給node {node["ID"]}')            
+            logger.warning(f'node {self.ID} 開始上傳檔案到網路，將資料傳給node {node["ID"]}')            
             self.web.Ask(self.NodeData.GetData(), 'send', 'POST', 'file', TargetHash, address = node['address'],
                 data = data, **kwargs)
         

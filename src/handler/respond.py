@@ -42,11 +42,14 @@ def ReceiveGetNode(data, KadeNode):
     '''receive the request node'''
     if data['destination'].get('address', None) != None:
         KadeNode.update(data['destination'])
-        logger.info(f'LookUp success!!!!!!!   I find the node {data["destination"]["ID"]}')
+        logger.warning(f'LookUp success!!!!!!!   I find the node {data["destination"]["ID"]}')
     else:
         logger.info(f'Get node receive reply, add the node into bucket {data["content"]}')
-        for node in data['content']:
-            KadeNode.update(node)
+        try:
+            for node in data['content']:
+                KadeNode.update(node)
+        except:
+            logger.info(f'Get node receive reply, but the content is empty')
         
 
 def _SaveFile(data, KadeNode):
@@ -118,7 +121,7 @@ def ReceivePostFile(data, KadeNode):
     data = _SaveFile(data, KadeNode)
     for saver in data['content']['saver']:
         KadeNode.update(saver[0])
-    logger.info(f'Update File success!!!!!!!  存到檔案的節點有{[peer[0]["ID"] for peer in data["content"]["saver"][1:]]}')
+    logger.warning(f'Update File success!!!!!!!  存到檔案的節點有{[peer[0]["ID"] for peer in data["content"]["saver"][1:]]}')
     
     
 def ReplyGetFile(data, KadeNode):
@@ -139,7 +142,7 @@ def ReplyGetFile(data, KadeNode):
             
 def ReceiveGetFile(data, KadeNode):
     _SaveFile(data, KadeNode)
-    logger.info(f'Get File success!!!!!!! 我拿到檔案了!!!!!!!!')
+    logger.warning(f'Get File success!!!!!!! 我拿到檔案 {data["content"]} 了!!!!!!!!')
     
 
 def ReplyGetBucket(KadeNode):

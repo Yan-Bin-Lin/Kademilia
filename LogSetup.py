@@ -15,9 +15,9 @@ from logging.handlers import QueueListener
 #from logging.handlers import TimedRotatingFileHandler
 #請你給我一個 Log 的分身，他的名字叫做.... loglog (function 的名稱)！！
 logger = logging.getLogger( 'loglog' )
-
-
 from pathlib import Path
+
+
 def Setup():
     # read config setup
     path_ = 'Config.ini'
@@ -30,6 +30,9 @@ def Setup():
 
 
 def some_method():
+    print('自由測試')
+    from P2PFinalTest import FinalTest
+    FinalTest()
     try:
         print('開始測試P2P秘密聊天')
         from P2PWhisperTest import WhisperTest
@@ -74,7 +77,7 @@ def main():
     queue_handler = QueueHandler(que)
     logger.addHandler(queue_handler)
     #設定這個log 分身他要處理的情報等級
-    logger.setLevel(logging.INFO)
+    logger.setLevel(logging.WARNING)
     #關於 log 將要輸出的檔案，請你按照下面的設定，幫我處理一下
     fh = logging.FileHandler('Test.log', 'a', 'utf-8')
     #設定這個檔案要處理的情報等級，只要是 INFO 等級或以上的就寫入檔案

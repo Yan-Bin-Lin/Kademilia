@@ -93,15 +93,6 @@ DownLoad
    node
    util
 
-Package and module
-==================
-
-* :ref:`crypto`
-* :ref:`handler`
-* :ref:`network`
-* :ref:`node`
-* :ref:`util`
-
 
 Indices and tables
 ==================
