@@ -54,7 +54,7 @@ def ReplyPostMsg(data, KadeNode):
 
 def ReplyPostContract(data, KadeNode):
     '''reply to a contract request'''
-    peer = data['content']['Trader'].get('lender', data['content']['Trader']['brower'])['sign']
+    peer = data['content']['Trader'].get('lender', data['content']['Trader'].get('brower', None))['sign']
     if KadeNode.RSA.verify(
                     KadeNode.RSA.LoadBytePublicKey(peer['public_key'].encode('utf-8')), 
                     peer['signature'], peer['message']):
@@ -86,6 +86,7 @@ def ReplyPostSecrete(data, KadeNode):
             if KadeNode.SecreteFresh.get(data['origin']['ID'], data['origin']['PublicKey']) != data['origin']['PublicKey']:
                 # DH initial fail, resatart the secrete initial
                 KadeNode.send(data['origin']['ID'], 'DELETE', 'secrete', KadeNode.ID)
+                logger.info(f"initial secrete fail, please retry") 
                 ReplyDelSecrete(data, KadeNode, ID = data['origin']['ID'])
                 return
                 
@@ -97,6 +98,7 @@ def ReplyPostSecrete(data, KadeNode):
         # if the dh key got some error
         elif InitResult == 'worng DH PK !!!!!':
             # DH initial fail, resatart the secrete initial
+            logger.info(f" 'worng DH PK !!!!!'") 
             KadeNode.send(data['origin']['ID'], 'DELETE', 'secrete', KadeNode.ID)
             ReplyDelSecrete(data, KadeNode, ID = data['origin']['ID'])
         

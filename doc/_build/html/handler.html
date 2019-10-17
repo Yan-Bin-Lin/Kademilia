@@ -98,8 +98,8 @@
 <li class="toctree-l1"><a class="reference internal" href="crypto.html">crypto package</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">handler package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#handler-ask-module">handler.ask module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#handler-handler-module">handler.handler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-handler.ask">handler.ask module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-handler.handler">handler.handler module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#handler-respond-module">handler.respond module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-handler">Module contents</a></li>
 </ul>
@@ -176,11 +176,64 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="handler-ask-module">
-<h2>handler.ask module<a class="headerlink" href="#handler-ask-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-handler.ask">
+<span id="handler-ask-module"></span><h2>handler.ask module<a class="headerlink" href="#module-handler.ask" title="Permalink to this headline">¶</a></h2>
+<p>Created on 2019年9月9日</p>
+<p>&#64;author: danny</p>
+<dl class="function">
+<dt id="handler.ask.Ask">
+<code class="descclassname">handler.ask.</code><code class="descname">Ask</code><span class="sig-paren">(</span><em>SelfNode</em>, <em>type_</em>, <em>*instruct</em>, <em>connect=None</em>, <em>address=None</em>, <em>data=None</em>, <em>destination=None</em>, <em>content=''</em><span class="sig-paren">)</span><a class="headerlink" href="#handler.ask.Ask" title="Permalink to this definition">¶</a></dt>
+<dd><p>send a request to other node</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>SelfNode</strong> (<em>dict</em>) – the node who send request</li>
+<li><strong>type</strong> (<em>str</em>) – if <a href="#id1"><span class="problematic" id="id2">type_</span></a> == ‘request’ will wait for respond</li>
+<li><strong>connect</strong> (<em>tuple</em>) – connect instant tuple (ConnectNode, ConnectSocket)</li>
+<li><strong>address</strong> (<em>tuple</em>) – you should give IP address if you don’t give connect</li>
+<li><strong>data</strong> – the request data from other node, default = {}</li>
+<li><strong>destination</strong> (<em>dict</em>) – destination of this request, default = None</li>
+<li><strong>content</strong> – the request body</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">msg respond of other node</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="handler.ask.AskNode">
+<code class="descclassname">handler.ask.</code><code class="descname">AskNode</code><span class="sig-paren">(</span><em>data</em>, <em>type_</em>, <em>connect=None</em>, <em>address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#handler.ask.AskNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="handler-handler-module">
-<h2>handler.handler module<a class="headerlink" href="#handler-handler-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-handler.handler">
+<span id="handler-handler-module"></span><h2>handler.handler module<a class="headerlink" href="#module-handler.handler" title="Permalink to this headline">¶</a></h2>
+<p>Created on 2019年9月4日</p>
+<p>&#64;author: danny</p>
+<dl class="function">
+<dt id="handler.handler.RespondHandle">
+<code class="descclassname">handler.handler.</code><code class="descname">RespondHandle</code><span class="sig-paren">(</span><em>connect</em>, <em>data</em>, <em>KadeNode</em><span class="sig-paren">)</span><a class="headerlink" href="#handler.handler.RespondHandle" title="Permalink to this definition">¶</a></dt>
+<dd><p>main handler to deal with the receive data</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> – the request data from other node</li>
+<li><strong>KadeNode</strong> – a KadeNode object who call this function</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="handler-respond-module">
 <h2>handler.respond module<a class="headerlink" href="#handler-respond-module" title="Permalink to this headline">¶</a></h2>

@@ -17,7 +17,7 @@ class log():
     encapsulation and set up for logging to slow down
     
     Attributes:
-        logger: logging.getLogger( 'loglog' )
+        logger: logging.getlogger( 'loglog' )
     '''
     def __init__(self):
         self.logger =  logging.getLogger( 'loglog' )

@@ -202,6 +202,12 @@ ID可以相同，而演萬法上也會把檔案存在相同ID的peer上。</p>
 </div>
 <div class="section" id="getting-start">
 <h2>Getting start<a class="headerlink" href="#getting-start" title="Permalink to this headline">¶</a></h2>
+<p>所有資料傳輸都遵循以下規則:</p>
+<div class="line-block">
+<div class="line">* 任何資料轉手次數只要&gt;=8就會直接丟棄，不進行處理</div>
+<div class="line">* 資料絕不回傳給已經手過的節點</div>
+<div class="line">* 當一個節點接收到任一節點的資料，就會將對方加入自己的KBucket</div>
+</div>
 <div class="section" id="kademlia-initial">
 <h3>Kademlia initial<a class="headerlink" href="#kademlia-initial" title="Permalink to this headline">¶</a></h3>
 <p>自己一人是無法構成網路的，想要拓展自己的網路就要先update一個已知節點的資料，向對方發出GET
@@ -209,6 +215,8 @@ node
 SelfID請求，也就是請對方找<strong>自己</strong>，Kademlia節點只要收到任何請求都會先將對方update進自己的bucket然後才執行其他動作，當收到GET
 node
 SelfID的請求時，對方就會將自己加入bucket中，然後回傳對方bucket中離自己最近的其他節點，再向這些節點發出請求，如此遞迴下去，就能完備自己的bucket資料</p>
+<div class="figure">
+<img alt="" src="_images/initial.svg" /></div>
 </div>
 <div class="section" id="update">
 <h3>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h3>
@@ -221,44 +229,48 @@ node請求，其他節點收到請求後，如果自己存有該節點資料就�
 </div>
 <div class="section" id="upload">
 <h3>UpLoad<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h3>
+<p>上傳的檔案會先將內容進行Hash，所得到的Hash code即為目標節點，將檔案送往目標節點，途經的各點都會將檔案存於本地，並往下遞迴執行UpLoad，同時將送下去的節點資訊回傳給最初呼叫UpLoad的節點，如果送往目標後，目標節點匯兌最靠近自己的K個節點執行UpLoad</p>
+<div class="figure">
+<img alt="" src="_images/UploadFile.svg" /></div>
 </div>
 <div class="section" id="download">
 <h3>DownLoad<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h3>
+<p>當你有一段Hash code，就能往目標節點執行Get file，途中經過的節點如果存有該檔案，就會直接回傳檔案，否則就繼續執行Get file，同時將送下去的節點資訊回傳給最初呼叫Get File的節點</p>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="crypto.html">crypto package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="crypto.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crypto.html#module-crypto.AEAD">crypto.AEAD module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.html#module-crypto.DHKeyExchange">crypto.DHKeyExchange module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crypto.html#module-crypto.RSASign">crypto.RSASign module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.html#crypto-dhkeyexchange-module">crypto.DHKeyExchange module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.html#crypto-rsasign-module">crypto.RSASign module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crypto.html#module-crypto.asycrypto">crypto.asycrypto module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crypto.html#module-crypto">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="handler.html">handler package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="handler.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="handler.html#handler-ask-module">handler.ask module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="handler.html#handler-handler-module">handler.handler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="handler.html#module-handler.ask">handler.ask module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="handler.html#module-handler.handler">handler.handler module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="handler.html#handler-respond-module">handler.respond module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="handler.html#module-handler">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="network.html">network package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="network.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="network.html#network-client-module">network.client module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="network.html#network-communicate-module">network.communicate module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="network.html#network-connect-module">network.connect module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="network.html#network-server-module">network.server module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html#module-network.client">network.client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html#module-network.communicate">network.communicate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html#module-network.connect">network.connect module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html#module-network.server">network.server module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="network.html#module-network">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="node.html">node package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="node.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="node.html#node-kbucket-module">node.KBucket module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="node.html#node-kadenode-module">node.KadeNode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html#module-node.KBucket">node.KBucket module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html#module-node.KadeNode">node.KadeNode module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="node.html#module-node.NodeData">node.NodeData module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="node.html#node-routetable-module">node.RouteTable module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node.html#module-node.RouteTable">node.RouteTable module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="node.html#module-node">Module contents</a></li>
 </ul>
 </li>

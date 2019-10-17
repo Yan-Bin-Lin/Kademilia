@@ -16,21 +16,18 @@ def WhisperTest():
     
         input('wait for whisper...')
 
-        server.Whisper('11', 'hahahahahahahaha')
+        while(1):
+            server.Whisper('11', input('wait for whisper...'))
         
     elif instruc == 'n':
         with open('Save/00.txt', 'rb') as file:
             s = pickle.load(file)
                 
         end = P2PNode(ID = '11', node = s)    
-        end.SecreteInit('00')
+        end.SecreteInit('00') 
         
-        input('wait for whisper...')
-        
-        end.Whisper('00', 'hihihihi')
-
-    while(1):
-        pass
+        while(1):
+            end.Whisper('00', input('wait for whisper...'))
 
 
 if __name__ == "__main__":

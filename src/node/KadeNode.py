@@ -247,9 +247,8 @@ class KadeNode():
         '''
         result = {}
         for i in range(128):
-            if self.table.amount[i] > 0:
-                for k in self.table.table[i].bucket.keys():
-                    result.update({i : self.table.table[i].bucket[k]})
+            if len(self.table.table[i].bucket) > 0:
+                result.update({i : self.table.table[i].bucket})
         return result
             
     @CheckError()

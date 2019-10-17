@@ -98,8 +98,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">crypto package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-crypto.AEAD">crypto.AEAD module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-crypto.DHKeyExchange">crypto.DHKeyExchange module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-crypto.RSASign">crypto.RSASign module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crypto-dhkeyexchange-module">crypto.DHKeyExchange module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crypto-rsasign-module">crypto.RSASign module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-crypto.asycrypto">crypto.asycrypto module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-crypto">Module contents</a></li>
 </ul>
@@ -183,7 +183,7 @@
 <p>&#64;author: danny</p>
 <dl class="class">
 <dt id="crypto.AEAD.AEAD">
-<em class="property">class </em><code class="descclassname">crypto.AEAD.</code><code class="descname">AEAD</code><span class="sig-paren">(</span><em>aad='0'</em>, <em>key=None</em>, <em>nonce=b'x85x01x9cx98x1f_xa3x96|x98R3'</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.AEAD.AEAD" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">crypto.AEAD.</code><code class="descname">AEAD</code><span class="sig-paren">(</span><em>aad='0'</em>, <em>key=None</em>, <em>nonce=b'1xe0xb9-x19x84xf6xc0xdex0fxfex17'</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.AEAD.AEAD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Authenticated encryption with associated data (AEAD)</p>
 <dl class="method">
@@ -219,73 +219,11 @@
 </dd></dl>
 
 </div>
-<div class="section" id="module-crypto.DHKeyExchange">
-<span id="crypto-dhkeyexchange-module"></span><h2>crypto.DHKeyExchange module<a class="headerlink" href="#module-crypto.DHKeyExchange" title="Permalink to this headline">¶</a></h2>
-<p>Created on 2019年9月2日</p>
-<p>&#64;author: danny</p>
-<dl class="class">
-<dt id="crypto.DHKeyExchange.DH">
-<em class="property">class </em><code class="descclassname">crypto.DHKeyExchange.</code><code class="descname">DH</code><span class="sig-paren">(</span><em>PublicKey=None</em>, <em>parameters=&lt;cryptography.hazmat.backends.openssl.dh._DHParameters object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.DHKeyExchange.DH" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#crypto.asycrypto.asycalgori" title="crypto.asycrypto.asycalgori"><code class="xref py py-class docutils literal"><span class="pre">crypto.asycrypto.asycalgori</span></code></a></p>
-<dl class="method">
-<dt id="crypto.DHKeyExchange.DH.CreateShareKey">
-<code class="descname">CreateShareKey</code><span class="sig-paren">(</span><em>OtherPublicKey</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.DHKeyExchange.DH.CreateShareKey" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="crypto.DHKeyExchange.DH.GetShareKey">
-<code class="descname">GetShareKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crypto.DHKeyExchange.DH.GetShareKey" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="crypto-dhkeyexchange-module">
+<h2>crypto.DHKeyExchange module<a class="headerlink" href="#crypto-dhkeyexchange-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-crypto.RSASign">
-<span id="crypto-rsasign-module"></span><h2>crypto.RSASign module<a class="headerlink" href="#module-crypto.RSASign" title="Permalink to this headline">¶</a></h2>
-<p>Created on 2019年9月2日</p>
-<p>&#64;author: danny</p>
-<dl class="class">
-<dt id="crypto.RSASign.RSA">
-<em class="property">class </em><code class="descclassname">crypto.RSASign.</code><code class="descname">RSA</code><span class="sig-paren">(</span><em>SaveKeyPath=None</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#crypto.asycrypto.asycalgori" title="crypto.asycrypto.asycalgori"><code class="xref py py-class docutils literal"><span class="pre">crypto.asycrypto.asycalgori</span></code></a></p>
-<dl class="method">
-<dt id="crypto.RSASign.RSA.LoadBytePublicKey">
-<code class="descname">LoadBytePublicKey</code><span class="sig-paren">(</span><em>public_pem_data</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.LoadBytePublicKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>load byte sting publickey to a publickey class</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crypto.RSASign.RSA.NewKey">
-<code class="descname">NewKey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.NewKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>create new RSA KEY</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crypto.RSASign.RSA.decrypt">
-<code class="descname">decrypt</code><span class="sig-paren">(</span><em>ciphertext</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.decrypt" title="Permalink to this definition">¶</a></dt>
-<dd><p>use private key to decrypt data</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crypto.RSASign.RSA.encrypt">
-<code class="descname">encrypt</code><span class="sig-paren">(</span><em>public_key</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.encrypt" title="Permalink to this definition">¶</a></dt>
-<dd><p>use “others” public key to encrypt data</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crypto.RSASign.RSA.sign">
-<code class="descname">sign</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.sign" title="Permalink to this definition">¶</a></dt>
-<dd><p>use private to sign data</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="crypto.RSASign.RSA.verify">
-<code class="descname">verify</code><span class="sig-paren">(</span><em>public_key</em>, <em>signature</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#crypto.RSASign.RSA.verify" title="Permalink to this definition">¶</a></dt>
-<dd><p>use “others” public key to verify data</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="crypto-rsasign-module">
+<h2>crypto.RSASign module<a class="headerlink" href="#crypto-rsasign-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-crypto.asycrypto">
 <span id="crypto-asycrypto-module"></span><h2>crypto.asycrypto module<a class="headerlink" href="#module-crypto.asycrypto" title="Permalink to this headline">¶</a></h2>

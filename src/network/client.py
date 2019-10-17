@@ -63,13 +63,18 @@ class Client():
     '''
     def request(self, msg):
         # 发送数据
-        self._connect.sendall(msg.encode('utf-8'))
-        return self._WaitResponse()
-    
+        try:
+            self._connect.sendall(msg.encode('utf-8'))
+            return self._WaitResponse()
+        except:
+            return None
     
     '''
     send message to other node that don't need to respond in a few time, ex. ping,...  
     no blocking    
     '''
     def send(self, msg):
-        self._connect.sendall(msg.encode('utf-8'))
+        try:
+            self._connect.sendall(msg.encode('utf-8'))
+        except:
+            return

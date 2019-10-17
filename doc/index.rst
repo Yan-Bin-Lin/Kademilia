@@ -68,6 +68,9 @@ SelfID請求，也就是請對方找\ **自己**\ ，Kademlia節點只要收到�
 node
 SelfID的請求時，對方就會將自己加入bucket中，然後回傳對方bucket中離自己最近的其他節點，再向這些節點發出請求，如此遞迴下去，就能完備自己的bucket資料
 
+.. figure:: _static/initial.svg
+   :alt: 
+
 update
 ''''''
 
@@ -84,11 +87,13 @@ UpLoad
 
 上傳的檔案會先將內容進行Hash，所得到的Hash code即為目標節點，將檔案送往目標節點，途經的各點都會將檔案存於本地，並往下遞迴執行UpLoad，同時將送下去的節點資訊回傳給最初呼叫UpLoad的節點，如果送往目標後，目標節點匯兌最靠近自己的K個節點執行UpLoad
 
+.. figure:: _static/UploadFile.svg
+   :alt: 
+
 DownLoad
 ''''''''
 
 當你有一段Hash code，就能往目標節點執行Get file，途中經過的節點如果存有該檔案，就會直接回傳檔案，否則就繼續執行Get file，同時將送下去的節點資訊回傳給最初呼叫Get File的節點
-
 
 
 .. toctree::

@@ -60,16 +60,19 @@ def FinalTest():
                             )
             
             if instruct == 'getnode':
-                print(f'all node in self is {[v["ID"] for v in node.GetAllNode().values()]}')
+                print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = input('please key in ID to specify\n')
                 print(f"{ node.GetNode(parm, closest = False)}")
                 
             elif instruct == 'lookup':
                 parm = input('please key in ID to specify\n')
-                print(f"{[n['ID'] for n in node.LookUp(parm)]}")
-                
+                try:
+                    print(f"{[n['ID'] for n in node.LookUp(parm)]}")
+                except:
+                    print(f"{node.LookUp(parm)['ID']}")
             elif instruct == 'uploadfile':
                 parm = input('please key in something as a file\n')
+                print(f"hashcode is {hash.GetHash(parm)}")
                 node.UpLoadFile(parm)
                 
             elif instruct == 'getfile':
@@ -77,7 +80,7 @@ def FinalTest():
                 print(node.GetFile(parm))
             
             elif instruct == 'chat':
-                print(f'all node in self is {[v["ID"] for v in node.GetAllNode().values()]}')
+                print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = input('please key in ID to specify\n')
                 parm2 = input('please key in msg\n')
                 node.chat(parm, parm2)
@@ -87,13 +90,13 @@ def FinalTest():
                 node.broadcast(parm)
                 
             elif instruct == 'post':
-                print(f'all node in self is {[v["ID"] for v in node.GetAllNode().values()]}')
+                print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = input('please key in ID to specify\n')
                 parm2 = input('please key in msg\n')
                 node.post(parm, parm2)
 
             elif instruct == 'getchat':
-                print(f'all node in self is {[v["ID"] for v in node.GetAllNode().values()]}')
+                print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = input('please key in ID to specify\n')
                 print(node.GetChat(parm))
                 
@@ -101,24 +104,24 @@ def FinalTest():
                 print(node.GetPost())
                    
             elif instruct == 'gettmpcontract':
-                print(f'all node in self is {[v["ID"] for v in node.GetAllNode().values()]}')
+                print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = input('please key in ID to specify\n')
                 print(node.GetTmpContract(parm))
                                
             elif instruct == 'sendcontract':
-                print(f'all node in self is {[v["ID"] for v in node.GetAllNode().values()]}')
+                print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = True if input('please key in "y" that you are lender else brower\n') == 'y' else False
                 parm2 = input('please key in ID to specify\n')
                 parm3 = input('please key in anything for content of contract\n')
                 node.SendContract(parm, ID = parm2, contract = parm3)
                 
             elif instruct == 'whisper':
-                print(f'all node in self is {[v["ID"] for v in node.GetAllNode().values()]}')
+                print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = input('please key in ID to specify, NOTE: remember to call "secreteinit" first\n')
                 print(node.GetTmpContract(parm))           
                  
             elif instruct == 'secreteinit':
-                print(f'all node in self is {[v["ID"] for v in node.GetAllNode().values()]}')
+                print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = input('please key in ID to specify\n')
                 print(node.GetTmpContract(parm))
                 

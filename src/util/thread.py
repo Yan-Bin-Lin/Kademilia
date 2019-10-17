@@ -34,9 +34,11 @@ class ReturnTread():
     def _ReturnFun(self, fun, *args, **kwargs):
         '''get copy(not reference) of return value'''
         #check if serialize object
-        result = fun(*args, kwargs)
-        self.return_ = copy.deepcopy(result)
-        
+        try:
+            result = fun(*args, kwargs)
+            self.return_ = copy.deepcopy(result)
+        except:
+            self.return_ = None
         
     def GetResult(self):
         '''return the return value of given function'''
