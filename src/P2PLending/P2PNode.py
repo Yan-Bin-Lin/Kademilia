@@ -56,11 +56,13 @@ class P2PNode(KadeNode):
             msg: msg need to be send
             post (bool): True for post, else chat  
         '''
-        for node in self.GetAllNode().values():
-            if post:
-                self.post('', msg, node = node, content = content)
-            else:
-                self.chat('', msg, node = node, content = content)
+        nodes = [list(v.values()) for v in self.GetAllNode().values()]
+        for node in nodes:
+            for n in node:
+                if post:
+                    self.post('', msg, node = n, content = content)
+                else:
+                    self.chat('', msg, node = n, content = content)
             
     @CheckError()
     def post(self, ID, msg, *, node = None, content = ''):
@@ -152,9 +154,11 @@ class P2PNode(KadeNode):
     @CheckError()
     def SignMsg(self, msg):
         '''sign for a message'''
+        cyphertext = self.RSA.sign(msg).decode('utf-8')
+        logger.warning(f"{self.ID} 開始簽章， 文本為 {msg}, 簽章為 {cyphertext}")
         return {
                 'plaintext' : msg, 
-                'cyphertext' : self.RSA.sign(msg).decode('utf-8'),
+                'cyphertext' : cyphertext,
                 'public_key' : self.NodeData.GetByteStringPubKey()
             }
         
@@ -170,7 +174,9 @@ class P2PNode(KadeNode):
             sign = self.SignMsg(GetHash(msg))
             encrypter = AEAD()
             encrypter.NewKey(self.secrete[ID])
-            msg = list(encrypter.encrypt(msg))
+            cypher = list(encrypter.encrypt(msg))
+            logger.warning(f"{self.ID} 開始進行加密， 文本為 {msg}， 密文為 {cypher[0]} ，參數為 {cypher[1:]}")
+            msg = cypher
         return {
             'sign' : sign,
             'msg' : msg 
@@ -202,23 +208,30 @@ class P2PNode(KadeNode):
         if self.secrete.get(ID, None) == None:
             # test if the DH public key is worng
             try:
+                logger.warning(f"{self.ID} 開始建構自己的Diffie-Hellman")
                 self.secrete[ID] = DH(PK)
             except:
+                logger.warning(f"建構錯誤!!  'worng DH PK !!!!!'")
                 return 'worng DH PK !!!!!'
+            logger.warning(f"{self.ID} 傳送 Diffie-Hellman 公鑰給 {ID}")
             self.Whisper(ID, self.secrete[ID].DumpPublicKey().decode('utf-8'))
             # if there is a node send data to this node first
             if data != None:
                 self.secrete[ID] = self.secrete[ID].GetShareKey()
+                logger.warning(f"{self.ID} 成功建構出 share key {self.secrete[ID]}")
                 self.SecreteFresh[ID] = data['origin']['PublicKey']
             return True
         # if it's DH andget publickey from other node
         elif type(self.secrete[ID]) == DH and data != None:
             # test if the DH public key is worng
             try:
+                logger.warning(f"{self.ID} 開始建構自己的 share key")
                 self.secrete[ID].CreateShareKey(PK)
             except:
+                logger.warning(f"建構錯誤!!  'worng DH PK !!!!!'")
                 return 'worng DH PK !!!!!'
             self.secrete[ID] = self.secrete[ID].GetShareKey()
             self.SecreteFresh[ID] = data['origin']['PublicKey']
+            logger.warning(f"{self.ID} 成功建構出 share key {self.secrete[ID]}")
             return True
         return False

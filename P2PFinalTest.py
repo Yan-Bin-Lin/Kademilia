@@ -28,7 +28,7 @@ def FinalTest():
         
     elif instruct == 'c':
         
-        with open('Save/00000000.txt', 'rb') as file:
+        with open('00000000_Save/00000000.txt', 'rb') as file:
             server = pickle.load(file)
         
         nodes = []
@@ -38,7 +38,7 @@ def FinalTest():
             
     elif instruct == 'r':
         
-        with open('Save/00000000.txt', 'rb') as file:
+        with open('00000000_Save/00000000.txt', 'rb') as file:
             server = pickle.load(file)
 
         for i in range(8):
@@ -46,7 +46,7 @@ def FinalTest():
 
     else:
             
-        with open('Save/00000000.txt', 'rb') as file:
+        with open('00000000_Save/00000000.txt', 'rb') as file:
             server = pickle.load(file)
             
         node = P2PNode(node = server)
@@ -118,12 +118,13 @@ def FinalTest():
             elif instruct == 'whisper':
                 print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = input('please key in ID to specify, NOTE: remember to call "secreteinit" first\n')
-                print(node.GetTmpContract(parm))           
+                parm2 = input('please key in message you want to send\n')
+                node.Whisper(parm, parm2)     
                  
             elif instruct == 'secreteinit':
                 print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
                 parm = input('please key in ID to specify\n')
-                print(node.GetTmpContract(parm))
+                node.SecreteInit(parm)
                 
             elif instruct == 'gethash':
                 parm = input('please key in something to get hash\n')

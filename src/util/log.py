@@ -10,8 +10,6 @@ import logging
 import threading
 import time
 
-lock = threading.Lock()
-
 class log():
     '''
     encapsulation and set up for logging to slow down
@@ -30,8 +28,8 @@ class log():
         
     def warning(self, msg):     
         '''logging warning'''
-        self.logger.warning(msg)
-        
+        #threading._start_new_thread(self._wait, (msg, 'warning',))
+        self._wait(msg, 'warning')
     
     def debug(self, msg):
         '''logging debug'''
@@ -40,18 +38,24 @@ class log():
         
     def info(self, msg):
         '''logging info'''
-        threading._start_new_thread(self._info, (msg,))
-
+        #threading._start_new_thread(self._wait, (msg,))
+        self._wait(msg)
     
-    def _info(self, msg):
+    
+    def _wait(self, msg, type_ = 'info'):
         '''extend info for wait some time'''
-        lock.acquire()
+        #setup.lock.acquire()
         now = time.time()
-        self.logger.info(msg)
+        
+        if type_ == 'info':
+            self.logger.info(msg)
+        else:
+            self.logger.warning(msg)
+            
         if float(setup.wait) > 0:
             print('waiting', end='')
             while time.time() - now < float(setup.wait):
                 print('.', end='', flush = True)
                 time.sleep(0.5)
             print('')
-        lock.release()
+        #setup.lock.release()

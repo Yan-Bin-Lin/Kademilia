@@ -17,6 +17,8 @@ from logging.handlers import QueueListener
 logger = logging.getLogger( 'loglog' )
 from pathlib import Path
 
+import threading
+lock = threading.Lock()
 
 def Setup():
     # read config setup
@@ -25,7 +27,8 @@ def Setup():
     cfg.read(path_)
     setup.init(
         cfg.get('log', 'wait'),
-        cfg.get('hash', 'OutSize')
+        cfg.get('hash', 'OutSize'),
+        lock
     )
 
 

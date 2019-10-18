@@ -22,11 +22,12 @@ def RespondHandle(connect, data, KadeNode):
         data: the request data from other node
         KadeNode: a KadeNode object who call this function
     '''
-    logger.debug(f'server receive data, data is {data}')
     # change string to dict
     data = json.loads(data)
     instruct = data.get('instruct', None)
-    
+
+    logger.warning(f'node {KadeNode.ID} 收到 node {data["path"][-1]["ID"]} 的  {instruct} 請求')
+
     # update Kbucket of the last node in path(from_ node)
     KadeNode.update(data['path'][-1])
     if len(data['path']) >= 8:
@@ -79,14 +80,7 @@ def RespondHandle(connect, data, KadeNode):
             logger.info(f'node {KadeNode.ID} Get a POST file request from node {data["path"][-1]["ID"]}')
             ReplyPostFile(data, KadeNode)
             return True
-        '''        
-    elif instruct[0] == 'REJECT':
-        # the request has been reject
-        logger.info(f'node {KadeNode.ID} 的 {data["instruct"][1:]} 請求被node {data["path"][-1]["ID"]} 退回了')
-        #delete 'REJECT' request
-        del data['instruct'][0]
-        ReceiveReject(data, KadeNode)
-        '''    
+
     logger.info(f'無符合的 KadeNode 內建  handle function ，呼叫P2P擴充function')
     return False
 

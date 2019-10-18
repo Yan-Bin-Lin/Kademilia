@@ -36,7 +36,7 @@ def FindNodeTest():
         middle = KadeNode(ID = '01010101')
         middle.save()
 
-        with open('Save/00000001.txt', 'rb') as file:
+        with open('Save/00000000.txt', 'rb') as file:
             next = pickle.load(file)
 
         middle.update(next)

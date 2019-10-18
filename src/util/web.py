@@ -36,7 +36,7 @@ def _DataFill(SelfNode, *args, data = None, **kwargs):
         data['content'] = kwargs.get('content', '')
     # update request
     else:
-        print(f"data = {data}")
+        #print(f"data = {data}")
         #data['origin'] = kwargs.get('origin', data['origin'])
         data['destination'] = kwargs['destination'] if kwargs.get('destination', None) != None else data['destination']
         data['instruct'] = args if len(args) != 0 else data['instruct']

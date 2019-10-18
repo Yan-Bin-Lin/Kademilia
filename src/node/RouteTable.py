@@ -37,7 +37,7 @@ class RouteTable():
         dis = self._CheckDistanceIndex(OtherNode['ID'], distance)
         self.table[dis].AddNode(OtherNode)
         self._UpdateAmount(dis)
-        logger.debug(f'add the node {self.table[self._CheckDistanceIndex(OtherNode["ID"], distance)].bucket[OtherNode["ID"]]}')
+        logger.warning(f'node {self.SelfNode.GetID()} 開始將 node {OtherNode} 資料跟新於bucket {dis}中')
 
     
     def GetNode(self, NodeID = None, *, closest = True, ping = True, num = 8, data = None, ExceptList = None):
@@ -51,7 +51,6 @@ class RouteTable():
             ping: if ping is true will ping the node before return the node 
         '''
         logger.debug(f" NodeID is {NodeID}, closest = {closest}, ping = {ping}, num = {8}, data is {data}, ExceptList = {ExceptList}")
-        
         # check for no give ID
         if NodeID == None:
             NodeID = self.SelfNode.GetID()
@@ -67,7 +66,7 @@ class RouteTable():
         exc = 0
         sign = [-1, 0]
         pre_dis = self._CheckDistanceIndex(NodeID)
-        if data != None:
+        if data != None and data != {}:
             ExceptList = ExceptList if ExceptList != None else []
             ExceptList.extend([d['ID'] for d in data['path']])
 
@@ -92,5 +91,5 @@ class RouteTable():
             self._UpdateAmount(dis)
             num = min(num, self.length - exc)
 
-        logger.debug(f"return {result[:num]}")
+        logger.warning(f'取出在 {self.SelfNode.GetID()} 中最靠近 {NodeID} 的 node {[r["ID"] for r in result[:num]]} ')
         return result[:num]
