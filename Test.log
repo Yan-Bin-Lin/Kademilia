@@ -11414,3 +11414,343 @@ Kg6u72CScSvXwCbe9KduAusOwu71ZVKFDw==
 	node 00101011 send a Whisper to you, the Whisper is: 
 	 ['CZes5AM+K4YmiMSJdeeMUE0jHQ/41qN1', '+tk7V5DPRDqmM4zD', 'MA=='], it mean 01000100
 
+2019-10-24 14:39:13,624        log. line: 53 - WARNING - Thread: 14712
+	node 00 上線了!!!
+
+2019-10-24 14:39:27,142        log. line: 53 - WARNING - Thread: 8420
+	node 11 上線了!!!
+
+2019-10-24 14:39:27,143        log. line: 53 - WARNING - Thread: 8420
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 12072), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALnIQ5PJv0N78BZYrE78ff+ZAac+kjqf\n7eReztPEoRIZAU0G6JiB2ZzuA3g9/i7WjFQVn4Xa5QZh5dzEjIKN/3UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:39:37,143        log. line: 53 - WARNING - Thread: 8420
+	取出在 11 中最靠近 00 的 node [] 
+
+2019-10-24 14:39:37,145        log. line: 53 - WARNING - Thread: 8420
+	node 11 開始向 []， 請求find self
+
+2019-10-24 14:39:37,146        log. line: 53 - WARNING - Thread: 8420
+	11 開始建構自己的Diffie-Hellman
+
+2019-10-24 14:39:37,149        log. line: 53 - WARNING - Thread: 8420
+	11 傳送 Diffie-Hellman 公鑰給 00
+
+2019-10-24 14:39:37,198        log. line: 53 - WARNING - Thread: 8420
+	11 開始簽章， 文本為 -----BEGIN PUBLIC KEY-----
+MIICJTCCARcGCSqGSIb3DQEDATCCAQgCggEBAP//////////yQ/aoiFowjTExmKL
+gNwc0SkCTgiKZ8x0Agu+pjsTmyJRSgh5jjQE3e+VGbPNOkMbMCsKbfJfFDdP4TVt
+bVHCReSFtXZiXn7G9ExC6aY37WsL/1y29Aa37e44a/taiZ+lrp8kEXxLH+ZJKGZR
+7ORbPcIAfLihY78FmNpINhxV05ppFj+o/STPX4NlXSPco62WHGLzViCFUrue1SkH
+cJaWbWcMNU5KvJgE8XRsCMoYIXwykF5GLjbOO+OedywYDoYDmyeDouwHoo+1xV3w
+b0xSyd4ry/aVWBcYOZVJfOqVauUV0iYYmPoFEBVyjlqKrKpo//////////8CAQID
+ggEGAAKCAQEAny0J5lOISI8qtHtJhueTfJYrZQYS2hSbrlkrzP6EG987w1Q1YxnE
+mgk+Zyd3cyZVTsDt61PCHEHN3ah5WjYN+3BE215ZFDiCluoQA2lFkBvUZG+kdBhe
+InfKkq2Gtd2KyqDkWA+ihua0LqiwScipCOjxFt1gqwRbU++UUSh7qUSRygzYKVuF
+yI9Rmn3MuQMkfCKd0cVu2sEBr2kEHg05c5YlYyfDomxfnuCFEHCkQXdApcHkpu+n
+RMq/xfigiKFcleMScE3JP7m3d2qnx9UeA3BQpFJypook98F30mY7C++J/f8CIab3
+e8+6/ZVhSPgwxrhdD+GAJgTK5ypz/mCxCg==
+-----END PUBLIC KEY-----
+, 簽章為 FIzudeCyzzoSVoxnClxPJB2tzhHzhI9hILcHr2EbyS0dFWw/wY1A2SgftQTxnI3BBWj8rG15STgEf7bmgdP6ZQ==
+
+2019-10-24 14:39:37,208        log. line: 53 - WARNING - Thread: 8420
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-10-24 14:39:50,178        log. line: 53 - WARNING - Thread: 8420
+	11 開始簽章， 文本為 3, 簽章為 o0QRqGTq3Z2J6V/JWTGKcaEbIvnnyOnzjMlE3TRqEzQpXb7gdYMrpkIBxNxkO8wJnTPlulpIN26tHMHDiN8/zw==
+
+2019-10-24 14:39:50,187        log. line: 53 - WARNING - Thread: 8420
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-10-24 14:39:55,700        log. line: 53 - WARNING - Thread: 14712
+	00 開始簽章， 文本為 3, 簽章為 unil31XsRa9FuruhFFAgMVqnEDbu8mdVqk+kjKBeft9iv74g/m0w3fqJd3/I5lfnH0PDTiZt+dolq48+q4UYsQ==
+
+2019-10-24 14:39:55,701        log. line: 53 - WARNING - Thread: 14712
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-10-24 14:39:55,702        log. line: 53 - WARNING - Thread: 14712
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-10-24 14:39:55,702        log. line: 53 - WARNING - Thread: 14712
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-10-24 14:39:55,702        log. line: 53 - WARNING - Thread: 14712
+	no node has find, 回傳   查找結果  "nothing"
+
+2019-10-24 14:39:57,003        log. line: 53 - WARNING - Thread: 14712
+	00 開始簽章， 文本為 3, 簽章為 n84zq19iyh+4nKlOHbBE2i5YV1obSBd6seXvEB6htY1bgBDcK0mRMeOkLqS9K4/jQ+GQSgZxZnXzoHIPRNyCnA==
+
+2019-10-24 14:39:57,004        log. line: 53 - WARNING - Thread: 14712
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-10-24 14:39:57,004        log. line: 53 - WARNING - Thread: 14712
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-10-24 14:39:57,005        log. line: 53 - WARNING - Thread: 14712
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-10-24 14:39:57,006        log. line: 53 - WARNING - Thread: 14712
+	no node has find, 回傳   查找結果  "nothing"
+
+2019-10-24 14:39:58,865        log. line: 53 - WARNING - Thread: 14712
+	00 開始簽章， 文本為 3, 簽章為 K2Uw1hfVD6bvXy/I3Pj94zKz0fRa9i7vjhVlGHTlY3jTREAVKW1VTrTIa5FxU8q8CxpYSb8JAh08w82edlsUKA==
+
+2019-10-24 14:39:58,866        log. line: 53 - WARNING - Thread: 14712
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-10-24 14:39:58,869        log. line: 53 - WARNING - Thread: 14712
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-10-24 14:39:58,870        log. line: 53 - WARNING - Thread: 14712
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-10-24 14:39:58,871        log. line: 53 - WARNING - Thread: 14712
+	no node has find, 回傳   查找結果  "nothing"
+
+2019-10-24 14:42:47,450        log. line: 53 - WARNING - Thread: 12708
+	node 00 上線了!!!
+
+2019-10-24 14:42:51,934        log. line: 53 - WARNING - Thread: 10688
+	node 11 上線了!!!
+
+2019-10-24 14:42:51,936        log. line: 53 - WARNING - Thread: 10688
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.1.113', 4322), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMkSPWDJY3DyqGppSk7hFzHm+irNlj23\nFdrMJ/WXg6CQ1KXnlDM33Qw2CFrS6vHYUaE1wjVC67rOLVt3DldJlIkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:42:51,970        log. line: 53 - WARNING - Thread: 13168
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-10-24 14:42:51,972        log. line: 53 - WARNING - Thread: 13168
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.1.113', 4326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALQUfJ8NAaUoBPv2OrTAXludJF9gK2ym\nsb6GLucqNuneFQym3b6ueU//0htZM9Daz2Q9rjvR/0nMJg/n9Gk+do8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:42:51,985        log. line: 53 - WARNING - Thread: 10688
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-10-24 14:42:51,986        log. line: 53 - WARNING - Thread: 10688
+	node 11 開始向 ['00']， 請求find self
+
+2019-10-24 14:42:51,992        log. line: 53 - WARNING - Thread: 10688
+	11 開始建構自己的Diffie-Hellman
+
+2019-10-24 14:42:51,995        log. line: 53 - WARNING - Thread: 6460
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-10-24 14:42:51,996        log. line: 53 - WARNING - Thread: 10688
+	11 傳送 Diffie-Hellman 公鑰給 00
+
+2019-10-24 14:42:51,998        log. line: 53 - WARNING - Thread: 10688
+	11 開始簽章， 文本為 -----BEGIN PUBLIC KEY-----
+MIICJTCCARcGCSqGSIb3DQEDATCCAQgCggEBAP//////////yQ/aoiFowjTExmKL
+gNwc0SkCTgiKZ8x0Agu+pjsTmyJRSgh5jjQE3e+VGbPNOkMbMCsKbfJfFDdP4TVt
+bVHCReSFtXZiXn7G9ExC6aY37WsL/1y29Aa37e44a/taiZ+lrp8kEXxLH+ZJKGZR
+7ORbPcIAfLihY78FmNpINhxV05ppFj+o/STPX4NlXSPco62WHGLzViCFUrue1SkH
+cJaWbWcMNU5KvJgE8XRsCMoYIXwykF5GLjbOO+OedywYDoYDmyeDouwHoo+1xV3w
+b0xSyd4ry/aVWBcYOZVJfOqVauUV0iYYmPoFEBVyjlqKrKpo//////////8CAQID
+ggEGAAKCAQEAjwHayQcwOM/j45Yt4gEKUrv7foN0HxNPQDC9Bxn04W7IN+uNgY9t
+5STD6h9ixVHL583izUu4p3J3PMoAuaLBN2m86OcK2ATCdMsiSlyse1btQp0H0+iI
+0SzJ+vmnL+hAf5nt+mZ0C0dm/snuKqYFkXl+kE6XCOHR23vsQeLaw63sqbNN4NRY
+I1euK7QvDNejquMJXpPr40KR2KfFB3leYtkkpb50HYCT7QOFowLK7/wSvzgXLGlH
+wnmNICU0gPR0Ccp8GDpBBnT6vl3MsBiw0mndUWACMd7+ibMuT4rsqSRDcVu6tqIO
+pHHu3ZgQwwDw+qzywdEQA++HRyQprfjaDg==
+-----END PUBLIC KEY-----
+, 簽章為 K+vzi9wP1sCuVYBdM0M9EMLNDxEI9bG/ijW8ssuqSFU+xUE+y96r2mHE5VfZPqUXDhVFCMWBUomb9dhHbd2OWg==
+
+2019-10-24 14:42:51,999        log. line: 53 - WARNING - Thread: 6460
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.1.113', 4326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALQUfJ8NAaUoBPv2OrTAXludJF9gK2ym\nsb6GLucqNuneFQym3b6ueU//0htZM9Daz2Q9rjvR/0nMJg/n9Gk+do8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:42:52,005        log. line: 53 - WARNING - Thread: 6460
+	此node 00 非查找目標，執行LookUP function
+
+2019-10-24 14:42:52,011        log. line: 53 - WARNING - Thread: 6460
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-10-24 14:42:52,013        log. line: 53 - WARNING - Thread: 10688
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-10-24 14:42:52,015        log. line: 53 - WARNING - Thread: 6460
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-10-24 14:42:52,019        log. line: 53 - WARNING - Thread: 6460
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-10-24 14:42:52,021        log. line: 53 - WARNING - Thread: 9476
+	node 00 收到 node 11 的  ['POST', 'secrete'] 請求
+
+2019-10-24 14:42:52,026        log. line: 53 - WARNING - Thread: 9476
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.1.113', 4326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALQUfJ8NAaUoBPv2OrTAXludJF9gK2ym\nsb6GLucqNuneFQym3b6ueU//0htZM9Daz2Q9rjvR/0nMJg/n9Gk+do8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:42:52,028        log. line: 53 - WARNING - Thread: 6556
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-10-24 14:42:52,029        log. line: 53 - WARNING - Thread: 9476
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.1.113', 4326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALQUfJ8NAaUoBPv2OrTAXludJF9gK2ym\nsb6GLucqNuneFQym3b6ueU//0htZM9Daz2Q9rjvR/0nMJg/n9Gk+do8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:42:52,030        log. line: 53 - WARNING - Thread: 6556
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.1.113', 4322], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMkSPWDJY3DyqGppSk7hFzHm+irNlj23\nFdrMJ/WXg6CQ1KXnlDM33Qw2CFrS6vHYUaE1wjVC67rOLVt3DldJlIkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:42:52,036        log. line: 53 - WARNING - Thread: 6556
+	Get node receive reply, add the node into bucket []
+
+2019-10-24 14:42:52,036        log. line: 53 - WARNING - Thread: 9476
+	00 開始驗證來自 11的簽章 ， 簽章為 K+vzi9wP1sCuVYBdM0M9EMLNDxEI9bG/ijW8ssuqSFU+xUE+y96r2mHE5VfZPqUXDhVFCMWBUomb9dhHbd2OWg==，文本為 -----BEGIN PUBLIC KEY-----
+MIICJTCCARcGCSqGSIb3DQEDATCCAQgCggEBAP//////////yQ/aoiFowjTExmKL
+gNwc0SkCTgiKZ8x0Agu+pjsTmyJRSgh5jjQE3e+VGbPNOkMbMCsKbfJfFDdP4TVt
+bVHCReSFtXZiXn7G9ExC6aY37WsL/1y29Aa37e44a/taiZ+lrp8kEXxLH+ZJKGZR
+7ORbPcIAfLihY78FmNpINhxV05ppFj+o/STPX4NlXSPco62WHGLzViCFUrue1SkH
+cJaWbWcMNU5KvJgE8XRsCMoYIXwykF5GLjbOO+OedywYDoYDmyeDouwHoo+1xV3w
+b0xSyd4ry/aVWBcYOZVJfOqVauUV0iYYmPoFEBVyjlqKrKpo//////////8CAQID
+ggEGAAKCAQEAjwHayQcwOM/j45Yt4gEKUrv7foN0HxNPQDC9Bxn04W7IN+uNgY9t
+5STD6h9ixVHL583izUu4p3J3PMoAuaLBN2m86OcK2ATCdMsiSlyse1btQp0H0+iI
+0SzJ+vmnL+hAf5nt+mZ0C0dm/snuKqYFkXl+kE6XCOHR23vsQeLaw63sqbNN4NRY
+I1euK7QvDNejquMJXpPr40KR2KfFB3leYtkkpb50HYCT7QOFowLK7/wSvzgXLGlH
+wnmNICU0gPR0Ccp8GDpBBnT6vl3MsBiw0mndUWACMd7+ibMuT4rsqSRDcVu6tqIO
+pHHu3ZgQwwDw+qzywdEQA++HRyQprfjaDg==
+-----END PUBLIC KEY-----
+
+
+2019-10-24 14:42:52,044        log. line: 53 - WARNING - Thread: 9476
+	00 開始建構自己的Diffie-Hellman
+
+2019-10-24 14:42:52,053        log. line: 53 - WARNING - Thread: 9476
+	00 傳送 Diffie-Hellman 公鑰給 11
+
+2019-10-24 14:42:52,055        log. line: 53 - WARNING - Thread: 9476
+	00 開始簽章， 文本為 -----BEGIN PUBLIC KEY-----
+MIICJTCCARcGCSqGSIb3DQEDATCCAQgCggEBAP//////////yQ/aoiFowjTExmKL
+gNwc0SkCTgiKZ8x0Agu+pjsTmyJRSgh5jjQE3e+VGbPNOkMbMCsKbfJfFDdP4TVt
+bVHCReSFtXZiXn7G9ExC6aY37WsL/1y29Aa37e44a/taiZ+lrp8kEXxLH+ZJKGZR
+7ORbPcIAfLihY78FmNpINhxV05ppFj+o/STPX4NlXSPco62WHGLzViCFUrue1SkH
+cJaWbWcMNU5KvJgE8XRsCMoYIXwykF5GLjbOO+OedywYDoYDmyeDouwHoo+1xV3w
+b0xSyd4ry/aVWBcYOZVJfOqVauUV0iYYmPoFEBVyjlqKrKpo//////////8CAQID
+ggEGAAKCAQEA+lUtK+bFF2nCIg5yIa2Wihd0YbAsDaBmESdOO603yGMJ74dQkKJF
+uA5iElMTDHx0ofhYQXmYlWoa9JB8bkOqFLB11lRKnPN1g5nTpYBly0Cxr1zsXsXw
+luhF+yaL0R96BjQrceXhtKWiZeBlNPjV0bVmnOIdEFwmy49NZKdxJSDzuh/svsGX
++YqgsDylEaX5fofg8xIXQINXyYxbC91RwVhLrbzGhKs3RDQMwD3a3z1bo57yY2Q3
+MuiZLSglYhBRepE1QRClSgMEF7PTSURcc2WexRcvbvRUSRo3s/JS/D79WlQWeDj1
+E7DndeusFqa4ZmJT30HjG3XVE7NvI6uKQQ==
+-----END PUBLIC KEY-----
+, 簽章為 A+QhPQtIMR5i9R/IQ9ldsb30jeChHcaMBRyUk6xyJsIZ2JnIHK5VjIsQRvOB/r64VSQ45FGnIKadRwEsBLgCzA==
+
+2019-10-24 14:42:52,088        log. line: 53 - WARNING - Thread: 9472
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-10-24 14:42:52,089        log. line: 53 - WARNING - Thread: 9472
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.1.113', 4322], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMkSPWDJY3DyqGppSk7hFzHm+irNlj23\nFdrMJ/WXg6CQ1KXnlDM33Qw2CFrS6vHYUaE1wjVC67rOLVt3DldJlIkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:42:52,100        log. line: 53 - WARNING - Thread: 9476
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-10-24 14:42:52,102        log. line: 53 - WARNING - Thread: 9476
+	00 成功建構出 share key b'6Qu\nuO\t\x9f\x93\xf4\xc4\x14\xe8\xd7\xb2\xb2\x90\xde\r\x9a\x07~\xe2\xc67\xe4\xe8}U\xb5T\xca'
+
+2019-10-24 14:42:52,105        log. line: 53 - WARNING - Thread: 1148
+	node 11 收到 node 00 的  ['POST', 'secrete'] 請求
+
+2019-10-24 14:42:52,107        log. line: 53 - WARNING - Thread: 1148
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.1.113', 4322], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMkSPWDJY3DyqGppSk7hFzHm+irNlj23\nFdrMJ/WXg6CQ1KXnlDM33Qw2CFrS6vHYUaE1wjVC67rOLVt3DldJlIkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:42:52,113        log. line: 53 - WARNING - Thread: 1148
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.1.113', 4322], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMkSPWDJY3DyqGppSk7hFzHm+irNlj23\nFdrMJ/WXg6CQ1KXnlDM33Qw2CFrS6vHYUaE1wjVC67rOLVt3DldJlIkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:42:52,115        log. line: 53 - WARNING - Thread: 1148
+	11 開始驗證來自 00的簽章 ， 簽章為 A+QhPQtIMR5i9R/IQ9ldsb30jeChHcaMBRyUk6xyJsIZ2JnIHK5VjIsQRvOB/r64VSQ45FGnIKadRwEsBLgCzA==，文本為 -----BEGIN PUBLIC KEY-----
+MIICJTCCARcGCSqGSIb3DQEDATCCAQgCggEBAP//////////yQ/aoiFowjTExmKL
+gNwc0SkCTgiKZ8x0Agu+pjsTmyJRSgh5jjQE3e+VGbPNOkMbMCsKbfJfFDdP4TVt
+bVHCReSFtXZiXn7G9ExC6aY37WsL/1y29Aa37e44a/taiZ+lrp8kEXxLH+ZJKGZR
+7ORbPcIAfLihY78FmNpINhxV05ppFj+o/STPX4NlXSPco62WHGLzViCFUrue1SkH
+cJaWbWcMNU5KvJgE8XRsCMoYIXwykF5GLjbOO+OedywYDoYDmyeDouwHoo+1xV3w
+b0xSyd4ry/aVWBcYOZVJfOqVauUV0iYYmPoFEBVyjlqKrKpo//////////8CAQID
+ggEGAAKCAQEA+lUtK+bFF2nCIg5yIa2Wihd0YbAsDaBmESdOO603yGMJ74dQkKJF
+uA5iElMTDHx0ofhYQXmYlWoa9JB8bkOqFLB11lRKnPN1g5nTpYBly0Cxr1zsXsXw
+luhF+yaL0R96BjQrceXhtKWiZeBlNPjV0bVmnOIdEFwmy49NZKdxJSDzuh/svsGX
++YqgsDylEaX5fofg8xIXQINXyYxbC91RwVhLrbzGhKs3RDQMwD3a3z1bo57yY2Q3
+MuiZLSglYhBRepE1QRClSgMEF7PTSURcc2WexRcvbvRUSRo3s/JS/D79WlQWeDj1
+E7DndeusFqa4ZmJT30HjG3XVE7NvI6uKQQ==
+-----END PUBLIC KEY-----
+
+
+2019-10-24 14:42:52,117        log. line: 53 - WARNING - Thread: 1148
+	11 開始建構自己的 share key
+
+2019-10-24 14:42:52,124        log. line: 53 - WARNING - Thread: 1148
+	11 成功建構出 share key b'6Qu\nuO\t\x9f\x93\xf4\xc4\x14\xe8\xd7\xb2\xb2\x90\xde\r\x9a\x07~\xe2\xc67\xe4\xe8}U\xb5T\xca'
+
+2019-10-24 14:43:01,204        log. line: 53 - WARNING - Thread: 12708
+	00 開始簽章， 文本為 11111010, 簽章為 b0PbLoIdLAOa1DPb6MCY1Vb7sG1lhCzMjsYao7cgqqML/TnDHFc+ozBbuiZAgz8y0BxFFX1ytihnItUBhsbOrw==
+
+2019-10-24 14:43:01,245        log. line: 53 - WARNING - Thread: 12708
+	00 開始進行加密， 文本為 321， 密文為 VlSuFYGxOq7JutGtRa6aWpT8EA== ，參數為 ['kI0uUf4r+gyPmdB3', 'MA==']
+
+2019-10-24 14:43:01,251        log. line: 53 - WARNING - Thread: 12708
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-10-24 14:43:01,253        log. line: 53 - WARNING - Thread: 13704
+	node 11 收到 node 00 的  ['POST', 'secrete'] 請求
+
+2019-10-24 14:43:01,254        log. line: 53 - WARNING - Thread: 13704
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.1.113', 4322], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMkSPWDJY3DyqGppSk7hFzHm+irNlj23\nFdrMJ/WXg6CQ1KXnlDM33Qw2CFrS6vHYUaE1wjVC67rOLVt3DldJlIkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:43:01,260        log. line: 53 - WARNING - Thread: 13704
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.1.113', 4322], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMkSPWDJY3DyqGppSk7hFzHm+irNlj23\nFdrMJ/WXg6CQ1KXnlDM33Qw2CFrS6vHYUaE1wjVC67rOLVt3DldJlIkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:43:01,261        log. line: 53 - WARNING - Thread: 13704
+	11 開始驗證來自 00的簽章 ， 簽章為 b0PbLoIdLAOa1DPb6MCY1Vb7sG1lhCzMjsYao7cgqqML/TnDHFc+ozBbuiZAgz8y0BxFFX1ytihnItUBhsbOrw==，文本為 11111010
+
+2019-10-24 14:43:01,262        log. line: 53 - WARNING - Thread: 13704
+	node 00 send a Whisper to you, the Whisper is: 
+	 ['VlSuFYGxOq7JutGtRa6aWpT8EA==', 'kI0uUf4r+gyPmdB3', 'MA=='], it mean 321
+
+2019-10-24 14:43:05,643        log. line: 53 - WARNING - Thread: 10688
+	11 開始簽章， 文本為 11111010, 簽章為 nJ88njXyuaiXMJ0zn9m5r5gD/qGhME+Zi/SncYlThWVuN86LBYtQDEnfhI1E5FgPxZ5qfuzgwd9FZ+d8lIE6QQ==
+
+2019-10-24 14:43:05,646        log. line: 53 - WARNING - Thread: 10688
+	11 開始進行加密， 文本為 321， 密文為 /YfBcqs85iwjlENXuV20TQOSTA== ，參數為 ['ogYF1Jswx7Ma5yQk', 'MA==']
+
+2019-10-24 14:43:05,703        log. line: 53 - WARNING - Thread: 4120
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-10-24 14:43:05,704        log. line: 53 - WARNING - Thread: 4120
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.1.113', 4326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALQUfJ8NAaUoBPv2OrTAXludJF9gK2ym\nsb6GLucqNuneFQym3b6ueU//0htZM9Daz2Q9rjvR/0nMJg/n9Gk+do8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:43:05,723        log. line: 53 - WARNING - Thread: 10688
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-10-24 14:43:05,726        log. line: 53 - WARNING - Thread: 9440
+	node 00 收到 node 11 的  ['POST', 'secrete'] 請求
+
+2019-10-24 14:43:05,728        log. line: 53 - WARNING - Thread: 9440
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.1.113', 4326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALQUfJ8NAaUoBPv2OrTAXludJF9gK2ym\nsb6GLucqNuneFQym3b6ueU//0htZM9Daz2Q9rjvR/0nMJg/n9Gk+do8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:43:05,731        log. line: 53 - WARNING - Thread: 9440
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.1.113', 4326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALQUfJ8NAaUoBPv2OrTAXludJF9gK2ym\nsb6GLucqNuneFQym3b6ueU//0htZM9Daz2Q9rjvR/0nMJg/n9Gk+do8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:43:05,731        log. line: 53 - WARNING - Thread: 9440
+	00 開始驗證來自 11的簽章 ， 簽章為 nJ88njXyuaiXMJ0zn9m5r5gD/qGhME+Zi/SncYlThWVuN86LBYtQDEnfhI1E5FgPxZ5qfuzgwd9FZ+d8lIE6QQ==，文本為 11111010
+
+2019-10-24 14:43:05,733        log. line: 53 - WARNING - Thread: 9440
+	node 11 send a Whisper to you, the Whisper is: 
+	 ['/YfBcqs85iwjlENXuV20TQOSTA==', 'ogYF1Jswx7Ma5yQk', 'MA=='], it mean 321
+
+2019-10-24 14:43:11,081        log. line: 53 - WARNING - Thread: 10688
+	11 開始簽章， 文本為 01100110, 簽章為 s8J0XzkPyOX7hX9erIz5ZadFm1EgVViyvsutmwawGidBVbclc+zYMd+SoaY5RAf6nb7o34snBOq55B/+7WfVuw==
+
+2019-10-24 14:43:11,084        log. line: 53 - WARNING - Thread: 10688
+	11 開始進行加密， 文本為 654789， 密文為 1M5AHgGTBHKBC8Xd+1Rai6/Ciu8Q9w== ，參數為 ['Fr+vVMiDncUTTdK1', 'MA==']
+
+2019-10-24 14:43:11,089        log. line: 53 - WARNING - Thread: 10688
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-10-24 14:43:11,092        log. line: 53 - WARNING - Thread: 15896
+	node 00 收到 node 11 的  ['POST', 'secrete'] 請求
+
+2019-10-24 14:43:11,094        log. line: 53 - WARNING - Thread: 15896
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.1.113', 4326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALQUfJ8NAaUoBPv2OrTAXludJF9gK2ym\nsb6GLucqNuneFQym3b6ueU//0htZM9Daz2Q9rjvR/0nMJg/n9Gk+do8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:43:11,098        log. line: 53 - WARNING - Thread: 15896
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.1.113', 4326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALQUfJ8NAaUoBPv2OrTAXludJF9gK2ym\nsb6GLucqNuneFQym3b6ueU//0htZM9Daz2Q9rjvR/0nMJg/n9Gk+do8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-10-24 14:43:11,098        log. line: 53 - WARNING - Thread: 15896
+	00 開始驗證來自 11的簽章 ， 簽章為 s8J0XzkPyOX7hX9erIz5ZadFm1EgVViyvsutmwawGidBVbclc+zYMd+SoaY5RAf6nb7o34snBOq55B/+7WfVuw==，文本為 01100110
+
+2019-10-24 14:43:11,100        log. line: 53 - WARNING - Thread: 15896
+	node 11 send a Whisper to you, the Whisper is: 
+	 ['1M5AHgGTBHKBC8Xd+1Rai6/Ciu8Q9w==', 'Fr+vVMiDncUTTdK1', 'MA=='], it mean 654789
+

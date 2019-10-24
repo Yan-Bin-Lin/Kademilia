@@ -15,11 +15,11 @@ from cryptography.hazmat.primitives.serialization import load_pem_public_key
 import base64
 
 class RSA(asycalgori):
-    def __init__(self, SaveKeyPath = None):
-        if SaveKeyPath == None:
+    def __init__(self, SaveKey = None):
+        if SaveKey == None:
             self.NewKey()
         else:
-            self.LoadKey(SaveKeyPath)
+            self.LoadBytePublicKey(SaveKey)
         self._CreatePublicKey()
         
         

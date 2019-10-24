@@ -35,10 +35,18 @@ class KadeNode():
         table: a dict with key i: subtree split of the network and value:the bucket class of NodeData containt
              the route table of this node
         Savepath: path for the file save
+        load (bool): default False. If True, it will this node will construct as NodeData
         lock: lock for write file
     '''
     @CheckError()
     def __init__(self, **kwargs):
+        '''
+        initial a KadeNode
+        
+        Arguments:
+            ID (bit str): the ID specify to this kadenode, if no given, the ID will be hash of IPAddress
+            node (NodeData): the nodedata for self, or for initial kbucket
+        '''
         self.RSA = RSA()
         self.WebInit()
         self.address = self.web.GetServeAddress()
@@ -54,11 +62,12 @@ class KadeNode():
         # create bucket
         if kwargs.get('node', None) != None:
             self.update(kwargs['node'], getbucket = True)
-        
+            
         
     @CheckError()
     def WebInit(self):
         self.web = Connect()
+            
             
     @CheckError()
     def update(self, node, getbucket = False):
