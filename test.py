@@ -17,18 +17,20 @@ from src.util import setup
 from src.util.log import log
 logger = log()
 
-def FinalTest():
+def Test():
     instruct = input('please enter "s" for a server node ID = "00000000", ' +
     ' "c" for 8 specify node, "r" for 8 random node,or just key in something else to be user node for conteol\n')
     
     if instruct == 's':
+        with open('10010011.txt', 'rb') as file:
+            ano = pickle.load(file)
         
-        node = P2PNode(ID = '00000000')
+        node = P2PNode(ID = '00000000', node = ano)
         node.save()
         
     elif instruct == 'c':
         
-        with open('Save/00000000/00000000.txt', 'rb') as file:
+        with open('00000000_Save/00000000.txt', 'rb') as file:
             server = pickle.load(file)
         
         nodes = []
@@ -38,7 +40,7 @@ def FinalTest():
             
     elif instruct == 'r':
         
-        with open('Save/00000000/00000000.txt', 'rb') as file:
+        with open('00000000_Save/00000000.txt', 'rb') as file:
             server = pickle.load(file)
 
         for i in range(8):
@@ -46,7 +48,7 @@ def FinalTest():
 
     else:
             
-        with open('Save/00000000/00000000.txt', 'rb') as file:
+        with open('00000000_Save/00000000.txt', 'rb') as file:
             server = pickle.load(file)
             
         node = P2PNode(node = server)
@@ -70,11 +72,10 @@ def FinalTest():
                     print(f"{[n['ID'] for n in node.LookUp(parm)]}")
                 except:
                     print(f"{node.LookUp(parm)['ID']}")
-                    
             elif instruct == 'uploadfile':
                 parm = input('please key in something as a file\n')
-                parm2 = input('please key in something as Hashcode\n')
-                node.UpLoadFile(parm, parm2)
+                print(f"hashcode is {hash.GetHash(parm)}")
+                node.UpLoadFile(parm)
                 
             elif instruct == 'getfile':
                 parm = input('please key FileID to specify\n')
@@ -102,11 +103,7 @@ def FinalTest():
                 print(node.GetChat(parm))
                 
             elif instruct == 'getpost':
-                ID = input('please key in ID to specif, or just enter to get locao post record\n')
-                if ID == '':
-                    node.GetPost()
-                else:
-                    print(node.GetPost(ID))
+                print(node.GetPost())
                    
             elif instruct == 'gettmpcontract':
                 print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')

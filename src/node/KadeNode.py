@@ -54,7 +54,7 @@ class KadeNode():
         self.NodeData = NodeData(self.address, self.RSA.GetPublicKey(), self.ID)
         # routing table content all Kbucket, initial create empty table, key = distance, value = bucket
         self.table = RouteTable(self.NodeData)
-        self.SavePath = self.ID + '_Save'
+        self.SavePath = Path('Save', self.ID)
         self.lock = threading.Lock()
         # start for connect
         self.run()
@@ -102,16 +102,7 @@ class KadeNode():
             else:
                 node = node[0]
         self.web.Ask(self.NodeData.GetData(), 'send', *instruct, address = node['address'], content = content, destination = destination)
-        
-    
-    # get a node in the distance bucket, 
-    # if ID is not none will count distance with ID and self ID and return the same distance node
-    # return ( nodedata, socket )
-    @CheckError()
-    def GetDistanceNode(self, distance, ID = None, *, recursive = True, ExceptList = None):
-        return (self.table[distance].GetNode(recursive = recursive, ExceptList = ExceptList) if ID == None
-                    else self.table[CountDistance(self.ID, ID)].GetNode(ID, recursive = recursive, ExceptList = ExceptList))
-        
+ 
     
     # if no argument is given, search for a exist node
     # get a node data, if the node not found, will return a same distance node if recurive is True
@@ -133,8 +124,7 @@ class KadeNode():
             data: the request data from other node, default = {}
         '''
         logger.debug(f" in lookup data is {data}")
-        logger.warning(f'node {self.ID} 開始查找 node {ID} ， 雙方距離差距為 {int(CountDistance(self.ID, ID), 2)}' + 
-                       f'，位於bucket {self.table._CheckDistanceIndex(ID)}')
+        logger.warning(f'node {self.ID} 開始查找 node {ID} ， 雙方距離差距為 {int(CountDistance(self.ID, ID), 2)}' + f'，位於bucket {self.table._CheckDistanceIndex(ID)}')
         
         result = self.GetNode(ID, data = data)
         
@@ -174,7 +164,6 @@ class KadeNode():
         for node in nodes:
             self.web.Ask(self.NodeData.GetData(), 'send', 'GET', 'node', self.ID, address = node['address'], destination = self.NodeData.GetData())       
 
-    
     # save node data
     @CheckError()
     def save(self, name = '', json = False):
@@ -188,13 +177,15 @@ class KadeNode():
         logger.debug(file.resolve())
             
     @CheckError()
-    def UpLoadFile(self, file, data = None, *, FilePath = '', TargetHash = ''):
+    def UpLoadFile(self, file, HashCode, *, data = None, FilePath = ''):
         '''
         upload a file to network
         
         Args:
             file: file to upload, must be a hashable value
             data: the request data from other node, default = {}
+            FilePath: the FilePath for read and uplad, default ''
+            HashCode: to specify hash location
         '''
         # initial for kwargs
         kwargs = {}
@@ -204,16 +195,13 @@ class KadeNode():
             logger.debug(f"ExceptList = {ExceptList}, data['content']['saver'] = {data['content']['saver']}")    
         else:
             ExceptList = list()
-            HashCode = GetHashFile(Path(FilePath)) if FilePath != '' else GetHash(file)
             kwargs['content'] = {'FileID' : HashCode, 'saver' : [[self.NodeData.GetData(), time.time()]], 'file' : file}
-            kwargs['destination'] = {'ID' : TargetHash if TargetHash != '' else HashCode}
+            kwargs['destination'] = {'ID' : HashCode}
             
-        logger.debug(f'HashCode = {HashCode}')    
-        TargetHash = TargetHash if TargetHash != '' else HashCode
-        nodes = self.GetNode(TargetHash, data = data, ExceptList = ExceptList)
+        nodes = self.GetNode(HashCode, data = data, ExceptList = ExceptList)
         logger.warning(f'node {self.ID} 開始上傳檔案到網路，將資料傳給node {[node["ID"] for node in nodes]}')            
         for node in nodes:
-            self.web.Ask(self.NodeData.GetData(), 'send', 'POST', 'file', TargetHash, address = node['address'],
+            self.web.Ask(self.NodeData.GetData(), 'send', 'POST', 'file', HashCode, address = node['address'],
                 data = data, **kwargs)
         
         if data == None:

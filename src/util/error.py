@@ -6,7 +6,6 @@ Created on 2019年10月13日
 '''
 import sys
 import traceback
-import test
 import functools
 
 from ..util.log import log

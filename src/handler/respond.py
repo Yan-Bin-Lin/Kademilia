@@ -56,7 +56,7 @@ def _SaveFile(data, KadeNode):
     logger.info(f'node {KadeNode.ID} 開始將File {data["content"]} 存於本地')
     name = data['instruct'][2] + '.txt'
     folder = Path(KadeNode.SavePath, 'file')
-    FileID = data['content']['FileID'] if type(data['content']) == type({}) else data['content'][0]['FileID']
+    #FileID = data['content']['FileID'] if type(data['content']) == type({}) else data['content'][0]['FileID']
     
     KadeNode.lock.acquire()
     
@@ -72,8 +72,9 @@ def _SaveFile(data, KadeNode):
         OriginFile = json.loads(file.read_text())
         same = False
         for of_ in OriginFile:
+            if GetHash(of_['file']) == GetHash(data['content']['file']):
             # if save file has exist, update saver
-            if of_['FileID'] == data['content']['FileID']:
+            #if of_['FileID'] == data['content']['FileID']:
                 saver = {s[0]['ID'] : s for s in json.loads(file.read_text())[0]['saver']}
                 for s in data['content']['saver']:
                     saver[s[0]['ID']] = saver.get(s[0]['ID'], 0) if saver.get(s[0]['ID'], [0, 0])[1] > s[1] else s
@@ -109,7 +110,7 @@ def ReplyPostFile(data, KadeNode):
         data['destination'] = SelfNode
         logger.warning(f'這份檔案已送達目標 {data["instruct"][2]}，將檔案送往靠近自己的node')
         
-    data['content']['saver'].extend(KadeNode.UpLoadFile('', data) ) 
+    data['content']['saver'].extend(KadeNode.UpLoadFile('', data['instruct'][2], data = data) ) 
     
     Ask(SelfNode, 'send', 'REPLY', 'postfile', data['instruct'][2], address = data['origin']['address'], data = data)
         
@@ -139,6 +140,9 @@ def ReplyGetFile(data, KadeNode):
             
 def ReceiveGetFile(data, KadeNode):
     if data['content'][0].get('FileID', None) != None:
+        file = Path(KadeNode.SavePath, 'file',  data['instruct'][2] + '.txt')
+        if file.exists():
+            file.unlink()
         _SaveFile(data, KadeNode)
         logger.warning(f'Get File success!!!!!!! 我拿到檔案 {data["content"]} 了!!!!!!!!')
     else:

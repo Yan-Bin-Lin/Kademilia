@@ -20,7 +20,8 @@ class RouteTable():
         
         
     def _CheckDistanceIndex(self, OtherNode, distance = None):
-        return (CountDistance(self.SelfNode.GetID(), OtherNode) if distance == None else distance).find('1') + 1
+        distance = CountDistance(self.SelfNode.GetID(), OtherNode) if distance == None else distance
+        return len(distance) - distance.rfind('1')
         
         
     def _UpdateAmount(self, dis):

@@ -18,7 +18,7 @@ class log():
         logger: logging.getlogger( 'loglog' )
     '''
     def __init__(self):
-        self.logger =  logging.getLogger( 'loglog' )
+        self.logger =  logging.getlogger( 'loglog' )
         
         
     def error(self, msg):     
@@ -29,7 +29,7 @@ class log():
     def warning(self, msg):     
         '''logging warning'''
         #threading._start_new_thread(self._wait, (msg, 'warning',))
-        self._wait(msg, 'warning')
+        self._wait(msg)
     
     def debug(self, msg):
         '''logging debug'''
@@ -38,19 +38,15 @@ class log():
         
     def info(self, msg):
         '''logging info'''
-        #threading._start_new_thread(self._wait, (msg,))
-        self._wait(msg)
+        self.logger.info(msg)
     
     
-    def _wait(self, msg, type_ = 'info'):
+    def _wait(self, msg):
         '''extend info for wait some time'''
         #setup.lock.acquire()
         now = time.time()
-        
-        if type_ == 'info':
-            self.logger.info(msg)
-        else:
-            self.logger.warning(msg)
+
+        self.logger.warning(msg)
             
         if float(setup.wait) > 0:
             print('waiting', end='')

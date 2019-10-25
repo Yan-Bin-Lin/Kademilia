@@ -112,6 +112,17 @@ def ReplyPostSecrete(data, KadeNode):
         logger.info(f"node {data['path'][-1]['ID']} send a error sign to you, thraw this contract away") 
 
 
+def ReplyGetPost(data, KadeNode):
+    '''reply to Get Post'''
+    KadeNode.send(data['origin']['ID'], 'REPLY', 'getpost', KadeNode.ID, content = json.dumps(KadeNode.GetPost()))
+    
+    
+def ReceiveGetPost(data, KadeNode):
+    '''receive reply of get post'''
+    data['content'] =  json.loads(data['content'])
+    logger.warning(f"node {data['path'][-1]['ID']} reply the post to you, the post is: \n\t {data['content']}")
+    
+    
 def P2PHandle(connect, data, KadeNode):
     '''
     the extend handler for P2P extnd function
@@ -141,8 +152,17 @@ def P2PHandle(connect, data, KadeNode):
         # a node post a contract
         elif instruct[1] == 'contract':
             ReplyPostContract(data, KadeNode)
+        # a node post a secrete
         elif instruct[1] == 'secrete':
             ReplyPostSecrete(data, KadeNode)
+    if instruct[0] == 'GET':
+        # a node request post
+        if instruct[1] == 'post':
+            ReplyGetPost(data, KadeNode)
+    if instruct[0] == 'REPLY':
+        # a node request post
+        if instruct[1] == 'getpost':
+            ReceiveGetPost(data, KadeNode)     
     if instruct[0] == 'DELETE':
         # the secrete initial fail
         if instruct[1] == 'secrete':

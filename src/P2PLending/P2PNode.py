@@ -99,11 +99,20 @@ class P2PNode(KadeNode):
             return None
         
     @CheckError()
-    def GetPost(self):
-        '''get all post in local'''
-        FileNames = [f for f in Path(self.SavePath, 'post').glob('*.txt')]
-        files = [json.loads(f.read_text()) for f in FileNames]
-        return files
+    def GetPost(self, ID = None):
+        '''
+        get all post in local or from another node
+        
+        Arguments:
+            ID: default None, if give an ID, the function will get post from specify node else just get from local
+        '''
+        if ID == None:
+            FileNames = [f for f in Path(self.SavePath, 'post').glob('*.txt')]
+            files = [json.loads(f.read_text()) for f in FileNames]
+            return files
+        else:
+            self.send(ID, 'GET', 'post')
+            return None
     
     @CheckError()
     def GetTmpContract(self, ID):
