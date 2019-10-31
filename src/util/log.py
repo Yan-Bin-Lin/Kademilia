@@ -18,7 +18,7 @@ class log():
         logger: logging.getlogger( 'loglog' )
     '''
     def __init__(self):
-        self.logger =  logging.getlogger( 'loglog' )
+        self.logger =  logging.getLogger( 'loglog' )
         
         
     def error(self, msg):     

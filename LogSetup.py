@@ -14,7 +14,7 @@ from logging.handlers import QueueHandler
 from logging.handlers import QueueListener
 #from logging.handlers import TimedRotatingFileHandler
 #請你給我一個 Log 的分身，他的名字叫做.... loglog (function 的名稱)！！
-logger = logging.getlogger( 'loglog' )
+logger = logging.getLogger( 'loglog' )
 from pathlib import Path
 
 import threading
