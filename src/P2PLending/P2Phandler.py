@@ -121,7 +121,29 @@ def ReceiveGetPost(data, KadeNode):
     '''receive reply of get post'''
     data['content'] =  json.loads(data['content'])
     logger.warning(f"node {data['path'][-1]['ID']} reply the post to you, the post is: \n\t {data['content']}")
+
+    for post in data['content']:
+        folder = Path(KadeNode.SavePath, "post")
     
+        KadeNode.lock.acquire()
+    
+        # cirtical section
+        folder.mkdir(parents=True, exist_ok=True) 
+        file = folder / (post[0]['from']['ID'] + '.txt')
+        
+        if not file.exists():
+            # save the file in local
+            file.write_text(json.dumps(post))
+        
+        else:
+            OriginFile = json.loads(file.read_text())
+            # append to the tail
+            OriginFile.extend(post)
+            file.write_text(json.dumps(OriginFile))
+        # cirtical section
+        
+        KadeNode.lock.release()
+
     
 def P2PHandle(connect, data, KadeNode):
     '''

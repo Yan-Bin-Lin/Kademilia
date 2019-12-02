@@ -53,7 +53,7 @@ def ReceiveGetNode(data, KadeNode):
         
 
 def _SaveFile(data, KadeNode):
-    logger.info(f'node {KadeNode.ID} 開始將File {data["content"]} 存於本地')
+    #logger.info(f'node {KadeNode.ID} 開始將File {data["content"]} 存於本地')
     name = data['instruct'][2] + '.txt'
     folder = Path(KadeNode.SavePath, 'file')
     #FileID = data['content']['FileID'] if type(data['content']) == type({}) else data['content'][0]['FileID']

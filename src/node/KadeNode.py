@@ -7,6 +7,9 @@ import pickle
 from pathlib import Path
 import time
 import threading
+from ast import literal_eval
+import copy
+
 
 from .KBucket import KBucket
 from .NodeData import NodeData
@@ -15,9 +18,10 @@ from ..crypto.RSASign import RSA
 from ..network.connect import Connect
 from ..util.hash import *
 from ..handler.respond import *
+from ..handler.respond import _SaveFile
 from ..handler.ask import Ask
 from ..util.error import CheckError
-
+from ..util.web import _DataFill
 from ..util.log import log
 logger = log()
 # a single kade node
@@ -197,7 +201,7 @@ class KadeNode():
             ExceptList = list()
             kwargs['content'] = {'FileID' : HashCode, 'saver' : [[self.NodeData.GetData(), time.time()]], 'file' : file}
             kwargs['destination'] = {'ID' : HashCode}
-            
+                        
         nodes = self.GetNode(HashCode, data = data, ExceptList = ExceptList)
         logger.warning(f'node {self.ID} 開始上傳檔案到網路，將資料傳給node {[node["ID"] for node in nodes]}')            
         for node in nodes:
@@ -207,6 +211,12 @@ class KadeNode():
         if data == None:
             data = {}
         logger.warning(f'回傳  {data.get("origin", {}).get("ID", "")}， node {[[node["ID"], 0] for node in nodes]} 為下一個儲存對象')
+        
+        df = literal_eval(_DataFill(self.NodeData.GetData(), 'POST', 'file', HashCode, data = data, **kwargs))
+        df['content']['saver'].append([self.NodeData.GetData(), time.time()])
+        
+        _SaveFile(df, self)
+        
         return [[node, 0] for node in nodes]
         
     @CheckError()

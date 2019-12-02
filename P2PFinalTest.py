@@ -104,7 +104,7 @@ def FinalTest():
             elif instruct == 'getpost':
                 ID = input('please key in ID to specif, or just enter to get locao post record\n')
                 if ID == '':
-                    node.GetPost()
+                    print(node.GetPost())
                 else:
                     print(node.GetPost(ID))
                    
