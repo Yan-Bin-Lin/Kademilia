@@ -114,7 +114,9 @@ def ReplyPostSecrete(data, KadeNode):
 
 def ReplyGetPost(data, KadeNode):
     '''reply to Get Post'''
-    KadeNode.send(data['origin']['ID'], 'REPLY', 'getpost', KadeNode.ID, content = json.dumps(KadeNode.GetPost()))
+    content = json.dumps(KadeNode.GetPost())
+    KadeNode.send(data['origin']['ID'], 'REPLY', 'getpost', KadeNode.ID, content = content)
+    return content
     
     
 def ReceiveGetPost(data, KadeNode):
@@ -143,7 +145,8 @@ def ReceiveGetPost(data, KadeNode):
         # cirtical section
         
         KadeNode.lock.release()
-
+    
+    return data['content']
     
 def P2PHandle(connect, data, KadeNode):
     '''
@@ -180,11 +183,11 @@ def P2PHandle(connect, data, KadeNode):
     if instruct[0] == 'GET':
         # a node request post
         if instruct[1] == 'post':
-            ReplyGetPost(data, KadeNode)
+            connect.sendall(ReplyGetPost(data, KadeNode).encode(encoding='utf_8'))
     if instruct[0] == 'REPLY':
         # a node request post
         if instruct[1] == 'getpost':
-            ReceiveGetPost(data, KadeNode)     
+            ReceiveGetPost(data, KadeNode)
     if instruct[0] == 'DELETE':
         # the secrete initial fail
         if instruct[1] == 'secrete':

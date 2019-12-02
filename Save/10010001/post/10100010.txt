@@ -1,1 +1,0 @@
-[{"msg": "wrgwr", "time": 1574929845.9894075, "from": {"ID": "10100010", "address": ["192.168.200.90", 8542], "PublicKey": "-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANiHGLrRLED231ov9HDlk4gOV1sDr/nK\n68+ZeCEZa/ca7xC5FCrPqKvtTYz44uvblSaUTE2gQja09XVZGFw8P8ECAwEAAQ==\n-----END PUBLIC KEY-----\n"}}]

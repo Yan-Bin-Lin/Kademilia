@@ -106,7 +106,7 @@ def FinalTest():
                 if ID == '':
                     print(node.GetPost())
                 else:
-                    print(node.GetPost(ID))
+                    print(f"getpost return result is:\n{node.GetPost(ID)}\n\n")
                    
             elif instruct == 'gettmpcontract':
                 print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')

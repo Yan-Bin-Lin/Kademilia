@@ -111,8 +111,7 @@ class P2PNode(KadeNode):
             files = [json.loads(f.read_text()) for f in FileNames]
             return files
         else:
-            self.send(ID, 'GET', 'post')
-            return None
+            return self.request(ID, 'GET', 'post')[0]
     
     @CheckError()
     def GetTmpContract(self, ID):

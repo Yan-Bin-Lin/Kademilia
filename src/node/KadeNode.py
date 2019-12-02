@@ -90,6 +90,12 @@ class KadeNode():
     def request(self, ID, *instruct, node = None, content = '', destination = None):
         if node == None:
             node = self.GetNode(ID, closest = False)
+            if node == []:
+                # no such node in local, start to lookup
+                self.LookUp(ID)
+                return
+            else:
+                node = node[0]
         return self.web.Ask(self.NodeData.GetData(), 'request', *instruct,  address = node['address'], content = '', destination = None) if node != None else None
           
           

@@ -6,6 +6,7 @@ Created on 2019/9/1
 '''
 import socket
 import time
+import copy
 
 from ..util.log import log
 logger = log()
@@ -65,7 +66,7 @@ class Client():
         # 发送数据
         try:
             self._connect.sendall(msg.encode('utf-8'))
-            return self._WaitResponse()
+            return copy.deepcopy(self._WaitResponse())
         except:
             return None
     
