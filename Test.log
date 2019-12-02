@@ -43229,3 +43229,107 @@ Traceback (most recent call last):
 	node 00000000 reply the post to you, the post is: 
 	 [[{'msg': 'argoia', 'time': 1575193201.8536232, 'from': {'ID': '10010001', 'address': ['192.168.1.113', 2326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMYOKQKlVj5I5MnC0Ezb0Pzt+KLAKB+H\nn1c2oOsfMxNB00BaL7uyXjL+7+INNTNYgzR1bBjAnhuIZb8c6slcPvMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'wrgwr', 'time': 1574929845.9894075, 'from': {'ID': '10100010', 'address': ['192.168.200.90', 8542], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANiHGLrRLED231ov9HDlk4gOV1sDr/nK\n68+ZeCEZa/ca7xC5FCrPqKvtTYz44uvblSaUTE2gQja09XVZGFw8P8ECAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': '31215', 'time': 1574955456.2588077, 'from': {'ID': '10101001', 'address': ['192.168.1.113', 7634], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK+ja7OG85g2xzoANt6wQLgKHuNnGxAm\noQqkNNpqAOTHUFBWpFd9ayfBg4F70PnFX5uLEbyOVQaupS0K3+XCkJ8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'qrgroier', 'time': 1574955518.5040653, 'from': {'ID': '10101001', 'address': ['192.168.1.113', 7634], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK+ja7OG85g2xzoANt6wQLgKHuNnGxAm\noQqkNNpqAOTHUFBWpFd9ayfBg4F70PnFX5uLEbyOVQaupS0K3+XCkJ8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'wefwefw', 'time': 1574955538.8242185, 'from': {'ID': '10101001', 'address': ['192.168.1.113', 7634], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK+ja7OG85g2xzoANt6wQLgKHuNnGxAm\noQqkNNpqAOTHUFBWpFd9ayfBg4F70PnFX5uLEbyOVQaupS0K3+XCkJ8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'rgeg', 'time': 1574944461.6205385, 'from': {'ID': '11101001', 'address': ['192.168.1.113', 11562], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALx4RzLhK/NkboK3fuByfcqD0xW9ZPSQ\n1gTaJlnXgl7cIAThJ1Nz78EPm9aQkfLmr/+Osbc0AKY5+XxUHja/sTkCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'wgwgrw', 'time': 1575193453.855348, 'from': {'ID': '11101100', 'address': ['192.168.1.113', 2483], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALfOzSzMzL6Ff0q+q66WmxVEYWi8FozJ\nBXk5SzOk3sh/i/GcAtWH+clt3KWYJYSxvO9RCycNud0mumZum+gkSgECAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'rojperjg', 'time': 1575193514.631003, 'from': {'ID': '11111001', 'address': ['192.168.1.113', 2477], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMDwjCNuqr6O+w8Zh+ZVM+f9v+zaxl8V\nhZyUIORUgOEUtsjMAjbv2PhKrU6FmRA3Kjao+6yq/vCYKOfz4P1Ab58CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
 
+2019-12-02 14:18:15,864        log. line: 49 - WARNING - Thread: 16728
+	node 00000000 上線了!!!
+
+2019-12-02 14:18:24,195        log. line: 49 - WARNING - Thread: 12864
+	node 01001111 上線了!!!
+
+2019-12-02 14:18:24,195        log. line: 49 - WARNING - Thread: 12864
+	node 01001111 開始將 node {'ID': '00000000', 'address': ('192.168.43.147', 6558), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAPfZe1Uzt/WJhgHePNNap9JMJljqK4tu\nAVJngk6g9qx0X5uB1cUnhwqD0WDuNUJARmEmWbSbHidNCJWeD5XqxxkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:24,241        log. line: 49 - WARNING - Thread: 9340
+	node 00000000 收到 node 01001111 的  ['TRACE', 'ping'] 請求
+
+2019-12-02 14:18:24,251        log. line: 49 - WARNING - Thread: 9340
+	node 00000000 開始將 node {'ID': '01001111', 'address': ['192.168.43.147', 6563], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMCmra2QQcKUoVrFGmELU6jS+OzIGVcC\nCA9uIcQ7OZcr/eRJGRJv+pL6u/VRtynDNM9pvX/dxdwUu1WjlYnBBEMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:24,267        log. line: 49 - WARNING - Thread: 12864
+	取出在 01001111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-02 14:18:24,268        log. line: 49 - WARNING - Thread: 12864
+	node 01001111 開始向 ['00000000']， 請求find self
+
+2019-12-02 14:18:24,317        log. line: 49 - WARNING - Thread: 5508
+	node 00000000 收到 node 01001111 的  ['GET', 'node', '01001111'] 請求
+
+2019-12-02 14:18:24,322        log. line: 49 - WARNING - Thread: 5508
+	node 00000000 開始將 node {'ID': '01001111', 'address': ['192.168.43.147', 6563], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMCmra2QQcKUoVrFGmELU6jS+OzIGVcC\nCA9uIcQ7OZcr/eRJGRJv+pL6u/VRtynDNM9pvX/dxdwUu1WjlYnBBEMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:24,352        log. line: 49 - WARNING - Thread: 5508
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-02 14:18:24,377        log. line: 49 - WARNING - Thread: 5508
+	node 00000000 開始查找 node 01001111 ， 雙方距離差距為 79，位於bucket 1
+
+2019-12-02 14:18:24,397        log. line: 49 - WARNING - Thread: 5508
+	取出在 00000000 中最靠近 01001111 的 node [] 
+
+2019-12-02 14:18:24,407        log. line: 49 - WARNING - Thread: 5508
+	no node has find, 回傳  01001111 查找結果  "nothing"
+
+2019-12-02 14:18:24,458        log. line: 49 - WARNING - Thread: 2740
+	node 01001111 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-02 14:18:24,459        log. line: 49 - WARNING - Thread: 2740
+	node 01001111 開始將 node {'ID': '00000000', 'address': ['192.168.43.147', 6558], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAPfZe1Uzt/WJhgHePNNap9JMJljqK4tu\nAVJngk6g9qx0X5uB1cUnhwqD0WDuNUJARmEmWbSbHidNCJWeD5XqxxkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:24,459        log. line: 49 - WARNING - Thread: 2740
+	Get node receive reply, add the node into bucket []
+
+2019-12-02 14:18:31,600        log. line: 49 - WARNING - Thread: 6044
+	node 00000000 收到 node 01001111 的  ['TRACE', 'ping'] 請求
+
+2019-12-02 14:18:31,615        log. line: 49 - WARNING - Thread: 6044
+	node 00000000 開始將 node {'ID': '01001111', 'address': ['192.168.43.147', 6563], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMCmra2QQcKUoVrFGmELU6jS+OzIGVcC\nCA9uIcQ7OZcr/eRJGRJv+pL6u/VRtynDNM9pvX/dxdwUu1WjlYnBBEMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:31,655        log. line: 49 - WARNING - Thread: 12864
+	取出在 01001111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-02 14:18:31,675        log. line: 49 - WARNING - Thread: 18192
+	node 00000000 收到 node 01001111 的  ['POST', 'post', 'oejgorej'] 請求
+
+2019-12-02 14:18:31,690        log. line: 49 - WARNING - Thread: 18192
+	node 00000000 開始將 node {'ID': '01001111', 'address': ['192.168.43.147', 6563], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMCmra2QQcKUoVrFGmELU6jS+OzIGVcC\nCA9uIcQ7OZcr/eRJGRJv+pL6u/VRtynDNM9pvX/dxdwUu1WjlYnBBEMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:31,705        log. line: 49 - WARNING - Thread: 18192
+	node 00000000 開始將 node {'ID': '01001111', 'address': ['192.168.43.147', 6563], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMCmra2QQcKUoVrFGmELU6jS+OzIGVcC\nCA9uIcQ7OZcr/eRJGRJv+pL6u/VRtynDNM9pvX/dxdwUu1WjlYnBBEMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:31,721        log. line: 49 - WARNING - Thread: 18192
+	node 01001111 send a post to you, the post is: 
+	 oejgorej
+
+2019-12-02 14:18:41,363        log. line: 49 - WARNING - Thread: 12864
+	取出在 01001111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-02 14:18:41,413        log. line: 49 - WARNING - Thread: 4180
+	node 00000000 收到 node 01001111 的  ['GET', 'post'] 請求
+
+2019-12-02 14:18:41,423        log. line: 49 - WARNING - Thread: 4180
+	node 00000000 開始將 node {'ID': '01001111', 'address': ['192.168.43.147', 6563], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMCmra2QQcKUoVrFGmELU6jS+OzIGVcC\nCA9uIcQ7OZcr/eRJGRJv+pL6u/VRtynDNM9pvX/dxdwUu1WjlYnBBEMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:41,449        log. line: 49 - WARNING - Thread: 4180
+	node 00000000 開始將 node {'ID': '01001111', 'address': ['192.168.43.147', 6563], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMCmra2QQcKUoVrFGmELU6jS+OzIGVcC\nCA9uIcQ7OZcr/eRJGRJv+pL6u/VRtynDNM9pvX/dxdwUu1WjlYnBBEMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:41,958        log. line: 49 - WARNING - Thread: 8108
+	node 01001111 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-02 14:18:41,960        log. line: 49 - WARNING - Thread: 8108
+	node 01001111 開始將 node {'ID': '00000000', 'address': ['192.168.43.147', 6558], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAPfZe1Uzt/WJhgHePNNap9JMJljqK4tu\nAVJngk6g9qx0X5uB1cUnhwqD0WDuNUJARmEmWbSbHidNCJWeD5XqxxkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:42,013        log. line: 49 - WARNING - Thread: 4180
+	取出在 00000000 中最靠近 01001111 的 node ['01001111'] 
+
+2019-12-02 14:18:42,150        log. line: 49 - WARNING - Thread: 3596
+	node 01001111 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-02 14:18:42,151        log. line: 49 - WARNING - Thread: 3596
+	node 01001111 開始將 node {'ID': '00000000', 'address': ['192.168.43.147', 6558], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAPfZe1Uzt/WJhgHePNNap9JMJljqK4tu\nAVJngk6g9qx0X5uB1cUnhwqD0WDuNUJARmEmWbSbHidNCJWeD5XqxxkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:42,154        log. line: 49 - WARNING - Thread: 3596
+	node 01001111 開始將 node {'ID': '00000000', 'address': ['192.168.43.147', 6558], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAPfZe1Uzt/WJhgHePNNap9JMJljqK4tu\nAVJngk6g9qx0X5uB1cUnhwqD0WDuNUJARmEmWbSbHidNCJWeD5XqxxkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-02 14:18:42,154        log. line: 49 - WARNING - Thread: 3596
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'oejgorej', 'time': 1575267511.731896, 'from': {'ID': '01001111', 'address': ['192.168.43.147', 6563], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMCmra2QQcKUoVrFGmELU6jS+OzIGVcC\nCA9uIcQ7OZcr/eRJGRJv+pL6u/VRtynDNM9pvX/dxdwUu1WjlYnBBEMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'argoia', 'time': 1575193201.8536232, 'from': {'ID': '10010001', 'address': ['192.168.1.113', 2326], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMYOKQKlVj5I5MnC0Ezb0Pzt+KLAKB+H\nn1c2oOsfMxNB00BaL7uyXjL+7+INNTNYgzR1bBjAnhuIZb8c6slcPvMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'wrgwr', 'time': 1574929845.9894075, 'from': {'ID': '10100010', 'address': ['192.168.200.90', 8542], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANiHGLrRLED231ov9HDlk4gOV1sDr/nK\n68+ZeCEZa/ca7xC5FCrPqKvtTYz44uvblSaUTE2gQja09XVZGFw8P8ECAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': '31215', 'time': 1574955456.2588077, 'from': {'ID': '10101001', 'address': ['192.168.1.113', 7634], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK+ja7OG85g2xzoANt6wQLgKHuNnGxAm\noQqkNNpqAOTHUFBWpFd9ayfBg4F70PnFX5uLEbyOVQaupS0K3+XCkJ8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'qrgroier', 'time': 1574955518.5040653, 'from': {'ID': '10101001', 'address': ['192.168.1.113', 7634], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK+ja7OG85g2xzoANt6wQLgKHuNnGxAm\noQqkNNpqAOTHUFBWpFd9ayfBg4F70PnFX5uLEbyOVQaupS0K3+XCkJ8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'wefwefw', 'time': 1574955538.8242185, 'from': {'ID': '10101001', 'address': ['192.168.1.113', 7634], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK+ja7OG85g2xzoANt6wQLgKHuNnGxAm\noQqkNNpqAOTHUFBWpFd9ayfBg4F70PnFX5uLEbyOVQaupS0K3+XCkJ8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'rgeg', 'time': 1574944461.6205385, 'from': {'ID': '11101001', 'address': ['192.168.1.113', 11562], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALx4RzLhK/NkboK3fuByfcqD0xW9ZPSQ\n1gTaJlnXgl7cIAThJ1Nz78EPm9aQkfLmr/+Osbc0AKY5+XxUHja/sTkCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'wgwgrw', 'time': 1575193453.855348, 'from': {'ID': '11101100', 'address': ['192.168.1.113', 2483], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALfOzSzMzL6Ff0q+q66WmxVEYWi8FozJ\nBXk5SzOk3sh/i/GcAtWH+clt3KWYJYSxvO9RCycNud0mumZum+gkSgECAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'rojperjg', 'time': 1575193514.631003, 'from': {'ID': '11111001', 'address': ['192.168.1.113', 2477], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMDwjCNuqr6O+w8Zh+ZVM+f9v+zaxl8V\nhZyUIORUgOEUtsjMAjbv2PhKrU6FmRA3Kjao+6yq/vCYKOfz4P1Ab58CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
