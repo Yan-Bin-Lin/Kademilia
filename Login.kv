@@ -1,0 +1,41 @@
+<MainScreen>:
+    Label:
+        font_size: 70
+        size_hint: None, None
+        pos_hint: {'right':0.55,'top':0.6}
+        size: 150, 50
+        text: "Welcome to the P2Plending"
+    
+    Label:
+        font_size: 30
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.5}
+        size: 150, 50
+        text: "User"
+    Label:
+        id:password
+        font_size: 30
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.4}
+        size: 150, 50
+        text: "Password"
+    TextInput:
+        # password 
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.4}
+        font_size: 30
+        multiline: False
+    TextInput:
+        #userID
+        id:node_ID
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.5}
+        font_size: 30
+        multiline: False
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.51,'top':0.3}
+        size: 200, 50
+        text:"Login"
+        on_press:app.change_ID(node_ID.text)
+        on_press:app.get_running_app().stop()

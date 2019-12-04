@@ -1,0 +1,541 @@
+<modeselecterScreen>:
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.18,'top':0.90}
+        size: 250, 50
+        text:"Bulletin-Board"
+        on_press:root.manager.current="Bulletin_Board"
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.6,'top':0.75}
+        size: 300, 50
+        text:"Post Page"
+        on_press:root.manager.current="p2pwhispertest"
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.8,'top':0.75}
+        size: 300, 50
+        text:"Sign Contract"
+        on_press:root.manager.current="p2pcontracttest"
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 1,'top':0.75}
+        size: 300, 50
+        text:"Chat Page"
+        on_press:root.manager.current="p2pchattest"
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.2,'top':0.75}
+        size: 300, 50
+        text:"Find Node Test"
+        on_press:root.manager.current="kadefindnodetest"
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.4,'top':0.75}
+        size: 300, 50
+        text:"Find contract"
+        on_press:root.manager.current="kadefiletest"
+    Label:
+        id:title
+        text: 'mode selector'
+        font_size: 70
+        size_hint: None, None
+        pos_hint: {'right': 0.585,'top':0.9}
+        size: 300, 50
+
+
+<bulletinboardScreen>:
+    Label:
+        id:title
+        font_size: 70
+        size_hint: None, None
+        pos_hint: {'right': 0.585,'top':0.9}
+        size: 300, 50
+    Label:
+        text:"Bulletin Board"
+        size_hint: None, None
+        size: 200, 50
+        pos_hint: {'right':0.12,'top':1}
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.12,'top':0.95}
+        size: 200, 50
+        text:"return"
+        on_press:root.manager.current="mode_selecter"
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.12,'top':0.9}
+        size: 200, 50
+        text:"Next Page"
+        on_press:app.refresh_bulletinboard()
+    Button:
+        id: display_01
+        size_hint: None, None
+        pos_hint: {'right': 0.5,'top':0.75}
+        size: 800, 75
+        text:""
+        on_press:app.select_target(0)
+    Button:
+        id: display_02
+        size_hint: None, None
+        pos_hint: {'right': 0.5,'top':0.65}
+        size: 800, 75
+        text:""
+        on_press:app.select_target(1)
+    Button:
+        id: display_03
+        size_hint: None, None
+        pos_hint: {'right': 0.5,'top':0.55}
+        size: 800, 75
+        text:""
+        on_press:root.manager.current="p2pchattest"
+        on_press:app.select_target(2)
+    Button:
+        id: display_04
+        size_hint: None, None
+        pos_hint: {'right': 0.5,'top':0.45}
+        size: 800, 75
+        text:""
+        on_press:root.manager.current="p2pchattest"
+        on_press:app.select_target(3)
+    Button:
+        id: display_05
+        size_hint: None, None
+        pos_hint: {'right': 0.5,'top':0.35}
+        size: 800, 75
+        text:""
+        on_press:root.manager.current="p2pchattest"
+        on_press:app.select_target(4)
+    Button:
+        id: display_06
+        size_hint: None, None
+        pos_hint: {'right': 0.8,'top':0.75}
+        size: 800, 75
+        text:""
+        on_press:root.manager.current="p2pchattest"
+        on_press:app.select_target(5)
+    Button:
+        id: display_07
+        size_hint: None, None
+        pos_hint: {'right': 0.8,'top':0.65}
+        size: 800, 75
+        text:""
+        on_press:root.manager.current="p2pchattest"
+        on_press:app.select_target(6)
+    Button:
+        id: display_08
+        size_hint: None, None
+        pos_hint: {'right': 0.8,'top':0.55}
+        size: 800, 75
+        text:""
+        on_press:root.manager.current="p2pchattest"
+        on_press:app.select_target(7)
+    Button:
+        id: display_09
+        size_hint: None, None
+        pos_hint: {'right': 0.8,'top':0.45}
+        size: 800, 75
+        text:""
+        on_press:root.manager.current="p2pchattest"
+        on_press:app.select_target(8)
+    Button:
+        id: display_10
+        size_hint: None, None
+        pos_hint: {'right': 0.8,'top':0.35}
+        size: 800, 75
+        text:""
+        on_press:root.manager.current="p2pchattest"
+        on_press:app.select_target(9)
+
+
+<P2PWhisperTestScreen>:
+    Button:
+        #temp button
+        size_hint: None, None
+        pos_hint: {'right': 0.15,'top':0.9}
+        size: 200, 50
+        text:"return"
+        on_press:root.manager.current="mode_selecter"
+    Label:
+        id:node_ID
+        font_size:70
+        text:"" 
+        size_hint: None, None
+        pos_hint: {'right':0.65,'top':0.9}
+        size: 500, 50
+    TextInput:
+        # message
+        id:interest
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.6}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:amount
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.4}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:period
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.5}
+        font_size: 30
+        multiline: False
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.6}
+        size: 150, 50
+        text: "interest"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.5}
+        size: 150, 50
+        text: "period"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.4}
+        size: 150, 50
+        text: "amount"
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.45,'top':0.3}
+        size: 200, 50
+        text:"Deal"
+        on_release:interest.text = ''
+        on_release:period.text = ''
+        on_release:amount.text = ''
+        on_press:app.post(interest.text,period.text,amount.text)
+    
+
+<P2PContractTestScreen>:
+    Button:
+        #temp button
+        size_hint: None, None
+        pos_hint: {'right': 0.15,'top':0.9}
+        size: 200, 50
+        text:"return"
+        on_press:root.manager.current="mode_selecter"
+    Label:
+        id:node_ID
+        font_size:70
+        text:"" 
+        size_hint: None, None
+        pos_hint: {'right':0.65,'top':0.9}
+        size: 500, 50
+    TextInput:
+        # message
+        id:transaction_ID
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.8}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:name
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.7}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:interest
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.6}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:amount
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.4}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:period
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.5}
+        font_size: 30
+        multiline: False
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.8}
+        size: 150, 50
+        text: "Target ID"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.7}
+        size: 150, 50
+        text: "name"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.6}
+        size: 150, 50
+        text: "interest"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.5}
+        size: 150, 50
+        text: "period"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.4}
+        size: 150, 50
+        text: "amount"
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.45,'top':0.3}
+        size: 200, 50
+        text:"Deal"
+        on_release:interest.text = ''
+        on_release:name.text = '' 
+        on_release:period.text = ''
+        on_release:amount.text = ''
+        on_press:app.P2P_contract_test(transaction_ID.text,interest.text,name.text,period.text,amount.text)
+    Button:
+        #temp button
+        size_hint: None, None
+        pos_hint: {'right': 0.65,'top':0.3}
+        size: 200, 50
+        text:"look up"
+        on_press:app.P2P_receive_contract(transaction_ID.text,False)
+<P2PChatTestScreen>:
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.15,'top':0.8}
+        size: 300, 50
+        text:"P2PContractTest"
+        on_press:root.manager.current="p2pcontracttest"
+    Button:
+        #temp button
+        size_hint: None, None
+        pos_hint: {'right': 0.15,'top':0.9}
+        size: 200, 50
+        text:"return"
+        on_press:root.manager.current="mode_selecter"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.3}
+        size: 150, 50
+        text: "Received"
+    Label:
+        id:received_message
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.65,'top':0.3}
+        size: 150, 50
+        text: ""
+    Label:
+        id:node_ID
+        font_size:70
+        text:"" 
+        size_hint: None, None
+        pos_hint: {'right':0.65,'top':0.9}
+        size: 500, 50
+    Label:
+        id:find_node_ID
+        font_size:70
+        text:"" 
+        size_hint: None, None
+        pos_hint: {'right':0.65,'top':0.8}
+        size: 500, 50
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.6}
+        size: 150, 50
+        text: "Target ID"
+    TextInput:
+        # target_ID
+        id:target_ID
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.6}
+        font_size: 30
+        multiline: False
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.5}
+        size: 150, 50
+        text: "Message"
+    TextInput:
+        # message
+        id:message
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.5}
+        font_size: 30
+        multiline: False
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.45,'top':0.4}
+        size: 200, 50
+        text:"chat"
+        on_release:target_ID.text = ''
+        on_release:message.text = '' 
+        on_press:find_node_ID.text = 'Send to : ' + target_ID.text
+        on_press:app.P2P_chat(target_ID.text,message.text)
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.65,'top':0.4}
+        size: 200, 50
+        text:"receive"
+        on_press:received_message.text = app.P2P_chat_getmessage(target_ID.text)
+    Button:
+        #temp button
+        size_hint: None, None
+        pos_hint: {'right': 0.15,'top':0.9}
+        size: 200, 50
+        text:"return"
+        on_press:root.manager.current="mode_selecter"
+
+<KadeFindNodeTestScreen>:
+    Label:
+        id:node_ID
+        font_size:70
+        text:"" 
+        size_hint: None, None
+        pos_hint: {'right':0.65,'top':0.9}
+        size: 500, 50
+    
+    Label:
+        id:find_node_ID
+        font_size:70
+        text:"" 
+        size_hint: None, None
+        pos_hint: {'right':0.65,'top':0.8}
+        size: 500, 50
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.6}
+        size: 150, 50
+        text: "Target ID"
+    TextInput:
+        # target_ID
+        id:target_ID
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.6}
+        font_size: 30
+        multiline: False
+    Button:
+        size_hint: None, None
+        pos_hint: {'right': 0.55,'top':0.45}
+        size: 200, 50
+        text:"start"
+        on_release:target_ID.text = "" 
+        on_press:find_node_ID.text = 'Find : ' + target_ID.text
+        on_press:app.P2P_find_node(target_ID.text)
+    Button:
+        #temp button
+        size_hint: None, None
+        pos_hint: {'right': 0.15,'top':0.9}
+        size: 200, 50
+        text:"return"
+        on_press:root.manager.current="mode_selecter"
+
+<KadeFileTestScreen>:
+    Button:
+        #temp button
+        size_hint: None, None
+        pos_hint: {'right': 0.15,'top':0.9}
+        size: 200, 50
+        text:"return"
+        on_press:root.manager.current="mode_selecter"
+    Label:
+        id:node_ID
+        font_size:70
+        text:"" 
+        size_hint: None, None
+        pos_hint: {'right':0.65,'top':0.9}
+        size: 500, 50
+    TextInput:
+        # message
+        id:transaction_ID
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.8}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:name
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.7}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:interest
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.6}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:amount
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.4}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
+        id:period
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.5}
+        font_size: 30
+        multiline: False
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.8}
+        size: 150, 50
+        text: "Target ID"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.7}
+        size: 150, 50
+        text: "name"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.6}
+        size: 150, 50
+        text: "interest"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.5}
+        size: 150, 50
+        text: "period"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.4}
+        size: 150, 50
+        text: "amount"
+    Button:
+        #temp button
+        size_hint: None, None
+        pos_hint: {'right': 0.65,'top':0.3}
+        size: 200, 50
+        text:"look up"
+        on_press:app.P2P_receive_contract(transaction_ID.text,True)
+    Button:
+        #temp button
+        size_hint: None, None
+        pos_hint: {'right': 0.45,'top':0.3}
+        size: 200, 50
+        text:"Pay back"
+        on_press:app.P2P_contract_test(transaction_ID.text,interest.text,name.text,period.text,amount.text,True)
