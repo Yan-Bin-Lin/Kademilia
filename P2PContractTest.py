@@ -5,6 +5,7 @@ Created on 2019年10月10日
 @author: danny
 '''
 import pickle
+import json
 from src.P2PLending.P2PNode import P2PNode
 
 def ContractTest():
@@ -17,7 +18,7 @@ def ContractTest():
         input('wait for instruct to get contract')
         print(f"the contract record of 11 is {server.GetTmpContract('11')}")
         contract = server.SendContract(True, ID = '11', transation = server.GetTmpContract('11')[0]['msg']['Transation'], other = server.GetTmpContract('11')[0]['msg']['Trader']['brower'])
-        server.UpLoadFile(str(contract))
+        server.UpLoadFile(contract, '10101010')
         
     elif instruc == 'n':
         with open('Save/00/00.txt', 'rb') as file:
@@ -30,6 +31,7 @@ def ContractTest():
         
         input('wait for instruct to get contract')
         print(f"the contract record of 00 is {end.GetTmpContract('00')}")
+        end.GetFile('10101010')
 
     while(1):
         pass

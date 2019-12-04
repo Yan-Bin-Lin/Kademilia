@@ -9,7 +9,8 @@ from . import setup
 import hashlib
 from pathlib import Path
 
-OutSize = int(setup.OutSize)
+#OutSize = int(setup.OutSize)
+OutSize = 8
 # return bit like string(0110101.......)
 def _HashFormat(HashHexCode, OutSize = OutSize):
     return bin(int(HashHexCode, 16)).zfill(OutSize)[-OutSize:]

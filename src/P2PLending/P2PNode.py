@@ -198,6 +198,7 @@ class P2PNode(KadeNode):
             ID (str): Node ID you want to send to
             node: Node you want to send to 
             transation: the contract data of transation that has already save in local
+            the person you want to contract to
             kwargs (dict): everything you want to write in the transation
         '''
         contract = self.WriteContract(lender, transation, other, **kwargs)

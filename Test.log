@@ -50718,3 +50718,1201 @@ Traceback (most recent call last):
     peer = data['content']['Trader']['lender']['sign']
 [TypeError] 'NoneType' object is not subscriptable
 
+2019-12-04 23:06:23,019        log. line: 49 - WARNING - Thread: 9260
+	node 00 上線了!!!
+
+2019-12-04 23:06:27,028        log. line: 49 - WARNING - Thread: 12892
+	node 11 上線了!!!
+
+2019-12-04 23:06:27,029        log. line: 49 - WARNING - Thread: 12892
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 3038), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMMSeOL8lY5S5CE+VgF1uPUVyPHiRr5/\nDoqnCjjeWFedd2IUgFL7aE6HNvniIRTOoJzky4UJqK9MVGCyttO/2FkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 23:06:27,156        log. line: 49 - WARNING - Thread: 1116
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 23:06:27,158        log. line: 49 - WARNING - Thread: 1116
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 3040], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOE20DPeZjvyQqkvrdnaO5IiDeCARFKK\nyW8T0hZeaTf8HO6nzrVNN3ShXKtCzgc0O/jffjcUJPsCyQaxQ2Wmu3UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 23:06:27,234        log. line: 49 - WARNING - Thread: 12892
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-04 23:06:27,235        log. line: 49 - WARNING - Thread: 12892
+	node 11 開始向 ['00']， 請求find self
+
+2019-12-04 23:06:27,237        log. line: 49 - WARNING - Thread: 16792
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-12-04 23:06:27,239        log. line: 49 - WARNING - Thread: 16792
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 3040], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOE20DPeZjvyQqkvrdnaO5IiDeCARFKK\nyW8T0hZeaTf8HO6nzrVNN3ShXKtCzgc0O/jffjcUJPsCyQaxQ2Wmu3UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 23:06:27,243        log. line: 49 - WARNING - Thread: 16792
+	此node 00 非查找目標，執行LookUP function
+
+2019-12-04 23:06:27,244        log. line: 49 - WARNING - Thread: 16792
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-12-04 23:06:27,245        log. line: 49 - WARNING - Thread: 16792
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-12-04 23:06:27,245        log. line: 49 - WARNING - Thread: 16792
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-12-04 23:06:27,249        log. line: 49 - WARNING - Thread: 12892
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-04 23:06:27,251        log. line: 49 - WARNING - Thread: 15072
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-12-04 23:06:27,252        log. line: 49 - WARNING - Thread: 15072
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 3038], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMMSeOL8lY5S5CE+VgF1uPUVyPHiRr5/\nDoqnCjjeWFedd2IUgFL7aE6HNvniIRTOoJzky4UJqK9MVGCyttO/2FkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 23:06:27,253        log. line: 49 - WARNING - Thread: 10816
+	node 00 收到 node 11 的  ['POST', 'contract'] 請求
+
+2019-12-04 23:06:27,254        log. line: 49 - WARNING - Thread: 10816
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 3040], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOE20DPeZjvyQqkvrdnaO5IiDeCARFKK\nyW8T0hZeaTf8HO6nzrVNN3ShXKtCzgc0O/jffjcUJPsCyQaxQ2Wmu3UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 23:06:27,255        log. line: 49 - WARNING - Thread: 15072
+	Get node receive reply, add the node into bucket []
+
+2019-12-04 23:06:27,255        log. line: 49 - WARNING - Thread: 10816
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 3040], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOE20DPeZjvyQqkvrdnaO5IiDeCARFKK\nyW8T0hZeaTf8HO6nzrVNN3ShXKtCzgc0O/jffjcUJPsCyQaxQ2Wmu3UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 23:06:27,257        log. line: 49 - WARNING - Thread: 10816
+	00 開始驗證來自 11的簽章 ， 簽章為 BWNfwEi0UqQYxAJUGAoOC9WnCLekz6PFOruY4oej1O7o+ZMfGw/xzyN4WHfAhULXWe6pdK9UbciO5FOAc38MDg==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-04 23:06:27,259        log. line: 49 - WARNING - Thread: 10816
+	node 11 send a contract to you, the contract is: 
+	 {'Trader': {'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 3040], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOE20DPeZjvyQqkvrdnaO5IiDeCARFKK\nyW8T0hZeaTf8HO6nzrVNN3ShXKtCzgc0O/jffjcUJPsCyQaxQ2Wmu3UCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575471987.2379286, 'sign': {'signature': 'BWNfwEi0UqQYxAJUGAoOC9WnCLekz6PFOruY4oej1O7o+ZMfGw/xzyN4WHfAhULXWe6pdK9UbciO5FOAc38MDg==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOE20DPeZjvyQqkvrdnaO5IiDeCARFKK\nyW8T0hZeaTf8HO6nzrVNN3ShXKtCzgc0O/jffjcUJPsCyQaxQ2Wmu3UCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'lender': ''}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-04 23:06:30,534        log. line: 49 - WARNING - Thread: 14656
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 23:06:30,535        log. line: 49 - WARNING - Thread: 14656
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 3038], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMMSeOL8lY5S5CE+VgF1uPUVyPHiRr5/\nDoqnCjjeWFedd2IUgFL7aE6HNvniIRTOoJzky4UJqK9MVGCyttO/2FkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 23:06:30,554        log. line: 49 - WARNING - Thread: 9260
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-12-04 23:06:30,557        log. line: 26 - ERROR - Thread: 9260
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+[TypeError] UpLoadFile() missing 1 required positional argument: 'HashCode'
+
+2019-12-04 23:06:30,560        log. line: 49 - WARNING - Thread: 14028
+	node 11 收到 node 00 的  ['POST', 'contract'] 請求
+
+2019-12-04 23:06:30,560        log. line: 49 - WARNING - Thread: 14028
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 3038], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMMSeOL8lY5S5CE+VgF1uPUVyPHiRr5/\nDoqnCjjeWFedd2IUgFL7aE6HNvniIRTOoJzky4UJqK9MVGCyttO/2FkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 23:06:30,561        log. line: 49 - WARNING - Thread: 14028
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 3038], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMMSeOL8lY5S5CE+VgF1uPUVyPHiRr5/\nDoqnCjjeWFedd2IUgFL7aE6HNvniIRTOoJzky4UJqK9MVGCyttO/2FkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 23:06:30,562        log. line: 49 - WARNING - Thread: 14028
+	11 開始驗證來自 00的簽章 ， 簽章為 H5csMaTyZQqWYgOMxPiQlCt9nW7KBucTYf/h/L3FBxBks+1jqXicV18w9PQ0Rk1EqCqmyspOvJ3lw6GGmmukgg==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-04 23:06:30,564        log. line: 49 - WARNING - Thread: 14028
+	node 00 send a contract to you, the contract is: 
+	 {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 3038], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMMSeOL8lY5S5CE+VgF1uPUVyPHiRr5/\nDoqnCjjeWFedd2IUgFL7aE6HNvniIRTOoJzky4UJqK9MVGCyttO/2FkCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575471990.4304304, 'sign': {'signature': 'H5csMaTyZQqWYgOMxPiQlCt9nW7KBucTYf/h/L3FBxBks+1jqXicV18w9PQ0Rk1EqCqmyspOvJ3lw6GGmmukgg==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMMSeOL8lY5S5CE+VgF1uPUVyPHiRr5/\nDoqnCjjeWFedd2IUgFL7aE6HNvniIRTOoJzky4UJqK9MVGCyttO/2FkCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 3040], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOE20DPeZjvyQqkvrdnaO5IiDeCARFKK\nyW8T0hZeaTf8HO6nzrVNN3ShXKtCzgc0O/jffjcUJPsCyQaxQ2Wmu3UCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575471987.2379286, 'sign': {'signature': 'BWNfwEi0UqQYxAJUGAoOC9WnCLekz6PFOruY4oej1O7o+ZMfGw/xzyN4WHfAhULXWe6pdK9UbciO5FOAc38MDg==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOE20DPeZjvyQqkvrdnaO5IiDeCARFKK\nyW8T0hZeaTf8HO6nzrVNN3ShXKtCzgc0O/jffjcUJPsCyQaxQ2Wmu3UCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:07:05,769        log. line: 49 - WARNING - Thread: 6476
+	node 00 上線了!!!
+
+2019-12-05 00:08:12,452        log. line: 49 - WARNING - Thread: 12160
+	node 00 上線了!!!
+
+2019-12-05 00:08:16,296        log. line: 49 - WARNING - Thread: 16016
+	node 11 上線了!!!
+
+2019-12-05 00:08:16,297        log. line: 49 - WARNING - Thread: 16016
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 5100), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:16,406        log. line: 49 - WARNING - Thread: 12676
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:08:16,408        log. line: 49 - WARNING - Thread: 12676
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:16,484        log. line: 49 - WARNING - Thread: 16016
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:08:16,486        log. line: 49 - WARNING - Thread: 16016
+	node 11 開始向 ['00']， 請求find self
+
+2019-12-05 00:08:16,488        log. line: 49 - WARNING - Thread: 8796
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-12-05 00:08:16,489        log. line: 49 - WARNING - Thread: 8796
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:16,491        log. line: 49 - WARNING - Thread: 8796
+	此node 00 非查找目標，執行LookUP function
+
+2019-12-05 00:08:16,492        log. line: 49 - WARNING - Thread: 8796
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-12-05 00:08:16,493        log. line: 49 - WARNING - Thread: 8796
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-12-05 00:08:16,495        log. line: 49 - WARNING - Thread: 8796
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-12-05 00:08:16,499        log. line: 49 - WARNING - Thread: 16016
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:08:16,501        log. line: 49 - WARNING - Thread: 2424
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-12-05 00:08:16,502        log. line: 49 - WARNING - Thread: 2424
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5100], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:16,503        log. line: 49 - WARNING - Thread: 2424
+	Get node receive reply, add the node into bucket []
+
+2019-12-05 00:08:16,503        log. line: 49 - WARNING - Thread: 2576
+	node 00 收到 node 11 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:08:16,504        log. line: 49 - WARNING - Thread: 2576
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:16,505        log. line: 49 - WARNING - Thread: 2576
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:16,505        log. line: 49 - WARNING - Thread: 2576
+	00 開始驗證來自 11的簽章 ， 簽章為 yERUX8kbNU8C3TSQl7W798rwYMSfXJejWYRcZSGXyxRGan1PCW+8+ZXTpbFygGvZCGeUFo3qLDQDzxPZ5Euhpg==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:08:16,507        log. line: 49 - WARNING - Thread: 2576
+	node 11 send a contract to you, the contract is: 
+	 {'Trader': {'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575475696.488752, 'sign': {'signature': 'yERUX8kbNU8C3TSQl7W798rwYMSfXJejWYRcZSGXyxRGan1PCW+8+ZXTpbFygGvZCGeUFo3qLDQDzxPZ5Euhpg==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'lender': ''}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:08:19,651        log. line: 49 - WARNING - Thread: 8800
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:08:19,652        log. line: 49 - WARNING - Thread: 8800
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5100], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:19,713        log. line: 49 - WARNING - Thread: 12160
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-12-05 00:08:19,744        log. line: 49 - WARNING - Thread: 12160
+	取出在 00 中最靠近 10101010 的 node ['11'] 
+
+2019-12-05 00:08:19,745        log. line: 49 - WARNING - Thread: 2552
+	node 11 收到 node 00 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:08:19,746        log. line: 49 - WARNING - Thread: 2552
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5100], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:19,746        log. line: 49 - WARNING - Thread: 12160
+	node 00 開始上傳檔案到網路，將資料傳給node ['11']
+
+2019-12-05 00:08:19,747        log. line: 49 - WARNING - Thread: 12160
+	回傳  ， node [['11', 0]] 為下一個儲存對象
+
+2019-12-05 00:08:19,748        log. line: 49 - WARNING - Thread: 2552
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5100], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:19,750        log. line: 49 - WARNING - Thread: 2552
+	11 開始驗證來自 00的簽章 ， 簽章為 KQsylA2SnZEYBtRKA7cpgqz8QXxmLwobpjy5jobKkCzFGkSrpmN1bVOiiemmuPFavQ92mNMZd3z7cP+ttr4orQ==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:08:19,751        log. line: 49 - WARNING - Thread: 8996
+	node 11 收到 node 00 的  ['POST', 'file', '10101010'] 請求
+
+2019-12-05 00:08:19,751        log. line: 49 - WARNING - Thread: 2552
+	node 00 send a contract to you, the contract is: 
+	 {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 5100], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575475699.4650652, 'sign': {'signature': 'KQsylA2SnZEYBtRKA7cpgqz8QXxmLwobpjy5jobKkCzFGkSrpmN1bVOiiemmuPFavQ92mNMZd3z7cP+ttr4orQ==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575475696.488752, 'sign': {'signature': 'yERUX8kbNU8C3TSQl7W798rwYMSfXJejWYRcZSGXyxRGan1PCW+8+ZXTpbFygGvZCGeUFo3qLDQDzxPZ5Euhpg==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:08:19,752        log. line: 49 - WARNING - Thread: 8996
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5100], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:19,756        log. line: 49 - WARNING - Thread: 8996
+	取出在 11 中最靠近 10101010 的 node [] 
+
+2019-12-05 00:08:19,756        log. line: 49 - WARNING - Thread: 8996
+	node 11 開始上傳檔案到網路，將資料傳給node []
+
+2019-12-05 00:08:19,757        log. line: 49 - WARNING - Thread: 8996
+	回傳  00， node [] 為下一個儲存對象
+
+2019-12-05 00:08:19,806        log. line: 49 - WARNING - Thread: 6448
+	node 00 收到 node 11 的  ['REPLY', 'postfile', '10101010'] 請求
+
+2019-12-05 00:08:19,837        log. line: 49 - WARNING - Thread: 6448
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:20,246        log. line: 49 - WARNING - Thread: 6448
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:08:20,277        log. line: 49 - WARNING - Thread: 6448
+	Update File success!!!!!!!  存到檔案的節點有['11']
+
+2019-12-05 00:08:23,430        log. line: 49 - WARNING - Thread: 16016
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-12-05 00:08:23,432        log. line: 49 - WARNING - Thread: 16016
+	node 11 擁有該檔案 [{'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 5100], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575475699.7163599], [{'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575475699.7549434]], 'file': '{\'Trader\': {\'lender\': {\'node\': {\'ID\': \'00\', \'address\': (\'192.168.200.90\', 5100), \'PublicKey\': \'-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\\n-----END PUBLIC KEY-----\\n\'}, \'time\': 1575475699.4650652, \'sign\': {\'signature\': \'KQsylA2SnZEYBtRKA7cpgqz8QXxmLwobpjy5jobKkCzFGkSrpmN1bVOiiemmuPFavQ92mNMZd3z7cP+ttr4orQ==\', \'message\': "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", \'public_key\': \'-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\\n-----END PUBLIC KEY-----\\n\'}}, \'brower\': {\'node\': {\'ID\': \'11\', \'address\': [\'192.168.200.90\', 5103], \'PublicKey\': \'-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\\n-----END PUBLIC KEY-----\\n\'}, \'time\': 1575475696.488752, \'sign\': {\'signature\': \'yERUX8kbNU8C3TSQl7W798rwYMSfXJejWYRcZSGXyxRGan1PCW+8+ZXTpbFygGvZCGeUFo3qLDQDzxPZ5Euhpg==\', \'message\': "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", \'public_key\': \'-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\\n-----END PUBLIC KEY-----\\n\'}}}, \'Transation\': {\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}}'}]，回傳該檔
+
+2019-12-05 00:14:15,301        log. line: 49 - WARNING - Thread: 14592
+	node 00 上線了!!!
+
+2019-12-05 00:14:19,202        log. line: 49 - WARNING - Thread: 8176
+	node 11 上線了!!!
+
+2019-12-05 00:14:19,203        log. line: 49 - WARNING - Thread: 8176
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 5311), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMdkTf8WYwY38d/2kJ4XA03NN5uvbDDc\nMOIam9PESlJ18fptgX9zDb9GKio24zQRJvCnnxryQ1Hc1oZFWYIq0rsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:19,339        log. line: 49 - WARNING - Thread: 13328
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:14:19,340        log. line: 49 - WARNING - Thread: 13328
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5314], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMDqkSh5SQEaCJSPZEWmqS9piObi4kWr\nJcKqLwbZWYwKbzh5XIBy745+Q/guAmHcGXfLFkWGOsomnIOQx8DSID8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:19,396        log. line: 49 - WARNING - Thread: 8176
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:14:19,396        log. line: 49 - WARNING - Thread: 8176
+	node 11 開始向 ['00']， 請求find self
+
+2019-12-05 00:14:19,399        log. line: 49 - WARNING - Thread: 8644
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-12-05 00:14:19,400        log. line: 49 - WARNING - Thread: 8644
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5314], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMDqkSh5SQEaCJSPZEWmqS9piObi4kWr\nJcKqLwbZWYwKbzh5XIBy745+Q/guAmHcGXfLFkWGOsomnIOQx8DSID8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:19,402        log. line: 49 - WARNING - Thread: 8644
+	此node 00 非查找目標，執行LookUP function
+
+2019-12-05 00:14:19,403        log. line: 49 - WARNING - Thread: 8644
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-12-05 00:14:19,404        log. line: 49 - WARNING - Thread: 8644
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-12-05 00:14:19,405        log. line: 49 - WARNING - Thread: 8644
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-12-05 00:14:19,442        log. line: 49 - WARNING - Thread: 16280
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-12-05 00:14:19,458        log. line: 49 - WARNING - Thread: 8176
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:14:19,458        log. line: 49 - WARNING - Thread: 16280
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5311], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMdkTf8WYwY38d/2kJ4XA03NN5uvbDDc\nMOIam9PESlJ18fptgX9zDb9GKio24zQRJvCnnxryQ1Hc1oZFWYIq0rsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:19,460        log. line: 49 - WARNING - Thread: 16280
+	Get node receive reply, add the node into bucket []
+
+2019-12-05 00:14:19,462        log. line: 49 - WARNING - Thread: 7420
+	node 00 收到 node 11 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:14:19,463        log. line: 49 - WARNING - Thread: 7420
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5314], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMDqkSh5SQEaCJSPZEWmqS9piObi4kWr\nJcKqLwbZWYwKbzh5XIBy745+Q/guAmHcGXfLFkWGOsomnIOQx8DSID8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:19,464        log. line: 49 - WARNING - Thread: 7420
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5314], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMDqkSh5SQEaCJSPZEWmqS9piObi4kWr\nJcKqLwbZWYwKbzh5XIBy745+Q/guAmHcGXfLFkWGOsomnIOQx8DSID8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:19,466        log. line: 49 - WARNING - Thread: 7420
+	00 開始驗證來自 11的簽章 ， 簽章為 lwTTmfYLDXjdzAKmUpORTCGF43Y+k+eYDRIC+7OXLa/u8jLNIUrGm7WrPFveKzn5l/fxYXBG3ERM3+H+sowZgQ==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:14:19,467        log. line: 49 - WARNING - Thread: 7420
+	node 11 send a contract to you, the contract is: 
+	 {'Trader': {'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5314], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMDqkSh5SQEaCJSPZEWmqS9piObi4kWr\nJcKqLwbZWYwKbzh5XIBy745+Q/guAmHcGXfLFkWGOsomnIOQx8DSID8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476059.3991373, 'sign': {'signature': 'lwTTmfYLDXjdzAKmUpORTCGF43Y+k+eYDRIC+7OXLa/u8jLNIUrGm7WrPFveKzn5l/fxYXBG3ERM3+H+sowZgQ==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMDqkSh5SQEaCJSPZEWmqS9piObi4kWr\nJcKqLwbZWYwKbzh5XIBy745+Q/guAmHcGXfLFkWGOsomnIOQx8DSID8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'lender': ''}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:14:21,700        log. line: 49 - WARNING - Thread: 1736
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:14:21,701        log. line: 49 - WARNING - Thread: 1736
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5311], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMdkTf8WYwY38d/2kJ4XA03NN5uvbDDc\nMOIam9PESlJ18fptgX9zDb9GKio24zQRJvCnnxryQ1Hc1oZFWYIq0rsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:21,793        log. line: 49 - WARNING - Thread: 14592
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-12-05 00:14:21,824        log. line: 49 - WARNING - Thread: 14592
+	取出在 00 中最靠近 10101010 的 node ['11'] 
+
+2019-12-05 00:14:21,825        log. line: 49 - WARNING - Thread: 15672
+	node 11 收到 node 00 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:14:21,825        log. line: 49 - WARNING - Thread: 14592
+	node 00 開始上傳檔案到網路，將資料傳給node ['11']
+
+2019-12-05 00:14:21,827        log. line: 49 - WARNING - Thread: 15672
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5311], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMdkTf8WYwY38d/2kJ4XA03NN5uvbDDc\nMOIam9PESlJ18fptgX9zDb9GKio24zQRJvCnnxryQ1Hc1oZFWYIq0rsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:21,828        log. line: 49 - WARNING - Thread: 14592
+	回傳  ， node [['11', 0]] 為下一個儲存對象
+
+2019-12-05 00:14:21,829        log. line: 49 - WARNING - Thread: 15672
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5311], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMdkTf8WYwY38d/2kJ4XA03NN5uvbDDc\nMOIam9PESlJ18fptgX9zDb9GKio24zQRJvCnnxryQ1Hc1oZFWYIq0rsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:21,830        log. line: 49 - WARNING - Thread: 16168
+	node 11 收到 node 00 的  ['POST', 'file', '10101010'] 請求
+
+2019-12-05 00:14:21,831        log. line: 49 - WARNING - Thread: 15672
+	11 開始驗證來自 00的簽章 ， 簽章為 Zll3vA0z/2dyTAy/ayyOtuXebCejvjFPxQ/yJ/VIEJy1k/Joaa3FovbdoZS3OziGVpPdZYUScs4/a7MV5TTw5g==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:14:21,832        log. line: 49 - WARNING - Thread: 16168
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5311], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMdkTf8WYwY38d/2kJ4XA03NN5uvbDDc\nMOIam9PESlJ18fptgX9zDb9GKio24zQRJvCnnxryQ1Hc1oZFWYIq0rsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:14:21,833        log. line: 49 - WARNING - Thread: 15672
+	node 00 send a contract to you, the contract is: 
+	 {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 5311], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMdkTf8WYwY38d/2kJ4XA03NN5uvbDDc\nMOIam9PESlJ18fptgX9zDb9GKio24zQRJvCnnxryQ1Hc1oZFWYIq0rsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476061.6282516, 'sign': {'signature': 'Zll3vA0z/2dyTAy/ayyOtuXebCejvjFPxQ/yJ/VIEJy1k/Joaa3FovbdoZS3OziGVpPdZYUScs4/a7MV5TTw5g==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMdkTf8WYwY38d/2kJ4XA03NN5uvbDDc\nMOIam9PESlJ18fptgX9zDb9GKio24zQRJvCnnxryQ1Hc1oZFWYIq0rsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575475696.488752, 'sign': {'signature': 'yERUX8kbNU8C3TSQl7W798rwYMSfXJejWYRcZSGXyxRGan1PCW+8+ZXTpbFygGvZCGeUFo3qLDQDzxPZ5Euhpg==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:14:21,833        log. line: 26 - ERROR - Thread: 14592
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\node\KadeNode.py", line 224, in UpLoadFile: 
+    _SaveFile(df, self)
+  File "D:\eclipse\python\hw\kademilia\src\handler\respond.py", line 75, in _SaveFile: 
+    if GetHash(of_['file']) == GetHash(data['content']['file']):
+  File "D:\eclipse\python\hw\kademilia\src\util\hash.py", line 29, in GetHash: 
+    HashFunc.update(data.encode(encoding='utf-8'))
+[AttributeError] 'dict' object has no attribute 'encode'
+
+2019-12-05 00:14:21,837        log. line: 26 - ERROR - Thread: 16168
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2Pnetwork.py", line 32, in CallHandle: 
+    if not RespondHandle(connect, data, KadeNode):
+  File "D:\eclipse\python\hw\kademilia\src\handler\handler.py", line 81, in RespondHandle: 
+    ReplyPostFile(data, KadeNode)
+  File "D:\eclipse\python\hw\kademilia\src\handler\respond.py", line 103, in ReplyPostFile: 
+    _SaveFile(data, KadeNode)
+  File "D:\eclipse\python\hw\kademilia\src\handler\respond.py", line 75, in _SaveFile: 
+    if GetHash(of_['file']) == GetHash(data['content']['file']):
+  File "D:\eclipse\python\hw\kademilia\src\util\hash.py", line 29, in GetHash: 
+    HashFunc.update(data.encode(encoding='utf-8'))
+[AttributeError] 'dict' object has no attribute 'encode'
+
+2019-12-05 00:19:57,536        log. line: 49 - WARNING - Thread: 9484
+	node 00 上線了!!!
+
+2019-12-05 00:20:01,044        log. line: 49 - WARNING - Thread: 4780
+	node 11 上線了!!!
+
+2019-12-05 00:20:01,045        log. line: 49 - WARNING - Thread: 4780
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 5495), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:01,166        log. line: 49 - WARNING - Thread: 16796
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:20:01,167        log. line: 49 - WARNING - Thread: 16796
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5498], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALWYPFnsSmt3cBp0mlX3kb0LMUfxORnJ\nIAp9OolGQf2qr3lxzTQi54nocDU6s0uQtNOebDNtL3rPwXqKMp8EmXUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:01,191        log. line: 49 - WARNING - Thread: 4780
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:20:01,193        log. line: 49 - WARNING - Thread: 4780
+	node 11 開始向 ['00']， 請求find self
+
+2019-12-05 00:20:01,196        log. line: 49 - WARNING - Thread: 4368
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-12-05 00:20:01,197        log. line: 49 - WARNING - Thread: 4368
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5498], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALWYPFnsSmt3cBp0mlX3kb0LMUfxORnJ\nIAp9OolGQf2qr3lxzTQi54nocDU6s0uQtNOebDNtL3rPwXqKMp8EmXUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:01,199        log. line: 49 - WARNING - Thread: 4368
+	此node 00 非查找目標，執行LookUP function
+
+2019-12-05 00:20:01,199        log. line: 49 - WARNING - Thread: 4368
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-12-05 00:20:01,201        log. line: 49 - WARNING - Thread: 4368
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-12-05 00:20:01,202        log. line: 49 - WARNING - Thread: 4368
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-12-05 00:20:01,217        log. line: 49 - WARNING - Thread: 4780
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:20:01,218        log. line: 49 - WARNING - Thread: 1536
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-12-05 00:20:01,220        log. line: 49 - WARNING - Thread: 1536
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5495], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:01,221        log. line: 49 - WARNING - Thread: 1536
+	Get node receive reply, add the node into bucket []
+
+2019-12-05 00:20:01,221        log. line: 49 - WARNING - Thread: 5008
+	node 00 收到 node 11 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:20:01,222        log. line: 49 - WARNING - Thread: 5008
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5498], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALWYPFnsSmt3cBp0mlX3kb0LMUfxORnJ\nIAp9OolGQf2qr3lxzTQi54nocDU6s0uQtNOebDNtL3rPwXqKMp8EmXUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:01,224        log. line: 49 - WARNING - Thread: 5008
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5498], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALWYPFnsSmt3cBp0mlX3kb0LMUfxORnJ\nIAp9OolGQf2qr3lxzTQi54nocDU6s0uQtNOebDNtL3rPwXqKMp8EmXUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:01,224        log. line: 49 - WARNING - Thread: 5008
+	00 開始驗證來自 11的簽章 ， 簽章為 hniheacYWhgasz7U/CUfyDsC+a6FVYWtPU8TsRSJ+yrblndVDBnZzB9Fuo9RlMlh6YMxicwyPMpHLUwVEloRxg==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:20:01,226        log. line: 49 - WARNING - Thread: 5008
+	node 11 send a contract to you, the contract is: 
+	 {'Trader': {'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5498], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALWYPFnsSmt3cBp0mlX3kb0LMUfxORnJ\nIAp9OolGQf2qr3lxzTQi54nocDU6s0uQtNOebDNtL3rPwXqKMp8EmXUCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476401.1959736, 'sign': {'signature': 'hniheacYWhgasz7U/CUfyDsC+a6FVYWtPU8TsRSJ+yrblndVDBnZzB9Fuo9RlMlh6YMxicwyPMpHLUwVEloRxg==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALWYPFnsSmt3cBp0mlX3kb0LMUfxORnJ\nIAp9OolGQf2qr3lxzTQi54nocDU6s0uQtNOebDNtL3rPwXqKMp8EmXUCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'lender': ''}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:20:03,302        log. line: 49 - WARNING - Thread: 1552
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:20:03,303        log. line: 49 - WARNING - Thread: 1552
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5495], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:03,318        log. line: 49 - WARNING - Thread: 9484
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-12-05 00:20:03,324        log. line: 49 - WARNING - Thread: 9484
+	取出在 00 中最靠近 10101010 的 node ['11'] 
+
+2019-12-05 00:20:03,325        log. line: 49 - WARNING - Thread: 9484
+	node 00 開始上傳檔案到網路，將資料傳給node ['11']
+
+2019-12-05 00:20:03,326        log. line: 49 - WARNING - Thread: 13232
+	node 11 收到 node 00 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:20:03,326        log. line: 49 - WARNING - Thread: 13232
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5495], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:03,327        log. line: 49 - WARNING - Thread: 9484
+	回傳  ， node [['11', 0]] 為下一個儲存對象
+
+2019-12-05 00:20:03,328        log. line: 49 - WARNING - Thread: 13232
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5495], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:03,328        log. line: 49 - WARNING - Thread: 13232
+	11 開始驗證來自 00的簽章 ， 簽章為 GKtt1sJ4VcgYed+TFlgadON+3tpBcLZdtmyqpkxALhdUXIiSfZTSaVMU8xX0IaKrj+HfMGTKWMzpLhsUt6og8g==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:20:03,330        log. line: 49 - WARNING - Thread: 8796
+	node 11 收到 node 00 的  ['POST', 'file', '10101010'] 請求
+
+2019-12-05 00:20:03,331        log. line: 49 - WARNING - Thread: 13232
+	node 00 send a contract to you, the contract is: 
+	 {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 5495], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476403.1658788, 'sign': {'signature': 'GKtt1sJ4VcgYed+TFlgadON+3tpBcLZdtmyqpkxALhdUXIiSfZTSaVMU8xX0IaKrj+HfMGTKWMzpLhsUt6og8g==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575475696.488752, 'sign': {'signature': 'yERUX8kbNU8C3TSQl7W798rwYMSfXJejWYRcZSGXyxRGan1PCW+8+ZXTpbFygGvZCGeUFo3qLDQDzxPZ5Euhpg==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:20:03,332        log. line: 49 - WARNING - Thread: 8796
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5495], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:03,335        log. line: 49 - WARNING - Thread: 8796
+	取出在 11 中最靠近 10101010 的 node [] 
+
+2019-12-05 00:20:03,336        log. line: 49 - WARNING - Thread: 8796
+	node 11 開始上傳檔案到網路，將資料傳給node []
+
+2019-12-05 00:20:03,337        log. line: 49 - WARNING - Thread: 8796
+	回傳  00， node [] 為下一個儲存對象
+
+2019-12-05 00:20:03,428        log. line: 49 - WARNING - Thread: 12668
+	node 00 收到 node 11 的  ['REPLY', 'postfile', '10101010'] 請求
+
+2019-12-05 00:20:03,475        log. line: 49 - WARNING - Thread: 12668
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5498], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALWYPFnsSmt3cBp0mlX3kb0LMUfxORnJ\nIAp9OolGQf2qr3lxzTQi54nocDU6s0uQtNOebDNtL3rPwXqKMp8EmXUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:03,899        log. line: 49 - WARNING - Thread: 12668
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5498], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALWYPFnsSmt3cBp0mlX3kb0LMUfxORnJ\nIAp9OolGQf2qr3lxzTQi54nocDU6s0uQtNOebDNtL3rPwXqKMp8EmXUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:03,930        log. line: 49 - WARNING - Thread: 12668
+	Update File success!!!!!!!  存到檔案的節點有['11']
+
+2019-12-05 00:20:07,984        log. line: 49 - WARNING - Thread: 4780
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-12-05 00:20:07,986        log. line: 49 - WARNING - Thread: 4780
+	node 11 擁有該檔案 [{'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 5100], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575475699.7163599], [{'ID': '11', 'address': ['192.168.200.90', 5103], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575475699.7549434]], 'file': '{\'Trader\': {\'lender\': {\'node\': {\'ID\': \'00\', \'address\': (\'192.168.200.90\', 5100), \'PublicKey\': \'-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\\n-----END PUBLIC KEY-----\\n\'}, \'time\': 1575475699.4650652, \'sign\': {\'signature\': \'KQsylA2SnZEYBtRKA7cpgqz8QXxmLwobpjy5jobKkCzFGkSrpmN1bVOiiemmuPFavQ92mNMZd3z7cP+ttr4orQ==\', \'message\': "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", \'public_key\': \'-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL+VGnmvIYWAKe5T0xrfWV/8xleLtShm\\nSioEY0oadeIRtNGkKvCgvrZfZC5GWYYOnNKdiHwvGabztvhE+aK6ghsCAwEAAQ==\\n-----END PUBLIC KEY-----\\n\'}}, \'brower\': {\'node\': {\'ID\': \'11\', \'address\': [\'192.168.200.90\', 5103], \'PublicKey\': \'-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\\n-----END PUBLIC KEY-----\\n\'}, \'time\': 1575475696.488752, \'sign\': {\'signature\': \'yERUX8kbNU8C3TSQl7W798rwYMSfXJejWYRcZSGXyxRGan1PCW+8+ZXTpbFygGvZCGeUFo3qLDQDzxPZ5Euhpg==\', \'message\': "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", \'public_key\': \'-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\\n-----END PUBLIC KEY-----\\n\'}}}, \'Transation\': {\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}}'}, {'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 5495], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476403.3192868], [{'ID': '11', 'address': ['192.168.200.90', 5498], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALWYPFnsSmt3cBp0mlX3kb0LMUfxORnJ\nIAp9OolGQf2qr3lxzTQi54nocDU6s0uQtNOebDNtL3rPwXqKMp8EmXUCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476403.3343267]], 'file': '{"Trader": {"lender": {"node": {"ID": "00", "address": ["192.168.200.90", 5495], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476403.1658788, "sign": {"signature": "GKtt1sJ4VcgYed+TFlgadON+3tpBcLZdtmyqpkxALhdUXIiSfZTSaVMU8xX0IaKrj+HfMGTKWMzpLhsUt6og8g==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMabOTlvoItjzwJy0qwJb8OqzVv0sCsU\\nSjAckw3YM+Js4UAr/Ah3L87IzmjAxWDYTegvQqeFBu4cGoE+56nvuYMCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}, "brower": {"node": {"ID": "11", "address": ["192.168.200.90", 5103], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575475696.488752, "sign": {"signature": "yERUX8kbNU8C3TSQl7W798rwYMSfXJejWYRcZSGXyxRGan1PCW+8+ZXTpbFygGvZCGeUFo3qLDQDzxPZ5Euhpg==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANmac4JLf2fAhTVb9bQUcF9w62TIk5e+\\nWSywaLNGbhzmnIitGOhWUvJpR8y2a+OAbHQTmgZucxSlxnFOtCtzvksCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}}, "Transation": {"money": "$", "date": "2019", "amount": 900}}'}]，回傳該檔
+
+2019-12-05 00:20:28,620        log. line: 49 - WARNING - Thread: 14584
+	node 00 上線了!!!
+
+2019-12-05 00:20:33,190        log. line: 49 - WARNING - Thread: 7352
+	node 11 上線了!!!
+
+2019-12-05 00:20:33,191        log. line: 49 - WARNING - Thread: 7352
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 5520), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:33,327        log. line: 49 - WARNING - Thread: 8264
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:20:33,328        log. line: 49 - WARNING - Thread: 8264
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:33,358        log. line: 49 - WARNING - Thread: 7352
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:20:33,359        log. line: 49 - WARNING - Thread: 7352
+	node 11 開始向 ['00']， 請求find self
+
+2019-12-05 00:20:33,363        log. line: 49 - WARNING - Thread: 3448
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-12-05 00:20:33,365        log. line: 49 - WARNING - Thread: 3448
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:33,366        log. line: 49 - WARNING - Thread: 3448
+	此node 00 非查找目標，執行LookUP function
+
+2019-12-05 00:20:33,368        log. line: 49 - WARNING - Thread: 3448
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-12-05 00:20:33,369        log. line: 49 - WARNING - Thread: 3448
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-12-05 00:20:33,370        log. line: 49 - WARNING - Thread: 3448
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-12-05 00:20:33,373        log. line: 49 - WARNING - Thread: 7352
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:20:33,375        log. line: 49 - WARNING - Thread: 13648
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-12-05 00:20:33,379        log. line: 49 - WARNING - Thread: 13648
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5520], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:33,380        log. line: 49 - WARNING - Thread: 13648
+	Get node receive reply, add the node into bucket []
+
+2019-12-05 00:20:33,381        log. line: 49 - WARNING - Thread: 2792
+	node 00 收到 node 11 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:20:33,382        log. line: 49 - WARNING - Thread: 2792
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:33,383        log. line: 49 - WARNING - Thread: 2792
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:33,384        log. line: 49 - WARNING - Thread: 2792
+	00 開始驗證來自 11的簽章 ， 簽章為 ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:20:33,385        log. line: 49 - WARNING - Thread: 2792
+	node 11 send a contract to you, the contract is: 
+	 {'Trader': {'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476433.364346, 'sign': {'signature': 'ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'lender': ''}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:20:39,803        log. line: 49 - WARNING - Thread: 16492
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:20:39,805        log. line: 49 - WARNING - Thread: 16492
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5520], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:39,834        log. line: 49 - WARNING - Thread: 14584
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-12-05 00:20:39,849        log. line: 49 - WARNING - Thread: 14584
+	取出在 00 中最靠近 10101010 的 node ['11'] 
+
+2019-12-05 00:20:39,850        log. line: 49 - WARNING - Thread: 14584
+	node 00 開始上傳檔案到網路，將資料傳給node ['11']
+
+2019-12-05 00:20:39,852        log. line: 49 - WARNING - Thread: 14584
+	回傳  ， node [['11', 0]] 為下一個儲存對象
+
+2019-12-05 00:20:39,854        log. line: 49 - WARNING - Thread: 6744
+	node 11 收到 node 00 的  ['POST', 'file', '10101010'] 請求
+
+2019-12-05 00:20:39,855        log. line: 49 - WARNING - Thread: 6744
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5520], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:39,859        log. line: 49 - WARNING - Thread: 6744
+	取出在 11 中最靠近 10101010 的 node [] 
+
+2019-12-05 00:20:39,860        log. line: 49 - WARNING - Thread: 6744
+	node 11 開始上傳檔案到網路，將資料傳給node []
+
+2019-12-05 00:20:39,861        log. line: 49 - WARNING - Thread: 6744
+	回傳  00， node [] 為下一個儲存對象
+
+2019-12-05 00:20:39,876        log. line: 49 - WARNING - Thread: 15444
+	node 00 收到 node 11 的  ['REPLY', 'postfile', '10101010'] 請求
+
+2019-12-05 00:20:39,890        log. line: 26 - ERROR - Thread: 16000
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2Pnetwork.py", line 32, in CallHandle: 
+    if not RespondHandle(connect, data, KadeNode):
+  File "D:\eclipse\python\hw\kademilia\src\handler\handler.py", line 26, in RespondHandle: 
+    data = json.loads(data)
+  File "D:\Anaconda\lib\json\__init__.py", line 354, in loads: 
+    return _default_decoder.decode(s)
+  File "D:\Anaconda\lib\json\decoder.py", line 339, in decode: 
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Anaconda\lib\json\decoder.py", line 355, in raw_decode: 
+    obj, end = self.scan_once(s, idx)
+[JSONDecodeError] Unterminated string starting at: line 1 column 1371 (char 1370)
+
+2019-12-05 00:20:39,886        log. line: 49 - WARNING - Thread: 15444
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:39,896        log. line: 26 - ERROR - Thread: 16000
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2Pnetwork.py", line 32, in CallHandle: 
+    if not RespondHandle(connect, data, KadeNode):
+  File "D:\eclipse\python\hw\kademilia\src\handler\handler.py", line 26, in RespondHandle: 
+    data = json.loads(data)
+  File "D:\Anaconda\lib\json\__init__.py", line 354, in loads: 
+    return _default_decoder.decode(s)
+  File "D:\Anaconda\lib\json\decoder.py", line 339, in decode: 
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Anaconda\lib\json\decoder.py", line 357, in raw_decode: 
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+[JSONDecodeError] Expecting value: line 1 column 1 (char 0)
+
+2019-12-05 00:20:40,227        log. line: 49 - WARNING - Thread: 15444
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:20:40,289        log. line: 49 - WARNING - Thread: 15444
+	Update File success!!!!!!!  存到檔案的節點有['11']
+
+2019-12-05 00:23:18,132        log. line: 49 - WARNING - Thread: 7352
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-12-05 00:23:18,134        log. line: 49 - WARNING - Thread: 7352
+	node 11 擁有該檔案 [{'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 5520], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476439.8357089], [{'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476439.857767]], 'file': '{"Trader": {"lender": {"node": {"ID": "00", "address": ["192.168.200.90", 5520], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476439.6256506, "sign": {"signature": "YlP9Mito5VyhANsQ1e+7ZYhZ/KniczJF4xal49pcZT4aC1sTIyprarHdmay0ratx/j0IYj0xHXcmDe/2bA7FeQ==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}, "brower": {"node": {"ID": "11", "address": ["192.168.200.90", 5524], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476433.364346, "sign": {"signature": "ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}}, "Transation": {"money": "$", "date": "2019", "amount": 900}}'}]，回傳該檔
+
+2019-12-05 00:28:07,630        log. line: 49 - WARNING - Thread: 3136
+	node 00 上線了!!!
+
+2019-12-05 00:28:10,971        log. line: 49 - WARNING - Thread: 10304
+	node 11 上線了!!!
+
+2019-12-05 00:28:10,972        log. line: 49 - WARNING - Thread: 10304
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 5767), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:11,102        log. line: 49 - WARNING - Thread: 16156
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:28:11,103        log. line: 49 - WARNING - Thread: 16156
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5770], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:11,164        log. line: 49 - WARNING - Thread: 10304
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:28:11,166        log. line: 49 - WARNING - Thread: 10304
+	node 11 開始向 ['00']， 請求find self
+
+2019-12-05 00:28:11,168        log. line: 49 - WARNING - Thread: 16052
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-12-05 00:28:11,170        log. line: 49 - WARNING - Thread: 16052
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5770], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:11,171        log. line: 49 - WARNING - Thread: 16052
+	此node 00 非查找目標，執行LookUP function
+
+2019-12-05 00:28:11,172        log. line: 49 - WARNING - Thread: 16052
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-12-05 00:28:11,174        log. line: 49 - WARNING - Thread: 16052
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-12-05 00:28:11,174        log. line: 49 - WARNING - Thread: 16052
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-12-05 00:28:11,180        log. line: 49 - WARNING - Thread: 10304
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:28:11,181        log. line: 49 - WARNING - Thread: 3468
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-12-05 00:28:11,184        log. line: 49 - WARNING - Thread: 3468
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5767], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:11,184        log. line: 49 - WARNING - Thread: 7712
+	node 00 收到 node 11 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:28:11,185        log. line: 49 - WARNING - Thread: 3468
+	Get node receive reply, add the node into bucket []
+
+2019-12-05 00:28:11,185        log. line: 49 - WARNING - Thread: 7712
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5770], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:11,188        log. line: 49 - WARNING - Thread: 7712
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5770], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:11,189        log. line: 49 - WARNING - Thread: 7712
+	00 開始驗證來自 11的簽章 ， 簽章為 FE9/r2y3BRzjSRisOpRJEQ+LBp2T7bWRWJGTp3M+tJMHfA5tHp2dEGdEjlhNL9ZphYzcrx1cRT94e0BH1+tJjg==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:28:11,191        log. line: 49 - WARNING - Thread: 7712
+	node 11 send a contract to you, the contract is: 
+	 {'Trader': {'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5770], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476891.1683366, 'sign': {'signature': 'FE9/r2y3BRzjSRisOpRJEQ+LBp2T7bWRWJGTp3M+tJMHfA5tHp2dEGdEjlhNL9ZphYzcrx1cRT94e0BH1+tJjg==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'lender': ''}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:28:14,145        log. line: 49 - WARNING - Thread: 14032
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:28:14,146        log. line: 49 - WARNING - Thread: 14032
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5767], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:14,207        log. line: 49 - WARNING - Thread: 3136
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-12-05 00:28:14,223        log. line: 49 - WARNING - Thread: 3136
+	取出在 00 中最靠近 10101010 的 node ['11'] 
+
+2019-12-05 00:28:14,223        log. line: 49 - WARNING - Thread: 3136
+	node 00 開始上傳檔案到網路，將資料傳給node ['11']
+
+2019-12-05 00:28:14,224        log. line: 49 - WARNING - Thread: 16660
+	node 11 收到 node 00 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:28:14,225        log. line: 49 - WARNING - Thread: 3136
+	回傳  ， node [['11', 0]] 為下一個儲存對象
+
+2019-12-05 00:28:14,226        log. line: 49 - WARNING - Thread: 16660
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5767], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:14,227        log. line: 49 - WARNING - Thread: 16660
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5767], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:14,228        log. line: 49 - WARNING - Thread: 16660
+	11 開始驗證來自 00的簽章 ， 簽章為 m/gHMKVbdCRQILK47hx68P65eZCYybXOCe0BVYDqcowt3I7F4bhL1nkyApOQJbOPCIws3Nz5N42kSuYe7a/UrQ==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:28:14,228        log. line: 49 - WARNING - Thread: 16376
+	node 11 收到 node 00 的  ['POST', 'file', '10101010'] 請求
+
+2019-12-05 00:28:14,230        log. line: 49 - WARNING - Thread: 16660
+	node 00 send a contract to you, the contract is: 
+	 {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 5767], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476894.0696237, 'sign': {'signature': 'm/gHMKVbdCRQILK47hx68P65eZCYybXOCe0BVYDqcowt3I7F4bhL1nkyApOQJbOPCIws3Nz5N42kSuYe7a/UrQ==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476433.364346, 'sign': {'signature': 'ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:28:14,230        log. line: 49 - WARNING - Thread: 16376
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 5767], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:14,234        log. line: 49 - WARNING - Thread: 16376
+	取出在 11 中最靠近 10101010 的 node [] 
+
+2019-12-05 00:28:14,234        log. line: 49 - WARNING - Thread: 16376
+	node 11 開始上傳檔案到網路，將資料傳給node []
+
+2019-12-05 00:28:14,235        log. line: 49 - WARNING - Thread: 16376
+	回傳  00， node [] 為下一個儲存對象
+
+2019-12-05 00:28:14,285        log. line: 49 - WARNING - Thread: 8484
+	node 00 收到 node 11 的  ['REPLY', 'postfile', '10101010'] 請求
+
+2019-12-05 00:28:14,331        log. line: 49 - WARNING - Thread: 8484
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5770], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:14,622        log. line: 49 - WARNING - Thread: 8484
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 5770], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:28:14,647        log. line: 49 - WARNING - Thread: 8484
+	Update File success!!!!!!!  存到檔案的節點有['11']
+
+2019-12-05 00:28:19,934        log. line: 49 - WARNING - Thread: 10304
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-12-05 00:28:19,936        log. line: 49 - WARNING - Thread: 10304
+	node 11 擁有該檔案 [{'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 5520], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476439.8357089], [{'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476439.857767]], 'file': '{"Trader": {"lender": {"node": {"ID": "00", "address": ["192.168.200.90", 5520], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476439.6256506, "sign": {"signature": "YlP9Mito5VyhANsQ1e+7ZYhZ/KniczJF4xal49pcZT4aC1sTIyprarHdmay0ratx/j0IYj0xHXcmDe/2bA7FeQ==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}, "brower": {"node": {"ID": "11", "address": ["192.168.200.90", 5524], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476433.364346, "sign": {"signature": "ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}}, "Transation": {"money": "$", "date": "2019", "amount": 900}}'}, {'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 5767], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476894.2084947], [{'ID': '11', 'address': ['192.168.200.90', 5770], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476894.2325585]], 'file': '{"Trader": {"lender": {"node": {"ID": "00", "address": ["192.168.200.90", 5767], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476894.0696237, "sign": {"signature": "m/gHMKVbdCRQILK47hx68P65eZCYybXOCe0BVYDqcowt3I7F4bhL1nkyApOQJbOPCIws3Nz5N42kSuYe7a/UrQ==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}, "brower": {"node": {"ID": "11", "address": ["192.168.200.90", 5524], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476433.364346, "sign": {"signature": "ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}}, "Transation": {"money": "$", "date": "2019", "amount": 900}}'}]，回傳該檔
+
+2019-12-05 00:41:10,347        log. line: 49 - WARNING - Thread: 16368
+	node 00 上線了!!!
+
+2019-12-05 00:41:13,996        log. line: 49 - WARNING - Thread: 16120
+	node 11 上線了!!!
+
+2019-12-05 00:41:13,998        log. line: 49 - WARNING - Thread: 16120
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 6177), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbmVTo5uF+czRY8FvuLOoPxhSrOwxa2\nNWxdbpx7UFSAIEqv7JTUn3ipRFzn3IR8ztI7Vxay3QpR91bHgsXKDTMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:14,106        log. line: 49 - WARNING - Thread: 3560
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:41:14,109        log. line: 49 - WARNING - Thread: 3560
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6180], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK9mtrmTJJh333YzuLn2BhrAUn27gQLv\nl0wj5RZE8RURVvYFeqekA02pYBEaw5PqSmp0nCBE8Th5IilfsDx6dbMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:14,168        log. line: 49 - WARNING - Thread: 16120
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:41:14,170        log. line: 49 - WARNING - Thread: 16120
+	node 11 開始向 ['00']， 請求find self
+
+2019-12-05 00:41:14,173        log. line: 49 - WARNING - Thread: 14628
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-12-05 00:41:14,174        log. line: 49 - WARNING - Thread: 14628
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6180], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK9mtrmTJJh333YzuLn2BhrAUn27gQLv\nl0wj5RZE8RURVvYFeqekA02pYBEaw5PqSmp0nCBE8Th5IilfsDx6dbMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:14,176        log. line: 49 - WARNING - Thread: 14628
+	此node 00 非查找目標，執行LookUP function
+
+2019-12-05 00:41:14,177        log. line: 49 - WARNING - Thread: 14628
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-12-05 00:41:14,178        log. line: 49 - WARNING - Thread: 14628
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-12-05 00:41:14,179        log. line: 49 - WARNING - Thread: 14628
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-12-05 00:41:14,184        log. line: 49 - WARNING - Thread: 16120
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:41:14,185        log. line: 49 - WARNING - Thread: 11556
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-12-05 00:41:14,186        log. line: 49 - WARNING - Thread: 11556
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6177], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbmVTo5uF+czRY8FvuLOoPxhSrOwxa2\nNWxdbpx7UFSAIEqv7JTUn3ipRFzn3IR8ztI7Vxay3QpR91bHgsXKDTMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:14,188        log. line: 49 - WARNING - Thread: 11556
+	Get node receive reply, add the node into bucket []
+
+2019-12-05 00:41:14,188        log. line: 49 - WARNING - Thread: 536
+	node 00 收到 node 11 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:41:14,189        log. line: 49 - WARNING - Thread: 536
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6180], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK9mtrmTJJh333YzuLn2BhrAUn27gQLv\nl0wj5RZE8RURVvYFeqekA02pYBEaw5PqSmp0nCBE8Th5IilfsDx6dbMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:14,190        log. line: 49 - WARNING - Thread: 536
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6180], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK9mtrmTJJh333YzuLn2BhrAUn27gQLv\nl0wj5RZE8RURVvYFeqekA02pYBEaw5PqSmp0nCBE8Th5IilfsDx6dbMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:14,191        log. line: 49 - WARNING - Thread: 536
+	00 開始驗證來自 11的簽章 ， 簽章為 nOI+89gTo1rTzGAOhtlHeJY4WBJs87BsDxE1qRGth/UheaFvzJ2c48HhqpAGW5gYsNJPMyZ38E0SohwgGVpHWw==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:41:14,193        log. line: 49 - WARNING - Thread: 536
+	node 11 send a contract to you, the contract is: 
+	 {'Trader': {'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 6180], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK9mtrmTJJh333YzuLn2BhrAUn27gQLv\nl0wj5RZE8RURVvYFeqekA02pYBEaw5PqSmp0nCBE8Th5IilfsDx6dbMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477674.1737535, 'sign': {'signature': 'nOI+89gTo1rTzGAOhtlHeJY4WBJs87BsDxE1qRGth/UheaFvzJ2c48HhqpAGW5gYsNJPMyZ38E0SohwgGVpHWw==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK9mtrmTJJh333YzuLn2BhrAUn27gQLv\nl0wj5RZE8RURVvYFeqekA02pYBEaw5PqSmp0nCBE8Th5IilfsDx6dbMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'lender': ''}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:41:16,463        log. line: 49 - WARNING - Thread: 8368
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:41:16,465        log. line: 49 - WARNING - Thread: 8368
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6177], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbmVTo5uF+czRY8FvuLOoPxhSrOwxa2\nNWxdbpx7UFSAIEqv7JTUn3ipRFzn3IR8ztI7Vxay3QpR91bHgsXKDTMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:16,556        log. line: 49 - WARNING - Thread: 16368
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-12-05 00:41:16,571        log. line: 49 - WARNING - Thread: 16368
+	取出在 00 中最靠近 10101010 的 node ['11'] 
+
+2019-12-05 00:41:16,572        log. line: 49 - WARNING - Thread: 16368
+	node 00 開始上傳檔案到網路，將資料傳給node ['11']
+
+2019-12-05 00:41:16,573        log. line: 49 - WARNING - Thread: 8928
+	node 11 收到 node 00 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:41:16,574        log. line: 49 - WARNING - Thread: 8928
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6177], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbmVTo5uF+czRY8FvuLOoPxhSrOwxa2\nNWxdbpx7UFSAIEqv7JTUn3ipRFzn3IR8ztI7Vxay3QpR91bHgsXKDTMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:16,575        log. line: 49 - WARNING - Thread: 16368
+	回傳  ， node [['11', 0]] 為下一個儲存對象
+
+2019-12-05 00:41:16,575        log. line: 49 - WARNING - Thread: 8928
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6177], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbmVTo5uF+czRY8FvuLOoPxhSrOwxa2\nNWxdbpx7UFSAIEqv7JTUn3ipRFzn3IR8ztI7Vxay3QpR91bHgsXKDTMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:16,577        log. line: 49 - WARNING - Thread: 8928
+	11 開始驗證來自 00的簽章 ， 簽章為 aypdT7/FsI2Fu3mvP2PWGWkrIPEUl2M4Jz2eJp4wQH9xcuGV8kZhCQlqMCXugwNwwCgzS0/pC8OTLughGU/uqA==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:41:16,577        log. line: 49 - WARNING - Thread: 15300
+	node 11 收到 node 00 的  ['POST', 'file', '10101010'] 請求
+
+2019-12-05 00:41:16,579        log. line: 49 - WARNING - Thread: 8928
+	node 00 send a contract to you, the contract is: 
+	 {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 6177], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbmVTo5uF+czRY8FvuLOoPxhSrOwxa2\nNWxdbpx7UFSAIEqv7JTUn3ipRFzn3IR8ztI7Vxay3QpR91bHgsXKDTMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477676.3918793, 'sign': {'signature': 'aypdT7/FsI2Fu3mvP2PWGWkrIPEUl2M4Jz2eJp4wQH9xcuGV8kZhCQlqMCXugwNwwCgzS0/pC8OTLughGU/uqA==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbmVTo5uF+czRY8FvuLOoPxhSrOwxa2\nNWxdbpx7UFSAIEqv7JTUn3ipRFzn3IR8ztI7Vxay3QpR91bHgsXKDTMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476433.364346, 'sign': {'signature': 'ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:41:16,580        log. line: 49 - WARNING - Thread: 15300
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6177], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbmVTo5uF+czRY8FvuLOoPxhSrOwxa2\nNWxdbpx7UFSAIEqv7JTUn3ipRFzn3IR8ztI7Vxay3QpR91bHgsXKDTMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:41:16,581        log. line: 26 - ERROR - Thread: 16368
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\node\KadeNode.py", line 224, in UpLoadFile: 
+    _SaveFile(df, self)
+  File "D:\eclipse\python\hw\kademilia\src\handler\respond.py", line 75, in _SaveFile: 
+    if GetHash(of_['file']) == GetHash(data['content']['file']):
+  File "D:\eclipse\python\hw\kademilia\src\util\hash.py", line 29, in GetHash: 
+    HashFunc.update(data.encode(encoding='utf-8'))
+[AttributeError] 'dict' object has no attribute 'encode'
+
+2019-12-05 00:41:16,587        log. line: 26 - ERROR - Thread: 15300
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2Pnetwork.py", line 32, in CallHandle: 
+    if not RespondHandle(connect, data, KadeNode):
+  File "D:\eclipse\python\hw\kademilia\src\handler\handler.py", line 81, in RespondHandle: 
+    ReplyPostFile(data, KadeNode)
+  File "D:\eclipse\python\hw\kademilia\src\handler\respond.py", line 103, in ReplyPostFile: 
+    _SaveFile(data, KadeNode)
+  File "D:\eclipse\python\hw\kademilia\src\handler\respond.py", line 75, in _SaveFile: 
+    if GetHash(of_['file']) == GetHash(data['content']['file']):
+  File "D:\eclipse\python\hw\kademilia\src\util\hash.py", line 29, in GetHash: 
+    HashFunc.update(data.encode(encoding='utf-8'))
+[AttributeError] 'dict' object has no attribute 'encode'
+
+2019-12-05 00:43:18,904        log. line: 49 - WARNING - Thread: 10564
+	node 00 上線了!!!
+
+2019-12-05 00:43:23,041        log. line: 49 - WARNING - Thread: 15256
+	node 11 上線了!!!
+
+2019-12-05 00:43:23,042        log. line: 49 - WARNING - Thread: 15256
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 6252), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:23,202        log. line: 49 - WARNING - Thread: 6448
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:43:23,204        log. line: 49 - WARNING - Thread: 6448
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6255], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALXjJDlEGnWXHMSxFwkSssfGqLRaFNhw\nlO4+lSa4UsnNmMWH2VH3ry0OpeZgAL4QzSksejzbtBNdzhPxFOg0id0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:23,248        log. line: 49 - WARNING - Thread: 15256
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:43:23,250        log. line: 49 - WARNING - Thread: 15256
+	node 11 開始向 ['00']， 請求find self
+
+2019-12-05 00:43:23,253        log. line: 49 - WARNING - Thread: 8840
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-12-05 00:43:23,255        log. line: 49 - WARNING - Thread: 8840
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6255], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALXjJDlEGnWXHMSxFwkSssfGqLRaFNhw\nlO4+lSa4UsnNmMWH2VH3ry0OpeZgAL4QzSksejzbtBNdzhPxFOg0id0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:23,257        log. line: 49 - WARNING - Thread: 8840
+	此node 00 非查找目標，執行LookUP function
+
+2019-12-05 00:43:23,258        log. line: 49 - WARNING - Thread: 8840
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-12-05 00:43:23,260        log. line: 49 - WARNING - Thread: 8840
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-12-05 00:43:23,260        log. line: 49 - WARNING - Thread: 8840
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-12-05 00:43:23,264        log. line: 49 - WARNING - Thread: 15256
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:43:23,266        log. line: 49 - WARNING - Thread: 13072
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-12-05 00:43:23,268        log. line: 49 - WARNING - Thread: 13072
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:23,269        log. line: 49 - WARNING - Thread: 13072
+	Get node receive reply, add the node into bucket []
+
+2019-12-05 00:43:23,269        log. line: 49 - WARNING - Thread: 7560
+	node 00 收到 node 11 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:43:23,270        log. line: 49 - WARNING - Thread: 7560
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6255], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALXjJDlEGnWXHMSxFwkSssfGqLRaFNhw\nlO4+lSa4UsnNmMWH2VH3ry0OpeZgAL4QzSksejzbtBNdzhPxFOg0id0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:23,271        log. line: 49 - WARNING - Thread: 7560
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6255], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALXjJDlEGnWXHMSxFwkSssfGqLRaFNhw\nlO4+lSa4UsnNmMWH2VH3ry0OpeZgAL4QzSksejzbtBNdzhPxFOg0id0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:23,272        log. line: 49 - WARNING - Thread: 7560
+	00 開始驗證來自 11的簽章 ， 簽章為 Qyq+SIZouWwMDihKK39R4Wd47cFOwWYdTh1ulibA97GS8mdupuVQqsgL6WeklB5cK0+5SFfrzH4EsG/VdtpQvw==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:43:23,275        log. line: 49 - WARNING - Thread: 7560
+	node 11 send a contract to you, the contract is: 
+	 {'Trader': {'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 6255], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALXjJDlEGnWXHMSxFwkSssfGqLRaFNhw\nlO4+lSa4UsnNmMWH2VH3ry0OpeZgAL4QzSksejzbtBNdzhPxFOg0id0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477803.2535667, 'sign': {'signature': 'Qyq+SIZouWwMDihKK39R4Wd47cFOwWYdTh1ulibA97GS8mdupuVQqsgL6WeklB5cK0+5SFfrzH4EsG/VdtpQvw==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALXjJDlEGnWXHMSxFwkSssfGqLRaFNhw\nlO4+lSa4UsnNmMWH2VH3ry0OpeZgAL4QzSksejzbtBNdzhPxFOg0id0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'lender': ''}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:43:27,732        log. line: 49 - WARNING - Thread: 4416
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:43:27,734        log. line: 49 - WARNING - Thread: 4416
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:27,799        log. line: 49 - WARNING - Thread: 10564
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-12-05 00:43:27,806        log. line: 49 - WARNING - Thread: 10564
+	取出在 00 中最靠近 10101010 的 node ['11'] 
+
+2019-12-05 00:43:27,807        log. line: 49 - WARNING - Thread: 10564
+	node 00 開始上傳檔案到網路，將資料傳給node ['11']
+
+2019-12-05 00:43:27,807        log. line: 49 - WARNING - Thread: 7848
+	node 11 收到 node 00 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:43:27,808        log. line: 49 - WARNING - Thread: 10564
+	回傳  ， node [['11', 0]] 為下一個儲存對象
+
+2019-12-05 00:43:27,808        log. line: 49 - WARNING - Thread: 7848
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:27,810        log. line: 49 - WARNING - Thread: 7848
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:27,812        log. line: 49 - WARNING - Thread: 9576
+	node 11 收到 node 00 的  ['POST', 'file', '10101010'] 請求
+
+2019-12-05 00:43:27,813        log. line: 49 - WARNING - Thread: 7848
+	11 開始驗證來自 00的簽章 ， 簽章為 bnWxDfSkaFrKqvyiM6wehrJ+uiKh4AIYdFgwbiGAGxk/c3sBpsUJ5dFldGR1x1LUbvevKxCJxv03a9w2+ZVSyw==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:43:27,814        log. line: 49 - WARNING - Thread: 9576
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:27,816        log. line: 49 - WARNING - Thread: 7848
+	node 00 send a contract to you, the contract is: 
+	 {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477807.6487985, 'sign': {'signature': 'bnWxDfSkaFrKqvyiM6wehrJ+uiKh4AIYdFgwbiGAGxk/c3sBpsUJ5dFldGR1x1LUbvevKxCJxv03a9w2+ZVSyw==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476433.364346, 'sign': {'signature': 'ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:43:27,822        log. line: 49 - WARNING - Thread: 9576
+	取出在 11 中最靠近 10101010 的 node [] 
+
+2019-12-05 00:43:27,824        log. line: 49 - WARNING - Thread: 9576
+	node 11 開始上傳檔案到網路，將資料傳給node []
+
+2019-12-05 00:43:27,826        log. line: 49 - WARNING - Thread: 9576
+	回傳  00， node [] 為下一個儲存對象
+
+2019-12-05 00:43:27,891        log. line: 49 - WARNING - Thread: 13052
+	node 00 收到 node 11 的  ['REPLY', 'postfile', '10101010'] 請求
+
+2019-12-05 00:43:27,922        log. line: 49 - WARNING - Thread: 13052
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6255], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALXjJDlEGnWXHMSxFwkSssfGqLRaFNhw\nlO4+lSa4UsnNmMWH2VH3ry0OpeZgAL4QzSksejzbtBNdzhPxFOg0id0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:28,407        log. line: 49 - WARNING - Thread: 13052
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6255], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALXjJDlEGnWXHMSxFwkSssfGqLRaFNhw\nlO4+lSa4UsnNmMWH2VH3ry0OpeZgAL4QzSksejzbtBNdzhPxFOg0id0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:43:28,438        log. line: 49 - WARNING - Thread: 13052
+	Update File success!!!!!!!  存到檔案的節點有['11']
+
+2019-12-05 00:43:36,815        log. line: 49 - WARNING - Thread: 15256
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-12-05 00:43:36,818        log. line: 49 - WARNING - Thread: 15256
+	node 11 擁有該檔案 [{'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 5520], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476439.8357089], [{'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476439.857767]], 'file': '{"Trader": {"lender": {"node": {"ID": "00", "address": ["192.168.200.90", 5520], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476439.6256506, "sign": {"signature": "YlP9Mito5VyhANsQ1e+7ZYhZ/KniczJF4xal49pcZT4aC1sTIyprarHdmay0ratx/j0IYj0xHXcmDe/2bA7FeQ==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK6juq5yZSBeoVwELeHdVV+LEvZxHOV6\\nO9QKCuFGaVa/Uk/8VifErGE7B0yia8COcqn7V6ybr6z6NiC0Ls0HmJkCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}, "brower": {"node": {"ID": "11", "address": ["192.168.200.90", 5524], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476433.364346, "sign": {"signature": "ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}}, "Transation": {"money": "$", "date": "2019", "amount": 900}}'}, {'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 5767], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476894.2084947], [{'ID': '11', 'address': ['192.168.200.90', 5770], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpkFG+LR/kqFdUG7n6tP0MRhK4o0I3h\nfit65TPIxGLmE03Xnu3VX+ZFnSVe0VmusQcLkorKsHTmOO5pufOQWdsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575476894.2325585]], 'file': '{"Trader": {"lender": {"node": {"ID": "00", "address": ["192.168.200.90", 5767], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476894.0696237, "sign": {"signature": "m/gHMKVbdCRQILK47hx68P65eZCYybXOCe0BVYDqcowt3I7F4bhL1nkyApOQJbOPCIws3Nz5N42kSuYe7a/UrQ==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANa52wGat7tAKiv4a30jjL9Cut2sFqgx\\nadwVkWypa1AMJeH7G9HuGkRv//SaUMfy9EKy3AzhRMsdo6nTAHY2y6UCAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}, "brower": {"node": {"ID": "11", "address": ["192.168.200.90", 5524], "PublicKey": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}, "time": 1575476433.364346, "sign": {"signature": "ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==", "message": "{\'money\': \'$\', \'date\': \'2019\', \'amount\': 900}", "public_key": "-----BEGIN PUBLIC KEY-----\\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\\n-----END PUBLIC KEY-----\\n"}}}, "Transation": {"money": "$", "date": "2019", "amount": 900}}'}, {'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575477807.8011928], [{'ID': '11', 'address': ['192.168.200.90', 6255], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALXjJDlEGnWXHMSxFwkSssfGqLRaFNhw\nlO4+lSa4UsnNmMWH2VH3ry0OpeZgAL4QzSksejzbtBNdzhPxFOg0id0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575477807.8192408]], 'file': {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477807.6487985, 'sign': {'signature': 'bnWxDfSkaFrKqvyiM6wehrJ+uiKh4AIYdFgwbiGAGxk/c3sBpsUJ5dFldGR1x1LUbvevKxCJxv03a9w2+ZVSyw==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAL64mY+hez7KqG/EgNDwK5ot/Ecn6SE+\nk2ZoPBT05f9ch6pIW7b9zJBSBq4sFaKXpA09HXXsda2D1lLRhXCAZM0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 5524], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575476433.364346, 'sign': {'signature': 'ss/ejaQcQqicZ5IS6+lrXVJqTOzgxipAmWHjsa2lgOWg6/Jp3AAJtAgK+GAyiD/wmoIDoAMZr9iCjV8j+UrqsA==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALRjIStkNBvGHhhTWbXkow5eGKwAxTNp\nKrbsa3KRAcQAXn2S/iverUGV7FWszF2ZULKZQuYTNVN6AY5b1Nj1vSECAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}}]，回傳該檔
+
+2019-12-05 00:44:14,891        log. line: 49 - WARNING - Thread: 12716
+	node 00 上線了!!!
+
+2019-12-05 00:44:18,308        log. line: 49 - WARNING - Thread: 17228
+	node 11 上線了!!!
+
+2019-12-05 00:44:18,309        log. line: 49 - WARNING - Thread: 17228
+	node 11 開始將 node {'ID': '00', 'address': ('192.168.200.90', 6290), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:18,410        log. line: 49 - WARNING - Thread: 13824
+	node 00 收到 node 11 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:44:18,412        log. line: 49 - WARNING - Thread: 13824
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:18,472        log. line: 49 - WARNING - Thread: 17228
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:44:18,473        log. line: 49 - WARNING - Thread: 17228
+	node 11 開始向 ['00']， 請求find self
+
+2019-12-05 00:44:18,475        log. line: 49 - WARNING - Thread: 15152
+	node 00 收到 node 11 的  ['GET', 'node', '11'] 請求
+
+2019-12-05 00:44:18,476        log. line: 49 - WARNING - Thread: 15152
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:18,477        log. line: 49 - WARNING - Thread: 15152
+	此node 00 非查找目標，執行LookUP function
+
+2019-12-05 00:44:18,478        log. line: 49 - WARNING - Thread: 15152
+	node 00 開始查找 node 11 ， 雙方距離差距為 3，位於bucket 1
+
+2019-12-05 00:44:18,479        log. line: 49 - WARNING - Thread: 15152
+	取出在 00 中最靠近 11 的 node [] 
+
+2019-12-05 00:44:18,479        log. line: 49 - WARNING - Thread: 15152
+	no node has find, 回傳  11 查找結果  "nothing"
+
+2019-12-05 00:44:18,503        log. line: 49 - WARNING - Thread: 17228
+	取出在 11 中最靠近 00 的 node ['00'] 
+
+2019-12-05 00:44:18,504        log. line: 49 - WARNING - Thread: 13964
+	node 11 收到 node 00 的  ['REPLY', 'getnode'] 請求
+
+2019-12-05 00:44:18,505        log. line: 49 - WARNING - Thread: 13964
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6290], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:18,505        log. line: 49 - WARNING - Thread: 13964
+	Get node receive reply, add the node into bucket []
+
+2019-12-05 00:44:18,505        log. line: 49 - WARNING - Thread: 14772
+	node 00 收到 node 11 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:44:18,506        log. line: 49 - WARNING - Thread: 14772
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:18,507        log. line: 49 - WARNING - Thread: 14772
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:18,507        log. line: 49 - WARNING - Thread: 14772
+	00 開始驗證來自 11的簽章 ， 簽章為 QyioMU3WSE3ZCTn2ovm5ME6lPbmHa4BJrhGZf9JxZ0nB2xgsdoDgW/5rO+hYKAQyGgO/+2406/sQ+tBybh+J4Q==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:44:18,508        log. line: 49 - WARNING - Thread: 14772
+	node 11 send a contract to you, the contract is: 
+	 {'Trader': {'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477858.4754596, 'sign': {'signature': 'QyioMU3WSE3ZCTn2ovm5ME6lPbmHa4BJrhGZf9JxZ0nB2xgsdoDgW/5rO+hYKAQyGgO/+2406/sQ+tBybh+J4Q==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'lender': ''}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:44:20,791        log. line: 49 - WARNING - Thread: 6416
+	node 11 收到 node 00 的  ['TRACE', 'ping'] 請求
+
+2019-12-05 00:44:20,792        log. line: 49 - WARNING - Thread: 6416
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6290], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:20,802        log. line: 49 - WARNING - Thread: 12716
+	取出在 00 中最靠近 11 的 node ['11'] 
+
+2019-12-05 00:44:20,826        log. line: 49 - WARNING - Thread: 12716
+	取出在 00 中最靠近 10101010 的 node ['11'] 
+
+2019-12-05 00:44:20,826        log. line: 49 - WARNING - Thread: 12716
+	node 00 開始上傳檔案到網路，將資料傳給node ['11']
+
+2019-12-05 00:44:20,827        log. line: 49 - WARNING - Thread: 4760
+	node 11 收到 node 00 的  ['POST', 'contract'] 請求
+
+2019-12-05 00:44:20,827        log. line: 49 - WARNING - Thread: 12716
+	回傳  ， node [['11', 0]] 為下一個儲存對象
+
+2019-12-05 00:44:20,828        log. line: 49 - WARNING - Thread: 4760
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6290], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:20,828        log. line: 49 - WARNING - Thread: 4760
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6290], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:20,829        log. line: 49 - WARNING - Thread: 4760
+	11 開始驗證來自 00的簽章 ， 簽章為 CuTml48upvbrCFUAsn7MgmfTB4Sb3DZxWi+CNzi5BHRhFXMIbaBEV9vKTJ0qSsDVP5/NPV5fx0kSaFIQSZaeTA==，文本為 {'money': '$', 'date': '2019', 'amount': 900}
+
+2019-12-05 00:44:20,829        log. line: 49 - WARNING - Thread: 9384
+	node 11 收到 node 00 的  ['POST', 'file', '10101010'] 請求
+
+2019-12-05 00:44:20,831        log. line: 49 - WARNING - Thread: 4760
+	node 00 send a contract to you, the contract is: 
+	 {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 6290], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477860.6070728, 'sign': {'signature': 'CuTml48upvbrCFUAsn7MgmfTB4Sb3DZxWi+CNzi5BHRhFXMIbaBEV9vKTJ0qSsDVP5/NPV5fx0kSaFIQSZaeTA==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477858.4754596, 'sign': {'signature': 'QyioMU3WSE3ZCTn2ovm5ME6lPbmHa4BJrhGZf9JxZ0nB2xgsdoDgW/5rO+hYKAQyGgO/+2406/sQ+tBybh+J4Q==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}
+
+2019-12-05 00:44:20,831        log. line: 49 - WARNING - Thread: 9384
+	node 11 開始將 node {'ID': '00', 'address': ['192.168.200.90', 6290], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:20,836        log. line: 49 - WARNING - Thread: 9384
+	取出在 11 中最靠近 10101010 的 node [] 
+
+2019-12-05 00:44:20,837        log. line: 49 - WARNING - Thread: 9384
+	node 11 開始上傳檔案到網路，將資料傳給node []
+
+2019-12-05 00:44:20,837        log. line: 49 - WARNING - Thread: 9384
+	回傳  00， node [] 為下一個儲存對象
+
+2019-12-05 00:44:20,872        log. line: 49 - WARNING - Thread: 8388
+	node 00 收到 node 11 的  ['REPLY', 'postfile', '10101010'] 請求
+
+2019-12-05 00:44:20,903        log. line: 49 - WARNING - Thread: 8388
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:21,245        log. line: 49 - WARNING - Thread: 8388
+	node 00 開始將 node {'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-05 00:44:21,276        log. line: 49 - WARNING - Thread: 8388
+	Update File success!!!!!!!  存到檔案的節點有['11']
+
+2019-12-05 00:44:22,726        log. line: 49 - WARNING - Thread: 17228
+	node 11 收到GET file請求，開始查找本地有無該檔案
+
+2019-12-05 00:44:22,727        log. line: 49 - WARNING - Thread: 17228
+	node 11 擁有該檔案 [{'FileID': '10101010', 'saver': [[{'ID': '00', 'address': ['192.168.200.90', 6290], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575477860.803112], [{'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 1575477860.8347223]], 'file': {'Trader': {'lender': {'node': {'ID': '00', 'address': ['192.168.200.90', 6290], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477860.6070728, 'sign': {'signature': 'CuTml48upvbrCFUAsn7MgmfTB4Sb3DZxWi+CNzi5BHRhFXMIbaBEV9vKTJ0qSsDVP5/NPV5fx0kSaFIQSZaeTA==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrggOjsbJ717gdzlHCQ49HSEmK4aCZI\nXtZ6VSkQ9ixRr9SLGfPglXR3IELZMc4Ay+CsAc7TucHPlDV/LOOAYK0CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, 'brower': {'node': {'ID': '11', 'address': ['192.168.200.90', 6293], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}, 'time': 1575477858.4754596, 'sign': {'signature': 'QyioMU3WSE3ZCTn2ovm5ME6lPbmHa4BJrhGZf9JxZ0nB2xgsdoDgW/5rO+hYKAQyGgO/+2406/sQ+tBybh+J4Q==', 'message': "{'money': '$', 'date': '2019', 'amount': 900}", 'public_key': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAN8XsyOqYHCkCYvnuz4LQmL89W7vdBUe\nb3zpWw3NDWKlXtj67fBZ0KIpk/Sq0Bz5xM76c1yvIvGPhMmWJ5Ix+W8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}}, 'Transation': {'money': '$', 'date': '2019', 'amount': 900}}}]，回傳該檔
+

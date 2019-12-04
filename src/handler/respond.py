@@ -72,7 +72,7 @@ def _SaveFile(data, KadeNode):
         OriginFile = json.loads(file.read_text())
         same = False
         for of_ in OriginFile:
-            if GetHash(of_['file']) == GetHash(data['content']['file']):
+            if GetHash(str(of_['file'])) == GetHash(str(data['content']['file'])):
             # if save file has exist, update saver
             #if of_['FileID'] == data['content']['FileID']:
                 saver = {s[0]['ID'] : s for s in json.loads(file.read_text())[0]['saver']}
