@@ -33,6 +33,9 @@ def Setup():
 
 
 def some_method():
+    print('開始測試P2P contract')
+    from P2PContractTest import ContractTest
+    ContractTest()
     print('自由測試')
     from P2PFinalTest import FinalTest
     FinalTest()

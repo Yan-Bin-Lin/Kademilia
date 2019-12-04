@@ -163,7 +163,7 @@ class P2PNode(KadeNode):
         return self.GetRecord('contract', ID)
         
     @CheckError()
-    def WriteContract(self, lender = True, transation = None, **kwargs):
+    def WriteContract(self, lender = True, transation = None, other = '', **kwargs):
         '''
         write the contract
         
@@ -182,13 +182,14 @@ class P2PNode(KadeNode):
                         'message' : str(transation),
                         'public_key' : self.NodeData.GetByteStringPubKey()
                     }
-                 }
+                 },
+                'brower' if lender else 'lender' : other
             },
             'Transation' : transation
         }
     
     @CheckError()
-    def SendContract(self, lender = True, *, ID = '', node = None, transation = None, **kwargs):
+    def SendContract(self, lender = True, *, ID = '', node = None, transation = None, other = '', **kwargs):
         '''
         send the contract to peer or upload to website
         
@@ -199,7 +200,7 @@ class P2PNode(KadeNode):
             transation: the contract data of transation that has already save in local
             kwargs (dict): everything you want to write in the transation
         '''
-        contract = self.WriteContract(lender, transation, **kwargs)
+        contract = self.WriteContract(lender, transation, other, **kwargs)
         self.send(ID, 'POST', 'contract', node = node, content = contract)
         return contract
     

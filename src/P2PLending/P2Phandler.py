@@ -54,7 +54,11 @@ def ReplyPostMsg(data, KadeNode):
 
 def ReplyPostContract(data, KadeNode):
     '''reply to a contract request'''
-    peer = data['content']['Trader'].get('lender', data['content']['Trader'].get('brower', None))['sign']
+    if data['content']['Trader']['lender'] == '':
+        peer = data['content']['Trader']['brower']['sign']
+    else:
+        peer = data['content']['Trader']['lender']['sign']
+    #peer = data['content']['Trader'].get('lender', data['content']['Trader'].get('brower', None))['sign']
     logger.warning(f"{KadeNode.ID} 開始驗證來自 {data['path'][-1]['ID']}的簽章 ， 簽章為 {peer['signature']}，文本為 {peer['message']}")
     if KadeNode.RSA.verify(
                     KadeNode.RSA.LoadBytePublicKey(peer['public_key'].encode('utf-8')), 

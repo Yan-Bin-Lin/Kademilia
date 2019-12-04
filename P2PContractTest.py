@@ -15,33 +15,22 @@ def ContractTest():
         server.save()
         
         input('wait for instruct to get contract')
-        print(f"the chat record of 11 is {server.GetTmpContract('11')}")
-        print(server.GetAllNode())
-        contract = server.SendContract(True, ID = '11', transation = server.GetTmpContract('11')[0]['msg'])
+        print(f"the contract record of 11 is {server.GetTmpContract('11')}")
+        contract = server.SendContract(True, ID = '11', transation = server.GetTmpContract('11')[0]['msg']['Transation'], other = server.GetTmpContract('11')[0]['msg']['Trader']['brower'])
         server.UpLoadFile(str(contract))
         
     elif instruc == 'n':
-        with open('Save/00.txt', 'rb') as file:
-            s = pickle.load(file)
+        with open('Save/00/00.txt', 'rb') as file:
+            server = pickle.load(file)
                 
-        end = P2PNode(ID = '11', node = s)
+        end = P2PNode(ID = '11', node = server)
         end.save()
+        
         end.SendContract(False, ID = '00', money = '$', date = '2019', amount = 900)
-         
-         
-    elif instruc == 'm':
-        with open('Save/11.txt', 'rb') as file:
-            s = pickle.load(file)   
+        
+        input('wait for instruct to get contract')
+        print(f"the contract record of 00 is {end.GetTmpContract('00')}")
 
-        mid = P2PNode(ID = '10', node = s)    
-        
-        
-    else:
-        with open('Save/00.txt', 'rb') as file:
-            s = pickle.load(file)   
-
-        mid = P2PNode(ID = '01', node = s)  
-        
     while(1):
         pass
 
