@@ -7,6 +7,7 @@ Created on 2019年10月2日
 from pathlib import Path
 import json
 import time
+import ast
 
 from ..node.KadeNode import KadeNode
 from ..crypto.DHKeyExchange import DH
@@ -111,7 +112,50 @@ class P2PNode(KadeNode):
             files = [json.loads(f.read_text()) for f in FileNames]
             return files
         else:
-            return self.request(ID, 'GET', 'post')[0]
+            result = self.request(ID, 'GET', 'post')[0]
+            result = ast.literal_eval(result)
+            return result
+
+    @CheckError()
+    def DelPost(self, time, ID = None):
+        '''     
+        delete a post
+        
+        Arguments
+            ID (bstr): the ID of node you want him delete the post, if None, will delete the post in local
+            time (float): linux time of the post you want to delete
+        '''
+        if ID == None:
+            
+            FileNames =  [f for f in Path(self.SavePath, 'post').glob('*.txt')]
+            files = [json.loads(f.read_text()) for f in FileNames]
+            
+            delete = False
+            
+            # search for the post
+            for i in range(len(files)):
+                for j in range(len(files)):
+                    if files[i][j]['time'] == time:
+                        delete = True
+                        break
+        
+                if delete:
+                    break
+            
+            if delete:
+                del files[i][j]
+            
+                for post in files:
+                    folder = Path(self.SavePath, "post")
+            
+                    folder.mkdir(parents=True, exist_ok=True) 
+                    file = folder / (post[0]['from']['ID'] + '.txt')
+                    file.write_text(json.dumps(post))
+    
+        else:
+            self.send(ID, 'DELETE', 'post', str(time))
+            
+            
     
     @CheckError()
     def GetTmpContract(self, ID):

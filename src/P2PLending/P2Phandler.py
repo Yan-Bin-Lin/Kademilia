@@ -133,6 +133,7 @@ def ReceiveGetPost(data, KadeNode):
         folder.mkdir(parents=True, exist_ok=True) 
         file = folder / (post[0]['from']['ID'] + '.txt')
         
+
         if not file.exists():
             # save the file in local
             file.write_text(json.dumps(post))
@@ -147,6 +148,12 @@ def ReceiveGetPost(data, KadeNode):
         KadeNode.lock.release()
     
     return data['content']
+
+
+def ReplyDelPost(data, KadeNode):
+    ''' reply to a delete post request'''
+    KadeNode.DelPost(float(data['instruct'][2]))
+    
     
 def P2PHandle(connect, data, KadeNode):
     '''
@@ -192,3 +199,6 @@ def P2PHandle(connect, data, KadeNode):
         # the secrete initial fail
         if instruct[1] == 'secrete':
             ReplyDelSecrete(data, KadeNode)
+        # a node delete post
+        if instruct[1] == 'post':
+            ReplyDelPost(data, KadeNode)

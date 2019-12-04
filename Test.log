@@ -47447,3 +47447,1664 @@ Traceback (most recent call last):
 	node 00000000 reply the post to you, the post is: 
 	 [[{'msg': 'eokgpekrgpok', 'time': 1575298829.2125924, 'from': {'ID': '01011001', 'address': ['192.168.1.113', 5070], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMg6aG/SvQuAm7UUSBUOU+pIJNwBmaG0\nv6MDsQKA6XPcDMiatSv1VZvUgCsBl4cMff0i28WxLMUcheke7sxA4p8CAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
 
+2019-12-03 11:50:30,469        log. line: 49 - WARNING - Thread: 14004
+	node 00000000 上線了!!!
+
+2019-12-03 11:50:47,336        log. line: 49 - WARNING - Thread: 16772
+	node 01101011 上線了!!!
+
+2019-12-03 11:50:47,337        log. line: 49 - WARNING - Thread: 16772
+	node 01101011 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6004), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:47,391        log. line: 49 - WARNING - Thread: 2272
+	node 00000000 收到 node 01101011 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:50:47,402        log. line: 49 - WARNING - Thread: 2272
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:47,424        log. line: 49 - WARNING - Thread: 16772
+	取出在 01101011 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:50:47,425        log. line: 49 - WARNING - Thread: 16772
+	node 01101011 開始向 ['00000000']， 請求find self
+
+2019-12-03 11:50:47,451        log. line: 49 - WARNING - Thread: 13776
+	node 00000000 收到 node 01101011 的  ['GET', 'node', '01101011'] 請求
+
+2019-12-03 11:50:47,477        log. line: 49 - WARNING - Thread: 13776
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:47,497        log. line: 49 - WARNING - Thread: 13776
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 11:50:47,518        log. line: 49 - WARNING - Thread: 13776
+	node 00000000 開始查找 node 01101011 ， 雙方距離差距為 107，位於bucket 1
+
+2019-12-03 11:50:47,534        log. line: 49 - WARNING - Thread: 13776
+	取出在 00000000 中最靠近 01101011 的 node [] 
+
+2019-12-03 11:50:47,549        log. line: 49 - WARNING - Thread: 13776
+	no node has find, 回傳  01101011 查找結果  "nothing"
+
+2019-12-03 11:50:47,627        log. line: 49 - WARNING - Thread: 12844
+	node 01101011 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-03 11:50:47,627        log. line: 49 - WARNING - Thread: 12844
+	node 01101011 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:47,628        log. line: 49 - WARNING - Thread: 12844
+	Get node receive reply, add the node into bucket []
+
+2019-12-03 11:50:57,827        log. line: 49 - WARNING - Thread: 13408
+	node 00000000 收到 node 01101011 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:50:57,843        log. line: 49 - WARNING - Thread: 13408
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:57,871        log. line: 49 - WARNING - Thread: 16772
+	取出在 01101011 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:50:57,894        log. line: 49 - WARNING - Thread: 17128
+	node 00000000 收到 node 01101011 的  ['GET', 'post'] 請求
+
+2019-12-03 11:50:57,904        log. line: 49 - WARNING - Thread: 17128
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:57,924        log. line: 49 - WARNING - Thread: 17128
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:58,024        log. line: 49 - WARNING - Thread: 5500
+	node 01101011 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:50:58,026        log. line: 49 - WARNING - Thread: 5500
+	node 01101011 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:58,093        log. line: 49 - WARNING - Thread: 17128
+	取出在 00000000 中最靠近 01101011 的 node ['01101011'] 
+
+2019-12-03 11:50:58,153        log. line: 49 - WARNING - Thread: 6660
+	node 01101011 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-03 11:50:58,155        log. line: 49 - WARNING - Thread: 6660
+	node 01101011 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:58,159        log. line: 49 - WARNING - Thread: 6660
+	node 01101011 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:50:58,160        log. line: 49 - WARNING - Thread: 6660
+	node 00000000 reply the post to you, the post is: 
+	 []
+
+2019-12-03 11:51:13,793        log. line: 49 - WARNING - Thread: 3076
+	node 00000000 收到 node 01101011 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:51:13,809        log. line: 49 - WARNING - Thread: 3076
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:51:13,839        log. line: 49 - WARNING - Thread: 16772
+	取出在 01101011 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:51:13,855        log. line: 49 - WARNING - Thread: 1244
+	node 00000000 收到 node 01101011 的  ['POST', 'post', 'ergpergp'] 請求
+
+2019-12-03 11:51:13,876        log. line: 49 - WARNING - Thread: 1244
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:51:13,891        log. line: 49 - WARNING - Thread: 1244
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:51:13,897        log. line: 49 - WARNING - Thread: 1244
+	node 01101011 send a post to you, the post is: 
+	 ergpergp
+
+2019-12-03 11:51:20,275        log. line: 49 - WARNING - Thread: 16772
+	取出在 01101011 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:51:20,286        log. line: 49 - WARNING - Thread: 10704
+	node 00000000 收到 node 01101011 的  ['GET', 'post'] 請求
+
+2019-12-03 11:51:20,291        log. line: 49 - WARNING - Thread: 10704
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:51:20,297        log. line: 49 - WARNING - Thread: 10704
+	node 00000000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:51:20,542        log. line: 49 - WARNING - Thread: 14440
+	node 01101011 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:51:20,543        log. line: 49 - WARNING - Thread: 14440
+	node 01101011 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:51:20,592        log. line: 49 - WARNING - Thread: 10704
+	取出在 00000000 中最靠近 01101011 的 node ['01101011'] 
+
+2019-12-03 11:51:20,710        log. line: 49 - WARNING - Thread: 13304
+	node 01101011 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-03 11:51:20,711        log. line: 49 - WARNING - Thread: 13304
+	node 01101011 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:51:20,714        log. line: 49 - WARNING - Thread: 13304
+	node 01101011 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:51:20,714        log. line: 49 - WARNING - Thread: 13304
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'ergpergp', 'time': 1575345073.9076586, 'from': {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
+2019-12-03 11:54:59,017        log. line: 49 - WARNING - Thread: 12128
+	node 10011111 上線了!!!
+
+2019-12-03 11:54:59,018        log. line: 49 - WARNING - Thread: 12128
+	node 10011111 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6004), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:54:59,068        log. line: 49 - WARNING - Thread: 5980
+	node 00000000 收到 node 10011111 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:54:59,074        log. line: 49 - WARNING - Thread: 5980
+	node 00000000 開始將 node {'ID': '10011111', 'address': ['192.168.200.90', 6174], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALtw0NoiorCpJwpWgzFDI+l3mNj8qOka\nboL2k/Pq1Fa3Fa3AZlrB9sx6VTq+Y16SA+kV45dVzvoBGD4uh214tncCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:54:59,111        log. line: 49 - WARNING - Thread: 12128
+	取出在 10011111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:54:59,112        log. line: 49 - WARNING - Thread: 12128
+	node 10011111 開始向 ['00000000']， 請求find self
+
+2019-12-03 11:54:59,132        log. line: 49 - WARNING - Thread: 17084
+	node 00000000 收到 node 10011111 的  ['GET', 'node', '10011111'] 請求
+
+2019-12-03 11:54:59,133        log. line: 49 - WARNING - Thread: 17084
+	node 00000000 開始將 node {'ID': '10011111', 'address': ['192.168.200.90', 6174], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALtw0NoiorCpJwpWgzFDI+l3mNj8qOka\nboL2k/Pq1Fa3Fa3AZlrB9sx6VTq+Y16SA+kV45dVzvoBGD4uh214tncCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:54:59,144        log. line: 49 - WARNING - Thread: 17084
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 11:54:59,166        log. line: 49 - WARNING - Thread: 17084
+	node 00000000 開始查找 node 10011111 ， 雙方距離差距為 159，位於bucket 1
+
+2019-12-03 11:54:59,192        log. line: 49 - WARNING - Thread: 17084
+	取出在 00000000 中最靠近 10011111 的 node ['01101011'] 
+
+2019-12-03 11:54:59,213        log. line: 49 - WARNING - Thread: 17084
+	node 00000000 準備向 ['01101011'] 發出查找 node 10011111 的請求
+
+2019-12-03 11:54:59,253        log. line: 49 - WARNING - Thread: 17084
+	回傳  10011111 查找結果 ['01101011']
+
+2019-12-03 11:54:59,303        log. line: 49 - WARNING - Thread: 15552
+	node 10011111 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-03 11:54:59,305        log. line: 49 - WARNING - Thread: 15552
+	node 10011111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:54:59,308        log. line: 49 - WARNING - Thread: 15552
+	Get node receive reply, add the node into bucket ['01101011']
+
+2019-12-03 11:54:59,309        log. line: 49 - WARNING - Thread: 15552
+	node 10011111 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 11:55:04,822        log. line: 49 - WARNING - Thread: 15880
+	node 00000000 收到 node 10011111 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:55:04,827        log. line: 49 - WARNING - Thread: 15880
+	node 00000000 開始將 node {'ID': '10011111', 'address': ['192.168.200.90', 6174], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALtw0NoiorCpJwpWgzFDI+l3mNj8qOka\nboL2k/Pq1Fa3Fa3AZlrB9sx6VTq+Y16SA+kV45dVzvoBGD4uh214tncCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:55:04,835        log. line: 49 - WARNING - Thread: 12128
+	取出在 10011111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:55:04,854        log. line: 49 - WARNING - Thread: 10068
+	node 00000000 收到 node 10011111 的  ['GET', 'post'] 請求
+
+2019-12-03 11:55:04,880        log. line: 49 - WARNING - Thread: 10068
+	node 00000000 開始將 node {'ID': '10011111', 'address': ['192.168.200.90', 6174], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALtw0NoiorCpJwpWgzFDI+l3mNj8qOka\nboL2k/Pq1Fa3Fa3AZlrB9sx6VTq+Y16SA+kV45dVzvoBGD4uh214tncCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:55:04,886        log. line: 49 - WARNING - Thread: 10068
+	node 00000000 開始將 node {'ID': '10011111', 'address': ['192.168.200.90', 6174], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALtw0NoiorCpJwpWgzFDI+l3mNj8qOka\nboL2k/Pq1Fa3Fa3AZlrB9sx6VTq+Y16SA+kV45dVzvoBGD4uh214tncCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:55:05,105        log. line: 49 - WARNING - Thread: 11760
+	node 10011111 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:55:05,106        log. line: 49 - WARNING - Thread: 11760
+	node 10011111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:55:05,125        log. line: 49 - WARNING - Thread: 10068
+	取出在 00000000 中最靠近 10011111 的 node ['10011111'] 
+
+2019-12-03 11:55:05,148        log. line: 26 - ERROR - Thread: 12128
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2PNode.py", line 115, in GetPost: 
+    return ast.literal_eval(self.request(ID, 'GET', 'post')[0][0])
+  File "D:\Anaconda\lib\ast.py", line 48, in literal_eval: 
+    node_or_string = parse(node_or_string, mode='eval')
+  File "D:\Anaconda\lib\ast.py", line 35, in parse: 
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+[SyntaxError] unexpected EOF while parsing
+
+2019-12-03 11:56:58,822        log. line: 49 - WARNING - Thread: 2964
+	node 10101110 上線了!!!
+
+2019-12-03 11:56:58,822        log. line: 49 - WARNING - Thread: 2964
+	node 10101110 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6004), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:56:58,863        log. line: 49 - WARNING - Thread: 5588
+	node 00000000 收到 node 10101110 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:56:58,874        log. line: 49 - WARNING - Thread: 5588
+	node 00000000 開始將 node {'ID': '10101110', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALcrPensxtlgTdsOYbaBR/1yW2hC4tUQ\n92GQjLP+0NrU3ckp4ukQqp1N5HJEhBDksouPFUIRPbL86f/Ec5ly/sUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:56:58,905        log. line: 49 - WARNING - Thread: 2964
+	取出在 10101110 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:56:58,906        log. line: 49 - WARNING - Thread: 2964
+	node 10101110 開始向 ['00000000']， 請求find self
+
+2019-12-03 11:56:58,931        log. line: 49 - WARNING - Thread: 13744
+	node 00000000 收到 node 10101110 的  ['GET', 'node', '10101110'] 請求
+
+2019-12-03 11:56:58,942        log. line: 49 - WARNING - Thread: 13744
+	node 00000000 開始將 node {'ID': '10101110', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALcrPensxtlgTdsOYbaBR/1yW2hC4tUQ\n92GQjLP+0NrU3ckp4ukQqp1N5HJEhBDksouPFUIRPbL86f/Ec5ly/sUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:56:58,959        log. line: 49 - WARNING - Thread: 13744
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 11:56:58,970        log. line: 49 - WARNING - Thread: 13744
+	node 00000000 開始查找 node 10101110 ， 雙方距離差距為 174，位於bucket 2
+
+2019-12-03 11:56:59,043        log. line: 49 - WARNING - Thread: 13744
+	取出在 00000000 中最靠近 10101110 的 node ['10011111', '01101011'] 
+
+2019-12-03 11:56:59,054        log. line: 49 - WARNING - Thread: 13744
+	node 00000000 準備向 ['10011111', '01101011'] 發出查找 node 10101110 的請求
+
+2019-12-03 11:56:59,087        log. line: 49 - WARNING - Thread: 13744
+	回傳  10101110 查找結果 ['10011111', '01101011']
+
+2019-12-03 11:56:59,146        log. line: 49 - WARNING - Thread: 4108
+	node 10101110 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-03 11:56:59,148        log. line: 49 - WARNING - Thread: 4108
+	node 10101110 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:56:59,151        log. line: 49 - WARNING - Thread: 4108
+	Get node receive reply, add the node into bucket ['10011111', '01101011']
+
+2019-12-03 11:56:59,153        log. line: 49 - WARNING - Thread: 4108
+	node 10101110 開始將 node {'ID': '10011111', 'address': ['192.168.200.90', 6174], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALtw0NoiorCpJwpWgzFDI+l3mNj8qOka\nboL2k/Pq1Fa3Fa3AZlrB9sx6VTq+Y16SA+kV45dVzvoBGD4uh214tncCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:56:59,154        log. line: 49 - WARNING - Thread: 4108
+	node 10101110 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:57:02,711        log. line: 49 - WARNING - Thread: 6036
+	node 00000000 收到 node 10101110 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:57:02,727        log. line: 49 - WARNING - Thread: 6036
+	node 00000000 開始將 node {'ID': '10101110', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALcrPensxtlgTdsOYbaBR/1yW2hC4tUQ\n92GQjLP+0NrU3ckp4ukQqp1N5HJEhBDksouPFUIRPbL86f/Ec5ly/sUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:57:02,749        log. line: 49 - WARNING - Thread: 2964
+	取出在 10101110 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:57:02,764        log. line: 49 - WARNING - Thread: 10268
+	node 00000000 收到 node 10101110 的  ['GET', 'post'] 請求
+
+2019-12-03 11:57:02,769        log. line: 49 - WARNING - Thread: 10268
+	node 00000000 開始將 node {'ID': '10101110', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALcrPensxtlgTdsOYbaBR/1yW2hC4tUQ\n92GQjLP+0NrU3ckp4ukQqp1N5HJEhBDksouPFUIRPbL86f/Ec5ly/sUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:57:02,775        log. line: 49 - WARNING - Thread: 10268
+	node 00000000 開始將 node {'ID': '10101110', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALcrPensxtlgTdsOYbaBR/1yW2hC4tUQ\n92GQjLP+0NrU3ckp4ukQqp1N5HJEhBDksouPFUIRPbL86f/Ec5ly/sUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:57:02,895        log. line: 49 - WARNING - Thread: 16184
+	node 10101110 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:57:02,897        log. line: 49 - WARNING - Thread: 16184
+	node 10101110 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:57:02,955        log. line: 49 - WARNING - Thread: 10268
+	取出在 00000000 中最靠近 10101110 的 node ['10101110'] 
+
+2019-12-03 11:57:02,992        log. line: 49 - WARNING - Thread: 11560
+	node 10101110 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-03 11:57:02,993        log. line: 49 - WARNING - Thread: 11560
+	node 10101110 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:57:02,997        log. line: 49 - WARNING - Thread: 11560
+	node 10101110 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:57:02,998        log. line: 49 - WARNING - Thread: 11560
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'ergpergp', 'time': 1575345073.9076586, 'from': {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
+2019-12-03 11:57:52,814        log. line: 49 - WARNING - Thread: 6588
+	node 01110000 上線了!!!
+
+2019-12-03 11:57:52,816        log. line: 49 - WARNING - Thread: 6588
+	node 01110000 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6004), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:52,841        log. line: 49 - WARNING - Thread: 12256
+	node 00000000 收到 node 01110000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:57:52,868        log. line: 49 - WARNING - Thread: 12256
+	node 00000000 開始將 node {'ID': '01110000', 'address': ['192.168.200.90', 6292], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANH2sT3DnVrDKVg+4rwRZVd5WmTiletL\nMFTq8+1OVCqQMukNKkJElmuuMHuhl9Iujh8Hvi2qHNHyNp7taJaucrkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:52,910        log. line: 49 - WARNING - Thread: 6588
+	取出在 01110000 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:57:52,911        log. line: 49 - WARNING - Thread: 6588
+	node 01110000 開始向 ['00000000']， 請求find self
+
+2019-12-03 11:57:52,936        log. line: 49 - WARNING - Thread: 8736
+	node 00000000 收到 node 01110000 的  ['GET', 'node', '01110000'] 請求
+
+2019-12-03 11:57:52,942        log. line: 49 - WARNING - Thread: 8736
+	node 00000000 開始將 node {'ID': '01110000', 'address': ['192.168.200.90', 6292], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANH2sT3DnVrDKVg+4rwRZVd5WmTiletL\nMFTq8+1OVCqQMukNKkJElmuuMHuhl9Iujh8Hvi2qHNHyNp7taJaucrkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:52,963        log. line: 49 - WARNING - Thread: 8736
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 11:57:52,994        log. line: 49 - WARNING - Thread: 8736
+	node 00000000 開始查找 node 01110000 ， 雙方距離差距為 112，位於bucket 5
+
+2019-12-03 11:57:53,016        log. line: 49 - WARNING - Thread: 8736
+	取出在 00000000 中最靠近 01110000 的 node ['10101110', '01101011', '10011111'] 
+
+2019-12-03 11:57:53,031        log. line: 49 - WARNING - Thread: 8736
+	node 00000000 準備向 ['10101110', '01101011', '10011111'] 發出查找 node 01110000 的請求
+
+2019-12-03 11:57:53,065        log. line: 49 - WARNING - Thread: 8736
+	回傳  01110000 查找結果 ['10101110', '01101011', '10011111']
+
+2019-12-03 11:57:53,098        log. line: 49 - WARNING - Thread: 11280
+	node 01110000 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-03 11:57:53,099        log. line: 49 - WARNING - Thread: 11280
+	node 01110000 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:53,102        log. line: 49 - WARNING - Thread: 11280
+	Get node receive reply, add the node into bucket ['10101110', '01101011', '10011111']
+
+2019-12-03 11:57:53,103        log. line: 49 - WARNING - Thread: 11280
+	node 01110000 開始將 node {'ID': '10101110', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALcrPensxtlgTdsOYbaBR/1yW2hC4tUQ\n92GQjLP+0NrU3ckp4ukQqp1N5HJEhBDksouPFUIRPbL86f/Ec5ly/sUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:57:53,105        log. line: 49 - WARNING - Thread: 11280
+	node 01110000 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:57:53,106        log. line: 49 - WARNING - Thread: 11280
+	node 01110000 開始將 node {'ID': '10011111', 'address': ['192.168.200.90', 6174], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALtw0NoiorCpJwpWgzFDI+l3mNj8qOka\nboL2k/Pq1Fa3Fa3AZlrB9sx6VTq+Y16SA+kV45dVzvoBGD4uh214tncCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:57:56,131        log. line: 49 - WARNING - Thread: 17916
+	node 00000000 收到 node 01110000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:57:56,137        log. line: 49 - WARNING - Thread: 17916
+	node 00000000 開始將 node {'ID': '01110000', 'address': ['192.168.200.90', 6292], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANH2sT3DnVrDKVg+4rwRZVd5WmTiletL\nMFTq8+1OVCqQMukNKkJElmuuMHuhl9Iujh8Hvi2qHNHyNp7taJaucrkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:56,171        log. line: 49 - WARNING - Thread: 6588
+	取出在 01110000 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:57:56,185        log. line: 49 - WARNING - Thread: 11772
+	node 00000000 收到 node 01110000 的  ['GET', 'post'] 請求
+
+2019-12-03 11:57:56,192        log. line: 49 - WARNING - Thread: 11772
+	node 00000000 開始將 node {'ID': '01110000', 'address': ['192.168.200.90', 6292], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANH2sT3DnVrDKVg+4rwRZVd5WmTiletL\nMFTq8+1OVCqQMukNKkJElmuuMHuhl9Iujh8Hvi2qHNHyNp7taJaucrkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:56,203        log. line: 49 - WARNING - Thread: 11772
+	node 00000000 開始將 node {'ID': '01110000', 'address': ['192.168.200.90', 6292], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANH2sT3DnVrDKVg+4rwRZVd5WmTiletL\nMFTq8+1OVCqQMukNKkJElmuuMHuhl9Iujh8Hvi2qHNHyNp7taJaucrkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:56,327        log. line: 49 - WARNING - Thread: 15548
+	node 01110000 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:57:56,328        log. line: 49 - WARNING - Thread: 15548
+	node 01110000 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:56,353        log. line: 49 - WARNING - Thread: 11772
+	取出在 00000000 中最靠近 01110000 的 node ['01110000'] 
+
+2019-12-03 11:57:56,405        log. line: 49 - WARNING - Thread: 13540
+	node 01110000 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-03 11:57:56,406        log. line: 49 - WARNING - Thread: 13540
+	node 01110000 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:56,407        log. line: 49 - WARNING - Thread: 13540
+	node 01110000 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 11:57:56,409        log. line: 49 - WARNING - Thread: 13540
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'ergpergp', 'time': 1575345073.9076586, 'from': {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
+2019-12-03 11:59:13,277        log. line: 49 - WARNING - Thread: 8836
+	node 11111001 上線了!!!
+
+2019-12-03 11:59:13,278        log. line: 49 - WARNING - Thread: 8836
+	node 11111001 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6004), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:59:13,320        log. line: 49 - WARNING - Thread: 14128
+	node 00000000 收到 node 11111001 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:59:13,332        log. line: 49 - WARNING - Thread: 14128
+	node 00000000 開始將 node {'ID': '11111001', 'address': ['192.168.200.90', 6351], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMR+GNNYREnFnUAI/ytehFoXBd87YdiG\nDMTu2MuJ1q87VIti8erG7eQCzD8pa19qvH7jo9ZvtvfbF2YvQDJ/d38CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:59:13,370        log. line: 49 - WARNING - Thread: 8836
+	取出在 11111001 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:59:13,372        log. line: 49 - WARNING - Thread: 8836
+	node 11111001 開始向 ['00000000']， 請求find self
+
+2019-12-03 11:59:13,402        log. line: 49 - WARNING - Thread: 12732
+	node 00000000 收到 node 11111001 的  ['GET', 'node', '11111001'] 請求
+
+2019-12-03 11:59:13,420        log. line: 49 - WARNING - Thread: 12732
+	node 00000000 開始將 node {'ID': '11111001', 'address': ['192.168.200.90', 6351], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMR+GNNYREnFnUAI/ytehFoXBd87YdiG\nDMTu2MuJ1q87VIti8erG7eQCzD8pa19qvH7jo9ZvtvfbF2YvQDJ/d38CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:59:13,427        log. line: 49 - WARNING - Thread: 12732
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 11:59:13,432        log. line: 49 - WARNING - Thread: 12732
+	node 00000000 開始查找 node 11111001 ， 雙方距離差距為 249，位於bucket 1
+
+2019-12-03 11:59:13,501        log. line: 49 - WARNING - Thread: 12732
+	取出在 00000000 中最靠近 11111001 的 node ['10011111', '01101011', '10101110', '01110000'] 
+
+2019-12-03 11:59:13,512        log. line: 49 - WARNING - Thread: 12732
+	node 00000000 準備向 ['10011111', '01101011', '10101110', '01110000'] 發出查找 node 11111001 的請求
+
+2019-12-03 11:59:13,534        log. line: 49 - WARNING - Thread: 12732
+	回傳  11111001 查找結果 ['10011111', '01101011', '10101110', '01110000']
+
+2019-12-03 11:59:13,570        log. line: 49 - WARNING - Thread: 8364
+	node 11111001 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-03 11:59:13,573        log. line: 49 - WARNING - Thread: 8364
+	node 11111001 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:59:13,577        log. line: 49 - WARNING - Thread: 8364
+	Get node receive reply, add the node into bucket ['10011111', '01101011', '10101110', '01110000']
+
+2019-12-03 11:59:13,578        log. line: 49 - WARNING - Thread: 8364
+	node 11111001 開始將 node {'ID': '10011111', 'address': ['192.168.200.90', 6174], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALtw0NoiorCpJwpWgzFDI+l3mNj8qOka\nboL2k/Pq1Fa3Fa3AZlrB9sx6VTq+Y16SA+kV45dVzvoBGD4uh214tncCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:59:13,579        log. line: 49 - WARNING - Thread: 8364
+	node 11111001 開始將 node {'ID': '01101011', 'address': ['192.168.200.90', 6013], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALIQtihRpL+wXh6VduPAYBdMYz+hb3Je\n1lyuI8sOBovxnT/gSYOumsW9oGI//n1VHtktEB85R4qCe3XQI3XvyHUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:59:13,584        log. line: 49 - WARNING - Thread: 8364
+	node 11111001 開始將 node {'ID': '10101110', 'address': ['192.168.200.90', 6252], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALcrPensxtlgTdsOYbaBR/1yW2hC4tUQ\n92GQjLP+0NrU3ckp4ukQqp1N5HJEhBDksouPFUIRPbL86f/Ec5ly/sUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:59:13,585        log. line: 49 - WARNING - Thread: 8364
+	node 11111001 開始將 node {'ID': '01110000', 'address': ['192.168.200.90', 6292], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANH2sT3DnVrDKVg+4rwRZVd5WmTiletL\nMFTq8+1OVCqQMukNKkJElmuuMHuhl9Iujh8Hvi2qHNHyNp7taJaucrkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:59:16,516        log. line: 49 - WARNING - Thread: 12780
+	node 00000000 收到 node 11111001 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:59:16,527        log. line: 49 - WARNING - Thread: 12780
+	node 00000000 開始將 node {'ID': '11111001', 'address': ['192.168.200.90', 6351], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMR+GNNYREnFnUAI/ytehFoXBd87YdiG\nDMTu2MuJ1q87VIti8erG7eQCzD8pa19qvH7jo9ZvtvfbF2YvQDJ/d38CAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 11:59:27,030        log. line: 49 - WARNING - Thread: 3292
+	node 01011010 上線了!!!
+
+2019-12-03 11:59:27,032        log. line: 49 - WARNING - Thread: 3292
+	node 01011010 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6004), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:59:27,067        log. line: 49 - WARNING - Thread: 9500
+	node 00000000 收到 node 01011010 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:59:27,098        log. line: 49 - WARNING - Thread: 9500
+	node 00000000 開始將 node {'ID': '01011010', 'address': ['192.168.200.90', 6369], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKna12m9UKVEQo4oygB1YHoyn4ZgfPc7\ncytofrl0qEM/Av4Rc1AEilXsKeCOj0ZNrlgeSzv7UPeZt1xhq5evJjcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:59:27,145        log. line: 49 - WARNING - Thread: 3292
+	取出在 01011010 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:59:27,147        log. line: 49 - WARNING - Thread: 3292
+	node 01011010 開始向 ['00000000']， 請求find self
+
+2019-12-03 11:59:27,171        log. line: 49 - WARNING - Thread: 14000
+	node 00000000 收到 node 01011010 的  ['GET', 'node', '01011010'] 請求
+
+2019-12-03 11:59:27,187        log. line: 49 - WARNING - Thread: 14000
+	node 00000000 開始將 node {'ID': '01011010', 'address': ['192.168.200.90', 6369], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKna12m9UKVEQo4oygB1YHoyn4ZgfPc7\ncytofrl0qEM/Av4Rc1AEilXsKeCOj0ZNrlgeSzv7UPeZt1xhq5evJjcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:59:27,215        log. line: 49 - WARNING - Thread: 14000
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 11:59:27,231        log. line: 49 - WARNING - Thread: 14000
+	node 00000000 開始查找 node 01011010 ， 雙方距離差距為 90，位於bucket 2
+
+2019-12-03 11:59:30,114        log. line: 49 - WARNING - Thread: 3292
+	取出在 01011010 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 11:59:30,127        log. line: 49 - WARNING - Thread: 16900
+	node 00000000 收到 node 01011010 的  ['GET', 'post'] 請求
+
+2019-12-03 11:59:30,128        log. line: 49 - WARNING - Thread: 16900
+	node 00000000 開始將 node {'ID': '01011010', 'address': ['192.168.200.90', 6369], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKna12m9UKVEQo4oygB1YHoyn4ZgfPc7\ncytofrl0qEM/Av4Rc1AEilXsKeCOj0ZNrlgeSzv7UPeZt1xhq5evJjcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:59:30,149        log. line: 49 - WARNING - Thread: 16900
+	node 00000000 開始將 node {'ID': '01011010', 'address': ['192.168.200.90', 6369], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKna12m9UKVEQo4oygB1YHoyn4ZgfPc7\ncytofrl0qEM/Av4Rc1AEilXsKeCOj0ZNrlgeSzv7UPeZt1xhq5evJjcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:59:30,393        log. line: 49 - WARNING - Thread: 16804
+	node 01011010 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 11:59:30,394        log. line: 49 - WARNING - Thread: 16804
+	node 01011010 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6004], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKWIjezM8SzS8dI/WCHyR2YkukrefjII\nZm+c7ltAmfz/zcYwRVNhQZkiWIiZrrvweEb/y56fw6rC2tqABvyOTLUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 11:59:30,464        log. line: 49 - WARNING - Thread: 16900
+	取出在 00000000 中最靠近 01011010 的 node ['01011010'] 
+
+2019-12-03 11:59:37,306        log. line: 49 - WARNING - Thread: 14000
+	取出在 00000000 中最靠近 01011010 的 node ['10101110', '01101011', '10011111', '01110000'] 
+
+2019-12-03 11:59:37,322        log. line: 49 - WARNING - Thread: 14000
+	node 00000000 準備向 ['10101110', '01101011', '10011111', '01110000'] 發出查找 node 01011010 的請求
+
+2019-12-03 11:59:37,334        log. line: 49 - WARNING - Thread: 14000
+	回傳  01011010 查找結果 ['10101110', '01101011', '10011111', '01110000']
+
+2019-12-03 12:00:07,571        log. line: 49 - WARNING - Thread: 15424
+	node 00000000 上線了!!!
+
+2019-12-03 12:00:12,906        log. line: 49 - WARNING - Thread: 6844
+	node 00110011 上線了!!!
+
+2019-12-03 12:00:12,907        log. line: 49 - WARNING - Thread: 6844
+	node 00110011 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6405), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:00:12,958        log. line: 49 - WARNING - Thread: 16584
+	node 00000000 收到 node 00110011 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:00:12,969        log. line: 49 - WARNING - Thread: 16584
+	node 00000000 開始將 node {'ID': '00110011', 'address': ['192.168.200.90', 6409], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALqCIG7bdWGFXYgIrC7t9GByMrwNwqbW\ny1D9Xz/0YeBt7T/dYt1K/cGN88NdfkI7Vxk1VV//dIaj6CEr1iJMvlUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:00:12,999        log. line: 49 - WARNING - Thread: 6844
+	取出在 00110011 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:00:13,000        log. line: 49 - WARNING - Thread: 6844
+	node 00110011 開始向 ['00000000']， 請求find self
+
+2019-12-03 12:00:13,019        log. line: 49 - WARNING - Thread: 7960
+	node 00000000 收到 node 00110011 的  ['GET', 'node', '00110011'] 請求
+
+2019-12-03 12:00:13,024        log. line: 49 - WARNING - Thread: 7960
+	node 00000000 開始將 node {'ID': '00110011', 'address': ['192.168.200.90', 6409], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALqCIG7bdWGFXYgIrC7t9GByMrwNwqbW\ny1D9Xz/0YeBt7T/dYt1K/cGN88NdfkI7Vxk1VV//dIaj6CEr1iJMvlUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:00:13,050        log. line: 49 - WARNING - Thread: 7960
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 12:00:13,070        log. line: 49 - WARNING - Thread: 7960
+	node 00000000 開始查找 node 00110011 ， 雙方距離差距為 51，位於bucket 1
+
+2019-12-03 12:00:13,086        log. line: 49 - WARNING - Thread: 7960
+	取出在 00000000 中最靠近 00110011 的 node [] 
+
+2019-12-03 12:00:13,096        log. line: 49 - WARNING - Thread: 7960
+	no node has find, 回傳  00110011 查找結果  "nothing"
+
+2019-12-03 12:00:13,159        log. line: 49 - WARNING - Thread: 13224
+	node 00110011 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-03 12:00:13,160        log. line: 49 - WARNING - Thread: 13224
+	node 00110011 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:00:13,163        log. line: 49 - WARNING - Thread: 13224
+	Get node receive reply, add the node into bucket []
+
+2019-12-03 12:00:16,440        log. line: 49 - WARNING - Thread: 4596
+	node 00000000 收到 node 00110011 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:00:16,456        log. line: 49 - WARNING - Thread: 4596
+	node 00000000 開始將 node {'ID': '00110011', 'address': ['192.168.200.90', 6409], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALqCIG7bdWGFXYgIrC7t9GByMrwNwqbW\ny1D9Xz/0YeBt7T/dYt1K/cGN88NdfkI7Vxk1VV//dIaj6CEr1iJMvlUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:00:16,474        log. line: 49 - WARNING - Thread: 6844
+	取出在 00110011 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:00:16,491        log. line: 49 - WARNING - Thread: 11932
+	node 00000000 收到 node 00110011 的  ['GET', 'post'] 請求
+
+2019-12-03 12:00:16,516        log. line: 49 - WARNING - Thread: 11932
+	node 00000000 開始將 node {'ID': '00110011', 'address': ['192.168.200.90', 6409], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALqCIG7bdWGFXYgIrC7t9GByMrwNwqbW\ny1D9Xz/0YeBt7T/dYt1K/cGN88NdfkI7Vxk1VV//dIaj6CEr1iJMvlUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:00:16,526        log. line: 49 - WARNING - Thread: 11932
+	node 00000000 開始將 node {'ID': '00110011', 'address': ['192.168.200.90', 6409], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALqCIG7bdWGFXYgIrC7t9GByMrwNwqbW\ny1D9Xz/0YeBt7T/dYt1K/cGN88NdfkI7Vxk1VV//dIaj6CEr1iJMvlUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:00:16,675        log. line: 49 - WARNING - Thread: 8968
+	node 00110011 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:00:16,676        log. line: 49 - WARNING - Thread: 8968
+	node 00110011 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:00:16,751        log. line: 49 - WARNING - Thread: 11932
+	取出在 00000000 中最靠近 00110011 的 node ['00110011'] 
+
+2019-12-03 12:00:16,813        log. line: 26 - ERROR - Thread: 6844
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2PNode.py", line 117, in GetPost: 
+    print(type(result[0]), end = '\n============================================\n')
+[IndexError] list index out of range
+
+2019-12-03 12:01:02,045        log. line: 49 - WARNING - Thread: 16316
+	node 01101010 上線了!!!
+
+2019-12-03 12:01:02,046        log. line: 49 - WARNING - Thread: 16316
+	node 01101010 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6405), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:01:02,110        log. line: 49 - WARNING - Thread: 2336
+	node 00000000 收到 node 01101010 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:01:02,120        log. line: 49 - WARNING - Thread: 2336
+	node 00000000 開始將 node {'ID': '01101010', 'address': ['192.168.200.90', 6447], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpm4we5Vkxdvt4cp+WmgnhLPWH3umTl\nTiumLQbXN0UOGQX4exLcoBxa5nqGAyJqMlJDtdvAp8cbDYMkBInuZiUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:01:02,192        log. line: 49 - WARNING - Thread: 16316
+	取出在 01101010 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:01:02,194        log. line: 49 - WARNING - Thread: 16316
+	node 01101010 開始向 ['00000000']， 請求find self
+
+2019-12-03 12:01:02,213        log. line: 49 - WARNING - Thread: 2560
+	node 00000000 收到 node 01101010 的  ['GET', 'node', '01101010'] 請求
+
+2019-12-03 12:01:02,255        log. line: 49 - WARNING - Thread: 2560
+	node 00000000 開始將 node {'ID': '01101010', 'address': ['192.168.200.90', 6447], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpm4we5Vkxdvt4cp+WmgnhLPWH3umTl\nTiumLQbXN0UOGQX4exLcoBxa5nqGAyJqMlJDtdvAp8cbDYMkBInuZiUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:01:02,292        log. line: 49 - WARNING - Thread: 2560
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 12:01:02,324        log. line: 49 - WARNING - Thread: 2560
+	node 00000000 開始查找 node 01101010 ， 雙方距離差距為 106，位於bucket 2
+
+2019-12-03 12:01:02,350        log. line: 49 - WARNING - Thread: 2560
+	取出在 00000000 中最靠近 01101010 的 node ['00110011'] 
+
+2019-12-03 12:01:02,356        log. line: 49 - WARNING - Thread: 2560
+	node 00000000 準備向 ['00110011'] 發出查找 node 01101010 的請求
+
+2019-12-03 12:01:02,377        log. line: 49 - WARNING - Thread: 2560
+	回傳  01101010 查找結果 ['00110011']
+
+2019-12-03 12:01:02,441        log. line: 49 - WARNING - Thread: 16204
+	node 01101010 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-03 12:01:02,443        log. line: 49 - WARNING - Thread: 16204
+	node 01101010 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:01:02,447        log. line: 49 - WARNING - Thread: 16204
+	Get node receive reply, add the node into bucket ['00110011']
+
+2019-12-03 12:01:02,447        log. line: 49 - WARNING - Thread: 16204
+	node 01101010 開始將 node {'ID': '00110011', 'address': ['192.168.200.90', 6409], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALqCIG7bdWGFXYgIrC7t9GByMrwNwqbW\ny1D9Xz/0YeBt7T/dYt1K/cGN88NdfkI7Vxk1VV//dIaj6CEr1iJMvlUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:01:05,059        log. line: 49 - WARNING - Thread: 13992
+	node 00000000 收到 node 01101010 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:01:05,069        log. line: 49 - WARNING - Thread: 13992
+	node 00000000 開始將 node {'ID': '01101010', 'address': ['192.168.200.90', 6447], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpm4we5Vkxdvt4cp+WmgnhLPWH3umTl\nTiumLQbXN0UOGQX4exLcoBxa5nqGAyJqMlJDtdvAp8cbDYMkBInuZiUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:01:05,100        log. line: 49 - WARNING - Thread: 16316
+	取出在 01101010 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:01:05,117        log. line: 49 - WARNING - Thread: 17672
+	node 00000000 收到 node 01101010 的  ['GET', 'post'] 請求
+
+2019-12-03 12:01:05,123        log. line: 49 - WARNING - Thread: 17672
+	node 00000000 開始將 node {'ID': '01101010', 'address': ['192.168.200.90', 6447], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpm4we5Vkxdvt4cp+WmgnhLPWH3umTl\nTiumLQbXN0UOGQX4exLcoBxa5nqGAyJqMlJDtdvAp8cbDYMkBInuZiUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:01:05,160        log. line: 49 - WARNING - Thread: 17672
+	node 00000000 開始將 node {'ID': '01101010', 'address': ['192.168.200.90', 6447], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpm4we5Vkxdvt4cp+WmgnhLPWH3umTl\nTiumLQbXN0UOGQX4exLcoBxa5nqGAyJqMlJDtdvAp8cbDYMkBInuZiUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:01:05,203        log. line: 49 - WARNING - Thread: 15820
+	node 01101010 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:01:05,204        log. line: 49 - WARNING - Thread: 15820
+	node 01101010 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:01:05,229        log. line: 49 - WARNING - Thread: 17672
+	取出在 00000000 中最靠近 01101010 的 node ['01101010'] 
+
+2019-12-03 12:01:24,938        log. line: 49 - WARNING - Thread: 6084
+	node 10101100 上線了!!!
+
+2019-12-03 12:01:24,939        log. line: 49 - WARNING - Thread: 6084
+	node 10101100 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6405), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:24,990        log. line: 49 - WARNING - Thread: 12616
+	node 00000000 收到 node 10101100 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:01:24,996        log. line: 49 - WARNING - Thread: 12616
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:25,017        log. line: 49 - WARNING - Thread: 6084
+	取出在 10101100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:01:25,018        log. line: 49 - WARNING - Thread: 6084
+	node 10101100 開始向 ['00000000']， 請求find self
+
+2019-12-03 12:01:25,055        log. line: 49 - WARNING - Thread: 6868
+	node 00000000 收到 node 10101100 的  ['GET', 'node', '10101100'] 請求
+
+2019-12-03 12:01:25,072        log. line: 49 - WARNING - Thread: 6868
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:25,100        log. line: 49 - WARNING - Thread: 6868
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 12:01:25,106        log. line: 49 - WARNING - Thread: 6868
+	node 00000000 開始查找 node 10101100 ， 雙方距離差距為 172，位於bucket 3
+
+2019-12-03 12:01:25,138        log. line: 49 - WARNING - Thread: 6868
+	取出在 00000000 中最靠近 10101100 的 node ['01101010', '00110011'] 
+
+2019-12-03 12:01:25,149        log. line: 49 - WARNING - Thread: 6868
+	node 00000000 準備向 ['01101010', '00110011'] 發出查找 node 10101100 的請求
+
+2019-12-03 12:01:25,265        log. line: 49 - WARNING - Thread: 6868
+	回傳  10101100 查找結果 ['01101010', '00110011']
+
+2019-12-03 12:01:25,294        log. line: 49 - WARNING - Thread: 16412
+	node 10101100 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-03 12:01:25,295        log. line: 49 - WARNING - Thread: 16412
+	node 10101100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:25,299        log. line: 49 - WARNING - Thread: 16412
+	Get node receive reply, add the node into bucket ['01101010', '00110011']
+
+2019-12-03 12:01:25,300        log. line: 49 - WARNING - Thread: 16412
+	node 10101100 開始將 node {'ID': '01101010', 'address': ['192.168.200.90', 6447], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpm4we5Vkxdvt4cp+WmgnhLPWH3umTl\nTiumLQbXN0UOGQX4exLcoBxa5nqGAyJqMlJDtdvAp8cbDYMkBInuZiUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:01:25,301        log. line: 49 - WARNING - Thread: 16412
+	node 10101100 開始將 node {'ID': '00110011', 'address': ['192.168.200.90', 6409], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALqCIG7bdWGFXYgIrC7t9GByMrwNwqbW\ny1D9Xz/0YeBt7T/dYt1K/cGN88NdfkI7Vxk1VV//dIaj6CEr1iJMvlUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:01:27,307        log. line: 49 - WARNING - Thread: 9316
+	node 00000000 收到 node 10101100 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:01:27,313        log. line: 49 - WARNING - Thread: 9316
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:27,336        log. line: 49 - WARNING - Thread: 6084
+	取出在 10101100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:01:27,386        log. line: 49 - WARNING - Thread: 7244
+	node 00000000 收到 node 10101100 的  ['GET', 'post'] 請求
+
+2019-12-03 12:01:27,406        log. line: 49 - WARNING - Thread: 7244
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:27,438        log. line: 49 - WARNING - Thread: 7244
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:27,533        log. line: 49 - WARNING - Thread: 18240
+	node 10101100 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:01:27,534        log. line: 49 - WARNING - Thread: 18240
+	node 10101100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:27,553        log. line: 49 - WARNING - Thread: 7244
+	取出在 00000000 中最靠近 10101100 的 node ['10101100'] 
+
+2019-12-03 12:01:27,607        log. line: 49 - WARNING - Thread: 8264
+	node 10101100 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-03 12:01:27,608        log. line: 49 - WARNING - Thread: 8264
+	node 10101100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:27,611        log. line: 49 - WARNING - Thread: 8264
+	node 10101100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:27,612        log. line: 49 - WARNING - Thread: 8264
+	node 00000000 reply the post to you, the post is: 
+	 []
+
+2019-12-03 12:01:53,195        log. line: 49 - WARNING - Thread: 11808
+	node 00000000 收到 node 10101100 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:01:53,201        log. line: 49 - WARNING - Thread: 11808
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:53,229        log. line: 49 - WARNING - Thread: 6084
+	取出在 10101100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:01:53,247        log. line: 49 - WARNING - Thread: 17384
+	node 00000000 收到 node 10101100 的  ['POST', 'post', 'erkgepogrkpeo'] 請求
+
+2019-12-03 12:01:53,257        log. line: 49 - WARNING - Thread: 17384
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:53,273        log. line: 49 - WARNING - Thread: 17384
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:53,278        log. line: 49 - WARNING - Thread: 17384
+	node 10101100 send a post to you, the post is: 
+	 erkgepogrkpeo
+
+2019-12-03 12:01:58,056        log. line: 49 - WARNING - Thread: 6084
+	取出在 10101100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:01:58,076        log. line: 49 - WARNING - Thread: 256
+	node 00000000 收到 node 10101100 的  ['GET', 'post'] 請求
+
+2019-12-03 12:01:58,086        log. line: 49 - WARNING - Thread: 256
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:58,108        log. line: 49 - WARNING - Thread: 256
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:58,357        log. line: 49 - WARNING - Thread: 16884
+	node 10101100 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:01:58,358        log. line: 49 - WARNING - Thread: 16884
+	node 10101100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:58,428        log. line: 49 - WARNING - Thread: 256
+	取出在 00000000 中最靠近 10101100 的 node ['10101100'] 
+
+2019-12-03 12:01:58,485        log. line: 49 - WARNING - Thread: 7984
+	node 10101100 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-03 12:01:58,486        log. line: 49 - WARNING - Thread: 7984
+	node 10101100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:58,489        log. line: 49 - WARNING - Thread: 7984
+	node 10101100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:01:58,490        log. line: 49 - WARNING - Thread: 7984
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'erkgepogrkpeo', 'time': 1575345713.299827, 'from': {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
+2019-12-03 12:02:50,974        log. line: 49 - WARNING - Thread: 11040
+	node 10110000 上線了!!!
+
+2019-12-03 12:02:50,974        log. line: 49 - WARNING - Thread: 11040
+	node 10110000 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6405), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:51,029        log. line: 49 - WARNING - Thread: 7832
+	node 00000000 收到 node 10110000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:02:51,056        log. line: 49 - WARNING - Thread: 7832
+	node 00000000 開始將 node {'ID': '10110000', 'address': ['192.168.200.90', 6532], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAM2e9c4QMwX9yRM8oGkSfRdM9CE6DEyj\nWCOO6U90YpgQDtlvrDTMuC782Mqlx0qcgO0SkEtPjrGIHZ/v97/B3oUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:51,082        log. line: 49 - WARNING - Thread: 11040
+	取出在 10110000 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:02:51,084        log. line: 49 - WARNING - Thread: 11040
+	node 10110000 開始向 ['00000000']， 請求find self
+
+2019-12-03 12:02:51,099        log. line: 49 - WARNING - Thread: 9644
+	node 00000000 收到 node 10110000 的  ['GET', 'node', '10110000'] 請求
+
+2019-12-03 12:02:51,120        log. line: 49 - WARNING - Thread: 9644
+	node 00000000 開始將 node {'ID': '10110000', 'address': ['192.168.200.90', 6532], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAM2e9c4QMwX9yRM8oGkSfRdM9CE6DEyj\nWCOO6U90YpgQDtlvrDTMuC782Mqlx0qcgO0SkEtPjrGIHZ/v97/B3oUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:51,147        log. line: 49 - WARNING - Thread: 9644
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-03 12:02:51,163        log. line: 49 - WARNING - Thread: 9644
+	node 00000000 開始查找 node 10110000 ， 雙方距離差距為 176，位於bucket 5
+
+2019-12-03 12:02:51,277        log. line: 49 - WARNING - Thread: 9644
+	取出在 00000000 中最靠近 10110000 的 node ['10101100', '01101010', '00110011'] 
+
+2019-12-03 12:02:51,288        log. line: 49 - WARNING - Thread: 9644
+	node 00000000 準備向 ['10101100', '01101010', '00110011'] 發出查找 node 10110000 的請求
+
+2019-12-03 12:02:51,309        log. line: 49 - WARNING - Thread: 9644
+	回傳  10110000 查找結果 ['10101100', '01101010', '00110011']
+
+2019-12-03 12:02:51,355        log. line: 49 - WARNING - Thread: 13296
+	node 10110000 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-03 12:02:51,356        log. line: 49 - WARNING - Thread: 13296
+	node 10110000 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:51,357        log. line: 49 - WARNING - Thread: 13296
+	Get node receive reply, add the node into bucket ['10101100', '01101010', '00110011']
+
+2019-12-03 12:02:51,359        log. line: 49 - WARNING - Thread: 13296
+	node 10110000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-03 12:02:51,361        log. line: 49 - WARNING - Thread: 13296
+	node 10110000 開始將 node {'ID': '01101010', 'address': ['192.168.200.90', 6447], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKpm4we5Vkxdvt4cp+WmgnhLPWH3umTl\nTiumLQbXN0UOGQX4exLcoBxa5nqGAyJqMlJDtdvAp8cbDYMkBInuZiUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 2中
+
+2019-12-03 12:02:51,362        log. line: 49 - WARNING - Thread: 13296
+	node 10110000 開始將 node {'ID': '00110011', 'address': ['192.168.200.90', 6409], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALqCIG7bdWGFXYgIrC7t9GByMrwNwqbW\ny1D9Xz/0YeBt7T/dYt1K/cGN88NdfkI7Vxk1VV//dIaj6CEr1iJMvlUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-03 12:02:57,060        log. line: 49 - WARNING - Thread: 1612
+	node 00000000 收到 node 10110000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:02:57,066        log. line: 49 - WARNING - Thread: 1612
+	node 00000000 開始將 node {'ID': '10110000', 'address': ['192.168.200.90', 6532], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAM2e9c4QMwX9yRM8oGkSfRdM9CE6DEyj\nWCOO6U90YpgQDtlvrDTMuC782Mqlx0qcgO0SkEtPjrGIHZ/v97/B3oUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:57,088        log. line: 49 - WARNING - Thread: 11040
+	取出在 10110000 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-03 12:02:57,102        log. line: 49 - WARNING - Thread: 1540
+	node 00000000 收到 node 10110000 的  ['GET', 'post'] 請求
+
+2019-12-03 12:02:57,129        log. line: 49 - WARNING - Thread: 1540
+	node 00000000 開始將 node {'ID': '10110000', 'address': ['192.168.200.90', 6532], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAM2e9c4QMwX9yRM8oGkSfRdM9CE6DEyj\nWCOO6U90YpgQDtlvrDTMuC782Mqlx0qcgO0SkEtPjrGIHZ/v97/B3oUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:57,145        log. line: 49 - WARNING - Thread: 1540
+	node 00000000 開始將 node {'ID': '10110000', 'address': ['192.168.200.90', 6532], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAM2e9c4QMwX9yRM8oGkSfRdM9CE6DEyj\nWCOO6U90YpgQDtlvrDTMuC782Mqlx0qcgO0SkEtPjrGIHZ/v97/B3oUCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:57,363        log. line: 49 - WARNING - Thread: 9884
+	node 10110000 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-03 12:02:57,365        log. line: 49 - WARNING - Thread: 9884
+	node 10110000 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:57,379        log. line: 49 - WARNING - Thread: 1540
+	取出在 00000000 中最靠近 10110000 的 node ['10110000'] 
+
+2019-12-03 12:02:57,441        log. line: 49 - WARNING - Thread: 2424
+	node 10110000 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-03 12:02:57,444        log. line: 49 - WARNING - Thread: 2424
+	node 10110000 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:57,446        log. line: 49 - WARNING - Thread: 2424
+	node 10110000 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6405], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ+QphtxS2M0emNvzoq3ZHra4xk3Uos5\nnoF4B73uYWlVg3NZceXVxOvLABCCuWtximceUwDLXzlWHxNqdL0j/SMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-03 12:02:57,447        log. line: 49 - WARNING - Thread: 2424
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'erkgepogrkpeo', 'time': 1575345713.299827, 'from': {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
+2019-12-04 17:12:21,267        log. line: 49 - WARNING - Thread: 11884
+	node 00000000 上線了!!!
+
+2019-12-04 17:12:31,248        log. line: 49 - WARNING - Thread: 7604
+	node 11010000 上線了!!!
+
+2019-12-04 17:12:31,249        log. line: 49 - WARNING - Thread: 7604
+	node 11010000 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 4818), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbX1i7i6rJH0Dy1L1rGOQ1Kpyfr3PRG\n3PfWtLz62LC4lonrWCVim78CbXdyuAWYMR89WytSXsq1+3XA9a7dNjMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-04 17:12:31,299        log. line: 49 - WARNING - Thread: 16580
+	node 00000000 收到 node 11010000 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:12:31,309        log. line: 49 - WARNING - Thread: 16580
+	node 00000000 開始將 node {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-04 17:12:31,335        log. line: 49 - WARNING - Thread: 7604
+	取出在 11010000 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:12:31,336        log. line: 49 - WARNING - Thread: 7604
+	node 11010000 開始向 ['00000000']， 請求find self
+
+2019-12-04 17:12:31,356        log. line: 49 - WARNING - Thread: 12808
+	node 00000000 收到 node 11010000 的  ['GET', 'node', '11010000'] 請求
+
+2019-12-04 17:12:31,366        log. line: 49 - WARNING - Thread: 12808
+	node 00000000 開始將 node {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-04 17:12:31,382        log. line: 49 - WARNING - Thread: 12808
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-04 17:12:31,398        log. line: 49 - WARNING - Thread: 12808
+	node 00000000 開始查找 node 11010000 ， 雙方距離差距為 208，位於bucket 5
+
+2019-12-04 17:12:31,408        log. line: 49 - WARNING - Thread: 12808
+	取出在 00000000 中最靠近 11010000 的 node [] 
+
+2019-12-04 17:12:31,413        log. line: 49 - WARNING - Thread: 12808
+	no node has find, 回傳  11010000 查找結果  "nothing"
+
+2019-12-04 17:12:31,605        log. line: 49 - WARNING - Thread: 1656
+	node 11010000 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-04 17:12:31,606        log. line: 49 - WARNING - Thread: 1656
+	node 11010000 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 4818], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbX1i7i6rJH0Dy1L1rGOQ1Kpyfr3PRG\n3PfWtLz62LC4lonrWCVim78CbXdyuAWYMR89WytSXsq1+3XA9a7dNjMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-04 17:12:31,606        log. line: 49 - WARNING - Thread: 1656
+	Get node receive reply, add the node into bucket []
+
+2019-12-04 17:12:38,900        log. line: 49 - WARNING - Thread: 884
+	node 00000000 收到 node 11010000 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:12:38,920        log. line: 49 - WARNING - Thread: 884
+	node 00000000 開始將 node {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-04 17:12:38,940        log. line: 49 - WARNING - Thread: 7604
+	取出在 11010000 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:12:38,966        log. line: 49 - WARNING - Thread: 14112
+	node 00000000 收到 node 11010000 的  ['POST', 'post', 'eijperhgjpegk'] 請求
+
+2019-12-04 17:12:38,976        log. line: 49 - WARNING - Thread: 14112
+	node 00000000 開始將 node {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-04 17:12:38,992        log. line: 49 - WARNING - Thread: 14112
+	node 00000000 開始將 node {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-04 17:12:39,027        log. line: 49 - WARNING - Thread: 14112
+	node 11010000 send a post to you, the post is: 
+	 eijperhgjpegk
+
+2019-12-04 17:12:46,307        log. line: 49 - WARNING - Thread: 7604
+	取出在 11010000 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:12:46,317        log. line: 49 - WARNING - Thread: 16020
+	node 00000000 收到 node 11010000 的  ['POST', 'post', 'porwgjperkgpeojg'] 請求
+
+2019-12-04 17:12:46,327        log. line: 49 - WARNING - Thread: 16020
+	node 00000000 開始將 node {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-04 17:12:46,344        log. line: 49 - WARNING - Thread: 16020
+	node 00000000 開始將 node {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 5中
+
+2019-12-04 17:12:46,360        log. line: 49 - WARNING - Thread: 16020
+	node 11010000 send a post to you, the post is: 
+	 porwgjperkgpeojg
+
+2019-12-04 17:12:50,953        log. line: 49 - WARNING - Thread: 13720
+	node 10101100 上線了!!!
+
+2019-12-04 17:12:50,954        log. line: 49 - WARNING - Thread: 13720
+	node 10101100 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 4818), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbX1i7i6rJH0Dy1L1rGOQ1Kpyfr3PRG\n3PfWtLz62LC4lonrWCVim78CbXdyuAWYMR89WytSXsq1+3XA9a7dNjMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:12:51,008        log. line: 49 - WARNING - Thread: 4676
+	node 00000000 收到 node 10101100 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:12:51,019        log. line: 49 - WARNING - Thread: 4676
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:12:51,075        log. line: 49 - WARNING - Thread: 13720
+	取出在 10101100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:12:51,076        log. line: 49 - WARNING - Thread: 13720
+	node 10101100 開始向 ['00000000']， 請求find self
+
+2019-12-04 17:12:51,112        log. line: 49 - WARNING - Thread: 13092
+	node 00000000 收到 node 10101100 的  ['GET', 'node', '10101100'] 請求
+
+2019-12-04 17:12:51,123        log. line: 49 - WARNING - Thread: 13092
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:12:51,161        log. line: 49 - WARNING - Thread: 13092
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-04 17:12:51,187        log. line: 49 - WARNING - Thread: 13092
+	node 00000000 開始查找 node 10101100 ， 雙方距離差距為 172，位於bucket 3
+
+2019-12-04 17:12:56,468        log. line: 49 - WARNING - Thread: 13720
+	取出在 10101100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:12:56,627        log. line: 49 - WARNING - Thread: 8216
+	node 00000000 收到 node 10101100 的  ['POST', 'post', ',r[pgke[pkrg'] 請求
+
+2019-12-04 17:12:56,663        log. line: 49 - WARNING - Thread: 8216
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:12:56,688        log. line: 49 - WARNING - Thread: 8216
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:12:56,748        log. line: 49 - WARNING - Thread: 8216
+	node 10101100 send a post to you, the post is: 
+	 ,r[pgke[pkrg
+
+2019-12-04 17:13:01,203        log. line: 49 - WARNING - Thread: 13092
+	取出在 00000000 中最靠近 10101100 的 node [] 
+
+2019-12-04 17:13:01,218        log. line: 49 - WARNING - Thread: 13092
+	no node has find, 回傳  10101100 查找結果  "nothing"
+
+2019-12-04 17:13:01,263        log. line: 49 - WARNING - Thread: 8804
+	node 10101100 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-04 17:13:01,264        log. line: 49 - WARNING - Thread: 8804
+	node 10101100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 4818], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKbX1i7i6rJH0Dy1L1rGOQ1Kpyfr3PRG\n3PfWtLz62LC4lonrWCVim78CbXdyuAWYMR89WytSXsq1+3XA9a7dNjMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:13:01,265        log. line: 49 - WARNING - Thread: 8804
+	Get node receive reply, add the node into bucket []
+
+2019-12-04 17:13:07,069        log. line: 49 - WARNING - Thread: 2824
+	node 00000000 收到 node 10101100 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:13:07,095        log. line: 49 - WARNING - Thread: 2824
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:13:07,136        log. line: 49 - WARNING - Thread: 13720
+	取出在 10101100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:13:07,164        log. line: 49 - WARNING - Thread: 2016
+	node 00000000 收到 node 10101100 的  ['POST', 'post', 'wpkfw[kfw'] 請求
+
+2019-12-04 17:13:07,175        log. line: 49 - WARNING - Thread: 2016
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:13:07,185        log. line: 49 - WARNING - Thread: 2016
+	node 00000000 開始將 node {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:13:07,221        log. line: 49 - WARNING - Thread: 2016
+	node 10101100 send a post to you, the post is: 
+	 wpkfw[kfw
+
+2019-12-04 17:47:42,556        log. line: 49 - WARNING - Thread: 4320
+	node 00000000 上線了!!!
+
+2019-12-04 17:47:54,560        log. line: 49 - WARNING - Thread: 11672
+	node 10001100 上線了!!!
+
+2019-12-04 17:47:54,561        log. line: 49 - WARNING - Thread: 11672
+	node 10001100 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 5951), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:47:54,719        log. line: 49 - WARNING - Thread: 11288
+	node 00000000 收到 node 10001100 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:47:54,765        log. line: 49 - WARNING - Thread: 11288
+	node 00000000 開始將 node {'ID': '10001100', 'address': ['192.168.200.90', 5959], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJVFKa5MRo4fAzi0udxnOdZbMCN+WIze\nH3V8X4S4b3tzPZgjMsS7a4MDKxa9pXqcCNQbSXJCLrHWEvY4s2sHRuMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:47:54,845        log. line: 49 - WARNING - Thread: 11672
+	取出在 10001100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:47:54,845        log. line: 49 - WARNING - Thread: 11672
+	node 10001100 開始向 ['00000000']， 請求find self
+
+2019-12-04 17:47:54,891        log. line: 49 - WARNING - Thread: 12860
+	node 00000000 收到 node 10001100 的  ['GET', 'node', '10001100'] 請求
+
+2019-12-04 17:47:54,923        log. line: 49 - WARNING - Thread: 12860
+	node 00000000 開始將 node {'ID': '10001100', 'address': ['192.168.200.90', 5959], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJVFKa5MRo4fAzi0udxnOdZbMCN+WIze\nH3V8X4S4b3tzPZgjMsS7a4MDKxa9pXqcCNQbSXJCLrHWEvY4s2sHRuMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:47:54,988        log. line: 49 - WARNING - Thread: 12860
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-04 17:47:55,043        log. line: 49 - WARNING - Thread: 12860
+	node 00000000 開始查找 node 10001100 ， 雙方距離差距為 140，位於bucket 3
+
+2019-12-04 17:47:55,075        log. line: 49 - WARNING - Thread: 12860
+	取出在 00000000 中最靠近 10001100 的 node [] 
+
+2019-12-04 17:47:55,106        log. line: 49 - WARNING - Thread: 12860
+	no node has find, 回傳  10001100 查找結果  "nothing"
+
+2019-12-04 17:47:55,223        log. line: 49 - WARNING - Thread: 17068
+	node 10001100 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-04 17:47:55,223        log. line: 49 - WARNING - Thread: 17068
+	node 10001100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 5951], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:47:55,223        log. line: 49 - WARNING - Thread: 17068
+	Get node receive reply, add the node into bucket []
+
+2019-12-04 17:48:01,516        log. line: 49 - WARNING - Thread: 11516
+	node 00000000 收到 node 10001100 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:48:01,604        log. line: 49 - WARNING - Thread: 11516
+	node 00000000 開始將 node {'ID': '10001100', 'address': ['192.168.200.90', 5959], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJVFKa5MRo4fAzi0udxnOdZbMCN+WIze\nH3V8X4S4b3tzPZgjMsS7a4MDKxa9pXqcCNQbSXJCLrHWEvY4s2sHRuMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:48:01,667        log. line: 49 - WARNING - Thread: 11672
+	取出在 10001100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:48:01,699        log. line: 49 - WARNING - Thread: 15736
+	node 00000000 收到 node 10001100 的  ['GET', 'post'] 請求
+
+2019-12-04 17:48:01,730        log. line: 49 - WARNING - Thread: 15736
+	node 00000000 開始將 node {'ID': '10001100', 'address': ['192.168.200.90', 5959], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJVFKa5MRo4fAzi0udxnOdZbMCN+WIze\nH3V8X4S4b3tzPZgjMsS7a4MDKxa9pXqcCNQbSXJCLrHWEvY4s2sHRuMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:48:01,770        log. line: 49 - WARNING - Thread: 15736
+	node 00000000 開始將 node {'ID': '10001100', 'address': ['192.168.200.90', 5959], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJVFKa5MRo4fAzi0udxnOdZbMCN+WIze\nH3V8X4S4b3tzPZgjMsS7a4MDKxa9pXqcCNQbSXJCLrHWEvY4s2sHRuMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:48:02,276        log. line: 49 - WARNING - Thread: 13476
+	node 10001100 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:48:02,277        log. line: 49 - WARNING - Thread: 13476
+	node 10001100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 5951], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:48:02,373        log. line: 49 - WARNING - Thread: 15736
+	取出在 00000000 中最靠近 10001100 的 node ['10001100'] 
+
+2019-12-04 17:48:02,508        log. line: 49 - WARNING - Thread: 9156
+	node 10001100 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-04 17:48:02,509        log. line: 49 - WARNING - Thread: 9156
+	node 10001100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 5951], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:48:02,514        log. line: 49 - WARNING - Thread: 9156
+	node 10001100 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 5951], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 17:48:02,515        log. line: 49 - WARNING - Thread: 9156
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'erkgepogrkpeo', 'time': 1575345713.299827, 'from': {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'wpkfw[kfw', 'time': 1575450787.23859, 'from': {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'eijperhgjpegk', 'time': 1575450759.048605, 'from': {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'porwgjperkgpeojg', 'time': 1575450766.3750906, 'from': {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
+2019-12-04 17:57:33,924        log. line: 49 - WARNING - Thread: 2556
+	node 10100111 上線了!!!
+
+2019-12-04 17:57:33,926        log. line: 49 - WARNING - Thread: 2556
+	node 10100111 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 5951), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:34,121        log. line: 49 - WARNING - Thread: 9340
+	node 00000000 收到 node 10100111 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:57:34,137        log. line: 49 - WARNING - Thread: 9340
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6265], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMthp1WBWuHEPgiNSEhfUa2iBkXa4MOE\n0Ud6A7o2xRaGNmMb6U0//QMOGl2yKwLR0oqtedIaLtA22DyEbNcUD+MCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:34,216        log. line: 49 - WARNING - Thread: 2556
+	取出在 10100111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:57:34,217        log. line: 49 - WARNING - Thread: 2556
+	node 10100111 開始向 ['00000000']， 請求find self
+
+2019-12-04 17:57:34,263        log. line: 49 - WARNING - Thread: 10500
+	node 00000000 收到 node 10100111 的  ['GET', 'node', '10100111'] 請求
+
+2019-12-04 17:57:34,317        log. line: 49 - WARNING - Thread: 10500
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6265], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMthp1WBWuHEPgiNSEhfUa2iBkXa4MOE\n0Ud6A7o2xRaGNmMb6U0//QMOGl2yKwLR0oqtedIaLtA22DyEbNcUD+MCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:34,446        log. line: 49 - WARNING - Thread: 10500
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-04 17:57:34,509        log. line: 49 - WARNING - Thread: 10500
+	node 00000000 開始查找 node 10100111 ， 雙方距離差距為 167，位於bucket 1
+
+2019-12-04 17:57:34,551        log. line: 49 - WARNING - Thread: 10500
+	取出在 00000000 中最靠近 10100111 的 node ['10001100'] 
+
+2019-12-04 17:57:34,566        log. line: 49 - WARNING - Thread: 10500
+	node 00000000 準備向 ['10001100'] 發出查找 node 10100111 的請求
+
+2019-12-04 17:57:34,647        log. line: 49 - WARNING - Thread: 10500
+	回傳  10100111 查找結果 ['10001100']
+
+2019-12-04 17:57:34,885        log. line: 49 - WARNING - Thread: 15872
+	node 10100111 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-04 17:57:34,886        log. line: 49 - WARNING - Thread: 15872
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 5951], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:34,889        log. line: 49 - WARNING - Thread: 15872
+	Get node receive reply, add the node into bucket ['10001100']
+
+2019-12-04 17:57:34,889        log. line: 49 - WARNING - Thread: 15872
+	node 10100111 開始將 node {'ID': '10001100', 'address': ['192.168.200.90', 5959], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJVFKa5MRo4fAzi0udxnOdZbMCN+WIze\nH3V8X4S4b3tzPZgjMsS7a4MDKxa9pXqcCNQbSXJCLrHWEvY4s2sHRuMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:46,600        log. line: 49 - WARNING - Thread: 1100
+	node 00000000 收到 node 10100111 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:57:46,632        log. line: 49 - WARNING - Thread: 1100
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6265], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMthp1WBWuHEPgiNSEhfUa2iBkXa4MOE\n0Ud6A7o2xRaGNmMb6U0//QMOGl2yKwLR0oqtedIaLtA22DyEbNcUD+MCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:56,374        log. line: 49 - WARNING - Thread: 2556
+	取出在 10100111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:57:56,420        log. line: 49 - WARNING - Thread: 11720
+	node 00000000 收到 node 10100111 的  ['GET', 'post'] 請求
+
+2019-12-04 17:57:56,485        log. line: 49 - WARNING - Thread: 11720
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6265], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMthp1WBWuHEPgiNSEhfUa2iBkXa4MOE\n0Ud6A7o2xRaGNmMb6U0//QMOGl2yKwLR0oqtedIaLtA22DyEbNcUD+MCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:56,518        log. line: 49 - WARNING - Thread: 11720
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6265], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMthp1WBWuHEPgiNSEhfUa2iBkXa4MOE\n0Ud6A7o2xRaGNmMb6U0//QMOGl2yKwLR0oqtedIaLtA22DyEbNcUD+MCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:56,920        log. line: 49 - WARNING - Thread: 16520
+	node 10100111 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:57:56,921        log. line: 49 - WARNING - Thread: 16520
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 5951], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:56,984        log. line: 49 - WARNING - Thread: 11720
+	取出在 00000000 中最靠近 10100111 的 node ['10100111'] 
+
+2019-12-04 17:57:57,119        log. line: 49 - WARNING - Thread: 12120
+	node 10100111 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-04 17:57:57,122        log. line: 49 - WARNING - Thread: 12120
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 5951], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:57,126        log. line: 49 - WARNING - Thread: 12120
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 5951], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALeXuWZDEEdmm3ocX9NexxTbnnGkFIKh\nCPFgPaUUWxLhsJXojAUlrbjvNL2l5sHV76UbNt9ccZQKRi1d/Z0XptcCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 17:57:57,127        log. line: 49 - WARNING - Thread: 12120
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'erkgepogrkpeo', 'time': 1575345713.299827, 'from': {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'wpkfw[kfw', 'time': 1575450787.23859, 'from': {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'eijperhgjpegk', 'time': 1575450759.048605, 'from': {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'porwgjperkgpeojg', 'time': 1575450766.3750906, 'from': {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
+2019-12-04 17:59:39,430        log. line: 49 - WARNING - Thread: 7944
+	node 00000000 上線了!!!
+
+2019-12-04 17:59:49,950        log. line: 49 - WARNING - Thread: 11064
+	node 01101000 上線了!!!
+
+2019-12-04 17:59:49,951        log. line: 49 - WARNING - Thread: 11064
+	node 01101000 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6338), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANcfMXEtewWNMwbl7Fs98PwfzbLC/roi\n9v8nlAu6rP5qTHMaw2yn9eLz/FF402E7tj1P5dgpCDhz13YZxa7gZOkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 4中
+
+2019-12-04 17:59:50,011        log. line: 49 - WARNING - Thread: 11896
+	node 00000000 收到 node 01101000 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 17:59:55,049        log. line: 49 - WARNING - Thread: 11064
+	取出在 01101000 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:59:55,050        log. line: 49 - WARNING - Thread: 11064
+	node 01101000 開始向 ['00000000']， 請求find self
+
+2019-12-04 17:59:55,096        log. line: 49 - WARNING - Thread: 9040
+	node 00000000 收到 node 01101000 的  ['GET', 'node', '01101000'] 請求
+
+2019-12-04 17:59:59,580        log. line: 49 - WARNING - Thread: 11064
+	取出在 01101000 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 17:59:59,626        log. line: 49 - WARNING - Thread: 13888
+	node 00000000 收到 node 01101000 的  ['GET', 'post'] 請求
+
+2019-12-04 18:00:04,584        log. line: 26 - ERROR - Thread: 11064
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2PNode.py", line 116, in GetPost: 
+    result = ast.literal_eval(result)
+  File "D:\Anaconda\lib\ast.py", line 85, in literal_eval: 
+    return _convert(node_or_string)
+  File "D:\Anaconda\lib\ast.py", line 84, in _convert: 
+    raise ValueError('malformed node or string: ' + repr(node))
+[ValueError] malformed node or string: None
+
+2019-12-04 18:00:52,038        log. line: 49 - WARNING - Thread: 12336
+	node 01001100 上線了!!!
+
+2019-12-04 18:00:52,041        log. line: 49 - WARNING - Thread: 12336
+	node 01001100 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6338), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANcfMXEtewWNMwbl7Fs98PwfzbLC/roi\n9v8nlAu6rP5qTHMaw2yn9eLz/FF402E7tj1P5dgpCDhz13YZxa7gZOkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 18:00:52,189        log. line: 49 - WARNING - Thread: 12296
+	node 00000000 收到 node 01001100 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 18:00:57,223        log. line: 49 - WARNING - Thread: 12336
+	取出在 01001100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 18:00:57,224        log. line: 49 - WARNING - Thread: 12336
+	node 01001100 開始向 ['00000000']， 請求find self
+
+2019-12-04 18:00:57,270        log. line: 49 - WARNING - Thread: 6980
+	node 00000000 收到 node 01001100 的  ['GET', 'node', '01001100'] 請求
+
+2019-12-04 18:01:02,866        log. line: 49 - WARNING - Thread: 12336
+	取出在 01001100 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 18:01:02,914        log. line: 49 - WARNING - Thread: 16704
+	node 00000000 收到 node 01001100 的  ['GET', 'post'] 請求
+
+2019-12-04 18:01:07,871        log. line: 26 - ERROR - Thread: 12336
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2PNode.py", line 116, in GetPost: 
+    result = ast.literal_eval(result)
+  File "D:\Anaconda\lib\ast.py", line 85, in literal_eval: 
+    return _convert(node_or_string)
+  File "D:\Anaconda\lib\ast.py", line 84, in _convert: 
+    raise ValueError('malformed node or string: ' + repr(node))
+[ValueError] malformed node or string: None
+
+2019-12-04 18:02:03,378        log. line: 49 - WARNING - Thread: 6420
+	node 10101111 上線了!!!
+
+2019-12-04 18:02:03,380        log. line: 49 - WARNING - Thread: 6420
+	node 10101111 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6338), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANcfMXEtewWNMwbl7Fs98PwfzbLC/roi\n9v8nlAu6rP5qTHMaw2yn9eLz/FF402E7tj1P5dgpCDhz13YZxa7gZOkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:03,549        log. line: 49 - WARNING - Thread: 12476
+	node 00000000 收到 node 10101111 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 18:02:08,610        log. line: 49 - WARNING - Thread: 6420
+	取出在 10101111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 18:02:11,038        log. line: 49 - WARNING - Thread: 6420
+	node 10101111 開始向 ['00000000']， 請求find self
+
+2019-12-04 18:02:11,088        log. line: 49 - WARNING - Thread: 12928
+	node 00000000 收到 node 10101111 的  ['GET', 'node', '10101111'] 請求
+
+2019-12-04 18:02:17,288        log. line: 49 - WARNING - Thread: 6420
+	取出在 10101111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 18:02:17,324        log. line: 49 - WARNING - Thread: 11392
+	node 00000000 收到 node 10101111 的  ['GET', 'post'] 請求
+
+2019-12-04 18:02:22,297        log. line: 26 - ERROR - Thread: 6420
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2PNode.py", line 116, in GetPost: 
+    result = ast.literal_eval(result)
+  File "D:\Anaconda\lib\ast.py", line 85, in literal_eval: 
+    return _convert(node_or_string)
+  File "D:\Anaconda\lib\ast.py", line 84, in _convert: 
+    raise ValueError('malformed node or string: ' + repr(node))
+[ValueError] malformed node or string: None
+
+2019-12-04 18:02:27,554        log. line: 49 - WARNING - Thread: 11896
+	node 00000000 開始將 node {'ID': '01101000', 'address': ['192.168.200.90', 6347], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK5lUZ9/djATBr/hju+PrD5bORfE2YJN\nfN2hzIQ439uHwuGfr9FUcLK7vfzHKyw3sMGawsuA2CAdPqlO34pVRdMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 4中
+
+2019-12-04 18:02:27,619        log. line: 49 - WARNING - Thread: 9040
+	node 00000000 開始將 node {'ID': '01101000', 'address': ['192.168.200.90', 6347], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK5lUZ9/djATBr/hju+PrD5bORfE2YJN\nfN2hzIQ439uHwuGfr9FUcLK7vfzHKyw3sMGawsuA2CAdPqlO34pVRdMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 4中
+
+2019-12-04 18:02:27,651        log. line: 49 - WARNING - Thread: 13888
+	node 00000000 開始將 node {'ID': '01101000', 'address': ['192.168.200.90', 6347], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK5lUZ9/djATBr/hju+PrD5bORfE2YJN\nfN2hzIQ439uHwuGfr9FUcLK7vfzHKyw3sMGawsuA2CAdPqlO34pVRdMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 4中
+
+2019-12-04 18:02:27,683        log. line: 49 - WARNING - Thread: 12296
+	node 00000000 開始將 node {'ID': '01001100', 'address': ['192.168.200.90', 6383], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANln+ukdAbmR9wqng76rtmJMWnQN6dLa\niVxJZpvW4SLibHpRpCnKc2HM9kYBG64wt1xMq8jfUWMFgHt7CQoJM6cCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 18:02:27,743        log. line: 49 - WARNING - Thread: 6980
+	node 00000000 開始將 node {'ID': '01001100', 'address': ['192.168.200.90', 6383], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANln+ukdAbmR9wqng76rtmJMWnQN6dLa\niVxJZpvW4SLibHpRpCnKc2HM9kYBG64wt1xMq8jfUWMFgHt7CQoJM6cCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 18:02:27,795        log. line: 49 - WARNING - Thread: 16704
+	node 00000000 開始將 node {'ID': '01001100', 'address': ['192.168.200.90', 6383], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANln+ukdAbmR9wqng76rtmJMWnQN6dLa\niVxJZpvW4SLibHpRpCnKc2HM9kYBG64wt1xMq8jfUWMFgHt7CQoJM6cCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 18:02:27,836        log. line: 49 - WARNING - Thread: 12476
+	node 00000000 開始將 node {'ID': '10101111', 'address': ['192.168.200.90', 6434], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALh+sjm50xeEpb52cXwPvMnOXscz0xyk\nw8fHRijS8SFhqC+7ZKGjvtygdvxVj9X235KBnFFHYWZ4neLFpTRTkusCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:27,839        log. line: 49 - WARNING - Thread: 12928
+	node 00000000 開始將 node {'ID': '10101111', 'address': ['192.168.200.90', 6434], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALh+sjm50xeEpb52cXwPvMnOXscz0xyk\nw8fHRijS8SFhqC+7ZKGjvtygdvxVj9X235KBnFFHYWZ4neLFpTRTkusCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:27,841        log. line: 49 - WARNING - Thread: 11392
+	node 00000000 開始將 node {'ID': '10101111', 'address': ['192.168.200.90', 6434], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALh+sjm50xeEpb52cXwPvMnOXscz0xyk\nw8fHRijS8SFhqC+7ZKGjvtygdvxVj9X235KBnFFHYWZ4neLFpTRTkusCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:27,844        log. line: 26 - ERROR - Thread: 11896
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\P2PLending\P2Pnetwork.py", line 32, in CallHandle: 
+    if not RespondHandle(connect, data, KadeNode):
+  File "D:\eclipse\python\hw\kademilia\src\handler\handler.py", line 40, in RespondHandle: 
+    connect.sendall(b'ping ok')
+[ConnectionAbortedError] 10053
+
+2019-12-04 18:02:27,847        log. line: 49 - WARNING - Thread: 9040
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-04 18:02:27,849        log. line: 49 - WARNING - Thread: 13888
+	node 00000000 開始將 node {'ID': '01101000', 'address': ['192.168.200.90', 6347], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK5lUZ9/djATBr/hju+PrD5bORfE2YJN\nfN2hzIQ439uHwuGfr9FUcLK7vfzHKyw3sMGawsuA2CAdPqlO34pVRdMCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 4中
+
+2019-12-04 18:02:27,851        log. line: 26 - ERROR - Thread: 12296
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\network\server.py", line 58, in communicate: 
+    data = connect.recv(10240)
+[ConnectionAbortedError] 10053
+
+2019-12-04 18:02:27,851        log. line: 49 - WARNING - Thread: 6980
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-04 18:02:27,852        log. line: 49 - WARNING - Thread: 16704
+	node 00000000 開始將 node {'ID': '01001100', 'address': ['192.168.200.90', 6383], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANln+ukdAbmR9wqng76rtmJMWnQN6dLa\niVxJZpvW4SLibHpRpCnKc2HM9kYBG64wt1xMq8jfUWMFgHt7CQoJM6cCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 3中
+
+2019-12-04 18:02:27,853        log. line: 26 - ERROR - Thread: 12476
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\network\server.py", line 58, in communicate: 
+    data = connect.recv(10240)
+[ConnectionAbortedError] 10053
+
+2019-12-04 18:02:27,854        log. line: 49 - WARNING - Thread: 12928
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-04 18:02:27,855        log. line: 49 - WARNING - Thread: 11392
+	node 00000000 開始將 node {'ID': '10101111', 'address': ['192.168.200.90', 6434], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALh+sjm50xeEpb52cXwPvMnOXscz0xyk\nw8fHRijS8SFhqC+7ZKGjvtygdvxVj9X235KBnFFHYWZ4neLFpTRTkusCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:35,361        log. line: 49 - WARNING - Thread: 14472
+	node 00000000 上線了!!!
+
+2019-12-04 18:02:38,993        log. line: 49 - WARNING - Thread: 11176
+	node 10100111 上線了!!!
+
+2019-12-04 18:02:38,993        log. line: 49 - WARNING - Thread: 11176
+	node 10100111 開始將 node {'ID': '00000000', 'address': ('192.168.200.90', 6455), 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOioMpZtqcLx3Fzsn1gwSn84ZmSVhBQO\n316BT1dSENkSw8FAFUzUQldCM+YHVESes4QNYl/xUzuw+znKbEexzecCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:39,090        log. line: 49 - WARNING - Thread: 8488
+	node 00000000 收到 node 10100111 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 18:02:39,122        log. line: 49 - WARNING - Thread: 8488
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:39,222        log. line: 49 - WARNING - Thread: 11176
+	取出在 10100111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 18:02:39,226        log. line: 49 - WARNING - Thread: 11176
+	node 10100111 開始向 ['00000000']， 請求find self
+
+2019-12-04 18:02:39,269        log. line: 49 - WARNING - Thread: 15624
+	node 00000000 收到 node 10100111 的  ['GET', 'node', '10100111'] 請求
+
+2019-12-04 18:02:39,285        log. line: 49 - WARNING - Thread: 15624
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:39,338        log. line: 49 - WARNING - Thread: 15624
+	此node 00000000 非查找目標，執行LookUP function
+
+2019-12-04 18:02:39,369        log. line: 49 - WARNING - Thread: 15624
+	node 00000000 開始查找 node 10100111 ， 雙方距離差距為 167，位於bucket 1
+
+2019-12-04 18:02:39,400        log. line: 49 - WARNING - Thread: 15624
+	取出在 00000000 中最靠近 10100111 的 node [] 
+
+2019-12-04 18:02:39,432        log. line: 49 - WARNING - Thread: 15624
+	no node has find, 回傳  10100111 查找結果  "nothing"
+
+2019-12-04 18:02:39,582        log. line: 49 - WARNING - Thread: 16632
+	node 10100111 收到 node 00000000 的  ['REPLY', 'getnode'] 請求
+
+2019-12-04 18:02:39,583        log. line: 49 - WARNING - Thread: 16632
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6455], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOioMpZtqcLx3Fzsn1gwSn84ZmSVhBQO\n316BT1dSENkSw8FAFUzUQldCM+YHVESes4QNYl/xUzuw+znKbEexzecCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:39,587        log. line: 49 - WARNING - Thread: 16632
+	Get node receive reply, add the node into bucket []
+
+2019-12-04 18:02:45,727        log. line: 49 - WARNING - Thread: 16000
+	node 00000000 收到 node 10100111 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 18:02:45,815        log. line: 49 - WARNING - Thread: 16000
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:45,908        log. line: 49 - WARNING - Thread: 11176
+	取出在 10100111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 18:02:45,944        log. line: 49 - WARNING - Thread: 9132
+	node 00000000 收到 node 10100111 的  ['GET', 'post'] 請求
+
+2019-12-04 18:02:45,955        log. line: 49 - WARNING - Thread: 9132
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:45,966        log. line: 49 - WARNING - Thread: 9132
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:46,419        log. line: 49 - WARNING - Thread: 8528
+	node 10100111 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 18:02:46,420        log. line: 49 - WARNING - Thread: 8528
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6455], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOioMpZtqcLx3Fzsn1gwSn84ZmSVhBQO\n316BT1dSENkSw8FAFUzUQldCM+YHVESes4QNYl/xUzuw+znKbEexzecCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:46,621        log. line: 49 - WARNING - Thread: 9132
+	取出在 00000000 中最靠近 10100111 的 node ['10100111'] 
+
+2019-12-04 18:02:46,973        log. line: 49 - WARNING - Thread: 884
+	node 10100111 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-04 18:02:46,974        log. line: 49 - WARNING - Thread: 884
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6455], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOioMpZtqcLx3Fzsn1gwSn84ZmSVhBQO\n316BT1dSENkSw8FAFUzUQldCM+YHVESes4QNYl/xUzuw+znKbEexzecCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:46,977        log. line: 49 - WARNING - Thread: 884
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6455], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOioMpZtqcLx3Fzsn1gwSn84ZmSVhBQO\n316BT1dSENkSw8FAFUzUQldCM+YHVESes4QNYl/xUzuw+znKbEexzecCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:02:46,978        log. line: 49 - WARNING - Thread: 884
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'erkgepogrkpeo', 'time': 1575345713.299827, 'from': {'ID': '10101100', 'address': ['192.168.200.90', 6469], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANrYSFk3RD77aOkE0cypgq4YAB9FWr4b\ne5fa+Qe9CwOEdxpt1H7A8DJjdIM3vtdVsKk7Qhu2ch/WxS4P4wPYHnMCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'wpkfw[kfw', 'time': 1575450787.23859, 'from': {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'eijperhgjpegk', 'time': 1575450759.048605, 'from': {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'porwgjperkgpeojg', 'time': 1575450766.3750906, 'from': {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
+2019-12-04 18:03:50,850        log. line: 49 - WARNING - Thread: 11176
+	取出在 10100111 中最靠近 q 的 node [] 
+
+2019-12-04 18:03:50,850        log. line: 26 - ERROR - Thread: 11176
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\node\KadeNode.py", line 137, in LookUp: 
+    logger.warning(f'node {self.ID} 開始查找 node {ID} ， 雙方距離差距為 {int(CountDistance(self.ID, ID), 2)}' + f'，位於bucket {self.table._CheckDistanceIndex(ID)}')
+[ValueError] invalid literal for int() with base 2: '64'
+
+2019-12-04 18:04:17,877        log. line: 49 - WARNING - Thread: 8040
+	node 00000000 收到 node 10100111 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 18:04:17,939        log. line: 49 - WARNING - Thread: 8040
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:04:18,035        log. line: 49 - WARNING - Thread: 11176
+	取出在 10100111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 18:04:18,173        log. line: 49 - WARNING - Thread: 15488
+	node 00000000 收到 node 10100111 的  ['DELETE', 'post', '1575345713.299827'] 請求
+
+2019-12-04 18:04:18,179        log. line: 49 - WARNING - Thread: 15488
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:04:18,194        log. line: 49 - WARNING - Thread: 15488
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:04:57,675        log. line: 49 - WARNING - Thread: 11176
+	取出在 10100111 中最靠近 00000000 的 node ['00000000'] 
+
+2019-12-04 18:04:57,768        log. line: 49 - WARNING - Thread: 12020
+	node 00000000 收到 node 10100111 的  ['GET', 'post'] 請求
+
+2019-12-04 18:04:57,827        log. line: 49 - WARNING - Thread: 12020
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:04:57,858        log. line: 49 - WARNING - Thread: 12020
+	node 00000000 開始將 node {'ID': '10100111', 'address': ['192.168.200.90', 6458], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALOlF6RSwvo2ppEQQOxyVBnBHsT+/GrN\nnZFXIrqHFYsPBIa8oJKtE87zR3QxQsaRPHYLBX7Mim4vmRe/nF8PktkCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:04:58,599        log. line: 49 - WARNING - Thread: 15396
+	node 10100111 收到 node 00000000 的  ['TRACE', 'ping'] 請求
+
+2019-12-04 18:04:58,600        log. line: 49 - WARNING - Thread: 15396
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6455], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOioMpZtqcLx3Fzsn1gwSn84ZmSVhBQO\n316BT1dSENkSw8FAFUzUQldCM+YHVESes4QNYl/xUzuw+znKbEexzecCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:04:58,820        log. line: 49 - WARNING - Thread: 12020
+	取出在 00000000 中最靠近 10100111 的 node ['10100111'] 
+
+2019-12-04 18:04:59,003        log. line: 49 - WARNING - Thread: 6320
+	node 10100111 收到 node 00000000 的  ['REPLY', 'getpost', '00000000'] 請求
+
+2019-12-04 18:04:59,004        log. line: 49 - WARNING - Thread: 6320
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6455], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOioMpZtqcLx3Fzsn1gwSn84ZmSVhBQO\n316BT1dSENkSw8FAFUzUQldCM+YHVESes4QNYl/xUzuw+znKbEexzecCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:04:59,007        log. line: 49 - WARNING - Thread: 6320
+	node 10100111 開始將 node {'ID': '00000000', 'address': ['192.168.200.90', 6455], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOioMpZtqcLx3Fzsn1gwSn84ZmSVhBQO\n316BT1dSENkSw8FAFUzUQldCM+YHVESes4QNYl/xUzuw+znKbEexzecCAwEAAQ==\n-----END PUBLIC KEY-----\n'} 資料跟新於bucket 1中
+
+2019-12-04 18:04:59,008        log. line: 49 - WARNING - Thread: 6320
+	node 00000000 reply the post to you, the post is: 
+	 [[{'msg': 'wpkfw[kfw', 'time': 1575450787.23859, 'from': {'ID': '10101100', 'address': ['192.168.200.90', 4841], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALMgXNqeIoonNiFowWLDZEujhkm1pLAT\n9mMgpGUgHQ+pbovYSr0sD7aFX6ymSrgqNn8ZafeYkBVam4ldeb8sBfsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}], [{'msg': 'eijperhgjpegk', 'time': 1575450759.048605, 'from': {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}, {'msg': 'porwgjperkgpeojg', 'time': 1575450766.3750906, 'from': {'ID': '11010000', 'address': ['192.168.200.90', 4824], 'PublicKey': '-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJwgBp0OJj4WDzTF/ippMpKEdV5HAuYa\nUG7ygl4LCn/q0OMSzK2P0IFQD7V2ie9xDb31Z53g/rel/AeaAN6cqIsCAwEAAQ==\n-----END PUBLIC KEY-----\n'}}]]
+
+2019-12-04 18:05:25,213        log. line: 49 - WARNING - Thread: 11176
+	取出在 10100111 中最靠近 egerg 的 node [] 
+
+2019-12-04 18:05:25,214        log. line: 26 - ERROR - Thread: 11176
+	Oh NO!!!!! something ERROR!!!!!!!!!!!!
+Traceback (most recent call last):
+  File "D:\eclipse\python\hw\kademilia\src\util\error.py", line 37, in wrapper: 
+    return func(*args, **kwargs)
+  File "D:\eclipse\python\hw\kademilia\src\node\KadeNode.py", line 137, in LookUp: 
+    logger.warning(f'node {self.ID} 開始查找 node {ID} ， 雙方距離差距為 {int(CountDistance(self.ID, ID), 2)}' + f'，位於bucket {self.table._CheckDistanceIndex(ID)}')
+[ValueError] invalid literal for int() with base 2: '8487846687'
+

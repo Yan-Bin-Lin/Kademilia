@@ -56,7 +56,7 @@ def FinalTest():
             instruct = input('\nwaiting for user key in instruction...\n' + 
                              '"getnode", "lookup", "uploadfile", "getfile", "chat", ' + 
                              '"broadcast", "post", "getchat", "getpost", "gettmpcontract", ' +
-                             '"sendcontract", "whisper", "secreteinit", "gethash" \n'
+                             '"sendcontract", "whisper", "secreteinit", "gethash", "delpost" \n'
                             )
             
             if instruct == 'getnode':
@@ -102,11 +102,16 @@ def FinalTest():
                 print(node.GetChat(parm))
                 
             elif instruct == 'getpost':
-                ID = input('please key in ID to specif, or just enter to get locao post record\n')
+                ID = input('please key in ID to specif, or just enter to get local post record\n')
                 if ID == '':
                     print(node.GetPost())
                 else:
-                    print(f"getpost return result is:\n{node.GetPost(ID)}\n\n")
+                    result = node.GetPost(ID)
+                    if result == None:
+                        print('None')
+                    else:
+                        print(len(result[0][0]))
+                        print(f"getpost return result is:\n{result}\n\n")
                    
             elif instruct == 'gettmpcontract':
                 print(f'all node in self is {[list(v.keys()) for v in node.GetAllNode().values()]}')
@@ -134,6 +139,14 @@ def FinalTest():
             elif instruct == 'gethash':
                 parm = input('please key in something to get hash\n')
                 print(hash.GetHash(parm))
+                
+            elif instruct == 'delpost':
+                parm = input('please key in the time of the post you want to delete\n')
+                parm1 = input('please key in ID to specify, or just enter to delete local post record\n')
+                if ID == '':
+                    node.DelPost(float(parm))
+                else:
+                    node.DelPost(parm, parm1)
 
     while(1):
         pass
