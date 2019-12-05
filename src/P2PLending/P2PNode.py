@@ -8,6 +8,7 @@ from pathlib import Path
 import json
 import time
 import ast
+import pickle
 
 from ..node.KadeNode import KadeNode
 from ..crypto.DHKeyExchange import DH
@@ -237,6 +238,12 @@ class P2PNode(KadeNode):
         }
 
     @CheckError()
+    def DecryptMsg(self, ID, msg):
+        decrypter = AEAD()
+        decrypter.NewKey(self.secrete[ID])
+        return decrypter.decrypt(*msg)
+        
+    @CheckError()
     def Whisper(self, ID, msg = '', *, node = None):
         '''
         send encrypt msg, must initial(call SecreteInit) first
@@ -289,3 +296,21 @@ class P2PNode(KadeNode):
             logger.warning(f"{self.ID} 成功建構出 share key {self.secrete[ID]}")
             return True
         return False
+            
+    @CheckError()
+    def SaveKey(self):
+        '''save secrete key to a file'''
+        Path(self.SavePath, 'key').mkdir(parents=True, exist_ok=True) 
+        folder = Path(self.SavePath, 'key')
+        for name in self.secrete.keys():
+            file = folder / str(name)
+            with file.open('wb') as f:
+                pickle.dump(self.secrete[name], f)
+        
+    @CheckError()
+    def LoadKey(self):
+        for file in Path(self.SavePath, 'key').glob('*'):
+            with open(file, 'rb') as f:
+                self.secrete[Path(file).name] = pickle.load(f)
+                print(self.secrete[Path(file).name], end = '\n====================\n================\n===============\n')
+        

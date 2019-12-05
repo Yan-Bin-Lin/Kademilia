@@ -20,7 +20,7 @@ def WhisperTest():
             server.Whisper('11', input('wait for whisper...'))
         
     elif instruc == 'n':
-        with open('00_Save/00.txt', 'rb') as file:
+        with open('Save/00/00.txt', 'rb') as file:
             s = pickle.load(file)
                 
         end = P2PNode(ID = '11', node = s)    

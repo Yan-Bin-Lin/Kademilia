@@ -6,6 +6,7 @@ Created on 2019年10月10日
 '''
 import pickle
 import json
+import ast
 from src.P2PLending.P2PNode import P2PNode
 
 def ContractTest():
@@ -18,6 +19,8 @@ def ContractTest():
         input('wait for instruct to get contract')
         print(f"the contract record of 11 is {server.GetTmpContract('11')}")
         contract = server.SendContract(True, ID = '11', transation = server.GetTmpContract('11')[0]['msg']['Transation'], other = server.GetTmpContract('11')[0]['msg']['Trader']['brower'])
+        contract = server.EncryptMsg('11', str(contract))['msg']
+        print(f'contract = {contract}')
         server.UpLoadFile(contract, '10101010')
         
     elif instruc == 'n':
@@ -29,9 +32,22 @@ def ContractTest():
         
         end.SendContract(False, ID = '00', money = '$', date = '2019', amount = 900)
         
+        end.SecreteInit('00')
+        
         input('wait for instruct to get contract')
+
+        end.SaveKey()
+        
+        del end.secrete['00']
+        
+        end.LoadKey()
+        
         print(f"the contract record of 00 is {end.GetTmpContract('00')}")
         end.GetFile('10101010')
+        input('wait for instruct to get file')
+        file = end.GetFile('10101010')
+        print(f'file = {file[0]["file"]}')
+        print(f'after decrypt is {end.DecryptMsg("00", file[0]["file"])}')
 
     while(1):
         pass
