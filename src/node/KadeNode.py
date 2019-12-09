@@ -50,15 +50,18 @@ class KadeNode():
         Arguments:
             ID (bit str): the ID specify to this kadenode, if no given, the ID will be hash of IPAddress
             node (NodeData): the nodedata for self, or for initial kbucket
+            RSASave (bool): load RSA Key for self
         '''
         self.RSA = RSA()
         self.WebInit()
         self.address = self.web.GetServeAddress()
         self.ID = kwargs.get('ID', GetHash(self.address[0] + str(self.address[1])))#random ID here
+        self.SavePath = Path('Save', self.ID)
+        if kwargs.get('RSASave', None) != None:
+            self.LoadRSA()
         self.NodeData = NodeData(self.address, self.RSA.GetPublicKey(), self.ID)
         # routing table content all Kbucket, initial create empty table, key = distance, value = bucket
         self.table = RouteTable(self.NodeData)
-        self.SavePath = Path('Save', self.ID)
         self.lock = threading.Lock()
         # start for connect
         self.run()
@@ -277,3 +280,18 @@ class KadeNode():
     @CheckError()
     def closs(self):
         pass
+    
+    
+    @CheckError()
+    def SaveRSA(self):
+        '''Save RSA Private Key'''
+        name = 'RSAKey'
+        Path(self.SavePath).mkdir(parents=True, exist_ok=True) 
+        folder = Path(self.SavePath)
+        file = folder / name
+        self.RSA.SaveKey(file)
+        
+    @CheckError()
+    def LoadRSA(self):
+        '''Load RSA Private Key'''
+        self.RSA.LoadKey(Path(self.SavePath, 'RSAKey'))

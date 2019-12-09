@@ -11,7 +11,7 @@ import time
 from ..crypto.AEAD import AEAD
 from ..util.log import log
 from ..node.KadeNode import KadeNode
-from cv2 import instr
+#from cv2 import instr
 logger = log()
 
 

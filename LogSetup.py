@@ -33,6 +33,9 @@ def Setup():
 
 
 def some_method():
+    from KadeRSASaveTest import RSASaveTest
+    print('開始測試kade rsa save')
+    RSASaveTest()
     print('開始測試P2P contract')
     from P2PContractTest import ContractTest
     ContractTest()

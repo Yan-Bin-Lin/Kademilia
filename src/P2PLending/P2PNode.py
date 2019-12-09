@@ -309,8 +309,7 @@ class P2PNode(KadeNode):
         
     @CheckError()
     def LoadKey(self):
+        '''load secrete key'''
         for file in Path(self.SavePath, 'key').glob('*'):
             with open(file, 'rb') as f:
                 self.secrete[Path(file).name] = pickle.load(f)
-                print(self.secrete[Path(file).name], end = '\n====================\n================\n===============\n')
-        
