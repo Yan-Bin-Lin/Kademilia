@@ -12,6 +12,7 @@ import threading
 import pickle
 import json
 import time
+import ast
 
 from src.util.hash import GetHash
 from src.util import setup
@@ -132,16 +133,27 @@ class P2PlendingApp(App):
             amount = str(amount)
             print('\n\n|interest:' + interest + amount + period + '|end\n\n')
         if self.node.GetTmpContract(transaction_ID) == None or return_money ==True:
+            print('start send')
             contract = self.node.SendContract(lender = False, ID = transaction_ID,transation = None,interest = interest,name =  name, period = period,amount = amount )
             print('\n\n\n')
             print(contract)
+            self.node.SecreteInit(transaction_ID)
+            while self.node.secrete.get(transaction_ID,None) == None:
+                print('\nget Key\n')
+                continue
+            self.node.SaveKey()
         else:
+            #while self.node.secrete.get(transaction_ID,None) == None:
+                #continue
             contract = self.node.SendContract(lender = True, ID = transaction_ID , transation = self.node.GetTmpContract(transaction_ID)[-1]['msg']['Transation'],other = self.node.GetTmpContract(transaction_ID)[0]['msg']['Trader']['brower'])
+            contract = self.node.EncryptMsg(transaction_ID , str(contract))['msg']
             print(contract)
             if int(transaction_ID,2) > int(self.nodeID,2):
                 self.node.UpLoadFile(contract,GetHash((str(transaction_ID)+str(self.nodeID)),OutSize = 8))
+                self.node.SaveKey()
             else:
                 self.node.UpLoadFile(contract,GetHash((str(self.nodeID))+(str(transaction_ID)),OutSize = 8))
+                self.node.SaveKey()
         self.p2pcontracttest.ids.transaction_ID.disabled = False
         self.p2pcontracttest.ids.period.disabled = False
         self.p2pcontracttest.ids.amount.disabled = False
@@ -163,27 +175,40 @@ class P2PlendingApp(App):
             self.p2pcontracttest.ids.amount.disabled = True
             self.p2pcontracttest.ids.interest.disabled = True
         else:
+            self.node.LoadKey()
             if int(search_ID,2) > int(self.nodeID,2):
                 received_contract = self.node.GetFile(GetHash((str(search_ID)+str(self.nodeID)),OutSize = 8))
+                received_contract = self.node.DecryptMsg(search_ID, received_contract[-1]['file'])
+                print(received_contract)
             else:
                 received_contract = self.node.GetFile(GetHash((str(self.nodeID)+str(search_ID)),OutSize = 8))
-            print('\n\n')
-            print(received_contract[-1])
+                received_contract = self.node.DecryptMsg(search_ID, received_contract[-1]['file'])
+                print(received_contract)
+            received_contract = ast.literal_eval(received_contract)
             print('\n\n\n')
             print(received_contract)
-            if received_contract[-1]['file']['Trader']['brower']['node']['ID'] == self.nodeID:
-                self.kadefiletest.ids.transaction_ID.text = received_contract[-1]['file']['Trader']['lender']['node']['ID']
+            print('\n\n')
+            if received_contract['Trader']['brower']['node']['ID'] == self.nodeID:
+                self.kadefiletest.ids.transaction_ID.text = received_contract['Trader']['lender']['node']['ID']
             else:
-                self.kadefiletest.ids.transaction_ID.text = received_contract[-1]['file']['Trader']['brower']['node']['ID']
-            self.kadefiletest.ids.amount.text = received_contract[-1]['file']['Transation']['amount']
-            self.kadefiletest.ids.interest.text = received_contract[-1]['file']['Transation']['interest']
-            self.kadefiletest.ids.period.text = received_contract[-1]['file']['Transation']['period']
-            self.kadefiletest.ids.name.text = received_contract[-1]['file']['Transation']['name']
+                self.kadefiletest.ids.transaction_ID.text = received_contract['Trader']['brower']['node']['ID']
+            self.kadefiletest.ids.amount.text = received_contract['Transation']['amount']
+            self.kadefiletest.ids.interest.text = received_contract['Transation']['interest']
+            self.kadefiletest.ids.period.text = received_contract['Transation']['period']
+            self.kadefiletest.ids.name.text = received_contract['Transation']['name']
             self.kadefiletest.ids.transaction_ID.disabled = True
             self.kadefiletest.ids.period.disabled = True
             self.kadefiletest.ids.amount.disabled = True
             self.kadefiletest.ids.interest.disabled = True
             self.kadefiletest.ids.name.disabled = True
+
+    async def check_return_key(self,transaction_ID):
+        while self.node.secrete.get(transaction_ID,None) == None:
+            continue
+        return True
+    async def await_controller(self,transaction_ID):
+        result = await self.check_return_key(transaction_ID)
+        return result
     
     def P2P_chat_getmessage(self,target_ID):
         if target_ID == '':
