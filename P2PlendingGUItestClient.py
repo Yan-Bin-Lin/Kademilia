@@ -80,6 +80,7 @@ class P2PlendingApp(App):
         self.nodeID = P2Plending_node_ID
         self.bulletinboard_handler = 0
         self.transaction_target = None
+        self.file_handler = 0
         self.post_lenth = []
         with open('Save/00000000/00000000.txt', 'rb') as file:
             self.node = P2PNode(ID = P2Plending_node_ID)
@@ -159,10 +160,10 @@ class P2PlendingApp(App):
         self.p2pcontracttest.ids.amount.disabled = False
         self.p2pcontracttest.ids.interest.disabled = False
 
-    def P2P_receive_contract(self,search_ID,transaction_finished = False):
+    def P2P_receive_contract(self,search_ID,number = '',transaction_finished = False):
         if search_ID == '':
             search_ID = str(self.transaction_target)
-        if transaction_finished == False:
+        if transaction_finished == False :
             print(self.node.GetTmpContract(search_ID))
             received_contract = self.node.GetTmpContract(search_ID)
             print(received_contract)
@@ -175,14 +176,24 @@ class P2PlendingApp(App):
             self.p2pcontracttest.ids.amount.disabled = True
             self.p2pcontracttest.ids.interest.disabled = True
         else:
+            if number == '':
+                self.file_handler = self.file_handler - 1
+            else:
+                self.file_handler = self.file_handler - int(number)
             self.node.LoadKey()
             if int(search_ID,2) > int(self.nodeID,2):
                 received_contract = self.node.GetFile(GetHash((str(search_ID)+str(self.nodeID)),OutSize = 8))
-                received_contract = self.node.DecryptMsg(search_ID, received_contract[-1]['file'])
+                if self.file_handler < -(len(received_contract)):
+                    if number == '':
+                        self.file_handler = -1
+                    else :
+                        self.kadefiletest.ids.range.text = 'out of range'
+                        return
+                received_contract = self.node.DecryptMsg(search_ID, received_contract[self.file_handler]['file'])
                 print(received_contract)
             else:
                 received_contract = self.node.GetFile(GetHash((str(self.nodeID)+str(search_ID)),OutSize = 8))
-                received_contract = self.node.DecryptMsg(search_ID, received_contract[-1]['file'])
+                received_contract = self.node.DecryptMsg(search_ID, received_contract[self.file_handler]['file'])
                 print(received_contract)
             received_contract = ast.literal_eval(received_contract)
             print('\n\n\n')

@@ -490,6 +490,13 @@
         multiline: False
     TextInput:
         # message
+        id:number
+        size_hint: (0.3,0.05)
+        pos_hint: {'right':0.69,'top':0.3}
+        font_size: 30
+        multiline: False
+    TextInput:
+        # message
         id:period
         size_hint: (0.3,0.05)
         pos_hint: {'right':0.69,'top':0.5}
@@ -525,17 +532,32 @@
         pos_hint: {'right':0.36,'top':0.4}
         size: 150, 50
         text: "amount"
+    Label:
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.3}
+        size: 150, 50
+        text: "NO."
+    Label:
+        id:range
+        font_size: 50
+        size_hint: None, None
+        pos_hint: {'right':0.36,'top':0.1}
+        size: 150, 50
+        text: ""
     Button:
         #temp button
         size_hint: None, None
-        pos_hint: {'right': 0.65,'top':0.3}
+        pos_hint: {'right': 0.65,'top':0.2}
         size: 200, 50
         text:"look up"
-        on_press:app.P2P_receive_contract(transaction_ID.text,True)
+        on_press:app.P2P_receive_contract(transaction_ID.text,number.text,True)
+        on_press:range.text = ''
+        on_release:number.text = ''
     Button:
         #temp button
         size_hint: None, None
-        pos_hint: {'right': 0.45,'top':0.3}
+        pos_hint: {'right': 0.45,'top':0.2}
         size: 200, 50
         text:"Pay back"
         on_press:app.P2P_contract_test(transaction_ID.text,interest.text,name.text,period.text,amount.text,True)
