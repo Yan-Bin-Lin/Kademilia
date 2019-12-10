@@ -281,6 +281,7 @@ class P2PNode(KadeNode):
                 self.secrete[ID] = self.secrete[ID].GetShareKey()
                 logger.warning(f"{self.ID} 成功建構出 share key {self.secrete[ID]}")
                 self.SecreteFresh[ID] = data['origin']['PublicKey']
+                self.SaveKey()
             return True
         # if it's DH andget publickey from other node
         elif type(self.secrete[ID]) == DH and data != None:
@@ -294,6 +295,7 @@ class P2PNode(KadeNode):
             self.secrete[ID] = self.secrete[ID].GetShareKey()
             self.SecreteFresh[ID] = data['origin']['PublicKey']
             logger.warning(f"{self.ID} 成功建構出 share key {self.secrete[ID]}")
+            self.SaveKey()
             return True
         return False
             
