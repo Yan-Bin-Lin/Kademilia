@@ -179,10 +179,13 @@ class P2PlendingApp(App):
             if number == '':
                 self.file_handler = self.file_handler - 1
             else:
-                self.file_handler = self.file_handler - int(number)
+                self.file_handler = -(int(number))
             self.node.LoadKey()
             if int(search_ID,2) > int(self.nodeID,2):
                 received_contract = self.node.GetFile(GetHash((str(search_ID)+str(self.nodeID)),OutSize = 8))
+                print('\n')
+                print(len(received_contract))
+                print('\n')
                 if self.file_handler < -(len(received_contract)):
                     if number == '':
                         self.file_handler = -1
@@ -193,6 +196,15 @@ class P2PlendingApp(App):
                 print(received_contract)
             else:
                 received_contract = self.node.GetFile(GetHash((str(self.nodeID)+str(search_ID)),OutSize = 8))
+                print('\n')
+                print(len(received_contract))
+                print('\n')
+                if self.file_handler < -(len(received_contract)):
+                    if number == '':
+                        self.file_handler = -1
+                    else :
+                        self.kadefiletest.ids.range.text = 'out of range'
+                        return
                 received_contract = self.node.DecryptMsg(search_ID, received_contract[self.file_handler]['file'])
                 print(received_contract)
             received_contract = ast.literal_eval(received_contract)
